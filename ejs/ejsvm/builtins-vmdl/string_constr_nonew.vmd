@@ -1,0 +1,8 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) string_constr_nonew: (JSValue, JSValue) -> JSValue 
+string_constr_nonew(placeHolder, element){
+    JSValue arg = (na > 0) ? to_string(element) : gconsts.g_string_empty;
+    return arg;
+}

@@ -1,0 +1,11 @@
+--- CD.js	2020-03-19 11:27:25.000000000 +0900
++++ CD-fix.js	2020-03-19 12:04:17.000000000 +0900
+@@ -449,7 +449,7 @@
+ }
+ 
+ CallSign.prototype.compareTo = function (other) {
+-  return this.value == other.value ? 0 : this.value < other.value ? -1 : 1;
++  return this.value == other.value ? 0 : (this.value < other.value ? -1 : 1);
+ };
+ 
+ function Collision(aircraftA, aircraftB, position) {

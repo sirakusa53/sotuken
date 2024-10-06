@@ -1,0 +1,11 @@
+======== controlflow-recursive ========
+0: total CPU time = 35.567 msec, total GC time = 6.301 msec (#GC = 14) n_hc = 20, n_enter_hc = 491330, n_exit_hc = 245698
+1: total CPU time = 36.158 msec, total GC time = 0.0 msec (#GC = 14) n_hc = 20, n_enter_hc = 491330, n_exit_hc = 245698
+2: total CPU time = 33.355 msec, total GC time = 2.940 msec (#GC = 14) n_hc = 20, n_enter_hc = 491330, n_exit_hc = 245698
+3: total CPU time = 37.106 msec, total GC time = 0.0 msec (#GC = 14) n_hc = 20, n_enter_hc = 491330, n_exit_hc = 245698
+4: total CPU time = 37.294 msec, total GC time = 0.0 msec (#GC = 14) n_hc = 20, n_enter_hc = 491330, n_exit_hc = 245698
+5: total CPU time = 35.476 msec, total GC time = 6.291 msec (#GC = 14) n_hc = 20, n_enter_hc = 491330, n_exit_hc = 245698
+6: total CPU time = 36.849 msec, total GC time = 4.377 msec (#GC = 14) n_hc = 20, n_enter_hc = 491330, n_exit_hc = 245698
+7: total CPU time = 37.2 msec, total GC time = 0.0 msec (#GC = 14) n_hc = 20, n_enter_hc = 491330, n_exit_hc = 245698
+8: total CPU time = 37.141 msec, total GC time = 0.0 msec (#GC = 14) n_hc = 20, n_enter_hc = 491330, n_exit_hc = 245698
+9: total CPU time = 35.156 msec, total GC time = 0.0 msec (#GC = 14) n_hc = 20, n_enter_hc = 491330, n_exit_hc = 245698

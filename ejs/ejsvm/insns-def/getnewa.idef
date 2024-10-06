@@ -1,0 +1,13 @@
+\inst getnewa (Register dst)
+
+\otherwise \{
+  /*
+   getnewa dst
+     dst : destination register
+   $dst = (get_a(context) instanceof Object)? a : dst;
+ */
+
+  JSValue a = get_a(context);
+  if (is_jsobject(a))
+    dst = a;
+\}

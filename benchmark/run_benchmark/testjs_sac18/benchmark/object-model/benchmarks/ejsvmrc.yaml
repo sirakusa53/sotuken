@@ -1,0 +1,32 @@
+Bounce-small.sbc:
+- -m 1m
+CD-dyn-small.sbc:
+- -m 1m
+CD-small.sbc:
+- -m 1m
+DeltaBlue-dyn-small.sbc:
+- -m 50m
+DeltaBlue-small.sbc:
+- -m 50m
+Havlak-small.sbc:
+- -m 50m
+Json-small.sbc:
+- -m 50m
+List-small.sbc:
+- -m 1m
+Mandelbrot-small.sbc:
+- -m 1m
+NBody-small.sbc:
+- -m 1m
+Permute-small.sbc:
+- -m 1m
+Queens-small.sbc:
+- -m 1m
+Richards-small.sbc:
+- -m 1m
+Sieve-small.sbc:
+- -m 1m
+Storage-small.sbc:
+- -m 1m
+Towers-small.sbc:
+- -m 1m

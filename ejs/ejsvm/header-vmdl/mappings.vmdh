@@ -1,0 +1,137 @@
+externC mapping global_constant_objects{
+  SimpleObject g_prototype_Object;
+  Function g_prototype_Function;
+  Array g_prototype_Array;
+  NumberObject g_prototype_Number;
+  String g_prototype_String;
+  BooleanObject g_prototype_Boolean;
+
+  JSValue g_identity;
+  SimpleObject g_object;
+  SimpleObject g_object_proto;
+  Array g_array;
+  SimpleObject g_array_proto;
+  NumberObject g_number;
+  SimpleObject g_number_proto;
+  StringObject g_string;
+  SimpleObject g_string_proto;
+  Function g_function;
+  SimpleObject g_function_proto;
+  Builtin g_builtin;
+  SimpleObject g_builtin_proto;
+  BooleanObject g_boolean;
+  SimpleObject g_boolean_proto;
+  SimpleObject g_date;
+  SimpleObject g_date_proto;
+  Regexp g_regexp;
+  SimpleObject g_regexp_proto;
+  JSValue g_fixnum_to_string;
+  JSValue g_flonum_to_string;
+
+  String g_string_prototype;
+  String g_string___proto__;
+  String g_string_tostring;
+  String g_string_valueof;
+  String g_string_boolean;
+  String g_string_number;
+  String g_string_object;
+  String g_string_string;
+  String g_string_true;
+  String g_string_false;
+  String g_string_null;
+  String g_string_undefined;
+  String g_string_length;
+  String g_string_objtostr;
+  String g_string_empty;
+  String g_string_comma;
+  String g_string_blank;
+
+  Flonum g_flonum_infinity;
+  Flonum g_flonum_negative_infinity;
+  Flonum g_flonum_nan;
+
+  SimpleObject g_global;
+  SimpleObject g_math;
+}
+
+//externC type ShapePtr = "ShapePtr" : int
+externC type ShapePtr = "Shape*"
+
+externC mapping global_object_shapes{
+  ShapePtr g_shape_Object;
+  ShapePtr g_shape_Function;
+  ShapePtr g_shape_Builtin;
+  ShapePtr g_shape_Array;
+  ShapePtr g_shape_Number;
+  ShapePtr g_shape_String;
+  ShapePtr g_shape_Boolean;
+}
+
+// FunctionTable
+// SpecialRegisters
+// UnwindProtet
+
+externC type Instruction = "Instruction*"
+externC type bool
+
+externC mapping FunctionTable{
+  int index;
+  int call_entry;
+  int send_entry;
+  int n_locals;
+  Instruction insns;
+  JSValue[] constants;
+  bool ilabel_created;
+  int n_insns;
+  int n_constants;
+}
+
+externC mapping heap FunctionFrame{
+  FunctionFrame prev_frame;
+  JSValue arguments;
+  int nlocals;
+  JSValue[] locals;
+}
+
+externC mapping SpecialRegisters{
+  int fp;
+  FunctionTable cf;
+  FunctionFrame lp;
+  int sp;
+  int pc;
+  int ac;
+  JSValue a;
+  JSValue err;
+  bool iserr;
+}
+
+externC type jmp_buf = "jump_buf*"
+// externC constant jmp_buf_addr = "&jmp_buf" : jmp_buf
+
+externC mapping heap UnwindProtect{
+  UnwindProtect prev;
+  int fp;
+  int pc;
+  FunctionFrame lp;
+  int lcall_stack_ptr;
+  jmp_buf _jmp_buf;
+}
+
+externC mapping Context{
+  JSValue global;
+  FunctionTable function_table;
+  SpecialRegisters spreg;
+  int tablesize;
+  JSValue[] stack;
+  UnwindProtect exhandler_stack_top;
+  UnwindProtect exhandler_pool;
+  JSValue lcall_stack;
+  int lcall_stack_ptr;
+  /* etc. (With ifdef) */
+}
+
+externC constant gconsts = "gconsts" : global_constant_objects val
+externC constant gshapes = "gshapes" : global_object_shapes val
+
+externC type DDFunc = "DDFunc"
+externC type DDDFunc = "DDDFunc"

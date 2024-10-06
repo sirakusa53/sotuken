@@ -1,0 +1,7 @@
+======== move_get ========
+0: total CPU time = 0.277 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 2390, n_exit_hc = 1227
+1: total CPU time = 0.477 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 2390, n_exit_hc = 1227
+
+======== move_get Optimisation ========
+0: total CPU time = 0.160 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 342, n_exit_hc = 203
+1: total CPU time = 0.199 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 342, n_exit_hc = 203

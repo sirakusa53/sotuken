@@ -1,0 +1,19 @@
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, needContext, tailCall)
+setglobal : (String, JSValue) -> void
+
+setglobal (prop, src) {
+    top: match(prop) {
+        case (String prop){
+#ifdef INLINE_CACHE
+            SetglobalInl(prop, src);
+#else /* INLINE_CACHE */
+            Setglobal(prop, src);
+#endif /* INLINE_CACHE */
+        }
+        case (true){
+            LOG_EXIT("SETGLOBAL with non-string variable name\n");
+        }
+    }
+}

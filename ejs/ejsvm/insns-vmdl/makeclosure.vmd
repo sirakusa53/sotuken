@@ -1,0 +1,12 @@
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, needContext, tailCall)
+makeclosure : Subscript -> JSValue
+
+makeclosure (s1) {
+    Subscript ss = s1 + 1;
+    save_context();
+    Function result = Makeclosure(ss);
+    update_context();
+    return result;
+}

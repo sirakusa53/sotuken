@@ -1,0 +1,6 @@
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, makeInline) fixnum_to_object : Fixnum -> JSObject
+fixnum_to_object(v){
+    return new_number_object("fixnum_to_object", gshapes.g_shape_Number, v);
+}

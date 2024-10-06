@@ -1,0 +1,11 @@
+======== access-binary-trees ========
+0: total CPU time = 28.22 msec, total GC time = 2.813 msec (#GC = 9) n_hc = 24, n_enter_hc = 463145, n_exit_hc = 294714
+1: total CPU time = 20.716 msec, total GC time = 1.788 msec (#GC = 9) n_hc = 24, n_enter_hc = 463145, n_exit_hc = 294714
+2: total CPU time = 29.20 msec, total GC time = 0.0 msec (#GC = 9) n_hc = 24, n_enter_hc = 463145, n_exit_hc = 294714
+3: total CPU time = 24.907 msec, total GC time = 0.965 msec (#GC = 9) n_hc = 24, n_enter_hc = 463145, n_exit_hc = 294714
+4: total CPU time = 24.921 msec, total GC time = 1.933 msec (#GC = 9) n_hc = 24, n_enter_hc = 463145, n_exit_hc = 294714
+5: total CPU time = 29.346 msec, total GC time = 0.0 msec (#GC = 9) n_hc = 24, n_enter_hc = 463145, n_exit_hc = 294714
+6: total CPU time = 29.548 msec, total GC time = 0.0 msec (#GC = 9) n_hc = 24, n_enter_hc = 463145, n_exit_hc = 294714
+7: total CPU time = 25.458 msec, total GC time = 0.770 msec (#GC = 9) n_hc = 24, n_enter_hc = 463145, n_exit_hc = 294714
+8: total CPU time = 29.76 msec, total GC time = 0.0 msec (#GC = 9) n_hc = 24, n_enter_hc = 463145, n_exit_hc = 294714
+9: total CPU time = 29.60 msec, total GC time = 0.0 msec (#GC = 9) n_hc = 24, n_enter_hc = 463145, n_exit_hc = 294714

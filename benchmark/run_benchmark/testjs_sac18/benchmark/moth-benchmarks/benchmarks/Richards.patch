@@ -1,0 +1,55 @@
+--- Richards.js	2020-03-19 19:51:59.642742108 +0900
++++ Richards-fix.js	2020-03-19 19:53:45.574740464 +0900
+@@ -62,7 +62,7 @@
+   // init scheduler
+   this.queuePacketCount = 0;
+   this.holdCount = 0;
+-  this.taskTable = new Array(NUM_TYPES).fill(NO_TASK);
++  this.taskTable = (new Array(NUM_TYPES)).fill(NO_TASK);
+   this.taskList  = NO_TASK;
+ 
+   this.currentTask = null;
+@@ -284,7 +284,8 @@
+ 
+ function HandlerTaskDataRecord() {
+   RBObject.call(this);
+-  this.workIn = this.deviceIn = NO_WORK;
++  this.deviceIn = NO_WORK;
++  this.workIn = this.deviceIn;
+ }
+ HandlerTaskDataRecord.prototype = Object.create(RBObject.prototype);
+ 
+@@ -308,7 +309,7 @@
+   this.identity = identity;
+   this.kind     = kind;
+   this.datum    = 0;
+-  this.data     = new Array(DATA_SIZE).fill(0);
++  this.data     = (new Array(DATA_SIZE)).fill(0);
+ }
+ Packet.prototype = Object.create(RBObject.prototype);
+ 
+@@ -336,17 +337,21 @@
+ };
+ 
+ TaskState.prototype.running = function () {
+-  this.packetPending_ = this.taskWaiting_ = this.taskHolding_ = false;
++  this.taskHolding_ = false;
++  this.taskWaiting_ = this.taskHolding_;
++  this.packetPending_ = this.taskWaiting_ ;
+ };
+ 
+ TaskState.prototype.waiting = function () {
+-  this.packetPending_ = this.taskHolding_ = false;
++  this.taskHolding_ = false;
++  this.packetPending_ = this.taskHolding_;
+   this.taskWaiting_ = true;
+ };
+ 
+ TaskState.prototype.waitingWithPacket = function () {
+   this.taskHolding_ = false;
+-  this.taskWaiting_ = this.packetPending_ = true;
++  this.packetPending_ = true;
++  this.taskWaiting_ = this.packetPending_;
+ };
+ 
+ TaskState.prototype.isRunning = function () {

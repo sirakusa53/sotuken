@@ -1,0 +1,202 @@
+fingerprint 82
+funcLength 2
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 129
+numberOfConstants 15
+setfl 13
+setfl 13
+makeclosure 1 0 # 30 0
+bigprim 2 #0:string="morph"
+setglobal 2 1
+fixnum 1 15
+bigprim 2 #1:string="loops"
+setglobal 2 1
+fixnum 1 120
+bigprim 2 #2:string="nx"
+setglobal 2 1
+bigprim 3 #3:string="nz"
+setglobal 3 1
+bigprim 1 #4:string="Array"
+getglobal 1 1
+getglobal 2 2
+getglobal 3 3
+mul 2 2 3
+mulregfix 2 2 3
+move 13 2
+call 1 1
+setfl 13
+geta 1 # 43 8
+bigprim 2 #5:string="a"
+setglobal 2 1
+fixnum 1 0
+bigprim 2 #6:string="i"
+setglobal 2 1
+jump 8 # 44 0
+bigprim 1 #5:string="a"
+getglobal 1 1
+getglobal 3 2
+setpropregregfix 1 3 0
+getglobal 1 2
+addregfix 1 1 1
+setglobal 2 1
+bigprim 2 #6:string="i"
+getglobal 1 2
+bigprim 3 #2:string="nx"
+getglobal 3 3
+bigprim 4 #3:string="nz"
+getglobal 4 4
+mul 3 3 4
+mulregfix 3 3 3
+lessthan 1 1 3
+jumptrue 1 -16 # 44 14
+fixnum 1 0
+setglobal 2 1
+jump 15 # 48 0
+bigprim 1 #0:string="morph"
+getglobal 1 1
+bigprim 2 #5:string="a"
+getglobal 2 2
+getglobal 4 3
+getglobal 5 5
+div 4 4 5
+move 12 2
+move 13 4
+call 1 2
+setfl 13
+getglobal 1 3
+addregfix 1 1 1
+setglobal 3 1
+bigprim 3 #6:string="i"
+getglobal 1 3
+bigprim 5 #1:string="loops"
+getglobal 2 5
+lessthan 1 1 2
+jumptrue 1 -19 # 48 16
+fixnum 1 0
+bigprim 2 #7:string="testOutput"
+setglobal 2 1
+setglobal 3 1
+jump 18 # 53 0
+bigprim 2 #7:string="testOutput"
+getglobal 1 2
+bigprim 3 #5:string="a"
+getglobal 3 3
+getglobal 5 4
+getglobal 6 6
+mul 5 5 6
+getglobal 6 4
+add 5 5 6
+mulfixreg 5 3 5
+addregfix 5 5 1
+getprop 3 3 5
+add 1 1 3
+setglobal 2 1
+getglobal 1 4
+addregfix 1 1 1
+setglobal 4 1
+bigprim 4 #6:string="i"
+getglobal 1 4
+bigprim 6 #2:string="nx"
+getglobal 2 6
+lessthan 1 1 2
+jumptrue 1 -22 # 53 16
+specconst 1 null
+bigprim 2 #5:string="a"
+setglobal 2 1
+bigprim 1 #8:number=1.0E-13
+bigprim 2 #9:string="epsilon"
+setglobal 2 1
+bigprim 1 #10:string="Math"
+getglobal 1 1
+getpropregstr 3 1 #11:string="abs"
+bigprim 4 #7:string="testOutput"
+getglobal 5 4
+move 12 1
+move 13 5
+send 3 1
+setfl 13
+geta 1 # 63 4
+getglobal 3 2
+lessthanequal 1 3 1
+jumpfalse 1 12 # 63 4
+bigprim 1 #12:string="print"
+getglobal 1 1
+getglobal 2 2
+addstrreg 2 #13:string="Error:\sbad\stest\soutput:\sexpected\smagnitude\sbelow\s" 2
+addregstr 2 2 #14:string="\sbut\sgot\s"
+getglobal 3 4
+add 2 2 3
+move 13 2
+call 1 1
+setfl 13
+geta 1 # 65 4
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 61
+numberOfConstants 5
+setfl 15
+setfl 15
+bigprim 1 #0:string="Math"
+getglobal 4 1
+getpropregstr 4 4 #1:string="PI"
+mulregfix 4 4 8
+bigprim 5 #2:string="nx"
+getglobal 5 5
+div 4 4 5
+move 5 4 # 31 8
+getglobal 4 1
+getpropregstr 4 4 #3:string="sin"
+move 6 4 # 32 8
+getglobal 1 1
+getpropregstr 1 1 #1:string="PI"
+mul 1 3 1
+mulregfix 1 1 2
+move 15 1
+call 4 1
+setfl 15
+geta 1 # 33 21
+mulfixreg 1 50 1
+mulregfix 4 1 -1
+move 1 4 # 33 8
+fixnum 3 0
+jump 28 # 35 4
+fixnum 4 0
+move 7 4
+jump 19 # 36 8
+move 4 7 # 37 38
+subregfix 4 4 1
+mul 4 4 5
+move 15 4
+call 6 1
+setfl 15
+geta 4 # 37 33
+mulregfix 8 1 -1
+mul 4 4 8
+move 8 3 # 37 17
+getglobal 9 9
+mul 8 8 9
+add 8 8 7
+mulfixreg 8 3 8
+addregfix 8 8 1
+setprop 2 8 4
+addregfix 4 7 1
+move 7 4 # 36 34
+move 4 7 # 36 24
+bigprim 9 #2:string="nx"
+getglobal 8 9
+lessthan 4 4 8
+jumptrue 4 -22 # 36 24
+addregfix 3 3 1
+move 4 3 # 35 20
+bigprim 7 #4:string="nz"
+getglobal 7 7
+lessthan 4 4 7
+jumptrue 4 -31 # 35 20
+specconst 1 undefined
+seta 1
+ret

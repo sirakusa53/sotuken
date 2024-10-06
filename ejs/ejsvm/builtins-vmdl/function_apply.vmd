@@ -1,0 +1,36 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) function_apply: (JSValue, JSValue, JSValue) -> JSValue 
+function_apply(func, thisArg, argsArray){
+    JSValue as;
+    if(is_undefined(argsArray) || is_null(argsArray))
+        as <- new_array_object(DEBUG_NAME("function_apply"), gshapes.g_shape_Array, 0);
+    else{
+        match(argsArray){
+            case(Array argsArray){
+                as <- argsArray;
+            }
+            case(true){
+                LOG_EXIT("apply: the second argument is expected to be an array");
+                as <- JS_EMPTY;
+            }
+        }
+    }
+    JSValue alen_jsv = get_prop_prototype_chain(as, gconsts.g_string_length);
+    int alen = (alen_jsv != JS_EMPTY) ? to_cint(to_number(alen_jsv)) : 0;
+    JSValue ret;
+    match(func){
+        case(Function func){
+            ret <- invoke_function(thisArg, func, TRUE, as, alen);
+        }
+        case(Builtin func){
+            ret <- invoke_builtin(thisArg, func, TRUE, as, alen);
+        }
+        case(true){
+            LOG_EXIT("apply: the receiver has to be a function/builtin");
+            ret <- JS_EMPTY;
+        }
+    }
+    return ret;
+}

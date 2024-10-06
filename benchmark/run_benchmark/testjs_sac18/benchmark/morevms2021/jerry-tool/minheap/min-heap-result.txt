@@ -1,0 +1,17 @@
+DeltaBlue-small 7606
+CD-small 386
+Bounce-small 17
+Havlak-small -1
+Json-small -1
+List-small 14
+Mandelbrot-small 14
+NBody-small 16
+Permute-small 14
+Queens-small 14
+Richards-small 23
+Sieve-small 33
+Storage-small 293
+Towers-small 14
+CD-dyn-small 380
+RESULT: ours dht11 20
+

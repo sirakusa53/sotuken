@@ -1,0 +1,43 @@
+#include "../header-vmdl/patterns.vmdh"
+
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, needContext, tailCall)
+unsignedrightshift : (JSValue, JSValue) -> Number
+unsignedrightshift (v1, v2) {
+  top: match (v1, v2) {
+    case (Fixnum v1 && Fixnum v2) {
+      uint32_t x1 = cint_to_uint32(to_cint(v1));
+      int x2 = to_cint(v2) & 31;
+      return uint32_to_number(x1 >> x2);
+    }
+    case (Fixnum v1 && Flonum v2) {
+      uint32_t x1 = cint_to_uint32(to_cint(v1));
+      int x2 = to_cint(v2) & 31;
+      return uint32_to_number(x1 >> x2);
+    }
+    case (Flonum v1 && Fixnum v2) {
+      uint32_t x1 = cint_to_uint32(to_cint(v1));
+      int x2 = to_cint(v2) & 31;
+      return uint32_to_number(x1 >> x2);
+    }
+    case (Flonum v1 && Flonum v2) {
+      uint32_t x1 = cint_to_uint32(to_cint(v1));
+      int x2 = to_cint(v2) & 31;
+      return uint32_to_number(x1 >> x2);
+    }
+    case (number v1) {
+      Number u2 = to_number(v2);
+      rematch top(v1, u2);
+    }
+    case (number v2) {
+      Number u1 = to_number(v1);
+      rematch top(u1, v2);
+    }
+    case (true) {
+      Number u1 = to_number(v1);
+      Number u2 = to_number(v2);
+      rematch top(u1, u2);
+    }
+  }
+}

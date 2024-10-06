@@ -1,0 +1,7 @@
+======== bitops-3bit-bits-in-byte ========
+0: total CPU time = 43.290 msec, total GC time = 3.94 msec (#GC = 7) n_hc = 20, n_enter_hc = 256349, n_exit_hc = 128207
+1: total CPU time = 44.972 msec, total GC time = 3.474 msec (#GC = 7) n_hc = 20, n_enter_hc = 256349, n_exit_hc = 128207
+
+======== bitops-3bit-bits-in-byte Optimisation ========
+0: total CPU time = 44.891 msec, total GC time = 3.196 msec (#GC = 7) n_hc = 20, n_enter_hc = 256349, n_exit_hc = 128207
+1: total CPU time = 47.883 msec, total GC time = 3.397 msec (#GC = 7) n_hc = 20, n_enter_hc = 256349, n_exit_hc = 128207

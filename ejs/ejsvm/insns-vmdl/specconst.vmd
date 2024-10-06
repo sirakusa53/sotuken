@@ -1,0 +1,10 @@
+#include "../header-vmdl/patterns.vmdh"
+
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, needContext, tailCall)
+specconst : int -> int
+
+specconst (i0) {
+    return i0;
+}

@@ -1,0 +1,9 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) function_toString: JSValue -> JSValue 
+function_toString(func){
+    rest <- ARRAY_NULL;  /* suppress warning message */
+    JSValue ret = CstrToString("[function]");
+    return ret; 
+}

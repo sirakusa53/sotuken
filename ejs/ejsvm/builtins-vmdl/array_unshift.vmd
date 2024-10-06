@@ -1,0 +1,45 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) array_unshift : Array -> JSValue 
+array_unshift(o){
+  /* 2. 3. */
+  int len = number_to_cint(get_jsarray_length(o));
+  /* 5. */
+  int k = len;
+  /* 6. */
+  while(k > 0){
+    /* a. */
+    int from = k - 1;
+    /* b. */
+    int to_ = k + na - 1;
+    /* c. */
+    if(has_array_element(o, from)){
+      /* d. */
+      /* i. */
+      JSValue from_value = get_array_element(o, from);
+      /* ii. */
+      set_array_element(o, to_, from_value);
+    }else{
+      /* e. */
+      /* i. */
+      delete_array_element(o, to_);
+    }
+    /* f. */
+    k <- k - 1;
+  }
+  /* 7. */
+  int j = 0;
+  /* 8. 9. */
+  do(int i=0 to n_rest-1 step 1){
+    /* b. */
+    set_array_element(o, j, rest[i]);
+    /* c. */
+    j <- j + 1;
+  }
+  /* 10. */
+  JSValue new_length = cint_to_number(len + na);
+  set_jsarray_length(o, new_length);
+  /* 11. */
+  return new_length;
+}

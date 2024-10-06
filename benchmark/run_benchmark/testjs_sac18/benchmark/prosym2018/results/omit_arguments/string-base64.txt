@@ -1,0 +1,7 @@
+======== string-base64 ========
+0: total CPU time = 1161.297 msec, total GC time = 15.263 msec (#GC = 116) n_hc = 20, n_enter_hc = 639397, n_exit_hc = 426238
+1: total CPU time = 1169.460 msec, total GC time = 15.496 msec (#GC = 116) n_hc = 20, n_enter_hc = 639397, n_exit_hc = 426238
+
+======== string-base64 Optimisation ========
+0: total CPU time = 1131.222 msec, total GC time = 14.270 msec (#GC = 116) n_hc = 20, n_enter_hc = 639397, n_exit_hc = 426238
+1: total CPU time = 1116.227 msec, total GC time = 14.229 msec (#GC = 116) n_hc = 20, n_enter_hc = 639397, n_exit_hc = 426238

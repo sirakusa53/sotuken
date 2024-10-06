@@ -1,0 +1,1008 @@
+fingerprint 82
+funcLength 18
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 125
+numberOfConstants 31
+setfl 12
+setfl 12
+makeclosure 1 0 # 22 0
+bigprim 2 #0:string="hex_sha1"
+setglobal 2 1
+makeclosure 1 1 # 23 0
+bigprim 2 #1:string="b64_sha1"
+setglobal 2 1
+makeclosure 1 2 # 24 0
+bigprim 2 #2:string="str_sha1"
+setglobal 2 1
+makeclosure 1 3 # 25 0
+bigprim 2 #3:string="hex_hmac_sha1"
+setglobal 2 1
+makeclosure 1 4 # 26 0
+bigprim 2 #4:string="b64_hmac_sha1"
+setglobal 2 1
+makeclosure 1 5 # 27 0
+bigprim 2 #5:string="str_hmac_sha1"
+setglobal 2 1
+makeclosure 1 6 # 32 0
+bigprim 2 #6:string="sha1_vm_test"
+setglobal 2 1
+makeclosure 1 7 # 40 0
+bigprim 2 #7:string="core_sha1"
+setglobal 2 1
+makeclosure 1 8 # 88 0
+bigprim 2 #8:string="sha1_ft"
+setglobal 2 1
+makeclosure 1 9 # 99 0
+bigprim 2 #9:string="sha1_kt"
+setglobal 2 1
+makeclosure 1 10 # 108 0
+bigprim 2 #10:string="core_hmac_sha1"
+setglobal 2 1
+makeclosure 1 11 # 128 0
+bigprim 2 #11:string="safe_add"
+setglobal 2 1
+makeclosure 1 12 # 138 0
+bigprim 2 #12:string="rol"
+setglobal 2 1
+makeclosure 1 13 # 147 0
+bigprim 2 #13:string="str2binb"
+setglobal 2 1
+makeclosure 1 14 # 159 0
+bigprim 2 #14:string="binb2str"
+setglobal 2 1
+makeclosure 1 15 # 171 0
+bigprim 2 #15:string="binb2hex"
+setglobal 2 1
+makeclosure 1 16 # 186 0
+bigprim 2 #16:string="binb2b64"
+setglobal 2 1
+fixnum 1 0
+bigprim 2 #17:string="hexcase"
+setglobal 2 1
+bigprim 1 #18:string=""
+bigprim 2 #19:string="b64pad"
+setglobal 2 1
+fixnum 1 8
+bigprim 2 #20:string="chrsz"
+setglobal 2 1
+bigprim 1 #21:string="Two\shouseholds,\sboth\salike\sin\sdignity,\nIn\sfair\sVerona,\swhere\swe\slay\sour\sscene,\nFrom\sancient\sgrudge\sbreak\sto\snew\smutiny,\nWhere\scivil\sblood\smakes\scivil\shands\sunclean.\nFrom\sforth\sthe\sfatal\sloins\sof\sthese\stwo\sfoes\nA\spair\sof\sstar-cross'd\slovers\stake\stheir\slife;\nWhole\smisadventured\spiteous\soverthrows\nDo\swith\stheir\sdeath\sbury\stheir\sparents'\sstrife.\nThe\sfearful\spassage\sof\stheir\sdeath-mark'd\slove,\nAnd\sthe\scontinuance\sof\stheir\sparents'\srage,\nWhich,\sbut\stheir\schildren's\send,\snought\scould\sremove,\nIs\snow\sthe\stwo\shours'\straffic\sof\sour\sstage;\nThe\swhich\sif\syou\swith\spatient\sears\sattend,\nWhat\shere\sshall\smiss,\sour\stoil\sshall\sstrive\sto\smend."
+bigprim 2 #22:string="plainText"
+setglobal 2 1
+fixnum 1 0
+bigprim 2 #23:string="i"
+setglobal 2 1
+jump 9 # 220 0
+bigprim 2 #22:string="plainText"
+getglobal 1 2
+getglobal 3 2
+add 1 1 3
+setglobal 2 1
+getglobal 1 4
+addregfix 1 1 1
+setglobal 4 1
+bigprim 4 #23:string="i"
+getglobal 1 4
+lessthanregfix 1 1 4
+jumptrue 1 -11 # 220 16
+bigprim 1 #0:string="hex_sha1"
+getglobal 1 1
+bigprim 2 #22:string="plainText"
+getglobal 2 2
+move 12 2
+call 1 1
+setfl 12
+geta 1 # 224 17
+bigprim 2 #24:string="sha1Output"
+setglobal 2 1
+bigprim 1 #25:string="2524d264def74cce2498bf112bedf00e6c0b796d"
+bigprim 3 #26:string="expected"
+setglobal 3 1
+getglobal 1 2
+getglobal 4 3
+equal 5 1 4
+isundef 6 5 # 227 4
+jumpfalse 6 17 # 227 4
+isobject 5 1 # 227 4
+jumpfalse 5 6 # 227 4
+getpropregstr 5 1 #27:string="valueOf"
+move 12 1
+send 5 0
+geta 1 # 227 4
+jump 5 # 227 4
+getpropregstr 5 4 #27:string="valueOf"
+move 12 4
+send 5 0
+geta 4 # 227 4
+equal 5 1 4
+isundef 1 5 # 227 4
+jumpfalse 1 3 # 227 4
+bigprim 1 #28:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 227 4
+not 1 5
+jumpfalse 1 7 # 227 4
+getglobal 1 3
+addstrreg 1 #29:string="ERROR:\sbad\sresult:\sexpected\s" 1
+addregstr 1 1 #30:string="\sbut\sgot\s"
+getglobal 2 2
+add 1 1 2
+throw 1
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 27
+numberOfConstants 5
+setfl 12
+setfl 12
+bigprim 1 #0:string="binb2hex"
+getglobal 1 1
+bigprim 3 #1:string="core_sha1"
+getglobal 3 3
+bigprim 4 #2:string="str2binb"
+getglobal 4 4
+move 12 2
+call 4 1
+setfl 12
+geta 4 # 22 47
+getpropregstr 2 2 #3:string="length"
+bigprim 5 #4:string="chrsz"
+getglobal 5 5
+mul 2 2 5
+move 11 4
+move 12 2
+call 3 2
+setfl 12
+geta 2 # 22 37
+move 12 2
+call 1 1
+setfl 12
+geta 1 # 22 28
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 27
+numberOfConstants 5
+setfl 12
+setfl 12
+bigprim 1 #0:string="binb2b64"
+getglobal 1 1
+bigprim 3 #1:string="core_sha1"
+getglobal 3 3
+bigprim 4 #2:string="str2binb"
+getglobal 4 4
+move 12 2
+call 4 1
+setfl 12
+geta 4 # 23 47
+getpropregstr 2 2 #3:string="length"
+bigprim 5 #4:string="chrsz"
+getglobal 5 5
+mul 2 2 5
+move 11 4
+move 12 2
+call 3 2
+setfl 12
+geta 2 # 23 37
+move 12 2
+call 1 1
+setfl 12
+geta 1 # 23 28
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 27
+numberOfConstants 5
+setfl 12
+setfl 12
+bigprim 1 #0:string="binb2str"
+getglobal 1 1
+bigprim 3 #1:string="core_sha1"
+getglobal 3 3
+bigprim 4 #2:string="str2binb"
+getglobal 4 4
+move 12 2
+call 4 1
+setfl 12
+geta 4 # 24 47
+getpropregstr 2 2 #3:string="length"
+bigprim 5 #4:string="chrsz"
+getglobal 5 5
+mul 2 2 5
+move 11 4
+move 12 2
+call 3 2
+setfl 12
+geta 2 # 24 37
+move 12 2
+call 1 1
+setfl 12
+geta 1 # 24 28
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 17
+numberOfConstants 2
+setfl 11
+setfl 11
+bigprim 1 #0:string="binb2hex"
+getglobal 1 1
+bigprim 4 #1:string="core_hmac_sha1"
+getglobal 4 4
+move 10 2
+move 11 3
+call 4 2
+setfl 11
+geta 2 # 25 51
+move 11 2
+call 1 1
+setfl 11
+geta 1 # 25 42
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 17
+numberOfConstants 2
+setfl 11
+setfl 11
+bigprim 1 #0:string="binb2b64"
+getglobal 1 1
+bigprim 4 #1:string="core_hmac_sha1"
+getglobal 4 4
+move 10 2
+move 11 3
+call 4 2
+setfl 11
+geta 2 # 26 51
+move 11 2
+call 1 1
+setfl 11
+geta 1 # 26 42
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 17
+numberOfConstants 2
+setfl 11
+setfl 11
+bigprim 1 #0:string="binb2str"
+getglobal 1 1
+bigprim 4 #1:string="core_hmac_sha1"
+getglobal 4 4
+move 10 2
+move 11 3
+call 4 2
+setfl 11
+geta 2 # 27 51
+move 11 2
+call 1 1
+setfl 11
+geta 1 # 27 42
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 31
+numberOfConstants 5
+setfl 10
+setfl 10
+bigprim 1 #0:string="hex_sha1"
+getglobal 1 1
+bigprim 2 #1:string="abc"
+move 10 2
+call 1 1
+setfl 10
+geta 1 # 34 9
+bigprim 2 #2:string="a9993e364706816aba3e25717850c26c9cd0d89d"
+equalregstr 3 1 #2:string="a9993e364706816aba3e25717850c26c9cd0d89d"
+isundef 4 3 # 34 9
+jumpfalse 4 17 # 34 9
+isobject 3 1 # 34 9
+jumpfalse 3 6 # 34 9
+getpropregstr 3 1 #3:string="valueOf"
+move 10 1
+send 3 0
+geta 1 # 34 9
+jump 5 # 34 9
+getpropregstr 3 2 #3:string="valueOf"
+move 10 2
+send 3 0
+geta 2 # 34 9
+equal 3 1 2
+isundef 1 3 # 34 9
+jumpfalse 1 3 # 34 9
+bigprim 1 #4:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 34 9
+seta 3
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 216
+numberOfConstants 6
+setfl 32
+setfl 32
+rightshiftregfix 1 3 5
+getprop 1 2 1
+modregfix 4 3 32
+subfixreg 4 24 4
+leftshiftfixreg 4 128 4
+bitor 1 1 4
+rightshiftregfix 4 3 5
+setprop 2 4 1
+addregfix 1 3 64
+rightshiftregfix 1 1 9
+leftshiftregfix 1 1 4
+addregfix 1 1 15
+setprop 2 1 3
+bigprim 1 #0:string="Array"
+getglobal 1 1
+fixnum 3 80
+move 32 3
+call 1 1
+setfl 32
+geta 1 # 46 10
+move 3 1 # 46 6
+fixnum 1 1732584193
+move 4 1
+fixnum 1 -271733879
+move 5 1
+fixnum 1 -1732584194
+move 6 1
+fixnum 1 271733878
+move 7 1
+fixnum 1 -1009589776
+move 8 1
+fixnum 1 0
+move 9 1
+jump 165 # 53 2
+move 1 4 # 55 15
+move 10 1 # 55 8
+move 1 5 # 56 15
+move 11 1 # 56 8
+move 1 6 # 57 15
+move 12 1 # 57 8
+move 1 7 # 58 15
+move 13 1 # 58 8
+move 1 8 # 59 15
+move 14 1 # 59 8
+fixnum 1 0
+move 15 1
+jump 112 # 61 4
+move 1 15 # 63 9
+lessthanregfix 1 1 16
+jumpfalse 1 6 # 63 9
+move 1 9 # 63 26
+add 1 1 15
+getprop 1 2 1
+setprop 3 15 1
+jump 33 # 64 11
+bigprim 1 #1:string="rol"
+getglobal 1 1
+subregfix 16 15 3
+getprop 16 3 16
+subregfix 17 15 8
+getprop 17 3 17
+bitor 18 16 17
+bitand 16 16 17
+subfixreg 16 0 16
+fixnum 17 1
+subregfix 16 16 1
+bitand 16 16 18
+subregfix 18 15 14
+getprop 18 3 18
+bitor 19 16 18
+bitand 16 16 18
+subfixreg 16 0 16
+subregfix 16 16 1
+bitand 16 16 19
+subregfix 18 15 16
+getprop 18 3 18
+bitor 19 16 18
+bitand 16 16 18
+subfixreg 16 0 16
+subregfix 16 16 1
+bitand 16 16 19
+move 31 16
+move 32 17
+call 1 2
+setfl 32
+geta 1 # 64 18
+setprop 3 15 1
+bigprim 1 #2:string="safe_add"
+getglobal 16 1
+getglobal 17 1
+bigprim 18 #1:string="rol"
+getglobal 19 18
+move 20 4 # 65 36
+fixnum 21 5
+move 31 20
+move 32 21
+call 19 2
+setfl 32
+geta 19 # 65 32
+bigprim 20 #3:string="sha1_ft"
+getglobal 20 20
+move 21 15 # 65 51
+move 22 5 # 65 54
+move 29 21
+move 30 22
+move 31 6
+move 32 7
+call 20 4
+setfl 32
+geta 20 # 65 43
+move 31 19
+move 32 20
+call 17 2
+setfl 32
+geta 17 # 65 23
+getglobal 19 1
+getglobal 1 1
+getprop 20 3 15
+move 31 8
+move 32 20
+call 1 2
+setfl 32
+geta 1 # 66 32
+bigprim 8 #4:string="sha1_kt"
+getglobal 8 8
+move 32 15
+call 8 1
+setfl 32
+geta 8 # 66 51
+move 31 1
+move 32 8
+call 19 2
+setfl 32
+geta 1 # 66 23
+move 31 17
+move 32 1
+call 16 2
+setfl 32
+geta 1 # 65 14
+move 16 1 # 65 10
+move 1 7 # 67 10
+move 8 1 # 67 6
+move 1 6 # 68 10
+move 7 1 # 68 6
+getglobal 1 18
+fixnum 6 30
+move 31 5
+move 32 6
+call 1 2
+setfl 32
+geta 1 # 69 10
+move 6 1 # 69 6
+move 1 4 # 70 10
+move 5 1 # 70 6
+move 1 16 # 71 10
+move 4 1 # 71 6
+addregfix 1 15 1
+move 15 1 # 61 27
+lessthanregfix 1 15 80
+jumptrue 1 -112 # 61 19
+bigprim 15 #2:string="safe_add"
+getglobal 1 15
+move 31 4
+move 32 10
+call 1 2
+setfl 32
+geta 1 # 74 8
+move 4 1 # 74 4
+getglobal 1 15
+move 31 5
+move 32 11
+call 1 2
+setfl 32
+geta 1 # 75 8
+move 5 1 # 75 4
+getglobal 1 15
+move 31 6
+move 32 12
+call 1 2
+setfl 32
+geta 1 # 76 8
+move 6 1 # 76 4
+getglobal 1 15
+move 31 7
+move 32 13
+call 1 2
+setfl 32
+geta 1 # 77 8
+move 7 1 # 77 4
+getglobal 1 15
+move 31 8
+move 32 14
+call 1 2
+setfl 32
+geta 1 # 78 8
+move 8 1 # 78 4
+addregfix 1 9 16
+move 9 1 # 53 31
+move 1 9 # 53 17
+getpropregstr 10 2 #5:string="length"
+lessthan 1 1 10
+jumptrue 1 -167 # 53 17
+bigprim 1 #0:string="Array"
+getglobal 1 1
+move 28 4
+move 29 5
+move 30 6
+move 31 7
+move 32 8
+call 1 5
+setfl 32
+geta 1 # 80 9
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 46
+numberOfConstants 0
+setfl 10
+setfl 10
+lessthanregfix 1 2 20
+jumpfalse 1 8 # 90 5
+bitand 1 3 4
+subfixreg 2 0 3
+subregfix 2 2 1
+bitand 2 2 5
+bitor 1 1 2
+seta 1
+ret
+lessthanregfix 1 2 40
+jumpfalse 1 13 # 91 5
+bitor 1 3 4
+bitand 2 3 4
+subfixreg 2 0 2
+subregfix 2 2 1
+bitand 1 2 1
+bitor 2 1 5
+bitand 1 1 5
+subfixreg 1 0 1
+subregfix 1 1 1
+bitand 1 1 2
+seta 1
+ret
+lessthanregfix 1 2 60
+jumpfalse 1 8 # 92 5
+bitand 1 3 4
+bitand 2 3 5
+bitor 1 1 2
+bitand 2 4 5
+bitor 1 1 2
+seta 1
+ret
+bitor 1 3 4
+bitand 2 3 4
+subfixreg 2 0 2
+subregfix 2 2 1
+bitand 1 2 1
+bitor 2 1 5
+bitand 1 1 5
+subfixreg 1 0 1
+subregfix 1 1 1
+bitand 1 1 2
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 17
+numberOfConstants 0
+setfl 7
+setfl 7
+lessthanregfix 1 2 20
+jumpfalse 1 3 # 101 10
+fixnum 1 1518500249
+jump 10 # 101 21
+lessthanregfix 1 2 40
+jumpfalse 1 3 # 101 35
+fixnum 1 1859775393
+jump 6 # 101 46
+lessthanregfix 1 2 60
+jumpfalse 1 3 # 102 10
+fixnum 1 -1894007588
+jump 2 # 102 20
+fixnum 1 -899497514
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 100
+numberOfConstants 6
+setfl 15
+setfl 15
+bigprim 1 #0:string="str2binb"
+getglobal 1 1
+move 15 2
+call 1 1
+setfl 15
+geta 1 # 110 13
+move 4 1 # 110 6
+getpropregstr 1 1 #1:string="length"
+fixnum 5 16
+lessthanfixreg 1 16 1
+jumpfalse 1 13 # 111 5
+bigprim 1 #2:string="core_sha1"
+getglobal 1 1
+getpropregstr 2 2 #1:string="length"
+bigprim 6 #3:string="chrsz"
+getglobal 6 6
+mul 2 2 6
+move 14 4
+move 15 2
+call 1 2
+setfl 15
+geta 1 # 111 30
+move 4 1 # 111 23
+bigprim 2 #4:string="Array"
+getglobal 1 2
+move 15 5
+call 1 1
+setfl 15
+geta 1 # 113 13
+move 6 1 # 113 6
+getglobal 1 2
+move 15 5
+call 1 1
+setfl 15
+geta 1 # 113 31
+move 2 1 # 113 24
+fixnum 1 0
+move 5 1
+jump 19 # 114 2
+getprop 1 4 5
+fixnum 7 909522486
+bitor 8 1 7
+bitand 1 1 7
+subfixreg 1 0 1
+subregfix 1 1 1
+bitand 1 1 8
+setprop 6 5 1
+getprop 1 4 5
+fixnum 7 1549556828
+bitor 8 1 7
+bitand 1 1 7
+subfixreg 1 0 1
+subregfix 1 1 1
+bitand 1 1 8
+setprop 2 5 1
+addregfix 1 5 1
+move 5 1 # 114 25
+lessthanregfix 1 5 16
+jumptrue 1 -19 # 114 17
+bigprim 4 #2:string="core_sha1"
+getglobal 1 4
+getpropregstr 5 6 #5:string="concat"
+bigprim 7 #0:string="str2binb"
+getglobal 7 7
+move 15 3
+call 7 1
+setfl 15
+geta 7 # 120 35
+move 14 6
+move 15 7
+send 5 1
+setfl 15
+geta 5 # 120 23
+getpropregstr 3 3 #1:string="length"
+bigprim 6 #3:string="chrsz"
+getglobal 6 6
+mul 3 3 6
+addfixreg 3 512 3
+move 14 5
+move 15 3
+call 1 2
+setfl 15
+geta 1 # 120 13
+getglobal 3 4
+getpropregstr 4 2 #5:string="concat"
+move 14 2
+move 15 1
+send 4 1
+setfl 15
+geta 1 # 121 19
+fixnum 2 672
+move 14 1
+move 15 2
+call 3 2
+setfl 15
+geta 1 # 121 9
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 17
+numberOfConstants 0
+setfl 10
+setfl 10
+fixnum 1 65535
+bitand 4 2 1
+bitand 5 3 1
+add 4 4 5
+move 5 4 # 130 6
+rightshiftregfix 2 2 16
+rightshiftregfix 3 3 16
+add 2 2 3
+rightshiftregfix 3 4 16
+add 4 2 3
+leftshiftregfix 2 4 16
+bitand 1 5 1
+bitor 4 2 1
+seta 4
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 8
+numberOfConstants 0
+setfl 8
+setfl 8
+leftshift 1 2 3
+subfixreg 3 32 3
+unsignedrightshift 2 2 3
+bitor 1 1 2
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 49
+numberOfConstants 4
+setfl 15
+setfl 15
+bigprim 1 #0:string="Array"
+getglobal 1 1
+call 1 0
+setfl 15
+geta 1 # 149 12
+move 3 1 # 149 6
+bigprim 1 #1:string="chrsz"
+getglobal 1 1
+leftshiftfixreg 1 1 1
+subregfix 1 1 1
+move 4 1 # 150 6
+fixnum 1 0
+move 5 1
+jump 25 # 151 2
+move 1 5 # 152 8
+rightshiftregfix 1 1 5
+getprop 1 3 1
+getpropregstr 6 2 #2:string="charCodeAt"
+move 7 5 # 152 33
+getglobal 8 9
+div 7 7 8
+move 14 2
+move 15 7
+send 6 1
+setfl 15
+geta 6 # 152 18
+bitand 6 6 4
+getglobal 7 9
+subfixreg 7 32 7
+modregfix 8 5 32
+sub 7 7 8
+leftshift 6 6 7
+bitor 1 1 6
+rightshiftregfix 6 5 5
+setprop 3 6 1
+getglobal 1 9
+add 1 5 1
+move 5 1 # 151 41
+move 1 5 # 151 17
+getpropregstr 6 2 #3:string="length"
+bigprim 9 #1:string="chrsz"
+getglobal 7 9
+mul 6 6 7
+lessthan 1 1 6
+jumptrue 1 -30 # 151 17
+seta 3
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 41
+numberOfConstants 5
+setfl 16
+setfl 16
+bigprim 1 #0:string=""
+move 3 1
+bigprim 1 #1:string="chrsz"
+getglobal 1 1
+leftshiftfixreg 1 1 1
+subregfix 1 1 1
+move 4 1 # 162 6
+fixnum 1 0
+move 5 1
+jump 23 # 163 2
+bigprim 1 #2:string="String"
+getglobal 1 1
+getpropregstr 6 1 #3:string="fromCharCode"
+rightshiftregfix 7 5 5
+getprop 7 2 7
+bigprim 8 #1:string="chrsz"
+getglobal 9 8
+subfixreg 9 32 9
+modregfix 10 5 32
+sub 9 9 10
+unsignedrightshift 7 7 9
+bitand 7 7 4
+move 15 1
+move 16 7
+send 6 1
+setfl 16
+geta 1 # 164 11
+add 1 3 1
+move 3 1 # 164 4
+getglobal 1 8
+add 1 5 1
+move 5 1 # 163 38
+move 1 5 # 163 17
+getpropregstr 6 2 #4:string="length"
+mulregfix 6 6 32
+lessthan 1 1 6
+jumptrue 1 -26 # 163 17
+seta 3
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 51
+numberOfConstants 6
+setfl 14
+setfl 14
+bigprim 1 #0:string="hexcase"
+getglobal 1 1
+jumpfalse 1 3 # 173 16
+bigprim 1 #1:string="0123456789ABCDEF"
+jump 2 # 173 26
+bigprim 1 #2:string="0123456789abcdef"
+move 3 1 # 173 6
+bigprim 1 #3:string=""
+fixnum 4 0
+jump 33 # 175 2
+getpropregstr 5 3 #4:string="charAt"
+move 6 4 # 177 36
+rightshiftregfix 6 6 2
+getprop 6 2 6
+move 7 4 # 177 51
+modregfix 7 7 4
+subfixreg 7 3 7
+mulregfix 7 7 8
+addregfix 7 7 4
+rightshift 6 6 7
+bitandregfix 6 6 15
+move 13 3
+move 14 6
+send 5 1
+setfl 14
+geta 5 # 177 11
+getpropregstr 6 3 #4:string="charAt"
+rightshiftregfix 7 4 2
+getprop 7 2 7
+modregfix 8 4 4
+subfixreg 8 3 8
+mulregfix 8 8 8
+rightshift 7 7 8
+bitandregfix 7 7 15
+move 13 3
+move 14 7
+send 6 1
+setfl 14
+geta 6 # 178 11
+add 5 5 6
+add 1 1 5
+addregfix 4 4 1
+move 5 4 # 175 17
+getpropregstr 6 2 #5:string="length"
+mulregfix 6 6 4
+lessthan 5 5 6
+jumptrue 5 -36 # 175 17
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 83
+numberOfConstants 5
+setfl 15
+setfl 15
+bigprim 1 #0:string=""
+move 3 1
+fixnum 1 0
+move 4 1
+jump 70 # 190 2
+move 1 4 # 192 30
+rightshiftregfix 1 1 2
+getprop 1 2 1
+move 5 4 # 192 53
+modregfix 5 5 4
+subfixreg 5 3 5
+mulfixreg 5 8 5
+rightshift 1 1 5
+bitandregfix 1 1 255
+leftshiftregfix 1 1 16
+move 5 4 # 193 30
+addregfix 5 5 1
+rightshiftregfix 5 5 2
+getprop 5 2 5
+addregfix 6 4 1
+modregfix 6 6 4
+subfixreg 6 3 6
+mulfixreg 6 8 6
+rightshift 5 5 6
+bitandregfix 5 5 255
+leftshiftregfix 5 5 8
+bitor 1 1 5
+addregfix 5 4 2
+rightshiftregfix 5 5 2
+getprop 5 2 5
+addregfix 6 4 2
+modregfix 6 6 4
+subfixreg 6 3 6
+mulfixreg 6 8 6
+rightshift 5 5 6
+bitandregfix 5 5 255
+bitor 1 1 5
+move 5 1 # 192 8
+fixnum 1 0
+move 6 1
+jump 30 # 195 4
+mulregfix 1 4 8
+move 7 6 # 197 17
+mulregfix 7 7 6
+add 1 1 7
+getpropregstr 7 2 #1:string="length"
+mulregfix 7 7 32
+lessthan 1 7 1
+jumpfalse 1 6 # 197 9
+bigprim 1 #2:string="b64pad"
+getglobal 1 1
+add 1 3 1
+move 3 1 # 197 47
+jump 15 # 198 11
+bigprim 1 #3:string="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+getpropregstr 7 1 #4:string="charAt"
+move 8 5 # 198 30
+subfixreg 9 3 6
+mulfixreg 9 6 9
+rightshift 8 8 9
+bitandregfix 8 8 63
+move 14 1
+move 15 8
+send 7 1
+setfl 15
+geta 1 # 198 18
+add 1 3 1
+move 3 1 # 198 11
+addregfix 1 6 1
+move 6 1 # 195 26
+lessthanregfix 1 6 4
+jumptrue 1 -30 # 195 19
+addregfix 1 4 3
+move 4 1 # 190 42
+move 1 4 # 190 17
+getpropregstr 5 2 #1:string="length"
+mulregfix 5 5 4
+lessthan 1 1 5
+jumptrue 1 -73 # 190 17
+seta 3
+ret

@@ -1,0 +1,62 @@
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, needContext, triggerGC, tailCall)
+construct : (JSValue, int) -> JSValue
+
+construct (con, nargs) {
+  top: match (con) {
+    case (Function con) {
+      JSValue obj;
+
+      // new $dst $con
+      {
+        save_context();
+        obj <- Create_simple_object_with_constructor(con);
+        update_context();
+
+        set_dst(obj); // dst = obj;
+      }
+
+      // newsend
+      set_fp(fp);
+      set_pc(pc);
+      int sendp = TRUE;
+      call_function(con, nargs, sendp);
+      update_context();
+
+      regbase[1] <- obj; // this = $dst
+
+      NEXT_INSN_NOINCPC();
+    }
+    case (Builtin con) {
+      // new $dst $con
+      {
+        set_dst(JS_UNDEFINED); // dst = JS_UNDEFINED;
+      }
+
+      // move this $dst
+      {
+        int sp = get_sp();
+        JSValue[] stack = getStack(0);
+
+        stack[sp - nargs] <- JS_UNDEFINED; // stack[sp - nargs] = dst;
+      }
+
+      // newsend $dst
+      set_fp(fp);
+      set_pc(pc);
+      call_builtin(con, nargs, TRUE, TRUE);
+      update_context();
+      NEXT_INSN_INCPC();
+    }
+    case (true) {
+      set_fp(fp);
+      set_pc(pc);
+#ifdef DEBUG
+      print_value_simple(con);
+      printf(" is called in CALL instruction\n");
+#endif /* DEBUG */
+      LOG_EXIT("CALL\n");
+    }
+  }
+}

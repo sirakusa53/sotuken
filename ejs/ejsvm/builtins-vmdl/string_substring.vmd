@@ -1,0 +1,25 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) string_substring: (JSValue, JSValue, JSValue) -> JSValue 
+string_substring(str, indexStart, indexEnd){
+    top: match(str){
+        case(String str){
+            int len = string_length(str);
+            int intStart = (na >= 1) ? toInteger(indexStart) : 0;
+            int intEnd = (na >= 2 && indexEnd != JS_UNDEFINED) ? toInteger(indexEnd) : len;
+            int finalStart = min(max(intStart, 0), len);
+            int finalEnd = min(max(intEnd, 0), len);
+            int from = min(finalStart, finalEnd);
+            int to_ = max(finalStart, finalEnd);
+            JSValue ret = string_make_substring(str, from, to_ - from);
+            return ret;
+        }
+        case(true){
+            if(str == JS_NULL || str == JS_UNDEFINED)
+                type_error_exception("string_substring");
+            String s = to_string(str);
+            rematch top(s);
+        }
+    }
+}

@@ -1,0 +1,171 @@
+ejsvm: ../../ejs/ejsvm
+template: script/Makefile.template
+dir: vms
+iteration: 3
+vms:
+  - name: compaction
+    GC: threaded
+    WORDSIZE: 32
+    template: script/Makefile.template32
+    CFLAGS:
+      - INLINE_CACHE
+      - INLINE_CACHE_RESET
+  - name: compaction-pretrans
+    GC: threaded
+    WORDSIZE: 32
+    template: script/Makefile.template32
+    CFLAGS:
+      - INLINE_CACHE
+      - INLINE_CACHE_RESET
+      - INLINE_CACHE_WEAK
+      - ALLOC_SITE_CACHE
+      - WEAK_SHAPE_LIST
+      - HC_SKIP_INTERNAL
+      - ALLOC_SITE_CACHE_COUNT_BASE
+      - HC_SKIP_INTERNAL_COUNT_BASE
+
+
+
+#  - name: 3fa4
+#    srcdir: ../../versions/ejs.3fa4/ejsvm
+#    GC: threaded
+#    CFLAGS:
+#      - INLINE_CACHE
+#      - INLINE_CACHE_RESET
+#      - ALLOC_SITE_CACHE
+#      - WEAK_SHAPE_LIST
+#      - HC_SKIP_INTERNAL
+#      - GC_THREADED_BOUNDARY_TAG
+#      - GC_THREADED_MERGE_FREE_SPACE
+#      - ALLOC_SITE_CACHE_COUNT_BASE
+#      - HC_SKIP_INTERNAL_COUNT_BASE
+#      - INLINE_CACHE_WEAK
+#  - name: dcb3
+#    srcdir: ../../versions/ejsvm.dcb3/ejsvm
+#    GC: threaded
+#    CFLAGS:
+#      - INLINE_CACHE
+#      - INLINE_CACHE_RESET
+#      - ALLOC_SITE_CACHE
+#      - WEAK_SHAPE_LIST
+#      - HC_SKIP_INTERNAL
+#      - GC_THREADED_BOUNDARY_TAG
+#      - GC_THREADED_MERGE_FREE_SPACE
+#      - ALLOC_SITE_CACHE_COUNT_BASE
+#      - HC_SKIP_INTERNAL_COUNT_BASE
+#      - INLINE_CACHE_WEAK
+#  - name: 8098
+#    srcdir: ../../versions/ejsvm.8098/ejsvm
+#    GC: threaded
+#    CFLAGS:
+#      - INLINE_CACHE
+#      - INLINE_CACHE_RESET
+#      - ALLOC_SITE_CACHE
+#      - WEAK_SHAPE_LIST
+#      - HC_SKIP_INTERNAL
+#      - GC_THREADED_BOUNDARY_TAG
+#      - GC_THREADED_MERGE_FREE_SPACE
+#      - ALLOC_SITE_CACHE_COUNT_BASE
+#      - HC_SKIP_INTERNAL_COUNT_BASE
+#      - INLINE_CACHE_WEAK
+
+#  - name: baseline
+#    GC: native
+#    CFLAGS:
+#      - INLINE_CACHE
+#      - INLINE_CACHE_RESET
+#  - name: pretrans
+#    GC: native
+#    CFLAGS:
+#      - INLINE_CACHE
+#      - INLINE_CACHE_RESET
+#      - ALLOC_SITE_CACHE
+#      - WEAK_SHAPE_LIST
+#      - HC_SKIP_INTERNAL
+#      - ALLOC_SITE_CACHE_COUNT_BASE
+#      - HC_SKIP_INTERNAL_COUNT_BASE
+#      - INLINE_CACHE_WEAK
+#  - name: pretrans-hash
+#    GC: native
+#    CFLAGS:
+#      - INLINE_CACHE
+#      - INLINE_CACHE_RESET
+#      - ALLOC_SITE_CACHE
+#      - WEAK_SHAPE_LIST
+#      - HC_SKIP_INTERNAL
+#      - ALLOC_SITE_CACHE_COUNT_BASE
+#      - HC_SKIP_INTERNAL_COUNT_BASE
+#      - INLINE_CACHE_WEAK
+#      - PROPERTY_MAP_HASHTABLE
+#  - name: compaction-pretrans-hash
+#    GC: threaded
+#    CFLAGS:
+#      - INLINE_CACHE
+#      - INLINE_CACHE_RESET
+#      - ALLOC_SITE_CACHE
+#      - WEAK_SHAPE_LIST
+#      - HC_SKIP_INTERNAL
+#      - GC_THREADED_BOUNDARY_TAG
+#      - GC_THREADED_MERGE_FREE_SPACE
+#      - ALLOC_SITE_CACHE_COUNT_BASE
+#      - HC_SKIP_INTERNAL_COUNT_BASE
+#      - INLINE_CACHE_WEAK
+#      - PROPERTY_MAP_HASHTABLE
+#  - name: weak-shaeps
+#    GC: native
+#    CFLAGS:
+#      - INLINE_CACHE
+#      - INLINE_CACHE_RESET
+#      - ALLOC_SITE_CACHE
+#      - WEAK_SHAPE_LIST
+#  - name: weak-hcg
+#    GC: native
+#    CFLAGS:
+#      - INLINE_CACHE
+#      - INLINE_CACHE_RESET
+#      - ALLOC_SITE_CACHE
+#      - WEAK_SHAPE_LIST
+#      - HC_SKIP_INTERNAL
+
+
+#  - name: global-no-inline
+#    GC: native
+#  - name: persite
+#    GC: native
+#  - name: persite-shape
+#    GC: native
+#   CFLAGS:
+#     - INLINE_CACHE
+#     - INLINE_CACHE_RESET
+#     - INLINE_CACHE_SHAPE_BASE
+#     - ALLOC_SITE_CACHE_PER_SITE_HCG
+# - name: global-shape
+#   GC: native
+#   CFLAGS:
+#     - INLINE_CACHE
+#     - INLINE_CACHE_RESET
+#     - INLINE_CACHE_SHAPE_BASE
+# - name: global-pm
+#   GC: native
+#   CFLAGS:
+#     - INLINE_CACHE
+#     - INLINE_CACHE_RESET
+#  - name: global-hcg
+#    GC: native
+#  - name: global-hcg-xcache
+#    GC: native
+#    CFLAGS:
+#      - ALLOC_SITE_CACHE_SHAPE_XCACHE
+#  - name: persite-hcg
+#    GC: native
+#    CFLAGS:
+#      - ALLOC_SITE_CACHE_PER_SITE_HCG
+#  - name: global-hcg-inl
+#    GC: native
+#    CFLAGS:
+#      - INLINE_CACHE
+#  - name: persite-hcg-inl
+#    GC: native
+#    CFLAGS:
+#      - ALLOC_SITE_CACHE_PER_SITE_HCG
+#      - INLINE_CACHE

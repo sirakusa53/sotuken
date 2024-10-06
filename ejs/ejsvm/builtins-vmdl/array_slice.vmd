@@ -1,0 +1,42 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) array_slice: (JSValue, JSValue, JSValue) -> JSValue 
+array_slice(arr, start, end){
+  match(arr){
+    case(Array arr){
+      /* This is a bug. */
+      // start = (na >= 1)? start: 0;
+      JSValue start_ = (na >= 1) ? start : FIXNUM_ZERO;
+      JSValue end_ = (na >= 2) ? end : JS_UNDEFINED;
+    
+      int len = to_cint(get_jsarray_length(arr));
+      /* NOTE: 'arr' and 'end_' are targets of GC_PUSH/GC_POP here. */
+      int relativeStart = toInteger(start_);
+
+      int k = (relativeStart < 0) ? max((len + relativeStart), 0) : min(relativeStart, len);
+      
+      int relativeEnd = (is_undefined(end_)) ? len : toInteger(end_);
+    
+      int final = (relativeEnd < 0) ? max((len + relativeEnd), 0) : min(relativeEnd, len);
+    
+      int count = max(final - k, 0);
+      JSValue a = new_array_object(DEBUG_NAME("array_slice"), gshapes.g_shape_Array, count);
+      /* NOTE: 'a' is the target of GC_PUSH/GC_POP here. */
+      int n = 0;
+      while (k < final) {
+        if (has_array_element(arr,k)) {
+          JSValue kValue = get_array_element(arr, k);
+          set_array_prop(a, cint_to_number(n), kValue);
+        }
+        k <- k + 1;
+        n <- n + 1;
+      }
+      return a;
+    }
+    case(true){
+      LOG_EXIT("type error: array_slice");
+      return JS_EMPTY;
+    }
+  }
+}

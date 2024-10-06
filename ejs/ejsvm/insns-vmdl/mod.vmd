@@ -1,0 +1,46 @@
+#include "../header-vmdl/patterns.vmdh"
+
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, needContext, triggerGC, tailCall)
+mod : (JSValue, JSValue) -> JSValue
+
+mod (v1, v2) {
+  top: match (v1, v2) {
+    case (Fixnum v1 && Fixnum v2) {
+      if (IsFixnumZero(v2)) {
+        return gconsts.g_flonum_nan;
+      } else {
+        int x1 = to_cint(v1);
+        int x2 = to_cint(v2);
+        int s = x1 % x2;
+        return cint_to_number(s);
+      }
+    }
+    case (number v1 && number v2) {
+      double x1 = to_double(v1);
+      double x2 = to_double(v2);
+      if (IsFlonumInfinity(double_to_flonum(x1)) || x2 == 0.0f) {
+        return gconsts.g_flonum_nan;
+      } else {
+        double d = x1 / x2;
+        double d2 = d >= 0.0 ? floor(d) : ceil(d);
+        double d3 = x1 - (d2 * x2);
+        return double_to_number(d3);
+      }
+    }
+    case (number v2) {
+      Number u1 = to_number(v1);
+      rematch top(u1, v2);
+    }
+    case (number v1) {
+      Number u2 = to_number(v2);
+      rematch top(v1, u2);
+    }
+    case (true) {
+      Number u1 = to_number(v1);
+      Number u2 = to_number(v2);
+      rematch top(u1, u2);
+    }
+  }
+}

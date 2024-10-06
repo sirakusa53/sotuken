@@ -1,0 +1,11 @@
+======== 3d-morph ========
+0: total CPU time = 50.672 msec, total GC time = 1.384 msec (#GC = 2) n_hc = 20, n_enter_hc = 375, n_exit_hc = 220
+1: total CPU time = 50.141 msec, total GC time = 1.391 msec (#GC = 2) n_hc = 20, n_enter_hc = 375, n_exit_hc = 220
+2: total CPU time = 50.945 msec, total GC time = 1.795 msec (#GC = 2) n_hc = 20, n_enter_hc = 375, n_exit_hc = 220
+3: total CPU time = 49.394 msec, total GC time = 1.309 msec (#GC = 2) n_hc = 20, n_enter_hc = 375, n_exit_hc = 220
+4: total CPU time = 50.816 msec, total GC time = 1.449 msec (#GC = 2) n_hc = 20, n_enter_hc = 375, n_exit_hc = 220
+5: total CPU time = 50.375 msec, total GC time = 1.393 msec (#GC = 2) n_hc = 20, n_enter_hc = 375, n_exit_hc = 220
+6: total CPU time = 50.351 msec, total GC time = 1.390 msec (#GC = 2) n_hc = 20, n_enter_hc = 375, n_exit_hc = 220
+7: total CPU time = 50.494 msec, total GC time = 1.384 msec (#GC = 2) n_hc = 20, n_enter_hc = 375, n_exit_hc = 220
+8: total CPU time = 50.361 msec, total GC time = 1.381 msec (#GC = 2) n_hc = 20, n_enter_hc = 375, n_exit_hc = 220
+9: total CPU time = 50.490 msec, total GC time = 1.430 msec (#GC = 2) n_hc = 20, n_enter_hc = 375, n_exit_hc = 220

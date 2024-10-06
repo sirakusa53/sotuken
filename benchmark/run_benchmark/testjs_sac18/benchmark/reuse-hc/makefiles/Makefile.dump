@@ -1,0 +1,334 @@
+EJSVM_DIR = ../../ejs/ejsvm
+
+.PRECIOUS: %.c %.h %.o
+
+##
+## configuration files
+##
+
+DATATYPES = $(EJSVM_DIR)/datatypes/default.def
+# DATATYPES = $(EJSVM_DIR)/datatypes/default_32.def
+
+OPERANDSPEC = $(EJSVM_DIR)/operand-spec/any.spec
+# OPERANDSPEC = $(EJSVM_DIR)/operand-spec/fixnum-unspec.spec
+
+BUILTINSPEC = $(EJSVM_DIR)/builtin-spec/any.spec
+
+
+
+##
+## internal commands
+##
+
+## commands ##
+
+CC = gcc
+
+CXX = gcc
+
+# SED = gsed
+# SED = sed
+
+# PYTHON = python
+# PYTHON = python3
+
+# CPP_VMDL = $(CPP) -E -x c -P
+
+# COCCINELLE = spatch
+# COCCINELLE = spatch --python python3
+
+
+## command arguments ##
+
+## CPPFLAGS for C and  C++ compilers and preprocessor
+CPPFLAGS = -O2 -DNDEBUG -UDEBUG
+# CPPFLAGS = -Os -DNDEBUG -UDEBUG
+#CPPFLAGS = -O0 -g -DDEBUG
+#CPPFLAGS = -O2 -g -DDEBUG
+
+## CFLAGS for C compiler and preprocessor
+CFLAGS =
+
+## CXXFLAGS for C++ compiler
+CXXFLAGS =
+
+INSNGEN_FLAGS = -Xgen:pad_cases true -Xcmp:opt_pass MR:S -Xcmp:rand_seed 0
+
+
+
+##
+## instruction options
+##
+
+## accept OBC / SBC files
+USE_OBC = true
+USE_SBC = true
+
+
+## Super Instruction options ##
+
+SUPERINSNSPEC = $(EJSVM_DIR)/superinsn-spec/all.si
+# SUPERINSNSPEC = $(EJSVM_DIR)/superinsn-spec/def_32.si
+
+SUPERINSNTYPE = 4
+
+
+## Embedded Instruction options ##
+
+## Linker script template for some environments
+#LD_SCRIPT_RAW=$(EJSVM_DIR)/linkerscript/x86_64.ld.raw
+#LD_SCRIPT_RAW=$(EJSVM_DIR)/linkerscript/i386.ld.raw
+#LD_SCRIPT_RAW=$(EJSVM_DIR)/linkerscript/armelf_linux_eabi.ld.raw
+#LD_SCRIPT_RAW=$(EJSVM_DIR)/linkerscript/STM32H743VITX_FLASH.ld.raw
+
+## Target JavaScript program
+JSSRC_PATH = $(EJSVM_DIR)/mbed/common/sample_script.js
+
+## Compile option for embedded instruction
+EJSC_OPT = -O
+
+## use legacy (builtin) ejsc parser when build embedded instruction
+# USE_LEGACY_EJSC_PARSER = true
+
+
+
+##
+## VMDL
+##
+
+USE_VMDL=false
+
+VMDLC_FLAGS=-T3
+
+## Enable function inlining
+USE_VMDL_INLINE_EXPANSION=true
+
+## Compile type dispatches using if-style
+USE_VMDL_IFSTYLE=false
+
+## Use case split (with ICCSPEC specify)
+USE_VMDL_CASE_SPLIT=false
+
+# ICCSPEC=
+
+## Use direct-goto optimization
+USE_VMDL_DIRECT_GOTO=true
+
+## Enable ICC profiling
+ICC_PROF=false
+
+
+
+##
+## Target Environment options
+##
+
+## word size
+# INSN    -- instruction size
+# JSVALUE -- JSValue size  (>= ponter size)
+# ALIGN   -- alignment of heap-allocated data
+# BITWIDTH_INSN    = 32
+BITWIDTH_INSN    = 64
+# BITWIDTH_JSVALUE = 32
+BITWIDTH_JSVALUE = 64
+# BITWIDTH_ALIGN   = 32
+BITWIDTH_ALIGN   = 64
+
+## build whithout entry point
+# CPPFLAGS += -DNO_NEED_ENTRY_POINT
+
+
+## Mbed build options ##
+
+USE_MBED = false
+
+## Target board; Supported is: K64F, NUCLEO_F429ZI, NUCLEO_L476RG
+MBED_TARGET = K64F
+
+## Testing: Use efficient object header.
+# CPPFLAGS += -DUSE_MBED_EFFICIENT_HEADER
+
+## No messages will be printed.
+CPPFLAGS += -DMBED_SILENT
+
+
+
+##
+## paths
+##
+
+INCLUDES =
+# INCLUDES = -I/opt/local/include
+
+LIBS =
+# LIBS = -L/opt/local/lib
+
+
+
+##
+## GC options
+##
+
+## Base GC algorithm
+#OPT_GC        = native
+#OPT_GC        = bibop
+#OPT_GC        = copy
+#OPT_GC        = none
+OPT_GC        = fusuma
+#OPT_GC        = lisp2
+
+## Define default GC threshold
+# CPPFLAGS += -DDEFAULT_GC_THRESHOLD(heap_size)=((heap_size)>>4)
+
+## use explicit mark stack rather than recursive call
+#CPPFLAGS      += -DMARK_STACK
+
+
+## MS options ##
+
+## use 32bit object header (for BIT_JSVALUE32 env)
+# CPPFLAGS       += -DGC_MS_HEADER32
+
+
+## BiBoP options ##
+
+## page caches the size of bitmaps
+CFLAGS       += -DBIBOP_CACHE_BMP_GRANULES
+
+## free pages of size one is linked in a separate list
+CPPFLAGS       += -DBIBOP_SEGREGATE_1PAGE
+
+## allocate pages of size one from the bottom of the heap
+CPPFLAGS       += -DBIBOP_2WAY_ALLOC
+
+## link free blocks in a page to form a freelist
+CPPFLAGS       += -DBIBOP_FREELIST
+
+## use flonum pages as if it is a hashtable to encourage sahreing flonum objects
+#CPPFLAGS       += -DFLONUM_SPACE
+
+## debug
+CPPFLAGS       += -DVERIFY_BIBOP
+
+
+## Threaded compactor options ##
+
+## use boundary tag in Hidden Class
+CPPFLAGS       += -DGC_THREADED_BOUNDARY_TAG
+
+## Use no-fusuma compactor
+# CPPFLAGS       += -DGC_THREADED_MIX
+
+## use 32bit object header (for BIT_JSVALUE32 env)
+CPPFLAGS       += -DGC_THREADED_HEADER32
+
+
+## Lisp2 compactor options ##
+
+## use 32bit object header (for BIT_JSVALUE32 env)
+CPPFLAGS       += -DGC_LISP2_HEADER32
+
+
+##
+## VM Options
+##
+
+OPT_REGEXP    = none
+# OPT_REGEXP    = oniguruma
+
+## heap size in bytes
+# JS_HEAP_SIZE = 10485760
+
+## stack size in words
+# CPPFLAGS += -DSTACK_LIMIT=2000
+
+## show build options in runtime (make --buildinfo available)
+# CPPFLAGS += -DPRINT_BUILD_INFO
+
+## set command line option always true
+# CPPFLAGS += -DSET_LASTPRINT_FLAG_TRUE
+# CPPFLAGS += -DSET_FTABLE_FLAG_TRUE
+# CPPFLAGS += -DSET_TRACE_FLAG_TRUE
+# CPPFLAGS += -DSET_CPUTIME_FLAG_TRUE
+# CPPFLAGS += -DSET_GCPROF_FLAG_TRUE
+# CPPFLAGS += -DSET_ICPROF_FLAG_TRUE
+# CPPFLAGS += -DSET_ASPROF_FLAG_TRUE
+# CPPFLAGS += -DSET_BUILD_INFO_FLAG_TRUE
+
+
+
+##
+## Optimization options
+##
+
+## GC collects internal nodes in hidden class graph
+#CPPFLAGS       += -DHC_SKIP_INTERNAL
+
+## cache shapes at allocation site
+#CPPFLAGS       += -DALLOC_SITE_CACHE
+
+## GC collects unused shapes (effective if ALLOC_SITE_CACHE is specified)
+#CPPFLAGS       += -DWEAK_SHAPE_LIST
+
+## use inlne cache
+CPPFLAGS       += -DINLINE_CACHE
+CPPFLAGS       += -DPROTO_IC
+CPPFLAGS       += -DPROTO_IC_ALL_INVALIDATE
+
+
+
+##
+## Profiling options
+##
+
+## enable profiling to create customised VM (make some profiling options available)
+# CPPFLAGS       += -DPROFILE
+
+## show GC profiling information (make --gc-prof available)
+#CPPFLAGS       += -DGC_PROF
+
+## show hidden class related profiling information (make --hc-prof available)
+CPPFLAGS       += -DHC_PROF
+
+## show inline cache statistics
+#CPPFLAGS       += -DIC_PROF
+
+## show allocation site cache statistics
+# CPPFLAGS       += -DAS_PROF
+
+## show shape statisics
+# CPPFLAGS       += -DSHAPE_PROF
+
+## print flonum usage
+#CPPFLAGS       += -DFLONUM_PROF
+
+
+
+##
+## developer options
+##
+
+## dump hidden class graph
+CPPFLAGS       += -DDUMP_HCG
+
+## load hidden class graph from file (unstable)
+# CPPFLAGS       += -DLOAD_HCG
+
+##
+## debug/sanity check options
+##
+
+## show values of properties in GETPROP/SETPROP instructions
+#CPPFLAGS   += -DDEBUG_GETPROP_VALUE
+
+## fix rand seed
+CPPFLAGS    += -DNO_SRAND
+
+
+# enable structures to tree base invalidation for prototype inline cacing
+# (this can be used without PROTO_IC to measure overhead)
+#CPPFLAGS += -DPROTO_IC_TREE_INVALIDATE
+#CPPFLAGS += -DVERBOSE_HC
+#CPPFLAGS += -DVERBOSE_GC
+
+include $(EJSVM_DIR)/common.mk

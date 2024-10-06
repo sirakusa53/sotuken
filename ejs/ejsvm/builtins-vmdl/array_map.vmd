@@ -1,0 +1,39 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) array_map : (Array, callable, JSValue) -> JSValue 
+array_map(o, callbackfn, thisArg){
+  /* 2. 3. */
+  int len = number_to_cint(get_jsarray_length(o));
+  /* 5. */
+  JSValue t = na >= 2 ? thisArg : JS_UNDEFINED;
+  /* 6. */
+  JSValue a = new_array_object(DEBUG_NAME("array_map"), gshapes.g_shape_Array, len);
+  /* 7. */
+  int k = 0;
+  /* 8. */
+  while(k < len){
+    /* b. */
+    if(has_array_element(o, k)){
+      /* c. */
+      /* i. */
+      JSValue js_k = cint_to_number(k);
+      JSValue k_value = get_array_element(o, k);
+      /* ii. */
+      JSValue mapped_value;
+      match(callbackfn){
+        case(Function callbackfn){
+          mapped_value <- send_function3(t, callbackfn, k_value, js_k, o);
+        }
+        case(Builtin callbackfn){
+          mapped_value <- send_builtin3(t, callbackfn, k_value, js_k, o);
+        }
+      }
+      set_array_element(a, k, mapped_value);
+    }
+    /* d. */
+    k <- k + 1;
+  }
+  /* 9. */
+  return a;
+}

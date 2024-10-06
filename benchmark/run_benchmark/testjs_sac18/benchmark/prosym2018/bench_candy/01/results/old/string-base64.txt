@@ -1,0 +1,11 @@
+======== string-base64 ========
+0: total CPU time = 897.585 msec, total GC time = 0.0 msec (#GC = 116) n_hc = 20, n_enter_hc = 639397, n_exit_hc = 426238
+1: total CPU time = 893.817 msec, total GC time = 0.0 msec (#GC = 116) n_hc = 20, n_enter_hc = 639397, n_exit_hc = 426238
+2: total CPU time = 901.681 msec, total GC time = 0.0 msec (#GC = 116) n_hc = 20, n_enter_hc = 639397, n_exit_hc = 426238
+3: total CPU time = 901.331 msec, total GC time = 7.187 msec (#GC = 116) n_hc = 20, n_enter_hc = 639397, n_exit_hc = 426238
+4: total CPU time = 901.913 msec, total GC time = 2.177 msec (#GC = 116) n_hc = 20, n_enter_hc = 639397, n_exit_hc = 426238
+5: total CPU time = 899.492 msec, total GC time = 2.9 msec (#GC = 116) n_hc = 20, n_enter_hc = 639397, n_exit_hc = 426238
+6: total CPU time = 908.652 msec, total GC time = 7.225 msec (#GC = 116) n_hc = 20, n_enter_hc = 639397, n_exit_hc = 426238
+7: total CPU time = 927.995 msec, total GC time = 0.0 msec (#GC = 116) n_hc = 20, n_enter_hc = 639397, n_exit_hc = 426238
+8: total CPU time = 905.769 msec, total GC time = 0.0 msec (#GC = 116) n_hc = 20, n_enter_hc = 639397, n_exit_hc = 426238
+9: total CPU time = 909.256 msec, total GC time = 0.0 msec (#GC = 116) n_hc = 20, n_enter_hc = 639397, n_exit_hc = 426238

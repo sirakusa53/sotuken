@@ -1,0 +1,11 @@
+======== string-fasta ========
+0: total CPU time = 59.794 msec, total GC time = 0.0 msec (#GC = 9) n_hc = 54, n_enter_hc = 865496, n_exit_hc = 672647
+1: total CPU time = 59.472 msec, total GC time = 0.0 msec (#GC = 9) n_hc = 54, n_enter_hc = 865496, n_exit_hc = 672647
+2: total CPU time = 60.757 msec, total GC time = 0.0 msec (#GC = 9) n_hc = 54, n_enter_hc = 865496, n_exit_hc = 672647
+3: total CPU time = 59.177 msec, total GC time = 0.0 msec (#GC = 9) n_hc = 54, n_enter_hc = 865496, n_exit_hc = 672647
+4: total CPU time = 58.620 msec, total GC time = 2.394 msec (#GC = 9) n_hc = 54, n_enter_hc = 865496, n_exit_hc = 672647
+5: total CPU time = 59.721 msec, total GC time = 0.0 msec (#GC = 9) n_hc = 54, n_enter_hc = 865496, n_exit_hc = 672647
+6: total CPU time = 59.426 msec, total GC time = 0.0 msec (#GC = 9) n_hc = 54, n_enter_hc = 865496, n_exit_hc = 672647
+7: total CPU time = 59.440 msec, total GC time = 0.0 msec (#GC = 9) n_hc = 54, n_enter_hc = 865496, n_exit_hc = 672647
+8: total CPU time = 56.66 msec, total GC time = 1.918 msec (#GC = 9) n_hc = 54, n_enter_hc = 865496, n_exit_hc = 672647
+9: total CPU time = 59.439 msec, total GC time = 0.0 msec (#GC = 9) n_hc = 54, n_enter_hc = 865496, n_exit_hc = 672647

@@ -1,0 +1,11 @@
+======== math-partial-sums ========
+0: total CPU time = 32.300 msec, total GC time = 1.38 msec (#GC = 1) n_hc = 20, n_enter_hc = 352, n_exit_hc = 208
+1: total CPU time = 32.57 msec, total GC time = 0.748 msec (#GC = 1) n_hc = 20, n_enter_hc = 352, n_exit_hc = 208
+2: total CPU time = 32.54 msec, total GC time = 0.797 msec (#GC = 1) n_hc = 20, n_enter_hc = 352, n_exit_hc = 208
+3: total CPU time = 31.937 msec, total GC time = 0.743 msec (#GC = 1) n_hc = 20, n_enter_hc = 352, n_exit_hc = 208
+4: total CPU time = 31.938 msec, total GC time = 0.816 msec (#GC = 1) n_hc = 20, n_enter_hc = 352, n_exit_hc = 208
+5: total CPU time = 31.976 msec, total GC time = 0.749 msec (#GC = 1) n_hc = 20, n_enter_hc = 352, n_exit_hc = 208
+6: total CPU time = 32.15 msec, total GC time = 0.749 msec (#GC = 1) n_hc = 20, n_enter_hc = 352, n_exit_hc = 208
+7: total CPU time = 31.845 msec, total GC time = 0.750 msec (#GC = 1) n_hc = 20, n_enter_hc = 352, n_exit_hc = 208
+8: total CPU time = 31.870 msec, total GC time = 0.752 msec (#GC = 1) n_hc = 20, n_enter_hc = 352, n_exit_hc = 208
+9: total CPU time = 32.172 msec, total GC time = 0.795 msec (#GC = 1) n_hc = 20, n_enter_hc = 352, n_exit_hc = 208

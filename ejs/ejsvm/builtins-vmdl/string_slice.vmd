@@ -1,0 +1,17 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) string_slice: (JSValue, JSValue, JSValue) -> JSValue 
+string_slice(str, beginIndex, endIndex){
+    if(str == JS_NULL || str == JS_UNDEFINED)
+        type_error_exception("string_slice");
+    String str0 = to_string(str);
+    int len = string_length(str0);
+    int intStart = (na >= 1) ? toInteger(beginIndex) : 0;
+    int intEnd = (na >= 2 && endIndex != JS_UNDEFINED) ? toInteger(endIndex) : len;
+    int from = (intStart < 0) ? max(len+intStart, 0) : min(intStart, len);
+    int to_ = (intEnd < 0) ? max(len+intEnd, 0) : min(intEnd, len);
+    int span = max(to_-from, 0);
+    JSValue ret = string_make_substring(str0, from, span);
+    return ret;
+}

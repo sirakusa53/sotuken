@@ -1,0 +1,110 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) array_splice : (Array, JSValue, JSValue) -> JSValue 
+array_splice(arr, start, deleteCount){
+  /* 3. 4. */
+  int len = number_to_cint(get_jsarray_length(arr));
+  /* 5. */
+  int relative_start = toInteger(start);
+  /* 6. */
+  int actual_start = relative_start < 0 ? max((len + relative_start), 0) : min(relative_start, len);
+  /* 7. */
+  JSValue delete_count = na >= 2 ? deleteCount : JS_UNDEFINED;
+  int actual_delete_count = min(max(toInteger(delete_count), 0), len - actual_start);
+  /* 2. */
+  JSValue a = new_array_object(DEBUG_NAME("array_splice"), gshapes.g_shape_Array, actual_delete_count);
+  /* 8. */
+  int k = 0;
+  /* 9. */
+  while(k < actual_delete_count){
+    /* a. */
+    int from = actual_start + k;
+    /* b. */
+    if(has_array_element(arr, from)){
+      /* c. */
+      /* i. */
+      JSValue from_value = get_array_element(arr, from);
+      /* ii. */
+      set_array_element(a, k, from_value);
+    }
+    /* d. */
+    k <- k + 1;
+  }
+  /* 10. */
+  // items = &args[3];
+  /* 11. */
+  if(n_rest < actual_delete_count){
+    /* 12. */
+    /* a. */
+    k <- actual_start;
+    /* b. */
+    while(k < len - actual_delete_count){
+      /* i. */
+      int from = k + actual_delete_count;
+      /* ii. */
+      int to_ = k + n_rest;
+      /* iii. */
+      if(has_array_element(arr, from)){
+        /* iv. */
+        /* 1. */
+        JSValue from_value = get_array_element(arr, from);
+        /* 2. */
+        set_array_element(arr, to_, from_value);
+      }else{
+        /* v. */
+        /* 1. */
+        delete_array_element(arr, to_);
+      }
+      /* vi. */
+      k <- k + 1;
+    }
+    /* c. */
+    k <- len;
+    /* d. */
+    while(k > len - actual_delete_count + n_rest){
+      /* i. */
+      delete_array_element(arr, k-1);
+      /* ii. */
+      k <- k - 1;
+    }
+  }else{
+    /* 13. */
+    /* a. */
+    k <- len - actual_delete_count;
+    /* b. */
+    while(k > actual_start){
+      /* i. */
+      int from = k + actual_delete_count - 1;
+      /* ii. */
+      int to_ = k + n_rest - 1;
+      /* iii. */
+      if(has_array_element(arr, from)){
+        /* iv. */
+        /* 1. */
+        JSValue from_value = get_array_element(arr, from);
+        /* 2. */
+        set_array_element(arr, to_, from_value);
+      }else{
+        /* v. */
+        /* 1. */
+        delete_array_element(arr, to_);
+      }
+      k <- k - 1;
+    }
+  }
+  /* 14. */
+  k <- actual_start;
+  /* 15. */
+  do(int i=0 to n_rest-1 step 1){
+    /* b. */
+    set_array_element(arr, k, rest[i]);
+    /* c. */
+    k <- k + 1;
+  }
+  /* 16. */
+  JSValue new_length = cint_to_number(len - actual_delete_count + n_rest);
+  set_jsarray_length(arr, new_length);
+  /* 17. */
+  return a;
+}

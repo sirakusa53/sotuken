@@ -1,0 +1,14 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) number_valueOf: JSValue -> JSValue 
+number_valueOf(numObj){
+    match(numObj){
+        case(NumberObject numObj){
+            return get_jsnumber_object_value(numObj);
+        }
+        case(true){
+            LOG_EXIT("Receiver of valueOf is not a Number instance\n");
+        }
+    }
+}

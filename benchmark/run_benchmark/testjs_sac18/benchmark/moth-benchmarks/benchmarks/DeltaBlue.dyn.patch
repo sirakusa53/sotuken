@@ -1,0 +1,131 @@
+diff --git a/moth-benchmarks/benchmarks/DeltaBlue.js b/moth-benchmarks/benchmarks/DeltaBlue.js
+index 23636bd..bfee33c 100755
+--- a/moth-benchmarks/benchmarks/DeltaBlue.js
++++ b/moth-benchmarks/benchmarks/DeltaBlue.js
+@@ -54,7 +54,7 @@ Planner.prototype.incrementalAdd = function (c) {
+   var mark = this.newMark(),
+     overridden = c.satisfy(mark, this);
+ 
+-  while (overridden !== null) {
++  while (overridden) {
+     overridden = overridden.satisfy(mark, this);
+   }
+ };
+@@ -160,7 +160,7 @@ Planner.prototype.constraintsConsuming = function (v, fn) {
+ Planner.prototype.removePropagateFrom = function(out) {
+   var unsatisfied = new som.Vector();
+ 
+-  out.determinedBy = null;
++//  out.determinedBy = null;
+   out.walkStrength = Strength.absoluteWeakest;
+   out.stay = true;
+ 
+@@ -335,7 +335,7 @@ AbstractConstraint.prototype.destroyConstraint = function(planner) {
+ 
+ AbstractConstraint.prototype.inputsKnown = function(mark) {
+   return !this.inputsHasOne(function (v) {
+-      return !(v.mark === mark || v.stay || v.determinedBy === null);
++      return !(v.mark === mark || v.stay || !v.determinedBy);
+   });
+ };
+ 
+@@ -350,7 +350,7 @@ AbstractConstraint.prototype.satisfy = function (mark, planner) {
+ 
+     var out = this.getOutput();
+     overridden = out.determinedBy;
+-    if (overridden !== null) {
++    if (overridden) {
+       overridden.markUnsatisfied();
+     }
+     out.determinedBy = this;
+@@ -359,7 +359,7 @@ AbstractConstraint.prototype.satisfy = function (mark, planner) {
+     }
+     out.mark = mark;
+   } else {
+-    overridden = null;
++    overridden = undefined;
+     if (this.strength.sameAs(Strength.required)) {
+       throw new Error("Could not satisfy a required constraint");
+     }
+@@ -376,7 +376,7 @@ function BinaryConstraint(var1, var2, strength, planner) {
+ BinaryConstraint.prototype = Object.create(AbstractConstraint.prototype);
+ 
+ BinaryConstraint.prototype.isSatisfied = function () {
+-  return this.direction !== null;
++  return this.direction !== undefined;
+ };
+ 
+ BinaryConstraint.prototype.addToGraph = function () {
+@@ -411,7 +411,7 @@ BinaryConstraint.prototype.chooseMethod = function (mark) {
+       this.direction = "backward";
+       return this.direction;
+     } else {
+-      this.direction = null;
++//      this.direction = null;
+       return this.direction;
+     }
+   }
+@@ -422,7 +422,7 @@ BinaryConstraint.prototype.chooseMethod = function (mark) {
+       this.direction = "backward";
+       return this.direction;
+     } else {
+-      this.direction = null;
++//      this.direction = null;
+       return this.direction;
+     }
+   } else {
+@@ -430,7 +430,7 @@ BinaryConstraint.prototype.chooseMethod = function (mark) {
+       this.direction = "forward";
+       return this.direction;
+     } else {
+-      this.direction = null;
++//      this.direction = null;
+       return this.direction;
+     }
+   }
+@@ -453,7 +453,8 @@ BinaryConstraint.prototype.inputsHasOne = function (fn) {
+ };
+ 
+ BinaryConstraint.prototype.markUnsatisfied = function () {
+-  this.direction = null;
++  if (this.direction)
++    this.direction = undefined;
+ };
+ 
+ BinaryConstraint.prototype.getOutput = function () {
+@@ -570,7 +571,7 @@ ScaleConstraint.prototype.addToGraph = function () {
+   this.v2.addConstraint(this);
+   this.scale.addConstraint(this);
+   this.offset.addConstraint(this);
+-  this.direction = null;
++//  this.direction = null;
+ };
+ 
+ ScaleConstraint.prototype.removeFromGraph = function () {
+@@ -578,7 +579,7 @@ ScaleConstraint.prototype.removeFromGraph = function () {
+   if (this.v2 !== null) { this.v2.removeConstraint(this); }
+   if (this.scale  !== null) { this.scale.removeConstraint(this); }
+   if (this.offset !== null) { this.offset.removeConstraint(this); }
+-  this.direction = null;
++//  this.direction = null;
+ };
+ 
+ ScaleConstraint.prototype.execute = function () {
+@@ -627,7 +628,7 @@ StayConstraint.prototype.execute = function() {};
+ function Variable() {
+   this.value = 0;
+   this.constraints = new som.Vector(2);
+-  this.determinedBy = null;
++//  this.determinedBy = null;
+   this.walkStrength = Strength.absoluteWeakest;
+   this.stay = true;
+   this.mark = 0;
+@@ -640,7 +641,7 @@ Variable.prototype.addConstraint = function (c) {
+ Variable.prototype.removeConstraint = function (c) {
+   this.constraints.remove(c);
+   if (this.determinedBy == c) {
+-    this.determinedBy = null;
++    this.determinedBy = undefined;
+   }
+ };
+ 

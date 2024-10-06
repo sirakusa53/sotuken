@@ -1,0 +1,16 @@
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, makeInline) special_to_object : Special -> JSValue
+special_to_object(v){
+    if(v == JS_UNDEFINED){
+        type_error_exception("trying to convert undefined to an object");
+        return JS_UNDEFINED;
+    }
+    if(v == JS_NULL){
+        type_error_exception("trying to convert null to an object");
+        return JS_UNDEFINED;
+    }
+    if(v == JS_TRUE || v == JS_FALSE){
+        return new_boolean_object("special_to_object", gshapes.g_shape_Boolean , v);
+    }
+}

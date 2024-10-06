@@ -1,0 +1,31 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) string_fromCharCode: JSValue -> JSValue 
+string_fromCharCode(string){
+    cstring s = AllocateCstring(n_rest + 1);
+    do(int i=0 to n_rest-1 step 1){
+        JSValue a = rest[i];
+        int c;
+        main: match(a){
+            case(Fixnum a){
+                c <- to_cint(a);
+            }
+            case(Flonum a){
+                c <- flonum_to_int(a);
+            }
+            case(true){
+                Number n = to_number(a);
+                rematch main(n);
+                // printf("fromCharCode: cannot convert to a number\n");
+                // c <- CHAR_CODE_SPACE;
+            }
+        }
+        cstringPutCharAt(s, i, c);
+    }
+    cstringPutCharAt(s, n_rest, CHAR_CODE_NULL);
+    JSValue ret = cstr_to_string(s);
+    free(s);
+    return ret;
+    
+}

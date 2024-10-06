@@ -1,0 +1,7 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, builtinFunction) math_ceil : (JSValue, JSValue) ->JSValue
+math_ceil(placeHolder, x){
+  return math_func(CEIL, x);
+}

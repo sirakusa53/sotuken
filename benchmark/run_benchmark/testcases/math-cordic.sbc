@@ -1,0 +1,303 @@
+fingerprint 82
+funcLength 6
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 158
+numberOfConstants 29
+setfl 12
+setfl 12
+makeclosure 1 0 # 30 0
+bigprim 2 #0:string="FIXED"
+setglobal 2 1
+makeclosure 1 1 # 35 0
+bigprim 3 #1:string="FLOAT"
+setglobal 3 1
+makeclosure 1 2 # 40 0
+bigprim 3 #2:string="DEG2RAD"
+setglobal 3 1
+makeclosure 1 3 # 54 0
+bigprim 3 #3:string="cordicsincos"
+setglobal 3 1
+makeclosure 1 4 # 88 0
+bigprim 3 #4:string="cordic"
+setglobal 3 1
+bigprim 1 #5:number=0.607252935
+bigprim 4 #6:string="AG_CONST"
+setglobal 4 1
+bigprim 4 #7:string="Array"
+getglobal 4 4
+fixnum 5 12
+move 12 5
+construct 1 4 1
+setfl 12
+getnewa 1 # 45 13
+getglobal 4 2
+fixnum 5 45
+move 12 5
+call 4 1
+setfl 12
+geta 4 # 46 2
+setpropregfixreg 1 0 4
+getglobal 4 2
+bigprim 5 #8:number=26.565
+move 12 5
+call 4 1
+setfl 12
+geta 4 # 46 15
+setpropregfixreg 1 1 4
+getglobal 4 2
+bigprim 5 #9:number=14.0362
+move 12 5
+call 4 1
+setfl 12
+geta 4 # 46 30
+setpropregfixreg 1 2 4
+getglobal 4 2
+bigprim 5 #10:number=7.12502
+move 12 5
+call 4 1
+setfl 12
+geta 4 # 46 46
+setpropregfixreg 1 3 4
+getglobal 4 2
+bigprim 5 #11:number=3.57633
+move 12 5
+call 4 1
+setfl 12
+geta 4 # 47 2
+setpropregfixreg 1 4 4
+getglobal 4 2
+bigprim 5 #12:number=1.78991
+move 12 5
+call 4 1
+setfl 12
+geta 4 # 47 18
+setpropregfixreg 1 5 4
+getglobal 4 2
+bigprim 5 #13:number=0.895174
+move 12 5
+call 4 1
+setfl 12
+geta 4 # 47 34
+setpropregfixreg 1 6 4
+getglobal 4 2
+bigprim 5 #14:number=0.447614
+move 12 5
+call 4 1
+setfl 12
+geta 4 # 47 51
+setpropregfixreg 1 7 4
+getglobal 4 2
+bigprim 5 #15:number=0.223811
+move 12 5
+call 4 1
+setfl 12
+geta 4 # 48 2
+setpropregfixreg 1 8 4
+getglobal 4 2
+bigprim 5 #16:number=0.111906
+move 12 5
+call 4 1
+setfl 12
+geta 4 # 48 19
+setpropregfixreg 1 9 4
+getglobal 4 2
+bigprim 5 #17:number=0.055953
+move 12 5
+call 4 1
+setfl 12
+geta 4 # 48 36
+setpropregfixreg 1 10 4
+getglobal 2 2
+bigprim 4 #18:number=0.027977
+move 12 4
+call 2 1
+setfl 12
+geta 4 # 49 2
+setpropregfixreg 1 11 4
+bigprim 2 #19:string="Angles"
+setglobal 2 1
+bigprim 1 #20:number=28.027
+bigprim 2 #21:string="Target"
+setglobal 2 1
+fixnum 1 0
+bigprim 2 #22:string="total"
+setglobal 2 1
+getglobal 1 3
+fixnum 3 25000
+move 12 3
+call 1 1
+setfl 12
+bigprim 1 #23:number=10362.570468755888
+bigprim 3 #24:string="expected"
+setglobal 3 1
+getglobal 1 2
+getglobal 4 3
+equal 5 1 4
+isundef 6 5 # 104 4
+jumpfalse 6 17 # 104 4
+isobject 5 1 # 104 4
+jumpfalse 5 6 # 104 4
+getpropregstr 5 1 #25:string="valueOf"
+move 12 1
+send 5 0
+geta 1 # 104 4
+jump 5 # 104 4
+getpropregstr 5 4 #25:string="valueOf"
+move 12 4
+send 5 0
+geta 4 # 104 4
+equal 5 1 4
+isundef 1 5 # 104 4
+jumpfalse 1 3 # 104 4
+bigprim 1 #26:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 104 4
+not 1 5
+jumpfalse 1 7 # 104 4
+getglobal 1 3
+addstrreg 1 #27:string="ERROR:\sbad\sresult:\sexpected\s" 1
+addregstr 1 1 #28:string="\sbut\sgot\s"
+getglobal 2 2
+add 1 1 2
+throw 1
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 6
+numberOfConstants 0
+setfl 7
+setfl 7
+fixnum 1 65536
+mul 1 2 1
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 6
+numberOfConstants 0
+setfl 7
+setfl 7
+fixnum 1 65536
+div 1 2 1
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 5
+numberOfConstants 1
+setfl 7
+setfl 7
+mulfloreg 1 #0:number=0.017453 2
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 74
+numberOfConstants 4
+setfl 13
+setfl 13
+bigprim 1 #0:string="FIXED"
+getglobal 3 1
+bigprim 4 #1:string="AG_CONST"
+getglobal 4 4
+move 13 4
+call 3 1
+setfl 13
+geta 3 # 61 8
+move 4 3 # 61 4
+fixnum 3 0
+move 5 3
+getglobal 1 1
+move 13 2
+call 1 1
+setfl 13
+geta 3 # 64 18
+move 1 3 # 64 4
+move 2 5
+move 6 5
+jump 37 # 66 4
+lessthan 3 2 1
+jumpfalse 3 17 # 68 12
+move 3 4 # 69 19
+move 7 5 # 69 24
+rightshift 7 7 6
+sub 3 3 7
+move 7 3 # 69 12
+rightshift 3 4 6
+add 3 3 5
+move 5 3 # 70 12
+move 3 7 # 71 16
+move 4 3 # 71 12
+bigprim 3 #2:string="Angles"
+getglobal 3 3
+getprop 3 3 6
+add 3 2 3
+move 2 3 # 72 12
+jump 17 # 73 15
+move 3 4 # 74 19
+move 7 5 # 74 24
+rightshift 7 7 6
+add 3 3 7
+move 7 3 # 74 12
+rightshift 3 4 6
+mulregfix 3 3 -1
+add 3 3 5
+move 5 3 # 75 12
+move 3 7 # 76 16
+move 4 3 # 76 12
+bigprim 3 #2:string="Angles"
+getglobal 3 3
+getprop 3 3 6
+sub 3 2 3
+move 2 3 # 77 12
+addregfix 3 6 1
+move 6 3 # 66 30
+lessthanregfix 3 6 12
+jumptrue 3 -37 # 66 19
+bigprim 1 #3:string="FLOAT"
+getglobal 2 1
+move 13 4
+call 2 1
+setfl 13
+geta 2 # 81 11
+getglobal 1 1
+move 13 5
+call 1 1
+setfl 13
+geta 1 # 81 22
+mul 3 2 1
+seta 3
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 22
+numberOfConstants 3
+setfl 12
+setfl 12
+fixnum 1 0
+jump 14 # 91 2
+bigprim 3 #0:string="total"
+getglobal 4 3
+bigprim 5 #1:string="cordicsincos"
+getglobal 5 5
+bigprim 6 #2:string="Target"
+getglobal 6 6
+move 12 6
+call 5 1
+setfl 12
+geta 5 # 92 15
+add 4 4 5
+setglobal 3 4
+addregfix 1 1 1
+lessthan 3 1 2
+jumptrue 3 -14 # 91 20
+specconst 1 undefined
+seta 1
+ret

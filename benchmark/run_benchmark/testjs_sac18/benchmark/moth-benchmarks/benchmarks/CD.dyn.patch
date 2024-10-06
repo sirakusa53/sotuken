@@ -1,0 +1,42 @@
+diff --git a/moth-benchmarks/benchmarks/CD.js b/moth-benchmarks/benchmarks/CD.js
+index 65447bf..a74f8e9 100755
+--- a/moth-benchmarks/benchmarks/CD.js
++++ b/moth-benchmarks/benchmarks/CD.js
+@@ -102,7 +102,7 @@ Vector3D.prototype.times = function (amount) {
+ };
+ 
+ function RedBlackTree() {
+-  this.root = null;
++//  this.root = null;
+ }
+ 
+ RedBlackTree.prototype.put = function (key, value) {
+@@ -273,9 +273,12 @@ RedBlackTree.prototype.findNode = function (key) {
+ };
+ 
+ function InsertResult(isNewEntry, newNode, oldValue) {
+-  this.isNewEntry = isNewEntry;
+-  this.newNode    = newNode;
+-  this.oldValue   = oldValue;
++  if (isNewEntry)
++    this.isNewEntry = isNewEntry;
++  if (newNode)
++    this.newNode    = newNode;
++  if (oldValue)
++    this.oldValue   = oldValue;
+ }
+ 
+ RedBlackTree.prototype.treeInsert = function (key, value) {
+@@ -633,9 +636,9 @@ function treeMinimum(x) {
+ function Node(key, value) {
+   this.key = key;
+   this.value = value;
+-  this.left = null;
+-  this.right = null;
+-  this.parent = null;
++//  this.left = null;
++//  this.right = null;
++//  this.parent = null;
+   this.color = "red";
+ }
+ 

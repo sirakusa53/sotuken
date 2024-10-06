@@ -1,0 +1,14 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) array_isArray : (JSValue, JSValue) -> JSValue 
+array_isArray(placeHolder, arg){
+    match(arg){
+        case(Array arg){
+            return JS_TRUE;
+        }
+        case(true){
+            return JS_FALSE;
+        }
+    }
+}

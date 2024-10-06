@@ -1,0 +1,7 @@
+======== math-spectral-norm ========
+0: total CPU time = 59.482 msec, total GC time = 4.61 msec (#GC = 8) n_hc = 20, n_enter_hc = 245686, n_exit_hc = 122883
+1: total CPU time = 65.122 msec, total GC time = 4.855 msec (#GC = 8) n_hc = 20, n_enter_hc = 245686, n_exit_hc = 122883
+
+======== math-spectral-norm Optimisation ========
+0: total CPU time = 37.534 msec, total GC time = 0.808 msec (#GC = 1) n_hc = 20, n_enter_hc = 726, n_exit_hc = 403
+1: total CPU time = 37.301 msec, total GC time = 1.249 msec (#GC = 1) n_hc = 20, n_enter_hc = 726, n_exit_hc = 403

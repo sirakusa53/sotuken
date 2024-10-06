@@ -1,0 +1,7 @@
+======== tak_ft ========
+0: total CPU time = 38.216 msec, total GC time = 4.833 msec (#GC = 8) n_hc = 20, n_enter_hc = 280312, n_exit_hc = 140188
+1: total CPU time = 38.875 msec, total GC time = 4.115 msec (#GC = 8) n_hc = 20, n_enter_hc = 280312, n_exit_hc = 140188
+
+======== tak_ft Optimisation ========
+0: total CPU time = 12.43 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 342, n_exit_hc = 203
+1: total CPU time = 11.687 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 342, n_exit_hc = 203

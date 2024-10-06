@@ -1,0 +1,24 @@
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, needContext, tailCall)
+localret : void -> void
+
+localret () {
+    // Localret();
+
+    InstructionDisplacement disp;
+    int status;
+    int newpc;
+    (status, newpc) <- LCallStackPop();
+    UNUSE(status);
+    /* lcall_stack_pop body */
+    // if (context.lcall_stack_ptr < 1) {
+    //   newpc <- -1;
+    // } else {
+    //   context.lcall_stack_ptr <- context.lcall_stack_ptr - 1;
+    //   v <- get_array_prop(context.lcall_stack, cint_to_number(context.lcall_stack_ptr));
+    //   newpc <- number_to_cint(v);
+    // }
+    disp <- cintToInstructionDisplacement(newpc - pc);
+    set_pc_relative(disp);
+}

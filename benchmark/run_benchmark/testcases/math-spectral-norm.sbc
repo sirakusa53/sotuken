@@ -1,0 +1,288 @@
+fingerprint 82
+funcLength 6
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 82
+numberOfConstants 14
+setfl 12
+setfl 12
+makeclosure 1 0 # 6 0
+bigprim 2 #0:string="A"
+setglobal 2 1
+makeclosure 1 1 # 10 0
+bigprim 2 #1:string="Au"
+setglobal 2 1
+makeclosure 1 2 # 19 0
+bigprim 2 #2:string="Atu"
+setglobal 2 1
+makeclosure 1 3 # 28 0
+bigprim 2 #3:string="AtAu"
+setglobal 2 1
+makeclosure 1 4 # 33 0
+bigprim 2 #4:string="spectralnorm"
+setglobal 2 1
+fixnum 1 0
+bigprim 2 #5:string="total"
+setglobal 2 1
+fixnum 1 6
+bigprim 2 #6:string="i"
+setglobal 2 1
+jump 15 # 51 0
+bigprim 2 #5:string="total"
+getglobal 1 2
+bigprim 3 #4:string="spectralnorm"
+getglobal 3 3
+getglobal 4 5
+move 12 4
+call 3 1
+setfl 12
+geta 3 # 52 13
+add 1 1 3
+setglobal 2 1
+getglobal 1 5
+mulregfix 1 1 2
+setglobal 5 1
+bigprim 5 #6:string="i"
+getglobal 1 5
+lessthanequalregfix 1 1 48
+jumptrue 1 -17 # 51 16
+bigprim 1 #7:number=5.086694231303284
+bigprim 2 #8:string="expected"
+setglobal 2 1
+bigprim 3 #5:string="total"
+getglobal 1 3
+getglobal 5 2
+equal 4 1 5
+isundef 6 4 # 57 4
+jumpfalse 6 17 # 57 4
+isobject 4 1 # 57 4
+jumpfalse 4 6 # 57 4
+getpropregstr 4 1 #9:string="valueOf"
+move 12 1
+send 4 0
+geta 1 # 57 4
+jump 5 # 57 4
+getpropregstr 4 5 #9:string="valueOf"
+move 12 5
+send 4 0
+geta 5 # 57 4
+equal 4 1 5
+isundef 1 4 # 57 4
+jumpfalse 1 3 # 57 4
+bigprim 1 #10:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 57 4
+not 1 4
+jumpfalse 1 12 # 57 4
+bigprim 1 #11:string="print"
+getglobal 1 1
+getglobal 2 2
+addstrreg 2 #12:string="ERROR:\sbad\sresult:\sexpected\s" 2
+addregstr 2 2 #13:string="\sbut\sgot\s"
+getglobal 3 3
+add 2 2 3
+move 12 2
+call 1 1
+setfl 12
+geta 1 # 59 4
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 12
+numberOfConstants 0
+setfl 8
+setfl 8
+add 1 2 3
+add 3 2 3
+addregfix 3 3 1
+mul 1 1 3
+divregfix 1 1 2
+add 1 1 2
+addregfix 1 1 1
+divfixreg 1 1 1
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 32
+numberOfConstants 2
+setfl 14
+setfl 14
+fixnum 1 0
+jump 22 # 11 2
+fixnum 4 0
+move 5 4
+jump 13 # 13 4
+bigprim 6 #0:string="A"
+getglobal 6 6
+move 7 1 # 14 13
+move 13 7
+move 14 5
+call 6 2
+setfl 14
+geta 6 # 14 11
+getprop 7 2 5
+mul 6 6 7
+add 4 4 6
+addregfix 5 5 1
+move 6 5 # 13 18
+getpropregstr 7 2 #1:string="length"
+lessthan 6 6 7
+jumptrue 6 -15 # 13 18
+setprop 3 1 4
+addregfix 1 1 1
+move 4 1 # 11 16
+getpropregstr 5 2 #1:string="length"
+lessthan 4 4 5
+jumptrue 4 -24 # 11 16
+specconst 1 undefined
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 32
+numberOfConstants 2
+setfl 14
+setfl 14
+fixnum 1 0
+jump 22 # 20 2
+fixnum 4 0
+move 5 4
+jump 13 # 22 4
+bigprim 6 #0:string="A"
+getglobal 6 6
+move 7 5 # 23 13
+move 13 7
+move 14 1
+call 6 2
+setfl 14
+geta 6 # 23 11
+getprop 7 2 5
+mul 6 6 7
+add 4 4 6
+addregfix 5 5 1
+move 6 5 # 22 18
+getpropregstr 7 2 #1:string="length"
+lessthan 6 6 7
+jumptrue 6 -15 # 22 18
+setprop 3 1 4
+addregfix 1 1 1
+move 4 1 # 20 16
+getpropregstr 5 2 #1:string="length"
+lessthan 4 4 5
+jumptrue 4 -24 # 20 16
+specconst 1 undefined
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 17
+numberOfConstants 2
+setfl 11
+setfl 11
+bigprim 1 #0:string="Au"
+getglobal 1 1
+move 10 2
+move 11 4
+call 1 2
+setfl 11
+bigprim 1 #1:string="Atu"
+getglobal 1 1
+move 10 4
+move 11 3
+call 1 2
+setfl 11
+specconst 1 undefined
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 81
+numberOfConstants 4
+setfl 17
+setfl 17
+specconst 1 undefined
+bigprim 3 #0:string="Array"
+getglobal 4 3
+fixnum 5 0
+move 17 5
+construct 1 4 1
+setfl 17
+getnewa 1 # 34 11
+move 4 1 # 34 9
+getglobal 6 3
+move 17 5
+construct 1 6 1
+setfl 17
+getnewa 1 # 34 17
+move 6 1 # 34 15
+getglobal 3 3
+move 17 5
+construct 1 3 1
+setfl 17
+getnewa 1 # 34 23
+move 3 1 # 34 21
+move 7 5
+move 1 5
+move 8 5
+jump 6 # 35 2
+setpropregregfix 4 8 1
+fixnum 1 0
+setpropregregfix 3 8 0
+setpropregregfix 6 8 0
+addregfix 8 8 1
+lessthan 9 8 2
+jumptrue 9 -6 # 35 12
+move 8 1
+jump 16 # 38 2
+bigprim 1 #1:string="AtAu"
+getglobal 9 1
+move 15 4
+move 16 6
+move 17 3
+call 9 3
+setfl 17
+getglobal 1 1
+move 15 6
+move 16 4
+move 17 3
+call 1 3
+setfl 17
+addregfix 1 8 1
+move 8 1 # 38 20
+lessthanregfix 1 8 10
+jumptrue 1 -16 # 38 12
+fixnum 1 0
+move 8 1
+jump 13 # 42 2
+getprop 1 4 8
+getprop 3 6 8
+mul 1 1 3
+add 1 5 1
+move 5 1 # 43 4
+getprop 1 6 8
+getprop 3 6 8
+mul 1 1 3
+add 1 7 1
+move 7 1 # 44 4
+addregfix 1 8 1
+move 8 1 # 42 19
+lessthan 1 8 2
+jumptrue 1 -13 # 42 12
+bigprim 1 #2:string="Math"
+getglobal 1 1
+getpropregstr 2 1 #3:string="sqrt"
+div 3 5 7
+move 16 1
+move 17 3
+send 2 1
+setfl 17
+geta 1 # 46 9
+seta 1
+ret

@@ -1,0 +1,2288 @@
+fingerprint 82
+funcLength 29
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 146
+numberOfConstants 36
+setfl 15
+setfl 15
+makeclosure 1 0 # 26 0
+bigprim 2 #0:string="createVector"
+setglobal 2 1
+makeclosure 1 1 # 30 0
+bigprim 2 #1:string="sqrLengthVector"
+setglobal 2 1
+makeclosure 1 2 # 34 0
+bigprim 2 #2:string="lengthVector"
+setglobal 2 1
+makeclosure 1 3 # 38 0
+bigprim 2 #3:string="addVector"
+setglobal 2 1
+makeclosure 1 4 # 45 0
+bigprim 2 #4:string="subVector"
+setglobal 2 1
+makeclosure 1 5 # 52 0
+bigprim 2 #5:string="scaleVector"
+setglobal 2 1
+makeclosure 1 6 # 59 0
+bigprim 2 #6:string="normaliseVector"
+setglobal 2 1
+makeclosure 1 7 # 67 0
+bigprim 2 #7:string="add"
+setglobal 2 1
+makeclosure 1 8 # 71 0
+bigprim 2 #8:string="sub"
+setglobal 2 1
+makeclosure 1 9 # 75 0
+bigprim 2 #9:string="scalev"
+setglobal 2 1
+makeclosure 1 10 # 79 0
+bigprim 2 #10:string="dot"
+setglobal 2 1
+makeclosure 1 11 # 83 0
+bigprim 2 #11:string="scale"
+setglobal 2 1
+makeclosure 1 12 # 87 0
+bigprim 2 #12:string="cross"
+setglobal 2 1
+makeclosure 1 13 # 94 0
+bigprim 2 #13:string="normalise"
+setglobal 2 1
+makeclosure 1 14 # 99 0
+bigprim 2 #14:string="transformMatrix"
+setglobal 2 1
+makeclosure 1 15 # 107 0
+bigprim 2 #15:string="invertMatrix"
+setglobal 2 1
+makeclosure 1 16 # 125 0
+bigprim 2 #16:string="Triangle"
+setglobal 2 1
+makeclosure 1 17 # 181 0
+bigprim 3 #17:string="Scene"
+setglobal 3 1
+makeclosure 1 18 # 261 0
+bigprim 4 #18:string="Camera"
+setglobal 4 1
+makeclosure 1 19 # 292 0
+bigprim 5 #19:string="renderRows"
+setglobal 5 1
+makeclosure 1 20 # 313 0
+bigprim 5 #20:string="raytraceScene"
+setglobal 5 1
+makeclosure 1 22 # 405 0
+bigprim 6 #21:string="arrayToCanvasCommands"
+setglobal 6 1
+makeclosure 1 23 # 160 31
+getglobal 2 2
+getpropregstr 2 2 #22:string="prototype"
+setpropregstrreg 2 #23:string="intersect" 1
+bigprim 2 #24:string="Array"
+getglobal 2 2
+fixnum 7 0
+move 13 7
+move 14 7
+move 15 7
+construct 1 2 3
+setfl 15
+getnewa 1 # 187 15
+bigprim 2 #25:string="zero"
+setglobal 2 1
+makeclosure 1 24 # 189 28
+getglobal 2 3
+getpropregstr 2 2 #22:string="prototype"
+setpropregstrreg 2 #23:string="intersect" 1
+makeclosure 1 25 # 244 26
+getglobal 2 3
+getpropregstr 2 2 #22:string="prototype"
+setpropregstrreg 2 #26:string="blocked" 1
+makeclosure 1 26 # 283 35
+getglobal 2 4
+getpropregstr 2 2 #22:string="prototype"
+setpropregstrreg 2 #27:string="generateRayPair" 1
+makeclosure 1 27 # 305 26
+getglobal 2 4
+getpropregstr 2 2 #22:string="prototype"
+setpropregstrreg 2 #28:string="render" 1
+getglobal 1 6
+getglobal 2 5
+call 2 0
+setfl 15
+geta 2 # 441 35
+move 15 2
+call 1 1
+setfl 15
+geta 1 # 441 13
+bigprim 2 #29:string="testOutput"
+setglobal 2 1
+fixnum 1 20970
+bigprim 3 #30:string="expectedLength"
+setglobal 3 1
+getglobal 1 2
+getpropregstr 1 1 #31:string="length"
+getglobal 4 3
+equal 5 1 4
+isundef 6 5 # 445 4
+jumpfalse 6 17 # 445 4
+isobject 5 1 # 445 4
+jumpfalse 5 6 # 445 4
+getpropregstr 5 1 #32:string="valueOf"
+move 15 1
+send 5 0
+geta 1 # 445 4
+jump 5 # 445 4
+getpropregstr 5 4 #32:string="valueOf"
+move 15 4
+send 5 0
+geta 4 # 445 4
+equal 5 1 4
+isundef 1 5 # 445 4
+jumpfalse 1 3 # 445 4
+bigprim 1 #33:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 445 4
+not 1 5
+jumpfalse 1 8 # 445 4
+getglobal 1 3
+addstrreg 1 #34:string="Error:\sbad\sresult:\sexpected\slength\s" 1
+addregstr 1 1 #35:string="\sbut\sgot\s"
+getglobal 2 2
+getpropregstr 2 2 #31:string="length"
+add 1 1 2
+throw 1
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 13
+numberOfConstants 1
+setfl 13
+setfl 13
+specconst 1 undefined
+bigprim 5 #0:string="Array"
+getglobal 5 5
+move 11 2
+move 12 3
+move 13 4
+construct 1 5 3
+setfl 13
+getnewa 1 # 27 15
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 15
+numberOfConstants 0
+setfl 9
+setfl 9
+getpropregfix 1 2 0
+getpropregfix 3 2 0
+mul 1 1 3
+getpropregfix 3 2 1
+getpropregfix 4 2 1
+mul 3 3 4
+add 1 1 3
+getpropregfix 3 2 2
+getpropregfix 2 2 2
+mul 2 3 2
+add 1 1 2
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 23
+numberOfConstants 2
+setfl 12
+setfl 12
+bigprim 1 #0:string="Math"
+getglobal 1 1
+getpropregstr 3 1 #1:string="sqrt"
+getpropregfix 4 2 0
+getpropregfix 5 2 0
+mul 4 4 5
+getpropregfix 5 2 1
+getpropregfix 6 2 1
+mul 5 5 6
+add 4 4 5
+getpropregfix 5 2 2
+getpropregfix 2 2 2
+mul 2 5 2
+add 2 4 2
+move 11 1
+move 12 2
+send 3 1
+setfl 12
+geta 1 # 35 11
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 16
+numberOfConstants 0
+setfl 9
+setfl 9
+getpropregfix 1 2 0
+getpropregfix 4 3 0
+add 1 1 4
+setpropregfixreg 2 0 1
+getpropregfix 1 2 1
+getpropregfix 4 3 1
+add 1 1 4
+setpropregfixreg 2 1 1
+getpropregfix 1 2 2
+getpropregfix 3 3 2
+add 1 1 3
+setpropregfixreg 2 2 1
+seta 2
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 16
+numberOfConstants 0
+setfl 9
+setfl 9
+getpropregfix 1 2 0
+getpropregfix 4 3 0
+sub 1 1 4
+setpropregfixreg 2 0 1
+getpropregfix 1 2 1
+getpropregfix 4 3 1
+sub 1 1 4
+setpropregfixreg 2 1 1
+getpropregfix 1 2 2
+getpropregfix 3 3 2
+sub 1 1 3
+setpropregfixreg 2 2 1
+seta 2
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 13
+numberOfConstants 0
+setfl 8
+setfl 8
+getpropregfix 1 2 0
+mul 1 1 3
+setpropregfixreg 2 0 1
+getpropregfix 1 2 1
+mul 1 1 3
+setpropregfixreg 2 1 1
+getpropregfix 1 2 2
+mul 1 1 3
+setpropregfixreg 2 2 1
+seta 2
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 33
+numberOfConstants 2
+setfl 12
+setfl 12
+bigprim 1 #0:string="Math"
+getglobal 1 1
+getpropregstr 3 1 #1:string="sqrt"
+getpropregfix 4 2 0
+getpropregfix 5 2 0
+mul 4 4 5
+getpropregfix 5 2 1
+getpropregfix 6 2 1
+mul 5 5 6
+add 4 4 5
+getpropregfix 5 2 2
+getpropregfix 6 2 2
+mul 5 5 6
+add 4 4 5
+move 11 1
+move 12 4
+send 3 1
+setfl 12
+geta 1 # 60 14
+move 3 1 # 60 8
+getpropregfix 4 2 0
+div 1 4 1
+setpropregfixreg 2 0 1
+getpropregfix 1 2 1
+div 1 1 3
+setpropregfixreg 2 1 1
+getpropregfix 1 2 2
+div 1 1 3
+setpropregfixreg 2 2 1
+seta 2
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 22
+numberOfConstants 1
+setfl 15
+setfl 15
+specconst 1 undefined
+bigprim 4 #0:string="Array"
+getglobal 4 4
+getpropregfix 5 2 0
+getpropregfix 6 3 0
+add 5 5 6
+getpropregfix 6 2 1
+getpropregfix 7 3 1
+add 6 6 7
+getpropregfix 2 2 2
+getpropregfix 3 3 2
+add 2 2 3
+move 13 5
+move 14 6
+move 15 2
+construct 1 4 3
+setfl 15
+getnewa 1 # 68 15
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 22
+numberOfConstants 1
+setfl 15
+setfl 15
+specconst 1 undefined
+bigprim 4 #0:string="Array"
+getglobal 4 4
+getpropregfix 5 2 0
+getpropregfix 6 3 0
+sub 5 5 6
+getpropregfix 6 2 1
+getpropregfix 7 3 1
+sub 6 6 7
+getpropregfix 2 2 2
+getpropregfix 3 3 2
+sub 2 2 3
+move 13 5
+move 14 6
+move 15 2
+construct 1 4 3
+setfl 15
+getnewa 1 # 72 15
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 22
+numberOfConstants 1
+setfl 15
+setfl 15
+specconst 1 undefined
+bigprim 4 #0:string="Array"
+getglobal 4 4
+getpropregfix 5 2 0
+getpropregfix 6 3 0
+mul 5 5 6
+getpropregfix 6 2 1
+getpropregfix 7 3 1
+mul 6 6 7
+getpropregfix 2 2 2
+getpropregfix 3 3 2
+mul 2 2 3
+move 13 5
+move 14 6
+move 15 2
+construct 1 4 3
+setfl 15
+getnewa 1 # 76 15
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 15
+numberOfConstants 0
+setfl 10
+setfl 10
+getpropregfix 1 2 0
+getpropregfix 4 3 0
+mul 1 1 4
+getpropregfix 4 2 1
+getpropregfix 5 3 1
+mul 4 4 5
+add 1 1 4
+getpropregfix 2 2 2
+getpropregfix 3 3 2
+mul 2 2 3
+add 1 1 2
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 21
+numberOfConstants 1
+setfl 11
+setfl 11
+specconst 1 undefined
+bigprim 4 #0:string="Array"
+getglobal 4 4
+fixnum 5 3
+move 11 5
+construct 1 4 1
+setfl 11
+getnewa 1 # 84 11
+getpropregfix 4 2 0
+mul 4 4 3
+setpropregfixreg 1 0 4
+getpropregfix 4 2 1
+mul 4 4 3
+setpropregfixreg 1 1 4
+getpropregfix 2 2 2
+mul 4 2 3
+setpropregfixreg 1 2 4
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 36
+numberOfConstants 1
+setfl 12
+setfl 12
+specconst 1 undefined
+bigprim 4 #0:string="Array"
+getglobal 5 4
+fixnum 4 3
+move 12 4
+construct 1 5 1
+setfl 12
+getnewa 1 # 88 11
+getpropregfix 4 2 1
+getpropregfix 5 3 2
+mul 4 4 5
+getpropregfix 5 2 2
+getpropregfix 6 3 1
+mul 5 5 6
+sub 4 4 5
+setpropregfixreg 1 0 4
+getpropregfix 4 2 2
+getpropregfix 5 3 0
+mul 4 4 5
+getpropregfix 5 2 0
+getpropregfix 6 3 2
+mul 5 5 6
+sub 4 4 5
+setpropregfixreg 1 1 4
+getpropregfix 4 2 0
+getpropregfix 5 3 1
+mul 4 4 5
+getpropregfix 2 2 1
+getpropregfix 3 3 0
+mul 2 2 3
+sub 4 4 2
+setpropregfixreg 1 2 4
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 27
+numberOfConstants 2
+setfl 11
+setfl 11
+bigprim 1 #0:string="lengthVector"
+getglobal 1 1
+move 11 2
+call 1 1
+setfl 11
+geta 1 # 95 14
+move 3 1 # 95 8
+bigprim 4 #1:string="Array"
+getglobal 4 4
+fixnum 5 3
+move 11 5
+construct 1 4 1
+setfl 11
+getnewa 1 # 96 11
+getpropregfix 4 2 0
+div 4 4 3
+setpropregfixreg 1 0 4
+getpropregfix 4 2 1
+div 4 4 3
+setpropregfixreg 1 1 4
+getpropregfix 2 2 2
+div 4 2 3
+setpropregfixreg 1 2 4
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 56
+numberOfConstants 1
+setfl 14
+setfl 14
+getpropregfix 1 2 0
+getpropregfix 4 3 0
+mul 1 1 4
+getpropregfix 4 2 1
+getpropregfix 5 3 1
+mul 4 4 5
+add 1 1 4
+getpropregfix 4 2 2
+getpropregfix 5 3 2
+mul 4 4 5
+add 1 1 4
+fixnum 4 3
+getpropregfix 5 2 3
+add 1 1 5
+move 5 1 # 101 8
+getpropregfix 1 2 4
+getpropregfix 6 3 0
+mul 1 1 6
+getpropregfix 6 2 5
+getpropregfix 7 3 1
+mul 6 6 7
+add 1 1 6
+getpropregfix 6 2 6
+getpropregfix 7 3 2
+mul 6 6 7
+add 1 1 6
+getpropregfix 6 2 7
+add 1 1 6
+move 6 1 # 102 8
+getpropregfix 1 2 8
+getpropregfix 7 3 0
+mul 1 1 7
+getpropregfix 7 2 9
+getpropregfix 8 3 1
+mul 7 7 8
+add 1 1 7
+getpropregfix 7 2 10
+getpropregfix 3 3 2
+mul 3 7 3
+add 1 1 3
+getpropregfix 2 2 11
+add 1 1 2
+move 2 1 # 103 8
+bigprim 3 #0:string="Array"
+getglobal 3 3
+move 14 4
+construct 1 3 1
+setfl 14
+getnewa 1 # 104 11
+setpropregfixreg 1 0 5
+setpropregfixreg 1 1 6
+setpropregfixreg 1 2 2
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 98
+numberOfConstants 4
+setfl 15
+setfl 15
+specconst 1 undefined
+bigprim 3 #0:string="Array"
+getglobal 3 3
+fixnum 4 16
+move 15 4
+construct 1 3 1
+setfl 15
+getnewa 1 # 108 19
+move 3 1 # 108 8
+getpropregfix 1 2 3
+mulregfix 1 1 -1
+move 4 1 # 109 8
+getpropregfix 1 2 7
+mulregfix 1 1 -1
+move 5 1 # 110 8
+getpropregfix 1 2 11
+mulregfix 1 1 -1
+move 6 1 # 111 8
+fixnum 1 0
+bigprim 7 #1:string="h"
+setglobal 7 1
+jump 27 # 112 4
+fixnum 1 0
+bigprim 7 #2:string="v"
+setglobal 7 1
+jump 15 # 113 8
+getglobal 1 7
+bigprim 8 #1:string="h"
+getglobal 9 8
+mulregfix 9 9 4
+add 1 1 9
+getprop 1 2 1
+getglobal 8 8
+getglobal 9 7
+mulregfix 9 9 4
+add 8 8 9
+setprop 3 8 1
+getglobal 1 7
+addregfix 1 1 1
+setglobal 7 1
+bigprim 7 #2:string="v"
+getglobal 1 7
+lessthanregfix 1 1 3
+jumptrue 1 -17 # 113 20
+bigprim 1 #1:string="h"
+getglobal 7 1
+addregfix 7 7 1
+setglobal 1 7
+bigprim 1 #1:string="h"
+getglobal 1 1
+lessthanregfix 1 1 3
+jumptrue 1 -29 # 112 16
+fixnum 1 0
+bigprim 7 #3:string="i"
+setglobal 7 1
+jump 8 # 115 4
+getglobal 1 7
+getprop 1 3 1
+getglobal 8 7
+setprop 2 8 1
+getglobal 1 7
+addregfix 1 1 1
+setglobal 7 1
+bigprim 7 #3:string="i"
+getglobal 1 7
+lessthanregfix 1 1 11
+jumptrue 1 -10 # 115 16
+getpropregfix 1 2 0
+mul 1 4 1
+getpropregfix 3 2 1
+mul 3 5 3
+add 1 1 3
+getpropregfix 3 2 2
+mul 3 6 3
+add 1 1 3
+setpropregfixreg 2 3 1
+getpropregfix 1 2 4
+mul 1 4 1
+getpropregfix 3 2 5
+mul 3 5 3
+add 1 1 3
+getpropregfix 3 2 6
+mul 3 6 3
+add 1 1 3
+setpropregfixreg 2 7 1
+getpropregfix 1 2 8
+mul 1 4 1
+getpropregfix 3 2 9
+mul 3 5 3
+add 1 1 3
+getpropregfix 3 2 10
+mul 3 6 3
+add 1 1 3
+setpropregfixreg 2 11 1
+seta 2
+ret
+callentry 0
+sendentry 2
+numberOfLocals 0
+numberOfInstructions 164
+numberOfConstants 20
+setfl 19
+getglobalobj 1 # 125 0
+setfl 19
+bigprim 5 #0:string="sub"
+getglobal 6 5
+move 18 4
+move 19 2
+call 6 2
+setfl 19
+geta 4 # 126 16
+move 6 4 # 126 8
+getglobal 4 5
+move 18 3
+move 19 2
+call 4 2
+setfl 19
+geta 4 # 127 16
+move 3 4 # 127 8
+bigprim 5 #1:string="cross"
+getglobal 5 5
+move 18 6
+move 19 4
+call 5 2
+setfl 19
+geta 4 # 128 17
+move 5 4 # 128 8
+bigprim 7 #2:string="Math"
+getglobal 8 7
+getpropregstr 9 8 #3:string="abs"
+getpropregfix 10 4 0
+move 18 8
+move 19 10
+send 9 1
+setfl 19
+geta 8 # 129 8
+getglobal 9 7
+getpropregstr 10 9 #3:string="abs"
+getpropregfix 4 4 1
+move 18 9
+move 19 4
+send 10 1
+setfl 19
+geta 4 # 129 30
+lessthan 4 4 8
+jumpfalse 4 23 # 129 8
+getglobal 4 7
+getpropregstr 8 4 #3:string="abs"
+getpropregfix 9 5 0
+move 18 4
+move 19 9
+send 8 1
+setfl 19
+geta 4 # 130 12
+getglobal 7 7
+getpropregstr 8 7 #3:string="abs"
+getpropregfix 9 5 2
+move 18 7
+move 19 9
+send 8 1
+setfl 19
+geta 7 # 130 34
+lessthan 4 7 4
+jumpfalse 4 3 # 130 12
+setpropregstrfix 1 #4:string="axis" 0
+jump 2 # 133 12
+setpropregstrfix 1 #4:string="axis" 2
+jump 22 # 135 8
+getglobal 4 7
+getpropregstr 8 4 #3:string="abs"
+getpropregfix 9 5 1
+move 18 4
+move 19 9
+send 8 1
+setfl 19
+geta 4 # 135 12
+getglobal 7 7
+getpropregstr 8 7 #3:string="abs"
+getpropregfix 9 5 2
+move 18 7
+move 19 9
+send 8 1
+setfl 19
+geta 7 # 135 34
+lessthan 4 7 4
+jumpfalse 4 3 # 135 12
+setpropregstrfix 1 #4:string="axis" 1
+jump 2 # 138 12
+setpropregstrfix 1 #4:string="axis" 2
+getpropregstr 4 1 #4:string="axis"
+addregfix 4 4 1
+fixnum 7 3
+modregfix 4 4 3
+move 8 4 # 139 8
+getpropregstr 4 1 #4:string="axis"
+addregfix 4 4 2
+modregfix 4 4 3
+move 9 4 # 140 8
+getprop 4 6 8
+move 10 4 # 141 8
+getprop 4 6 9
+move 6 4 # 142 8
+getprop 4 3 8
+move 11 4 # 144 8
+getprop 4 3 9
+move 3 4 # 145 8
+bigprim 4 #5:string="normalise"
+getglobal 4 4
+move 19 5
+call 4 1
+setfl 19
+geta 4 # 146 18
+setpropregstrreg 1 #6:string="normal" 4
+getprop 4 5 8
+getpropregstr 12 1 #4:string="axis"
+getprop 12 5 12
+div 4 4 12
+setpropregstrreg 1 #7:string="nu" 4
+getprop 4 5 9
+getpropregstr 12 1 #4:string="axis"
+getprop 12 5 12
+div 4 4 12
+setpropregstrreg 1 #8:string="nv" 4
+bigprim 4 #9:string="dot"
+getglobal 4 4
+move 18 5
+move 19 2
+call 4 2
+setfl 19
+geta 4 # 149 14
+getpropregstr 12 1 #4:string="axis"
+getprop 5 5 12
+div 4 4 5
+setpropregstrreg 1 #10:string="nd" 4
+mul 4 10 3
+mul 5 6 11
+sub 4 4 5
+move 5 4 # 150 8
+getprop 4 2 8
+setpropregstrreg 1 #11:string="eu" 4
+getprop 4 2 9
+setpropregstrreg 1 #12:string="ev" 4
+div 4 10 5
+setpropregstrreg 1 #13:string="nu1" 4
+mulregfix 2 6 -1
+div 4 2 5
+setpropregstrreg 1 #14:string="nv1" 4
+div 4 3 5
+setpropregstrreg 1 #15:string="nu2" 4
+mulregfix 2 11 -1
+div 4 2 5
+setpropregstrreg 1 #16:string="nv2" 4
+bigprim 2 #17:string="Array"
+getglobal 2 2
+move 19 7
+construct 4 2 1
+setfl 19
+getnewa 4 # 157 20
+setpropregfixflo 4 0 #18:number=0.7
+setpropregfixflo 4 1 #18:number=0.7
+setpropregfixflo 4 2 #18:number=0.7
+setpropregstrreg 1 #19:string="material" 4
+specconst 1 undefined
+seta 1
+ret
+callentry 0
+sendentry 2
+numberOfLocals 0
+numberOfInstructions 34
+numberOfConstants 6
+setfl 11
+getglobalobj 1 # 181 0
+setfl 11
+setpropregstrreg 1 #0:string="triangles" 2
+bigprim 3 #1:string="Array"
+getglobal 4 3
+fixnum 5 0
+move 11 5
+construct 2 4 1
+setfl 11
+getnewa 2 # 183 18
+setpropregstrreg 1 #2:string="lights" 2
+getglobal 4 3
+fixnum 5 3
+move 11 5
+construct 2 4 1
+setfl 11
+getnewa 2 # 184 19
+setpropregfixfix 2 0 0
+setpropregfixfix 2 1 0
+setpropregfixfix 2 2 0
+setpropregstrreg 1 #3:string="ambient" 2
+getglobal 3 3
+move 11 5
+construct 2 3 1
+setfl 11
+getnewa 2 # 185 22
+setpropregfixflo 2 0 #4:number=0.8
+setpropregfixflo 2 1 #4:number=0.8
+setpropregfixfix 2 2 1
+setpropregstrreg 1 #5:string="background" 2
+specconst 1 undefined
+seta 1
+ret
+callentry 0
+sendentry 2
+numberOfLocals 0
+numberOfInstructions 206
+numberOfConstants 11
+setfl 22
+getglobalobj 1 # 261 0
+setfl 22
+bigprim 5 #0:string="normaliseVector"
+getglobal 6 5
+bigprim 7 #1:string="subVector"
+getglobal 8 7
+move 21 3
+move 22 2
+call 8 2
+setfl 22
+geta 3 # 262 32
+move 22 3
+call 6 1
+setfl 22
+geta 3 # 262 16
+move 6 3 # 262 8
+getglobal 8 5
+bigprim 9 #2:string="cross"
+getglobal 10 9
+move 21 4
+move 22 3
+call 10 2
+setfl 22
+geta 3 # 263 32
+move 22 3
+call 8 1
+setfl 22
+geta 3 # 263 16
+move 4 3 # 263 8
+getglobal 5 5
+getglobal 8 9
+getglobal 7 7
+bigprim 9 #3:string="Array"
+getglobal 9 9
+fixnum 10 3
+move 22 10
+construct 11 9 1
+setfl 22
+getnewa 11 # 264 55
+setpropregfixfix 11 0 0
+setpropregfixfix 11 1 0
+setpropregfixfix 11 2 0
+move 21 11
+move 22 6
+call 7 2
+setfl 22
+geta 7 # 264 45
+move 21 3
+move 22 7
+call 8 2
+setfl 22
+geta 3 # 264 32
+move 22 3
+call 5 1
+setfl 22
+geta 3 # 264 16
+move 5 3 # 264 8
+bigprim 7 #3:string="Array"
+getglobal 8 7
+fixnum 9 16
+move 22 9
+construct 3 8 1
+setfl 22
+getnewa 3 # 265 16
+move 8 3 # 265 8
+getpropregfix 3 4 0
+setpropregfixreg 8 0 3
+getpropregfix 3 4 1
+setpropregfixreg 8 1 3
+getpropregfix 3 4 2
+setpropregfixreg 8 2 3
+getpropregfix 3 5 0
+fixnum 4 4
+setpropregfixreg 8 4 3
+getpropregfix 3 5 1
+setpropregfixreg 8 5 3
+getpropregfix 3 5 2
+setpropregfixreg 8 6 3
+getpropregfix 3 6 0
+setpropregfixreg 8 8 3
+getpropregfix 3 6 1
+setpropregfixreg 8 9 3
+getpropregfix 3 6 2
+setpropregfixreg 8 10 3
+bigprim 3 #4:string="invertMatrix"
+getglobal 3 3
+move 22 8
+call 3 1
+setfl 22
+setpropregfixfix 8 3 0
+setpropregfixfix 8 7 0
+setpropregfixfix 8 11 0
+move 3 2 # 271 18
+setpropregstrreg 1 #5:string="origin" 2
+getglobal 2 7
+move 22 4
+construct 3 2 1
+setfl 22
+getnewa 3 # 272 26
+setpropregstrreg 1 #6:string="directions" 3
+bigprim 2 #7:string="normalise"
+getglobal 3 2
+getglobal 4 7
+move 22 10
+construct 12 4 1
+setfl 22
+getnewa 12 # 273 35
+setpropregfixflo 12 0 #8:number=-0.7
+setpropregfixflo 12 1 #9:number=0.7
+setpropregfixfix 12 2 1
+move 22 12
+call 3 1
+setfl 22
+geta 3 # 273 25
+getpropregstr 4 1 #6:string="directions"
+setpropregfixreg 4 0 3
+getglobal 3 2
+getglobal 4 7
+move 22 10
+construct 13 4 1
+setfl 22
+getnewa 13 # 274 35
+setpropregfixflo 13 0 #9:number=0.7
+setpropregfixflo 13 1 #9:number=0.7
+setpropregfixfix 13 2 1
+move 22 13
+call 3 1
+setfl 22
+geta 3 # 274 25
+getpropregstr 4 1 #6:string="directions"
+setpropregfixreg 4 1 3
+getglobal 3 2
+getglobal 4 7
+move 22 10
+construct 14 4 1
+setfl 22
+getnewa 14 # 275 35
+setpropregfixflo 14 0 #9:number=0.7
+setpropregfixflo 14 1 #8:number=-0.7
+setpropregfixfix 14 2 1
+move 22 14
+call 3 1
+setfl 22
+geta 3 # 275 25
+getpropregstr 4 1 #6:string="directions"
+setpropregfixreg 4 2 3
+getglobal 2 2
+getglobal 3 7
+move 22 10
+construct 15 3 1
+setfl 22
+getnewa 15 # 276 35
+setpropregfixflo 15 0 #8:number=-0.7
+setpropregfixflo 15 1 #8:number=-0.7
+setpropregfixfix 15 2 1
+move 22 15
+call 2 1
+setfl 22
+geta 3 # 276 25
+getpropregstr 2 1 #6:string="directions"
+setpropregfixreg 2 3 3
+bigprim 2 #10:string="transformMatrix"
+getglobal 3 2
+getpropregstr 4 1 #6:string="directions"
+getpropregfix 4 4 0
+move 21 8
+move 22 4
+call 3 2
+setfl 22
+geta 3 # 277 25
+getpropregstr 4 1 #6:string="directions"
+setpropregfixreg 4 0 3
+getglobal 3 2
+getpropregstr 4 1 #6:string="directions"
+getpropregfix 4 4 1
+move 21 8
+move 22 4
+call 3 2
+setfl 22
+geta 3 # 278 25
+getpropregstr 4 1 #6:string="directions"
+setpropregfixreg 4 1 3
+getglobal 3 2
+getpropregstr 4 1 #6:string="directions"
+getpropregfix 4 4 2
+move 21 8
+move 22 4
+call 3 2
+setfl 22
+geta 3 # 279 25
+getpropregstr 4 1 #6:string="directions"
+setpropregfixreg 4 2 3
+getglobal 2 2
+getpropregstr 3 1 #6:string="directions"
+getpropregfix 3 3 3
+move 21 8
+move 22 3
+call 2 2
+setfl 22
+geta 3 # 280 25
+getpropregstr 1 1 #6:string="directions"
+setpropregfixreg 1 3 3
+specconst 1 undefined
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 93
+numberOfConstants 7
+setfl 24
+setfl 24
+jump 86 # 293 4
+getpropregstr 1 2 #0:string="generateRayPair"
+div 9 7 6
+move 23 2
+move 24 9
+send 1 1
+setfl 24
+geta 1 # 294 19
+move 9 1 # 294 12
+fixnum 1 0
+move 10 1
+jump 71 # 295 8
+div 1 10 5
+move 11 1 # 296 16
+bigprim 12 #1:string="addVector"
+getglobal 1 12
+bigprim 13 #2:string="scale"
+getglobal 14 13
+move 15 9 # 297 41
+getpropregfix 15 15 0
+getpropregstr 15 15 #3:string="origin"
+move 23 15
+move 24 11
+call 14 2
+setfl 24
+geta 14 # 297 35
+getglobal 15 13
+move 16 9 # 297 68
+getpropregfix 16 16 1
+getpropregstr 16 16 #3:string="origin"
+subfixreg 17 1 11
+move 23 16
+move 24 17
+call 15 2
+setfl 24
+geta 15 # 297 62
+move 23 14
+move 24 15
+call 1 2
+setfl 24
+geta 1 # 297 25
+move 14 1 # 297 16
+bigprim 1 #4:string="normaliseVector"
+getglobal 1 1
+getglobal 12 12
+getglobal 15 13
+getpropregfix 16 9 0
+getpropregstr 16 16 #5:string="dir"
+move 23 16
+move 24 11
+call 15 2
+setfl 24
+geta 15 # 298 48
+getglobal 13 13
+getpropregfix 16 9 1
+getpropregstr 16 16 #5:string="dir"
+subfixreg 11 1 11
+move 23 16
+move 24 11
+call 13 2
+setfl 24
+geta 11 # 298 72
+move 23 15
+move 24 11
+call 12 2
+setfl 24
+geta 11 # 298 38
+move 24 11
+call 1 1
+setfl 24
+geta 1 # 298 22
+getpropregstr 11 3 #6:string="intersect"
+move 22 3
+move 23 14
+move 24 1
+send 11 2
+setfl 24
+geta 1 # 299 20
+getprop 11 4 7
+setprop 11 10 1
+addregfix 1 10 1
+move 10 1 # 295 35
+lessthan 1 10 5
+jumptrue 1 -71 # 295 24
+addregfix 1 7 1
+move 7 1 # 293 36
+lessthan 1 7 8
+jumptrue 1 -86 # 293 25
+specconst 1 undefined
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 2
+numberOfInstructions 417
+numberOfConstants 17
+setfl 24
+newframe 2 0 # 313 0
+setfl 24
+bigprim 1 #0:string="Date"
+getglobal 1 1
+construct 2 1 0
+setfl 24
+getnewa 2 # 315 24
+getpropregstr 1 2 #1:string="getTime"
+move 24 2
+send 1 0
+setfl 24
+fixnum 1 12
+bigprim 2 #2:string="Array"
+getglobal 3 2
+construct 1 3 0
+setfl 24
+getnewa 1 # 317 24
+move 3 1 # 317 8
+bigprim 4 #3:string="createVector"
+getglobal 1 4
+fixnum 5 10
+fixnum 6 -10
+move 22 6
+move 23 5
+move 24 6
+call 1 3
+setfl 24
+geta 1 # 318 14
+move 7 1 # 318 8
+getglobal 1 4
+move 22 5
+move 23 5
+move 24 6
+call 1 3
+setfl 24
+geta 1 # 319 14
+move 8 1 # 319 8
+getglobal 1 4
+move 22 6
+move 23 5
+move 24 5
+call 1 3
+setfl 24
+geta 1 # 320 14
+move 9 1 # 320 8
+getglobal 1 4
+move 22 5
+move 23 5
+move 24 5
+call 1 3
+setfl 24
+geta 1 # 321 14
+move 10 1 # 321 8
+getglobal 1 4
+move 22 6
+move 23 6
+move 24 6
+call 1 3
+setfl 24
+geta 1 # 322 14
+move 11 1 # 322 8
+getglobal 1 4
+move 22 5
+move 23 6
+move 24 6
+call 1 3
+setfl 24
+geta 1 # 323 14
+move 12 1 # 323 8
+getglobal 1 4
+move 22 6
+move 23 6
+move 24 5
+call 1 3
+setfl 24
+geta 1 # 324 14
+move 13 1 # 324 8
+getglobal 1 4
+move 22 5
+move 23 6
+move 24 5
+call 1 3
+setfl 24
+geta 1 # 325 14
+move 5 1 # 325 8
+fixnum 1 0
+move 6 1
+bigprim 14 #4:string="Triangle"
+getglobal 15 14
+move 22 7
+move 23 8
+move 24 12
+construct 1 15 3
+setfl 24
+getnewa 1 # 331 25
+setpropregfixreg 3 0 1
+getglobal 15 14
+move 22 7
+move 23 12
+move 24 11
+construct 1 15 3
+setfl 24
+getnewa 1 # 332 25
+setpropregfixreg 3 1 1
+getglobal 15 14
+move 22 9
+move 23 10
+move 24 5
+construct 1 15 3
+setfl 24
+getnewa 1 # 334 25
+setpropregfixreg 3 2 1
+getglobal 15 14
+move 22 9
+move 23 5
+move 24 13
+construct 1 15 3
+setfl 24
+getnewa 1 # 335 25
+setpropregfixreg 3 3 1
+getglobal 15 14
+move 22 9
+move 23 7
+move 24 13
+construct 1 15 3
+setfl 24
+getnewa 1 # 339 25
+setpropregfixreg 3 4 1
+getglobal 15 14
+move 22 7
+move 23 11
+move 24 13
+construct 1 15 3
+setfl 24
+getnewa 1 # 341 25
+setpropregfixreg 3 5 1
+getglobal 15 14
+move 22 10
+move 23 8
+move 24 5
+construct 1 15 3
+setfl 24
+getnewa 1 # 344 25
+setpropregfixreg 3 6 1
+getglobal 15 14
+move 22 8
+move 23 12
+move 24 5
+construct 1 15 3
+setfl 24
+getnewa 1 # 345 25
+setpropregfixreg 3 7 1
+getglobal 15 14
+move 22 9
+move 23 10
+move 24 8
+construct 1 15 3
+setfl 24
+getnewa 1 # 347 25
+setpropregfixreg 3 8 1
+getglobal 10 14
+move 22 9
+move 23 8
+move 24 7
+construct 1 10 3
+setfl 24
+getnewa 1 # 348 25
+setpropregfixreg 3 9 1
+getglobal 7 14
+move 22 13
+move 23 5
+move 24 12
+construct 1 7 3
+setfl 24
+getnewa 1 # 350 25
+setpropregfixreg 3 10 1
+getglobal 5 14
+move 22 13
+move 23 12
+move 24 11
+construct 1 5 3
+setfl 24
+getnewa 1 # 351 25
+setpropregfixreg 3 11 1
+getglobal 1 4
+bigprim 5 #5:number=0.4
+move 22 6
+move 23 5
+move 24 6
+call 1 3
+setfl 24
+geta 1 # 354 16
+setlocal 0 0 1
+getglobal 1 4
+move 22 5
+move 23 5
+move 24 5
+call 1 3
+setfl 24
+geta 1 # 355 15
+setlocal 0 1 1
+getlocal 1 0 1 # 356 4
+setpropregstrfix 1 #6:string="reflection" 1
+makeclosure 1 21 # 357 22
+move 5 1 # 357 8
+getglobal 1 4
+fixnum 7 1000
+fixnum 8 -1000
+fixnum 9 30
+fixnum 10 -30
+move 22 8
+move 23 10
+move 24 8
+call 1 3
+setfl 24
+geta 1 # 371 14
+move 11 1 # 371 8
+getglobal 1 4
+move 22 7
+move 23 10
+move 24 8
+call 1 3
+setfl 24
+geta 1 # 372 14
+move 12 1 # 372 8
+getglobal 1 4
+move 22 8
+move 23 10
+move 24 7
+call 1 3
+setfl 24
+geta 1 # 373 14
+move 8 1 # 373 8
+getglobal 1 4
+move 22 7
+move 23 10
+move 24 7
+call 1 3
+setfl 24
+geta 1 # 374 14
+getglobal 7 14
+move 22 8
+move 23 1
+move 24 12
+construct 1 7 3
+setfl 24
+getnewa 1 # 375 25
+setpropregfixreg 3 12 1
+move 1 5 # 376 28
+getpropregfix 7 3 12
+setpropregstrreg 7 #7:string="shader" 5
+getglobal 7 14
+move 22 8
+move 23 12
+move 24 11
+construct 1 7 3
+setfl 24
+getnewa 1 # 377 25
+setpropregfixreg 3 13 1
+move 1 5 # 378 28
+getpropregfix 7 3 13
+setpropregstrreg 7 #7:string="shader" 5
+bigprim 5 #8:string="Scene"
+getglobal 5 5
+move 24 3
+construct 1 5 1
+setfl 24
+getnewa 1 # 380 21
+move 3 1 # 380 8
+getglobal 1 4
+fixnum 5 20
+fixnum 7 38
+fixnum 8 -22
+move 22 5
+move 23 7
+move 24 8
+call 1 3
+setfl 24
+geta 1 # 381 23
+getpropregstr 7 3 #9:string="lights"
+setpropregfixreg 7 0 1
+getglobal 1 4
+bigprim 7 #10:number=0.7
+bigprim 8 #11:number=0.3
+move 22 7
+move 23 8
+move 24 8
+call 1 3
+setfl 24
+geta 1 # 382 30
+getpropregstr 10 3 #9:string="lights"
+getpropregfix 10 10 0
+setpropregstrreg 10 #12:string="colour" 1
+getglobal 1 4
+fixnum 10 23
+fixnum 11 -23
+fixnum 12 40
+fixnum 13 17
+move 22 11
+move 23 12
+move 24 13
+call 1 3
+setfl 24
+geta 1 # 383 23
+getpropregstr 11 3 #9:string="lights"
+setpropregfixreg 11 1 1
+getglobal 1 4
+move 22 7
+move 23 8
+move 24 8
+call 1 3
+setfl 24
+geta 1 # 384 30
+getpropregstr 8 3 #9:string="lights"
+getpropregfix 8 8 1
+setpropregstrreg 8 #12:string="colour" 1
+getglobal 1 4
+move 22 10
+move 23 5
+move 24 13
+call 1 3
+setfl 24
+geta 1 # 385 23
+getpropregstr 5 3 #9:string="lights"
+setpropregfixreg 5 2 1
+getglobal 1 4
+move 22 7
+move 23 7
+move 24 7
+call 1 3
+setfl 24
+geta 1 # 386 30
+getpropregstr 5 3 #9:string="lights"
+getpropregfix 5 5 2
+setpropregstrreg 5 #12:string="colour" 1
+getglobal 1 4
+bigprim 4 #13:number=0.1
+move 22 4
+move 23 4
+move 24 4
+call 1 3
+setfl 24
+geta 1 # 387 21
+setpropregstrreg 3 #14:string="ambient" 1
+move 1 9
+getglobal 2 2
+construct 1 2 0
+setfl 24
+getnewa 1 # 391 21
+move 2 1 # 391 8
+jump 18 # 392 4
+specconst 1 undefined
+bigprim 4 #2:string="Array"
+getglobal 4 4
+construct 1 4 0
+setfl 24
+getnewa 1 # 393 24
+setprop 2 6 1
+fixnum 4 0
+jump 5 # 394 8
+fixnum 1 0
+getprop 5 2 6
+setpropregregfix 5 4 0
+addregfix 4 4 1
+lessthanregfix 5 4 30
+jumptrue 5 -5 # 394 24
+addregfix 4 6 1
+move 6 4 # 392 30
+move 4 6 # 392 20
+fixnum 5 30
+lessthanregfix 4 4 30
+jumptrue 4 -20 # 392 20
+bigprim 4 #15:string="Camera"
+getglobal 4 4
+bigprim 6 #3:string="createVector"
+getglobal 7 6
+fixnum 8 40
+fixnum 9 -40
+move 22 9
+move 23 8
+move 24 8
+call 7 3
+setfl 24
+geta 7 # 399 29
+getglobal 8 6
+fixnum 9 0
+move 22 9
+move 23 9
+move 24 9
+call 8 3
+setfl 24
+geta 8 # 399 56
+getglobal 6 6
+fixnum 10 1
+move 22 9
+move 23 10
+move 24 9
+call 6 3
+setfl 24
+geta 6 # 399 79
+move 22 7
+move 23 8
+move 24 6
+construct 1 4 3
+setfl 24
+getnewa 1 # 399 22
+getpropregstr 4 1 #16:string="render"
+move 20 1
+move 21 3
+move 22 2
+move 23 5
+move 24 5
+send 4 4
+setfl 24
+seta 2
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 43
+numberOfConstants 3
+setfl 9
+setfl 9
+getpropregfix 1 3 0
+divregfix 1 1 32
+modregfix 1 1 2
+addregfix 1 1 2
+modregfix 1 1 2
+move 2 1 # 358 12
+getpropregfix 1 3 2
+divregfix 1 1 32
+addregflo 1 1 #0:number=0.3
+modregfix 1 1 2
+addregfix 1 1 2
+modregfix 1 1 2
+lessthanregfix 2 2 1
+lessthanregfix 1 1 1
+equal 3 2 1
+isundef 4 3 # 360 12
+jumpfalse 4 17 # 360 12
+isobject 3 2 # 360 12
+jumpfalse 3 6 # 360 12
+getpropregstr 3 2 #1:string="valueOf"
+move 9 2
+send 3 0
+geta 2 # 360 12
+jump 5 # 360 12
+getpropregstr 3 1 #1:string="valueOf"
+move 9 1
+send 3 0
+geta 1 # 360 12
+equal 3 2 1
+isundef 1 3 # 360 12
+jumpfalse 1 3 # 360 12
+bigprim 1 #2:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 360 12
+not 1 3
+jumpfalse 1 4 # 360 12
+getlocal 1 0 1 # 367 19
+seta 1
+ret
+getlocal 1 0 0 # 369 19
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 31
+numberOfConstants 4
+setfl 10
+setfl 10
+bigprim 1 #0:string="<canvas\sid=\"renderCanvas\"\swidth=\"30px\"\sheight=\"30px\"></canvas><script>\nvar\spixels\s=\s["
+move 3 1
+fixnum 1 0
+move 4 1
+jump 20 # 409 4
+addregstr 1 3 #1:string="["
+move 3 1 # 410 8
+fixnum 1 0
+move 5 1
+jump 9 # 411 8
+getprop 1 2 4
+getprop 1 1 5
+addstrreg 1 #1:string="[" 1
+addregstr 1 1 #2:string="],"
+add 1 3 1
+move 3 1 # 412 12
+addregfix 1 5 1
+move 5 1 # 411 34
+lessthanregfix 1 5 30
+jumptrue 1 -9 # 411 24
+addregstr 1 3 #2:string="],"
+move 3 1 # 414 8
+addregfix 1 4 1
+move 4 1 # 409 30
+lessthanregfix 1 4 30
+jumptrue 1 -20 # 409 20
+addregstr 1 3 #3:string="];\n\s\s\s\svar\scanvas\s=\sdocument.getElementById(\"renderCanvas\").getContext(\"2d\");\n\n\n\s\s\s\svar\ssize\s=\s30;\n\s\s\s\scanvas.fillStyle\s=\s\"red\";\n\s\s\s\scanvas.fillRect(0,\s0,\ssize,\ssize);\n\s\s\s\scanvas.scale(1,\s-1);\n\s\s\s\scanvas.translate(0,\s-size);\n\n\s\s\s\sif\s(!canvas.setFillColor)\n\s\s\s\s\s\s\s\scanvas.setFillColor\s=\sfunction(r,\sg,\sb,\sa)\s{\n\s\s\s\s\s\s\s\s\s\s\s\sthis.fillStyle\s=\s\"rgb(\"+[Math.floor(r\s*\s255),\sMath.floor(g\s*\s255),\sMath.floor(b\s*\s255)]+\")\";\n\s\s\s\s}\n\nfor\s(var\sy\s=\s0;\sy\s<\ssize;\sy++)\s{\n\s\sfor\s(var\sx\s=\s0;\sx\s<\ssize;\sx++)\s{\n\s\s\s\svar\sl\s=\spixels[y][x];\n\s\s\s\scanvas.setFillColor(l[0],\sl[1],\sl[2],\s1);\n\s\s\s\scanvas.fillRect(x,\sy,\s1,\s1);\n\s\s}\n}</script>"
+seta 1
+ret
+callentry 0
+sendentry 2
+numberOfLocals 0
+numberOfInstructions 86
+numberOfConstants 10
+setfl 16
+getglobalobj 1 # 160 31
+setfl 16
+getpropregstr 6 1 #0:string="axis"
+addregfix 6 6 1
+modregfix 6 6 3
+move 7 6 # 161 8
+getpropregstr 6 1 #0:string="axis"
+addregfix 6 6 2
+modregfix 6 6 3
+move 8 6 # 162 8
+getpropregstr 9 1 #0:string="axis"
+getprop 9 3 9
+getpropregstr 10 1 #1:string="nu"
+getprop 11 3 7
+mul 10 10 11
+add 9 9 10
+getpropregstr 10 1 #2:string="nv"
+getprop 6 3 6
+mul 6 10 6
+add 6 9 6
+getpropregstr 9 1 #3:string="nd"
+getpropregstr 10 1 #0:string="axis"
+getprop 10 2 10
+sub 9 9 10
+getpropregstr 10 1 #1:string="nu"
+getprop 11 2 7
+mul 10 10 11
+sub 9 9 10
+getpropregstr 10 1 #2:string="nv"
+getprop 11 2 8
+mul 10 10 11
+sub 9 9 10
+div 6 9 6
+move 9 6 # 164 8
+lessthan 6 6 4
+jumptrue 6 2 # 165 8
+lessthan 6 5 9
+jumpfalse 6 4 # 165 8
+specconst 6 null
+seta 6
+ret
+getprop 4 2 7
+getprop 5 3 7
+mul 5 9 5
+add 4 4 5
+getpropregstr 5 1 #4:string="eu"
+sub 6 4 5
+move 4 6 # 167 8
+getprop 2 2 8
+getprop 3 3 8
+mul 3 9 3
+add 2 2 3
+getpropregstr 3 1 #5:string="ev"
+sub 6 2 3
+move 2 6 # 168 8
+getpropregstr 3 1 #6:string="nu1"
+mul 3 6 3
+getpropregstr 5 1 #7:string="nv1"
+mul 5 4 5
+add 6 3 5
+move 3 6 # 169 8
+lessthanregfix 6 6 0
+jumpfalse 6 4 # 170 8
+specconst 6 null
+seta 6
+ret
+getpropregstr 5 1 #8:string="nu2"
+mul 4 4 5
+getpropregstr 1 1 #9:string="nv2"
+mul 1 2 1
+add 6 4 1
+move 1 6 # 172 8
+lessthanregfix 6 6 0
+jumpfalse 6 4 # 173 8
+specconst 6 null
+seta 6
+ret
+add 1 3 1
+lessthanfixreg 6 1 1
+jumpfalse 6 4 # 176 8
+specconst 6 null
+seta 6
+ret
+seta 9
+ret
+callentry 0
+sendentry 2
+numberOfLocals 0
+numberOfInstructions 304
+numberOfConstants 26
+setfl 22
+getglobalobj 1 # 189 28
+setfl 22
+specconst 6 null
+move 7 6
+fixnum 6 0
+move 8 6
+jump 50 # 191 4
+getpropregstr 6 1 #0:string="triangles"
+getprop 6 6 8
+move 9 6 # 192 12
+move 6 9 # 193 16
+getpropregstr 10 6 #1:string="intersect"
+move 18 6
+move 19 2
+move 20 3
+move 21 4
+move 22 5
+send 10 4
+setfl 22
+geta 6 # 193 16
+move 10 6 # 193 12
+move 11 10 # 194 12
+specconst 12 null
+equalregspec 6 11 null
+isundef 13 6 # 194 12
+jumpfalse 13 18 # 194 12
+isobject 6 11 # 194 12
+jumpfalse 6 6 # 194 12
+getpropregstr 6 11 #2:string="valueOf"
+move 22 11
+send 6 0
+geta 6 # 194 12
+jump 6 # 194 12
+getpropspecstr 6 null #2:string="valueOf"
+move 22 12
+send 6 0
+geta 12 # 194 12
+move 6 11 # 194 12
+equal 6 6 12
+isundef 11 6 # 194 12
+jumpfalse 11 3 # 194 12
+bigprim 1 #3:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 194 12
+jumptrue 6 3 # 194 12
+move 6 10 # 194 25
+lessthan 6 5 6
+jumptrue 6 2 # 194 12
+lessthan 6 10 4
+jumpfalse 6 2 # 194 12
+jump 5
+move 6 10 # 196 14
+move 5 6 # 196 8
+move 6 9 # 197 18
+move 7 6 # 197 8
+addregfix 6 8 1
+move 8 6 # 191 43
+move 6 8 # 191 16
+getpropregstr 9 1 #0:string="triangles"
+getpropregstr 9 9 #4:string="length"
+lessthan 6 6 9
+jumptrue 6 -53 # 191 16
+not 6 7
+jumpfalse 6 19 # 200 8
+bigprim 2 #5:string="Array"
+getglobal 2 2
+fixnum 3 3
+move 22 3
+construct 6 2 1
+setfl 22
+getnewa 6 # 201 15
+getpropregstr 2 1 #6:string="background"
+getpropregfix 2 2 0
+setpropregfixreg 6 0 2
+getpropregstr 2 1 #6:string="background"
+getpropregfix 2 2 1
+setpropregfixreg 6 1 2
+getpropregstr 1 1 #6:string="background"
+getpropregfix 2 1 2
+setpropregfixreg 6 2 2
+seta 6
+ret
+getpropregstr 6 7 #7:string="normal"
+move 4 6 # 203 8
+bigprim 6 #8:string="add"
+getglobal 6 6
+bigprim 8 #9:string="scale"
+getglobal 9 8
+move 21 3
+move 22 5
+call 9 2
+setfl 22
+geta 5 # 204 26
+move 21 2
+move 22 5
+call 6 2
+setfl 22
+geta 6 # 204 14
+move 2 6 # 204 8
+bigprim 5 #10:string="dot"
+getglobal 6 5
+move 21 3
+move 22 4
+call 6 2
+setfl 22
+geta 6 # 205 8
+fixnum 9 0
+lessthanfixreg 6 0 6
+jumpfalse 6 18 # 205 8
+bigprim 10 #5:string="Array"
+getglobal 10 10
+fixnum 11 3
+move 22 11
+construct 6 10 1
+setfl 22
+getnewa 6 # 206 17
+getpropregfix 10 4 0
+mulregfix 10 10 -1
+setpropregfixreg 6 0 10
+getpropregfix 10 4 1
+mulregfix 10 10 -1
+setpropregfixreg 6 1 10
+getpropregfix 4 4 2
+mulregfix 10 4 -1
+setpropregfixreg 6 2 10
+move 4 6 # 206 8
+getpropregstr 6 7 #11:string="shader"
+jumpfalse 6 11 # 209 8
+getpropregstr 6 7 #11:string="shader"
+move 19 7
+move 20 7
+move 21 2
+move 22 3
+send 6 3
+setfl 22
+geta 6 # 210 17
+move 7 6 # 210 8
+jump 3 # 211 11
+getpropregstr 6 7 #12:string="material"
+move 7 6 # 212 8
+specconst 6 null
+move 10 6
+getpropregstr 6 7 #13:string="reflection"
+lessthanfloreg 6 #14:number=0.001 6
+jumpfalse 6 38 # 217 8
+bigprim 6 #15:string="addVector"
+getglobal 6 6
+getglobal 8 8
+getglobal 5 5
+move 21 3
+move 22 4
+call 5 2
+setfl 22
+geta 5 # 218 52
+mulfixreg 5 -2 5
+move 21 4
+move 22 5
+call 8 2
+setfl 22
+geta 5 # 218 35
+move 21 5
+move 22 3
+call 6 2
+setfl 22
+geta 6 # 218 25
+getpropregstr 3 1 #1:string="intersect"
+bigprim 5 #16:number=1.0E-4
+fixnum 8 1000000
+move 18 1
+move 19 2
+move 20 6
+move 21 5
+move 22 8
+send 3 4
+setfl 22
+geta 6 # 219 20
+move 10 6 # 219 8
+getpropregstr 3 7 #13:string="reflection"
+lessthanequalfloreg 6 #17:number=0.999999 3
+jumpfalse 6 3 # 220 12
+seta 10
+ret
+bigprim 3 #5:string="Array"
+getglobal 3 3
+fixnum 5 3
+move 22 5
+construct 6 3 1
+setfl 22
+getnewa 6 # 224 12
+getpropregstr 3 1 #18:string="ambient"
+getpropregfix 3 3 0
+setpropregfixreg 6 0 3
+getpropregstr 3 1 #18:string="ambient"
+getpropregfix 3 3 1
+setpropregfixreg 6 1 3
+getpropregstr 3 1 #18:string="ambient"
+getpropregfix 3 3 2
+setpropregfixreg 6 2 3
+move 3 6 # 224 8
+move 8 9
+jump 64 # 225 4
+getpropregstr 5 1 #19:string="lights"
+getprop 6 5 8
+move 5 6 # 226 12
+bigprim 6 #20:string="sub"
+getglobal 6 6
+move 21 5
+move 22 2
+call 6 2
+setfl 22
+geta 6 # 227 22
+move 9 6 # 227 12
+bigprim 6 #21:string="lengthVector"
+getglobal 6 6
+move 22 9
+call 6 1
+setfl 22
+geta 6 # 228 23
+bigprim 11 #22:string="scaleVector"
+getglobal 11 11
+move 12 9 # 229 20
+divfixreg 13 1 6
+move 21 12
+move 22 13
+call 11 2
+setfl 22
+subregflo 6 6 #16:number=1.0E-4
+getpropregstr 11 1 #23:string="blocked"
+move 12 9 # 231 30
+move 19 1
+move 20 2
+move 21 12
+move 22 6
+send 11 3
+setfl 22
+geta 6 # 231 12
+jumpfalse 6 2 # 231 12
+jump 25
+bigprim 6 #10:string="dot"
+getglobal 6 6
+move 21 4
+move 22 9
+call 6 2
+setfl 22
+geta 6 # 233 17
+move 9 6 # 233 12
+lessthanfixreg 6 0 9
+jumpfalse 6 15 # 234 12
+bigprim 6 #15:string="addVector"
+getglobal 6 6
+bigprim 11 #9:string="scale"
+getglobal 11 11
+getpropregstr 5 5 #24:string="colour"
+move 21 5
+move 22 9
+call 11 2
+setfl 22
+geta 5 # 235 25
+move 21 3
+move 22 5
+call 6 2
+setfl 22
+addregfix 5 8 1
+move 8 5 # 225 44
+move 5 8 # 225 20
+getpropregstr 6 1 #19:string="lights"
+getpropregstr 6 6 #4:string="length"
+lessthan 5 5 6
+jumptrue 5 -67 # 225 20
+bigprim 1 #25:string="scalev"
+getglobal 1 1
+move 21 3
+move 22 7
+call 1 2
+setfl 22
+geta 6 # 237 8
+move 3 6 # 237 4
+jumpfalse 10 25 # 238 8
+bigprim 1 #15:string="addVector"
+getglobal 1 1
+bigprim 2 #22:string="scaleVector"
+getglobal 4 2
+getpropregstr 5 7 #13:string="reflection"
+subfixreg 5 1 5
+move 21 3
+move 22 5
+call 4 2
+setfl 22
+geta 3 # 239 22
+getglobal 2 2
+getpropregstr 4 7 #13:string="reflection"
+move 21 10
+move 22 4
+call 2 2
+setfl 22
+geta 2 # 239 61
+move 21 3
+move 22 2
+call 1 2
+setfl 22
+geta 6 # 239 12
+move 3 6 # 239 8
+seta 3
+ret
+callentry 0
+sendentry 2
+numberOfLocals 0
+numberOfInstructions 64
+numberOfConstants 7
+setfl 19
+getglobalobj 1 # 244 26
+setfl 19
+fixnum 5 0
+bigprim 6 #0:string="i"
+setglobal 6 5
+jump 49 # 247 4
+getpropregstr 5 1 #1:string="triangles"
+getglobal 7 6
+getprop 5 5 7
+getpropregstr 7 5 #2:string="intersect"
+bigprim 8 #3:number=1.0E-4
+move 15 5
+move 16 2
+move 17 3
+move 18 8
+move 19 4
+send 7 4
+setfl 19
+geta 5 # 249 16
+move 7 5 # 249 12
+move 8 7 # 250 12
+specconst 9 null
+equalregspec 5 8 null
+isundef 10 5 # 250 12
+jumpfalse 10 18 # 250 12
+isobject 5 8 # 250 12
+jumpfalse 5 6 # 250 12
+getpropregstr 5 8 #4:string="valueOf"
+move 19 8
+send 5 0
+geta 5 # 250 12
+jump 6 # 250 12
+getpropspecstr 5 null #4:string="valueOf"
+move 19 9
+send 5 0
+geta 9 # 250 12
+move 5 8 # 250 12
+equal 5 5 9
+isundef 8 5 # 250 12
+jumpfalse 8 3 # 250 12
+bigprim 1 #5:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 250 12
+jumptrue 5 2 # 250 12
+lessthan 5 4 7
+jumptrue 5 2 # 250 12
+lessthanregflo 5 7 #3:number=1.0E-4
+jumpfalse 5 2 # 250 12
+jump 4
+specconst 5 true
+seta 5
+ret
+getglobal 5 6
+addregfix 5 5 1
+setglobal 6 5
+bigprim 6 #0:string="i"
+getglobal 5 6
+getpropregstr 7 1 #1:string="triangles"
+getpropregstr 7 7 #6:string="length"
+lessthan 5 5 7
+jumptrue 5 -53 # 247 16
+specconst 5 false
+seta 5
+ret
+callentry 0
+sendentry 2
+numberOfLocals 0
+numberOfInstructions 87
+numberOfConstants 8
+setfl 17
+getglobalobj 1 # 283 35
+setfl 17
+specconst 3 undefined
+bigprim 4 #0:string="Array"
+getglobal 4 4
+bigprim 5 #1:string="Object"
+getglobal 6 5
+construct 7 6 0
+setfl 17
+getnewa 7 # 284 25
+getglobal 5 5
+construct 8 5 0
+setfl 17
+getnewa 8 # 284 39
+move 16 7
+move 17 8
+construct 3 4 2
+setfl 17
+getnewa 3 # 284 15
+bigprim 4 #2:string="rays"
+setglobal 4 3
+getpropregstr 3 1 #3:string="origin"
+getglobal 5 4
+getpropregfix 5 5 0
+setpropregstrreg 5 #3:string="origin" 3
+getpropregstr 3 1 #3:string="origin"
+getglobal 5 4
+getpropregfix 5 5 1
+setpropregstrreg 5 #3:string="origin" 3
+bigprim 5 #4:string="addVector"
+getglobal 3 5
+bigprim 6 #5:string="scale"
+getglobal 7 6
+getpropregstr 8 1 #6:string="directions"
+getpropregfix 8 8 0
+move 16 8
+move 17 2
+call 7 2
+setfl 17
+geta 7 # 287 28
+getglobal 8 6
+getpropregstr 9 1 #6:string="directions"
+getpropregfix 9 9 3
+subfixreg 10 1 2
+move 16 9
+move 17 10
+call 8 2
+setfl 17
+geta 8 # 287 58
+move 16 7
+move 17 8
+call 3 2
+setfl 17
+geta 3 # 287 18
+getglobal 7 4
+getpropregfix 7 7 0
+setpropregstrreg 7 #7:string="dir" 3
+getglobal 3 5
+getglobal 5 6
+getpropregstr 7 1 #6:string="directions"
+getpropregfix 7 7 1
+move 16 7
+move 17 2
+call 5 2
+setfl 17
+geta 5 # 288 28
+getglobal 6 6
+getpropregstr 1 1 #6:string="directions"
+getpropregfix 1 1 2
+subfixreg 2 1 2
+move 16 1
+move 17 2
+call 6 2
+setfl 17
+geta 1 # 288 58
+move 16 5
+move 17 1
+call 3 2
+setfl 17
+geta 3 # 288 18
+getglobal 1 4
+getpropregfix 1 1 1
+setpropregstrreg 1 #7:string="dir" 3
+getglobal 3 4
+seta 3
+ret
+callentry 0
+sendentry 2
+numberOfLocals 0
+numberOfInstructions 18
+numberOfConstants 1
+setfl 19
+getglobalobj 1 # 305 26
+setfl 19
+fixnum 6 0
+bigprim 7 #0:string="renderRows"
+getglobal 7 7
+move 13 1
+move 14 2
+move 15 3
+move 16 4
+move 17 5
+move 18 6
+move 19 5
+call 7 7
+setfl 19
+specconst 1 undefined
+seta 1
+ret

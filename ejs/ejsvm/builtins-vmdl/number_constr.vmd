@@ -1,0 +1,10 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) number_constr: (JSValue, JSValue) -> JSValue 
+number_constr(placeHolder, element){
+    JSValue rsv = new_number_object(DEBUG_NAME("number_constr"), gshapes.g_shape_Number, FIXNUM_ZERO);
+    if(na > 0)
+        set_jsnumber_object_value(rsv, to_number(element));
+    return rsv;
+}

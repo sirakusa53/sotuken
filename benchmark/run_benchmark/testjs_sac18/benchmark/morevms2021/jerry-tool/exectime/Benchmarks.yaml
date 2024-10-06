@@ -1,0 +1,15 @@
+- name: moth
+  dir: moth
+  programs:
+    - NBody-small:
+        heapsize: 1M
+        timeout: 100
+    - Towers-small:
+        heapsize: 1M
+        timeout: 100
+#    - DeltaBlue-dyn-small:
+#        heapsize: 100M
+#        timeout: 100
+#    - CD-dyn-small:
+#        heapsize: 10M
+#        timeout: 100

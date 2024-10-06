@@ -1,0 +1,7 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, builtinFunction) math_pow : (JSValue, JSValue, JSValue) -> JSValue
+math_pow(placeHolder, x, y){
+  math_func2(POW, x, y);
+}

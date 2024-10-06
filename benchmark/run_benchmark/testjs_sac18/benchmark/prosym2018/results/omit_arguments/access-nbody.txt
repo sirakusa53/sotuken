@@ -1,0 +1,7 @@
+======== access-nbody ========
+0: total CPU time = 83.894 msec, total GC time = 4.320 msec (#GC = 5) n_hc = 31, n_enter_hc = 9734, n_exit_hc = 4981
+1: total CPU time = 84.101 msec, total GC time = 3.998 msec (#GC = 5) n_hc = 31, n_enter_hc = 9734, n_exit_hc = 4981
+
+======== access-nbody Optimisation ========
+0: total CPU time = 78.420 msec, total GC time = 4.276 msec (#GC = 5) n_hc = 31, n_enter_hc = 9646, n_exit_hc = 4937
+1: total CPU time = 88.807 msec, total GC time = 4.563 msec (#GC = 5) n_hc = 31, n_enter_hc = 9646, n_exit_hc = 4937

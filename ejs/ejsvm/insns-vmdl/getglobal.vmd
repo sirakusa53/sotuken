@@ -1,0 +1,22 @@
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, needContext, tailCall)
+getglobal : String -> JSValue
+
+getglobal (prop) {
+    top: match(prop) {
+        case (String prop){
+#ifdef INLINE_CACHE
+            return GetGlobalInl(context.global, prop);
+#else /* INLINE_CACHE */
+            JSValue ret = get_prop(context.global, prop);
+            if(ret == JS_EMPTY)
+                LOG_EXIT_2_ARGS("GETGLOBAL: %s not found\n", string_to_cstr((prop)));
+            return ret;
+#endif /* INLINE_CACHE */
+        }
+        case (true){
+            LOG_EXIT("GETGLOBAL with non-stirng variable name\n");
+        }
+    }
+}

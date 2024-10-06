@@ -1,0 +1,1 @@
+vmrun_threaded  : GETGLOBAL: hex_sha1 not found

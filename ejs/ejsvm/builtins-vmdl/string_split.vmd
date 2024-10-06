@@ -1,0 +1,116 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) string_split: (JSValue, JSValue, JSValue) -> JSValue 
+string_split(o, separator, limit){
+  if (o == JS_NULL || o == JS_UNDEFINED){
+    type_error_exception("string_split");
+    return JS_EMPTY;
+  }
+  /* 2. */
+  JSValue s = to_string(o);
+  /* 3. */
+  JSValue a = new_array_object(DEBUG_NAME("string_split"), gshapes.g_shape_Array, 0);
+  /* 4. */
+  int length_a = 0;
+  /* 5. */
+  int lim = (limit == JS_UNDEFINED) ? MAX_VALUE_SIGNED_32BIT : toInteger(limit);
+  /* 6. */
+  int ss = string_length(s);
+  /* 7. */
+  int p = 0;
+  /* 8. */
+  match(separator){
+    case(Regexp separator){
+      /* TODO: Implement the case where the args[1] (separator) is of type regexp */
+      not_implemented("string_split");
+      return JS_EMPTY;
+    }
+    case(true){}
+  }
+  JSValue r = to_string(separator);
+  /* 9. */
+  if(lim == 0){
+    return a;
+  }
+  /* 10. */
+  if(separator == JS_UNDEFINED){
+    /* a. */
+    set_array_element(a, 0, s);
+    /* b. */
+    return a;
+  }
+  /* 11. */
+  if(ss == 0){
+    /* a. */
+    int endindex;
+    JSValue captures;
+    (endindex, captures) <- split_match(s, 0, r);
+    /* b. */
+    if(endindex != -1){
+      return a;
+    }
+    /* c. */
+    set_array_element(a, 0, s);
+    /* d. */
+    return a;
+  }
+  /* 12. */
+  int q = p;
+  /* 13. */
+  while(q != ss){
+    /* a. */
+    int endindex;
+    Array cap;
+    (endindex, cap) <- split_match(s, q, r);
+    if(endindex == -1){
+      /* b. */
+      q <- q + 1;
+    }else{
+      /* c. */
+      /* i. */
+      int e = endindex;
+      if(e == p){
+        /* ii. */
+        q <- q + 1;
+      }else{
+        /* iii. */
+        /* 1. */
+        JSValue t = string_make_substring(s, p, q - p);
+        /* 2. */
+        set_array_element(a, length_a, t);
+        /* 3. */
+        length_a <- length_a + 1;
+        /* 4. */
+        if(length_a == lim){
+          return a;
+        }
+        /* 5. */
+        p <- e;
+        /* 6. */
+        int i = 0;
+        /* 7. */
+        while(i != number_to_cint(get_jsarray_length(cap))){
+          /* a. */
+          i <- i + 1;
+          /* b. */
+          set_array_element(a, length_a, get_array_element(cap, i));
+          /* c. */
+          length_a <- length_a + 1;
+          /* d. */
+          if(length_a == lim){
+            return a;
+          }
+        }
+        /* 8. */
+        q <- p;
+      }
+    }
+  }
+  /* 14. */
+  JSValue t = string_make_substring(s, p, ss - p);
+  /* 15. */
+  set_array_element(a, length_a, t);
+  /* 16. */
+  return a;
+}

@@ -1,0 +1,26 @@
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, needContext, tailCall)
+newframe : (int, int) -> void
+
+newframe (i0, i1) {
+    // Newframe(i0, i1);
+    save_context();
+    FunctionFrame fr = new_frame(get_cf(), get_lp(), i0);
+    set_lp(fr);
+    update_context();
+    if (i1) {
+      JSValue[] body;
+      int num_of_args = get_ac();
+      save_context();
+      /* NOTE: fr sould be GC_PUSH/GC_POP here */
+      Array args = new_array_object(DEBUG_NAME("arguments"), gshapes.g_shape_Array, num_of_args);
+      update_context();
+      body <- get_jsarray_body(args);
+      do(int i = 0 to num_of_args-1 step 1){
+        body[i] <- regbase[i + 2];
+      }
+      setFFrameArgument(fr, args);
+      setFFrameLocalsIndex(fr, 0, args);
+    }
+}

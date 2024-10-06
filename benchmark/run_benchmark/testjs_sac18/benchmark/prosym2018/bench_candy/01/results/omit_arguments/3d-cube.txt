@@ -1,0 +1,23 @@
+======== 3d-cube ========
+0: total CPU time = 43.235 msec, total GC time = 0.0 msec (#GC = 5) n_hc = 40, n_enter_hc = 89440, n_exit_hc = 55225
+1: total CPU time = 44.435 msec, total GC time = 0.0 msec (#GC = 5) n_hc = 40, n_enter_hc = 89440, n_exit_hc = 55225
+2: total CPU time = 39.95 msec, total GC time = 1.786 msec (#GC = 5) n_hc = 40, n_enter_hc = 89440, n_exit_hc = 55225
+3: total CPU time = 42.613 msec, total GC time = 0.0 msec (#GC = 5) n_hc = 40, n_enter_hc = 89440, n_exit_hc = 55225
+4: total CPU time = 42.891 msec, total GC time = 0.0 msec (#GC = 5) n_hc = 40, n_enter_hc = 89440, n_exit_hc = 55225
+5: total CPU time = 42.896 msec, total GC time = 0.0 msec (#GC = 5) n_hc = 40, n_enter_hc = 89440, n_exit_hc = 55225
+6: total CPU time = 42.966 msec, total GC time = 0.0 msec (#GC = 5) n_hc = 40, n_enter_hc = 89440, n_exit_hc = 55225
+7: total CPU time = 41.364 msec, total GC time = 2.404 msec (#GC = 5) n_hc = 40, n_enter_hc = 89440, n_exit_hc = 55225
+8: total CPU time = 41.537 msec, total GC time = 2.425 msec (#GC = 5) n_hc = 40, n_enter_hc = 89440, n_exit_hc = 55225
+9: total CPU time = 38.505 msec, total GC time = 1.795 msec (#GC = 5) n_hc = 40, n_enter_hc = 89440, n_exit_hc = 55225
+
+======== 3d-cube Optimisation ========
+0: total CPU time = 42.831 msec, total GC time = 0.0 msec (#GC = 5) n_hc = 40, n_enter_hc = 78568, n_exit_hc = 49789
+1: total CPU time = 42.475 msec, total GC time = 0.0 msec (#GC = 5) n_hc = 40, n_enter_hc = 78568, n_exit_hc = 49789
+2: total CPU time = 42.430 msec, total GC time = 0.0 msec (#GC = 5) n_hc = 40, n_enter_hc = 78568, n_exit_hc = 49789
+3: total CPU time = 42.464 msec, total GC time = 0.0 msec (#GC = 5) n_hc = 40, n_enter_hc = 78568, n_exit_hc = 49789
+4: total CPU time = 41.51 msec, total GC time = 2.529 msec (#GC = 5) n_hc = 40, n_enter_hc = 78568, n_exit_hc = 49789
+5: total CPU time = 41.161 msec, total GC time = 2.585 msec (#GC = 5) n_hc = 40, n_enter_hc = 78568, n_exit_hc = 49789
+6: total CPU time = 41.170 msec, total GC time = 2.593 msec (#GC = 5) n_hc = 40, n_enter_hc = 78568, n_exit_hc = 49789
+7: total CPU time = 41.103 msec, total GC time = 2.575 msec (#GC = 5) n_hc = 40, n_enter_hc = 78568, n_exit_hc = 49789
+8: total CPU time = 38.541 msec, total GC time = 2.65 msec (#GC = 5) n_hc = 40, n_enter_hc = 78568, n_exit_hc = 49789
+9: total CPU time = 41.254 msec, total GC time = 2.536 msec (#GC = 5) n_hc = 40, n_enter_hc = 78568, n_exit_hc = 49789

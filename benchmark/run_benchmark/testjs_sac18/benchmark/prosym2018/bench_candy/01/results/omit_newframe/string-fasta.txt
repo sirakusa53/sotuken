@@ -1,0 +1,23 @@
+======== string-fasta ========
+0: total CPU time = 57.369 msec, total GC time = 4.42 msec (#GC = 9) n_hc = 54, n_enter_hc = 865496, n_exit_hc = 672647
+1: total CPU time = 61.237 msec, total GC time = 0.0 msec (#GC = 9) n_hc = 54, n_enter_hc = 865496, n_exit_hc = 672647
+2: total CPU time = 61.365 msec, total GC time = 0.0 msec (#GC = 9) n_hc = 54, n_enter_hc = 865496, n_exit_hc = 672647
+3: total CPU time = 61.369 msec, total GC time = 0.0 msec (#GC = 9) n_hc = 54, n_enter_hc = 865496, n_exit_hc = 672647
+4: total CPU time = 62.800 msec, total GC time = 2.306 msec (#GC = 9) n_hc = 54, n_enter_hc = 865496, n_exit_hc = 672647
+5: total CPU time = 61.261 msec, total GC time = 0.0 msec (#GC = 9) n_hc = 54, n_enter_hc = 865496, n_exit_hc = 672647
+6: total CPU time = 60.300 msec, total GC time = 2.307 msec (#GC = 9) n_hc = 54, n_enter_hc = 865496, n_exit_hc = 672647
+7: total CPU time = 62.313 msec, total GC time = 0.0 msec (#GC = 9) n_hc = 54, n_enter_hc = 865496, n_exit_hc = 672647
+8: total CPU time = 57.380 msec, total GC time = 0.437 msec (#GC = 9) n_hc = 54, n_enter_hc = 865496, n_exit_hc = 672647
+9: total CPU time = 61.83 msec, total GC time = 0.0 msec (#GC = 9) n_hc = 54, n_enter_hc = 865496, n_exit_hc = 672647
+
+======== string-fasta Optimisation ========
+0: total CPU time = 54.800 msec, total GC time = 0.0 msec (#GC = 6) n_hc = 53, n_enter_hc = 753486, n_exit_hc = 616642
+1: total CPU time = 54.937 msec, total GC time = 0.0 msec (#GC = 6) n_hc = 53, n_enter_hc = 753486, n_exit_hc = 616642
+2: total CPU time = 54.718 msec, total GC time = 0.0 msec (#GC = 6) n_hc = 53, n_enter_hc = 753486, n_exit_hc = 616642
+3: total CPU time = 50.839 msec, total GC time = 0.606 msec (#GC = 6) n_hc = 53, n_enter_hc = 753486, n_exit_hc = 616642
+4: total CPU time = 54.966 msec, total GC time = 0.0 msec (#GC = 6) n_hc = 53, n_enter_hc = 753486, n_exit_hc = 616642
+5: total CPU time = 54.581 msec, total GC time = 0.0 msec (#GC = 6) n_hc = 53, n_enter_hc = 753486, n_exit_hc = 616642
+6: total CPU time = 50.39 msec, total GC time = 1.650 msec (#GC = 6) n_hc = 53, n_enter_hc = 753486, n_exit_hc = 616642
+7: total CPU time = 51.9 msec, total GC time = 0.579 msec (#GC = 6) n_hc = 53, n_enter_hc = 753486, n_exit_hc = 616642
+8: total CPU time = 51.35 msec, total GC time = 0.101 msec (#GC = 6) n_hc = 53, n_enter_hc = 753486, n_exit_hc = 616642
+9: total CPU time = 55.427 msec, total GC time = 0.0 msec (#GC = 6) n_hc = 53, n_enter_hc = 753486, n_exit_hc = 616642

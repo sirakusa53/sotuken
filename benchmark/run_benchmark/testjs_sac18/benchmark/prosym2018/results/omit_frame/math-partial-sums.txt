@@ -1,0 +1,7 @@
+======== math-partial-sums ========
+0: total CPU time = 51.491 msec, total GC time = 1.375 msec (#GC = 1) n_hc = 20, n_enter_hc = 352, n_exit_hc = 208
+1: total CPU time = 40.884 msec, total GC time = 1.190 msec (#GC = 1) n_hc = 20, n_enter_hc = 352, n_exit_hc = 208
+
+======== math-partial-sums Optimisation ========
+0: total CPU time = 41.782 msec, total GC time = 1.79 msec (#GC = 1) n_hc = 19, n_enter_hc = 342, n_exit_hc = 203
+1: total CPU time = 36.722 msec, total GC time = 1.62 msec (#GC = 1) n_hc = 19, n_enter_hc = 342, n_exit_hc = 203

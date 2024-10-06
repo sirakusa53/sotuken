@@ -1,0 +1,17 @@
+--- Queens.js	2020-03-19 19:15:16.162776300 +0900
++++ Queens-fix.js	2020-03-19 19:47:56.054745888 +0900
+@@ -44,10 +44,10 @@
+ };
+ 
+ Queens.prototype.queens = function () {
+-  this.freeRows  = new Array( 8).fill(true);
+-  this.freeMaxs  = new Array(16).fill(true);
+-  this.freeMins  = new Array(16).fill(true);
+-  this.queenRows = new Array( 8).fill(-1);
++  this.freeRows  = (new Array( 8)).fill(true);
++  this.freeMaxs  = (new Array(16)).fill(true);
++  this.freeMins  = (new Array(16)).fill(true);
++  this.queenRows = (new Array( 8)).fill(-1);
+ 
+   return this.placeQueen(0);
+ };

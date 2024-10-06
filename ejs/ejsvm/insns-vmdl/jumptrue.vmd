@@ -1,0 +1,11 @@
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, tailCall)
+jumptrue : (JSValue, InstructionDisplacement) -> void
+
+jumptrue (v0, d1) {
+    if (v0 == JS_TRUE || (v0 != JS_FALSE && to_boolean(v0) == JS_TRUE)) {
+        set_pc_relative(d1);
+        NEXT_INSN_NOINCPC();
+    }
+}

@@ -1,0 +1,401 @@
+fingerprint 82
+funcLength 5
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 155
+numberOfConstants 40
+setfl 61
+setfl 61
+makeclosure 1 0 # 7 0
+bigprim 2 #0:string="doTest"
+setglobal 2 1
+makeclosure 1 1 # 62 0
+bigprim 3 #1:string="makeName"
+setglobal 3 1
+makeclosure 1 2 # 73 0
+bigprim 3 #2:string="makeNumber"
+setglobal 3 1
+makeclosure 1 3 # 84 0
+bigprim 3 #3:string="addResult"
+setglobal 3 1
+bigprim 3 #4:string="Array"
+getglobal 4 3
+bigprim 5 #5:string="a"
+bigprim 6 #6:string="b"
+bigprim 7 #7:string="c"
+bigprim 8 #8:string="d"
+bigprim 9 #9:string="e"
+bigprim 10 #10:string="f"
+bigprim 11 #11:string="g"
+bigprim 12 #12:string="h"
+bigprim 13 #13:string="i"
+bigprim 14 #14:string="j"
+bigprim 15 #15:string="k"
+bigprim 16 #16:string="l"
+bigprim 17 #17:string="m"
+bigprim 18 #18:string="n"
+bigprim 19 #19:string="o"
+bigprim 20 #20:string="p"
+bigprim 21 #21:string="q"
+bigprim 22 #22:string="r"
+bigprim 23 #23:string="s"
+bigprim 24 #24:string="t"
+bigprim 25 #25:string="u"
+bigprim 26 #26:string="v"
+bigprim 27 #27:string="w"
+bigprim 28 #28:string="x"
+bigprim 29 #29:string="y"
+bigprim 30 #30:string="z"
+move 36 5
+move 37 6
+move 38 7
+move 39 8
+move 40 9
+move 41 10
+move 42 11
+move 43 12
+move 44 13
+move 45 14
+move 46 15
+move 47 16
+move 48 17
+move 49 18
+move 50 19
+move 51 20
+move 52 21
+move 53 22
+move 54 23
+move 55 24
+move 56 25
+move 57 26
+move 58 27
+move 59 28
+move 60 29
+move 61 30
+construct 1 4 26
+setfl 61
+getnewa 1 # 1 14
+bigprim 4 #31:string="letters"
+setglobal 4 1
+getglobal 4 3
+fixnum 5 1
+fixnum 6 2
+fixnum 7 3
+fixnum 8 4
+fixnum 9 5
+fixnum 10 6
+fixnum 11 7
+fixnum 12 8
+fixnum 13 9
+fixnum 14 10
+fixnum 15 11
+fixnum 16 12
+fixnum 17 13
+fixnum 18 14
+fixnum 19 15
+fixnum 20 16
+fixnum 21 17
+fixnum 22 18
+fixnum 23 19
+fixnum 24 20
+fixnum 25 21
+fixnum 26 22
+fixnum 27 23
+fixnum 28 24
+fixnum 29 25
+fixnum 30 26
+move 36 5
+move 37 6
+move 38 7
+move 39 8
+move 40 9
+move 41 10
+move 42 11
+move 43 12
+move 44 13
+move 45 14
+move 46 15
+move 47 16
+move 48 17
+move 49 18
+move 50 19
+move 51 20
+move 52 21
+move 53 22
+move 54 23
+move 55 24
+move 56 25
+move 57 26
+move 58 27
+move 59 28
+move 60 29
+move 61 30
+construct 1 4 26
+setfl 61
+getnewa 1 # 2 14
+bigprim 4 #32:string="numbers"
+setglobal 4 1
+getglobal 3 3
+bigprim 4 #33:string="FF"
+bigprim 5 #34:string="CC"
+bigprim 6 #35:string="99"
+bigprim 7 #36:string="66"
+bigprim 8 #37:string="33"
+bigprim 9 #38:string="00"
+move 56 4
+move 57 5
+move 58 6
+move 59 7
+move 60 8
+move 61 9
+construct 1 3 6
+setfl 61
+getnewa 1 # 3 14
+bigprim 3 #39:string="colors"
+setglobal 3 1
+getglobal 1 2
+call 1 0
+setfl 61
+geta 1 # 89 0
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 141
+numberOfConstants 23
+setfl 12
+setfl 12
+bigprim 1 #0:string=""
+bigprim 2 #1:string="endResult"
+setglobal 2 1
+fixnum 1 0
+move 2 1
+jump 48 # 12 3
+bigprim 1 #2:string="makeName"
+getglobal 1 1
+fixnum 3 6
+move 12 3
+call 1 1
+setfl 12
+geta 1 # 14 17
+bigprim 3 #3:string="username"
+setglobal 3 1
+modregfix 1 2 2
+jumpfalse 1 6 # 15 7
+getglobal 1 3
+addregstr 1 1 #4:string="@mac.com"
+bigprim 3 #5:string="email"
+setglobal 3 1
+jump 5 # 15 12
+getglobal 1 3
+addregstr 1 1 #6:string="(at)mac.com"
+bigprim 3 #5:string="email"
+setglobal 3 1
+bigprim 1 #7:regexp=0="^[a-zA-Z0-9\\-\\._]+@[a-zA-Z0-9\\-_]+(\\.?[a-zA-Z0-9\\-_]*)\\.[a-zA-Z]{2,3}$" # 18 20
+getpropregstr 3 1 #8:string="test"
+bigprim 4 #5:string="email"
+getglobal 5 4
+move 11 1
+move 12 5
+send 3 1
+setfl 12
+geta 1 # 20 9
+jumpfalse 1 9 # 20 9
+getglobal 1 4
+addregstr 1 1 #9:string="\sappears\sto\sbe\sa\svalid\semail\saddress."
+bigprim 3 #10:string="addResult"
+getglobal 3 3
+move 12 1
+call 3 1
+setfl 12
+jump 8 # 26 6
+getglobal 1 4
+addregstr 1 1 #11:string="\sdoes\sNOT\sappear\sto\sbe\sa\svalid\semail\saddress."
+bigprim 3 #10:string="addResult"
+getglobal 3 3
+move 12 1
+call 3 1
+setfl 12
+addregfix 1 2 1
+move 2 1 # 12 23
+lessthanregfix 1 2 4000
+jumptrue 1 -48 # 12 16
+fixnum 1 0
+move 2 1
+jump 77 # 33 3
+specconst 1 true
+move 3 1
+bigprim 1 #12:string="makeNumber"
+getglobal 1 1
+fixnum 4 4
+move 12 4
+call 1 1
+setfl 12
+geta 1 # 36 16
+move 4 1 # 36 10
+modregfix 1 2 2
+jumpfalse 1 4 # 37 7
+addregstr 1 4 #13:string="xyz"
+move 4 1 # 37 12
+jump 9 # 37 12
+getpropregstr 1 4 #14:string="concat"
+bigprim 5 #15:string="7"
+move 11 4
+move 12 5
+send 1 1
+setfl 12
+geta 1 # 37 30
+move 4 1 # 37 26
+fixnum 1 0
+move 5 1
+jump 23 # 40 6
+move 1 4 # 41 19
+getpropregstr 6 1 #16:string="charAt"
+move 11 1
+move 12 5
+send 6 1
+setfl 12
+geta 1 # 41 19
+move 6 1 # 41 14
+lessthanregstr 1 6 #17:string="0"
+jumptrue 1 2 # 42 14
+lessthanstrreg 1 #18:string="9" 6
+jumpfalse 1 9 # 42 14
+specconst 1 false
+move 3 1
+addregstr 1 4 #19:string="\scontains\sletters."
+bigprim 6 #10:string="addResult"
+getglobal 6 6
+move 12 1
+call 6 1
+setfl 12
+addregfix 1 5 1
+move 5 1 # 40 38
+move 1 5 # 40 22
+move 6 4 # 40 26
+getpropregstr 6 6 #20:string="length"
+lessthan 1 1 6
+jumptrue 1 -26 # 40 22
+move 1 3 # 48 10
+jumpfalse 1 3 # 48 10
+getpropregstr 1 4 #20:string="length"
+lessthanfixreg 1 5 1
+jumpfalse 1 9 # 48 10
+specconst 1 false
+move 3 1
+addregstr 1 4 #21:string="\sis\slonger\sthan\sfive\scharacters."
+bigprim 5 #10:string="addResult"
+getglobal 5 5
+move 12 1
+call 5 1
+setfl 12
+move 1 3 # 54 10
+jumpfalse 1 7 # 54 10
+addregstr 1 4 #22:string="\sappears\sto\sbe\sa\svalid\sZIP\scode."
+bigprim 3 #10:string="addResult"
+getglobal 3 3
+move 12 1
+call 3 1
+setfl 12
+addregfix 1 2 1
+move 2 1 # 33 23
+lessthanregfix 1 2 4000
+jumptrue 1 -77 # 33 16
+specconst 1 undefined
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 33
+numberOfConstants 5
+setfl 13
+setfl 13
+bigprim 1 #0:string=""
+move 3 1
+fixnum 1 0
+move 4 1
+jump 23 # 65 3
+bigprim 1 #1:string="Math"
+getglobal 5 1
+getpropregstr 6 5 #2:string="floor"
+getglobal 1 1
+getpropregstr 7 1 #3:string="random"
+move 13 1
+send 7 0
+setfl 13
+geta 1 # 67 28
+mulfixreg 1 26 1
+move 12 5
+move 13 1
+send 6 1
+setfl 13
+geta 1 # 67 14
+bigprim 5 #4:string="letters"
+getglobal 5 5
+getprop 1 5 1
+add 1 3 1
+move 3 1 # 68 6
+addregfix 1 4 1
+move 4 1 # 65 20
+lessthan 1 4 2
+jumptrue 1 -23 # 65 16
+seta 3
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 35
+numberOfConstants 5
+setfl 13
+setfl 13
+bigprim 1 #0:string=""
+move 3 1
+fixnum 1 0
+move 4 1
+jump 25 # 76 3
+bigprim 1 #1:string="Math"
+getglobal 5 1
+getpropregstr 6 5 #2:string="floor"
+getglobal 1 1
+getpropregstr 7 1 #3:string="random"
+move 13 1
+send 7 0
+setfl 13
+geta 1 # 78 27
+mulfixreg 1 9 1
+move 12 5
+move 13 1
+send 6 1
+setfl 13
+geta 1 # 78 14
+getpropregstr 5 3 #4:string="concat"
+move 12 3
+move 13 1
+send 5 1
+setfl 13
+geta 1 # 79 12
+move 3 1 # 79 6
+addregfix 1 4 1
+move 4 1 # 76 20
+lessthan 1 4 2
+jumptrue 1 -25 # 76 16
+seta 3
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 10
+numberOfConstants 2
+setfl 8
+setfl 8
+bigprim 1 #0:string="endResult"
+getglobal 3 1
+addstrreg 2 #1:string="\n" 2
+add 2 3 2
+setglobal 1 2
+specconst 1 undefined
+seta 1
+ret

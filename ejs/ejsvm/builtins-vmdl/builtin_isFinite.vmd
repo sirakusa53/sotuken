@@ -1,0 +1,8 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) builtin_isFinite: (JSValue, JSValue) -> JSValue 
+builtin_isFinite(global, testValue){
+    double d = to_double(testValue);
+    return false_true(isinf(d));
+}

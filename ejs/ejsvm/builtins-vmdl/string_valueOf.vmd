@@ -1,0 +1,19 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) string_valueOf: JSValue -> JSValue 
+string_valueOf(str){
+  JSValue ret;
+  match(str){
+      case(StringObject str){
+          ret <- get_jsstring_object_value(str);
+      }
+      case(String str){
+          ret <- str;
+      }
+      case(true){
+          ret <- JS_UNDEFINED;
+      }
+  }
+  return ret;
+}

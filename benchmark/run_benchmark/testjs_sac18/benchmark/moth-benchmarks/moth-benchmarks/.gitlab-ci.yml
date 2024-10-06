@@ -1,0 +1,16 @@
+stages:
+  - benchmark
+
+variables:
+  PYTHONUNBUFFERED: "true"
+  JVMCI_BIN: /home/gitlab-runner/.local/graal-core-2018-04-20/bin/java
+
+before_script:
+  - git submodule update --init --recursive
+
+benchmark_job:
+  stage: benchmark
+  tags: [benchmarks, infinity, yuria]
+  script:
+    # - ./benchmark.sh
+    - artifact/virtualbox.sh

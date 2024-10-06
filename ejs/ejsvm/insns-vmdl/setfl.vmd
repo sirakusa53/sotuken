@@ -1,0 +1,18 @@
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, needContext, tailCall)
+setfl : int -> void
+
+setfl (i0) {
+    int oldfl = get_sp() - fp + 1;
+    if (fp + i0 > regstack_limit){
+        set_cf(curfn);
+        set_pc(pc);
+        set_fp(fp);
+        LOG_EXIT2("register stack overflow\n");
+    }
+    set_sp(fp + i0 - 1);
+    do(int i = oldfl+1 to i0 step 1){
+        regbase[i] <- JS_UNDEFINED;
+    }
+}

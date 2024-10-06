@@ -1,0 +1,23 @@
+======== 3d-morph ========
+0: total CPU time = 59.218 msec, total GC time = 1.991 msec (#GC = 2) n_hc = 20, n_enter_hc = 375, n_exit_hc = 220
+1: total CPU time = 70.939 msec, total GC time = 3.22 msec (#GC = 2) n_hc = 20, n_enter_hc = 375, n_exit_hc = 220
+2: total CPU time = 63.850 msec, total GC time = 1.889 msec (#GC = 2) n_hc = 20, n_enter_hc = 375, n_exit_hc = 220
+3: total CPU time = 52.34 msec, total GC time = 1.761 msec (#GC = 2) n_hc = 20, n_enter_hc = 375, n_exit_hc = 220
+4: total CPU time = 50.797 msec, total GC time = 1.987 msec (#GC = 2) n_hc = 20, n_enter_hc = 375, n_exit_hc = 220
+5: total CPU time = 50.943 msec, total GC time = 1.727 msec (#GC = 2) n_hc = 20, n_enter_hc = 375, n_exit_hc = 220
+6: total CPU time = 56.282 msec, total GC time = 1.838 msec (#GC = 2) n_hc = 20, n_enter_hc = 375, n_exit_hc = 220
+7: total CPU time = 55.770 msec, total GC time = 1.785 msec (#GC = 2) n_hc = 20, n_enter_hc = 375, n_exit_hc = 220
+8: total CPU time = 54.363 msec, total GC time = 1.830 msec (#GC = 2) n_hc = 20, n_enter_hc = 375, n_exit_hc = 220
+9: total CPU time = 55.193 msec, total GC time = 1.977 msec (#GC = 2) n_hc = 20, n_enter_hc = 375, n_exit_hc = 220
+
+======== 3d-morph Optimisation ========
+0: total CPU time = 56.197 msec, total GC time = 2.720 msec (#GC = 2) n_hc = 19, n_enter_hc = 345, n_exit_hc = 205
+1: total CPU time = 53.385 msec, total GC time = 2.266 msec (#GC = 2) n_hc = 19, n_enter_hc = 345, n_exit_hc = 205
+2: total CPU time = 49.551 msec, total GC time = 2.99 msec (#GC = 2) n_hc = 19, n_enter_hc = 345, n_exit_hc = 205
+3: total CPU time = 54.157 msec, total GC time = 2.995 msec (#GC = 2) n_hc = 19, n_enter_hc = 345, n_exit_hc = 205
+4: total CPU time = 50.945 msec, total GC time = 1.850 msec (#GC = 2) n_hc = 19, n_enter_hc = 345, n_exit_hc = 205
+5: total CPU time = 50.722 msec, total GC time = 1.950 msec (#GC = 2) n_hc = 19, n_enter_hc = 345, n_exit_hc = 205
+6: total CPU time = 54.356 msec, total GC time = 1.842 msec (#GC = 2) n_hc = 19, n_enter_hc = 345, n_exit_hc = 205
+7: total CPU time = 53.319 msec, total GC time = 1.971 msec (#GC = 2) n_hc = 19, n_enter_hc = 345, n_exit_hc = 205
+8: total CPU time = 50.640 msec, total GC time = 1.872 msec (#GC = 2) n_hc = 19, n_enter_hc = 345, n_exit_hc = 205
+9: total CPU time = 50.919 msec, total GC time = 1.846 msec (#GC = 2) n_hc = 19, n_enter_hc = 345, n_exit_hc = 205

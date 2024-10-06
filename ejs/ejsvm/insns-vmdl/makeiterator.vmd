@@ -1,0 +1,16 @@
+#include "../header-vmdl/externc.vmdh"
+#include "../header-vmdl/patterns.vmdh"
+
+(vmInstruction, needContext, tailCall)
+makeiterator : JSValue -> JSValue
+
+makeiterator (obj) {
+    top: match(obj){
+        case(object obj){
+            return new_iterator(obj);
+        }
+        case(true){
+            LOG_EXIT("makeiterator: not an object\n");
+        }
+    }
+}

@@ -1,0 +1,7 @@
+======== getlocal_needframe ========
+0: total CPU time = 0.242 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 2390, n_exit_hc = 1227
+1: total CPU time = 0.257 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 2390, n_exit_hc = 1227
+
+======== getlocal_needframe Optimisation ========
+0: total CPU time = 0.269 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 2390, n_exit_hc = 1227
+1: total CPU time = 0.271 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 2390, n_exit_hc = 1227

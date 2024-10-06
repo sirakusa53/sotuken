@@ -1,0 +1,9 @@
+#include "../header-vmdl/patterns.vmdh"
+
+#include "../header-vmdl/externc.vmdh"
+
+
+(makeInline) object_to_boolean : JSObject -> Special
+object_to_boolean(v){
+    return JS_TRUE;
+}

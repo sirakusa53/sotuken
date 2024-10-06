@@ -1,0 +1,7 @@
+======== string-fasta ========
+0: total CPU time = 98.338 msec, total GC time = 4.968 msec (#GC = 9) n_hc = 54, n_enter_hc = 865496, n_exit_hc = 672647
+1: total CPU time = 97.273 msec, total GC time = 5.230 msec (#GC = 9) n_hc = 54, n_enter_hc = 865496, n_exit_hc = 672647
+
+======== string-fasta Optimisation ========
+0: total CPU time = 80.703 msec, total GC time = 3.334 msec (#GC = 6) n_hc = 53, n_enter_hc = 753486, n_exit_hc = 616642
+1: total CPU time = 83.47 msec, total GC time = 3.334 msec (#GC = 6) n_hc = 53, n_enter_hc = 753486, n_exit_hc = 616642

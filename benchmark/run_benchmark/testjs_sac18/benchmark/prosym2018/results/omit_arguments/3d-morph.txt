@@ -1,0 +1,7 @@
+======== 3d-morph ========
+0: total CPU time = 54.247 msec, total GC time = 2.68 msec (#GC = 2) n_hc = 20, n_enter_hc = 375, n_exit_hc = 220
+1: total CPU time = 61.282 msec, total GC time = 2.4 msec (#GC = 2) n_hc = 20, n_enter_hc = 375, n_exit_hc = 220
+
+======== 3d-morph Optimisation ========
+0: total CPU time = 50.849 msec, total GC time = 2.12 msec (#GC = 2) n_hc = 20, n_enter_hc = 375, n_exit_hc = 220
+1: total CPU time = 51.31 msec, total GC time = 2.217 msec (#GC = 2) n_hc = 20, n_enter_hc = 375, n_exit_hc = 220

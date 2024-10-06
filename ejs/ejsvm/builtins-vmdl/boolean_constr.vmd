@@ -1,0 +1,10 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) boolean_constr: (JSValue, JSValue) -> JSValue 
+boolean_constr(placeHolder, element){
+    JSValue rsv = new_boolean_object(DEBUG_NAME("boolean_ctor"), gshapes.g_shape_Boolean, JS_FALSE);
+    if(na > 0)
+        set_jsboolean_object_value(rsv, to_boolean(element));
+    return rsv;
+}

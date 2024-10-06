@@ -1,0 +1,618 @@
+fingerprint 82
+funcLength 3
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 257
+numberOfConstants 22
+setfl 13
+setfl 13
+makeclosure 1 0 # 45 0
+bigprim 2 #0:string="toBase64"
+setglobal 2 1
+makeclosure 1 1 # 86 0
+bigprim 2 #1:string="base64ToString"
+setglobal 2 1
+bigprim 1 #2:string="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+bigprim 2 #3:string="toBase64Table"
+setglobal 2 1
+bigprim 1 #4:string="="
+bigprim 2 #5:string="base64Pad"
+setglobal 2 1
+bigprim 2 #6:string="Array"
+getglobal 2 2
+fixnum 3 128
+move 13 3
+construct 1 2 1
+setfl 13
+getnewa 1 # 75 20
+setpropregfixfix 1 0 -1
+setpropregfixfix 1 1 -1
+setpropregfixfix 1 2 -1
+setpropregfixfix 1 3 -1
+setpropregfixfix 1 4 -1
+setpropregfixfix 1 5 -1
+setpropregfixfix 1 6 -1
+setpropregfixfix 1 7 -1
+setpropregfixfix 1 8 -1
+setpropregfixfix 1 9 -1
+setpropregfixfix 1 10 -1
+setpropregfixfix 1 11 -1
+setpropregfixfix 1 12 -1
+setpropregfixfix 1 13 -1
+setpropregfixfix 1 14 -1
+setpropregfixfix 1 15 -1
+setpropregfixfix 1 16 -1
+setpropregfixfix 1 17 -1
+setpropregfixfix 1 18 -1
+setpropregfixfix 1 19 -1
+setpropregfixfix 1 20 -1
+setpropregfixfix 1 21 -1
+setpropregfixfix 1 22 -1
+setpropregfixfix 1 23 -1
+setpropregfixfix 1 24 -1
+setpropregfixfix 1 25 -1
+setpropregfixfix 1 26 -1
+setpropregfixfix 1 27 -1
+setpropregfixfix 1 28 -1
+setpropregfixfix 1 29 -1
+setpropregfixfix 1 30 -1
+setpropregfixfix 1 31 -1
+setpropregfixfix 1 32 -1
+setpropregfixfix 1 33 -1
+setpropregfixfix 1 34 -1
+setpropregfixfix 1 35 -1
+setpropregfixfix 1 36 -1
+setpropregfixfix 1 37 -1
+setpropregfixfix 1 38 -1
+setpropregfixfix 1 39 -1
+setpropregfixfix 1 40 -1
+setpropregfixfix 1 41 -1
+setpropregfixfix 1 42 -1
+setpropregfixfix 1 43 62
+setpropregfixfix 1 44 -1
+setpropregfixfix 1 45 -1
+setpropregfixfix 1 46 -1
+setpropregfixfix 1 47 63
+setpropregfixfix 1 48 52
+setpropregfixfix 1 49 53
+setpropregfixfix 1 50 54
+setpropregfixfix 1 51 55
+setpropregfixfix 1 52 56
+setpropregfixfix 1 53 57
+setpropregfixfix 1 54 58
+setpropregfixfix 1 55 59
+setpropregfixfix 1 56 60
+setpropregfixfix 1 57 61
+setpropregfixfix 1 58 -1
+setpropregfixfix 1 59 -1
+setpropregfixfix 1 60 -1
+setpropregfixfix 1 61 0
+setpropregfixfix 1 62 -1
+setpropregfixfix 1 63 -1
+setpropregfixfix 1 64 -1
+setpropregfixfix 1 65 0
+setpropregfixfix 1 66 1
+setpropregfixfix 1 67 2
+setpropregfixfix 1 68 3
+setpropregfixfix 1 69 4
+setpropregfixfix 1 70 5
+setpropregfixfix 1 71 6
+setpropregfixfix 1 72 7
+setpropregfixfix 1 73 8
+setpropregfixfix 1 74 9
+setpropregfixfix 1 75 10
+setpropregfixfix 1 76 11
+setpropregfixfix 1 77 12
+setpropregfixfix 1 78 13
+setpropregfixfix 1 79 14
+setpropregfixfix 1 80 15
+setpropregfixfix 1 81 16
+setpropregfixfix 1 82 17
+setpropregfixfix 1 83 18
+setpropregfixfix 1 84 19
+setpropregfixfix 1 85 20
+setpropregfixfix 1 86 21
+setpropregfixfix 1 87 22
+setpropregfixfix 1 88 23
+setpropregfixfix 1 89 24
+setpropregfixfix 1 90 25
+setpropregfixfix 1 91 -1
+setpropregfixfix 1 92 -1
+setpropregfixfix 1 93 -1
+setpropregfixfix 1 94 -1
+setpropregfixfix 1 95 -1
+setpropregfixfix 1 96 -1
+setpropregfixfix 1 97 26
+setpropregfixfix 1 98 27
+setpropregfixfix 1 99 28
+setpropregfixfix 1 100 29
+setpropregfixfix 1 101 30
+setpropregfixfix 1 102 31
+setpropregfixfix 1 103 32
+setpropregfixfix 1 104 33
+setpropregfixfix 1 105 34
+setpropregfixfix 1 106 35
+setpropregfixfix 1 107 36
+setpropregfixfix 1 108 37
+setpropregfixfix 1 109 38
+setpropregfixfix 1 110 39
+setpropregfixfix 1 111 40
+setpropregfixfix 1 112 41
+setpropregfixfix 1 113 42
+setpropregfixfix 1 114 43
+setpropregfixfix 1 115 44
+setpropregfixfix 1 116 45
+setpropregfixfix 1 117 46
+setpropregfixfix 1 118 47
+setpropregfixfix 1 119 48
+setpropregfixfix 1 120 49
+setpropregfixfix 1 121 50
+setpropregfixfix 1 122 51
+setpropregfixfix 1 123 -1
+setpropregfixfix 1 124 -1
+setpropregfixfix 1 125 -1
+setpropregfixfix 1 126 -1
+setpropregfixfix 1 127 -1
+bigprim 2 #7:string="toBinaryTable"
+setglobal 2 1
+bigprim 1 #8:string=""
+bigprim 2 #9:string="str"
+setglobal 2 1
+fixnum 1 0
+bigprim 2 #10:string="i"
+setglobal 2 1
+jump 25 # 122 0
+bigprim 2 #9:string="str"
+getglobal 1 2
+bigprim 3 #11:string="String"
+getglobal 3 3
+getpropregstr 4 3 #12:string="fromCharCode"
+bigprim 5 #13:string="Math"
+getglobal 5 5
+getpropregstr 6 5 #14:string="random"
+move 13 5
+send 6 0
+setfl 13
+geta 5 # 123 42
+mulfixreg 5 25 5
+addregfix 5 5 97
+move 12 3
+move 13 5
+send 4 1
+setfl 13
+geta 3 # 123 15
+add 1 1 3
+setglobal 2 1
+getglobal 1 7
+addregfix 1 1 1
+setglobal 7 1
+bigprim 7 #10:string="i"
+getglobal 1 7
+fixnum 2 8192
+lessthanregfix 1 1 8192
+jumptrue 1 -28 # 122 17
+setglobal 7 2
+jump 60 # 125 0
+bigprim 1 #0:string="toBase64"
+getglobal 1 1
+bigprim 2 #9:string="str"
+getglobal 3 2
+move 13 3
+call 1 1
+setfl 13
+geta 1 # 129 13
+bigprim 3 #15:string="base64"
+setglobal 3 1
+bigprim 1 #1:string="base64ToString"
+getglobal 1 1
+getglobal 3 3
+move 13 3
+call 1 1
+setfl 13
+geta 1 # 130 18
+bigprim 3 #16:string="encoded"
+setglobal 3 1
+getglobal 1 3
+getglobal 4 2
+equal 5 1 4
+isundef 6 5 # 131 8
+jumpfalse 6 17 # 131 8
+isobject 5 1 # 131 8
+jumpfalse 5 6 # 131 8
+getpropregstr 5 1 #17:string="valueOf"
+move 13 1
+send 5 0
+geta 1 # 131 8
+jump 5 # 131 8
+getpropregstr 5 4 #17:string="valueOf"
+move 13 4
+send 5 0
+geta 4 # 131 8
+equal 5 1 4
+isundef 1 5 # 131 8
+jumpfalse 1 3 # 131 8
+bigprim 1 #18:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 131 8
+not 1 5
+jumpfalse 1 11 # 131 8
+bigprim 1 #19:string="print"
+getglobal 1 1
+getglobal 4 2
+addstrreg 4 #20:string="ERROR:\sbad\sresult:\sexpected\s" 4
+addregstr 4 4 #21:string="\sbut\sgot\s"
+getglobal 3 3
+add 3 4 3
+move 13 3
+call 1 1
+setfl 13
+getglobal 1 2
+getglobal 3 2
+add 1 1 3
+setglobal 2 1
+getglobal 1 7
+mulregfix 1 1 2
+setglobal 7 1
+bigprim 7 #10:string="i"
+getglobal 1 7
+lessthanequalregfix 1 1 16384
+jumptrue 1 -62 # 125 20
+specconst 1 null
+bigprim 2 #7:string="toBinaryTable"
+setglobal 2 1
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 219
+numberOfConstants 8
+setfl 16
+setfl 16
+bigprim 1 #0:string=""
+move 3 1
+getpropregstr 1 2 #1:string="length"
+move 4 1 # 47 8
+fixnum 1 0
+move 5 1
+jump 91 # 50 4
+bigprim 6 #2:string="toBase64Table"
+getglobal 1 6
+getpropregstr 7 1 #3:string="charAt"
+getpropregstr 8 2 #4:string="charCodeAt"
+move 15 2
+move 16 5
+send 8 1
+setfl 16
+geta 8 # 51 39
+rightshiftregfix 8 8 2
+move 15 1
+move 16 8
+send 7 1
+setfl 16
+geta 1 # 51 18
+add 1 3 1
+move 3 1 # 51 8
+getglobal 1 6
+getpropregstr 7 1 #3:string="charAt"
+getpropregstr 8 2 #4:string="charCodeAt"
+move 15 2
+move 16 5
+send 8 1
+setfl 16
+geta 8 # 52 41
+bitandregfix 8 8 3
+leftshiftregfix 8 8 4
+getpropregstr 9 2 #4:string="charCodeAt"
+move 10 5 # 52 93
+addregfix 10 10 1
+move 15 2
+move 16 10
+send 9 1
+setfl 16
+geta 9 # 52 77
+rightshiftregfix 9 9 4
+add 8 8 9
+move 15 1
+move 16 8
+send 7 1
+setfl 16
+geta 1 # 52 18
+add 1 3 1
+move 3 1 # 52 8
+getglobal 1 6
+getpropregstr 7 1 #3:string="charAt"
+getpropregstr 8 2 #4:string="charCodeAt"
+addregfix 9 5 1
+move 15 2
+move 16 9
+send 8 1
+setfl 16
+geta 8 # 53 41
+bitandregfix 8 8 15
+leftshiftregfix 8 8 2
+getpropregstr 9 2 #4:string="charCodeAt"
+addregfix 10 5 2
+move 15 2
+move 16 10
+send 9 1
+setfl 16
+geta 9 # 53 79
+rightshiftregfix 9 9 6
+add 8 8 9
+move 15 1
+move 16 8
+send 7 1
+setfl 16
+geta 1 # 53 18
+add 1 3 1
+move 3 1 # 53 8
+getglobal 1 6
+getpropregstr 6 1 #3:string="charAt"
+getpropregstr 7 2 #4:string="charCodeAt"
+addregfix 8 5 2
+move 15 2
+move 16 8
+send 7 1
+setfl 16
+geta 7 # 54 39
+bitandregfix 7 7 63
+move 15 1
+move 16 7
+send 6 1
+setfl 16
+geta 1 # 54 18
+add 1 3 1
+move 3 1 # 54 8
+addregfix 1 5 3
+move 5 1 # 50 34
+move 1 5 # 50 16
+fixnum 9 2
+subregfix 6 4 2
+lessthan 1 1 6
+jumptrue 1 -94 # 50 16
+modregfix 1 4 3
+jumpfalse 1 112 # 58 8
+modregfix 1 4 3
+sub 1 4 1
+move 5 1 # 59 8
+bigprim 6 #2:string="toBase64Table"
+getglobal 7 6
+getpropregstr 8 7 #3:string="charAt"
+getpropregstr 10 2 #4:string="charCodeAt"
+move 15 2
+move 16 1
+send 10 1
+setfl 16
+geta 1 # 60 39
+rightshiftregfix 1 1 2
+move 15 7
+move 16 1
+send 8 1
+setfl 16
+geta 1 # 60 18
+add 1 3 1
+move 3 1 # 60 8
+modregfix 4 4 3
+equalregfix 1 4 2
+isundef 7 1 # 61 12
+jumpfalse 7 18 # 61 12
+isobject 1 4 # 61 12
+jumpfalse 1 6 # 61 12
+getpropregstr 1 4 #5:string="valueOf"
+move 16 4
+send 1 0
+geta 1 # 61 12
+jump 6 # 61 12
+getpropfixstr 1 2 #5:string="valueOf"
+move 16 9
+send 1 0
+geta 9 # 61 12
+move 1 4 # 61 12
+equal 1 1 9
+isundef 4 1 # 61 12
+jumpfalse 4 3 # 61 12
+bigprim 1 #6:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 61 12
+jumpfalse 1 48 # 61 12
+getglobal 1 6
+getpropregstr 4 1 #3:string="charAt"
+getpropregstr 7 2 #4:string="charCodeAt"
+move 15 2
+move 16 5
+send 7 1
+setfl 16
+geta 7 # 62 45
+bitandregfix 7 7 3
+leftshiftregfix 7 7 4
+getpropregstr 8 2 #4:string="charCodeAt"
+addregfix 9 5 1
+move 15 2
+move 16 9
+send 8 1
+setfl 16
+geta 8 # 62 81
+rightshiftregfix 8 8 4
+add 7 7 8
+move 15 1
+move 16 7
+send 4 1
+setfl 16
+geta 1 # 62 22
+add 1 3 1
+getglobal 3 6
+getpropregstr 4 3 #3:string="charAt"
+getpropregstr 6 2 #4:string="charCodeAt"
+addregfix 5 5 1
+move 15 2
+move 16 5
+send 6 1
+setfl 16
+geta 2 # 63 44
+bitandregfix 2 2 15
+leftshiftregfix 2 2 2
+move 15 3
+move 16 2
+send 4 1
+setfl 16
+geta 2 # 63 22
+add 1 1 2
+bigprim 2 #7:string="base64Pad"
+getglobal 2 2
+add 1 1 2
+move 3 1 # 64 12
+jump 23 # 65 15
+getglobal 1 6
+getpropregstr 4 1 #3:string="charAt"
+getpropregstr 6 2 #4:string="charCodeAt"
+move 15 2
+move 16 5
+send 6 1
+setfl 16
+geta 2 # 66 44
+bitandregfix 2 2 3
+leftshiftregfix 2 2 4
+move 15 1
+move 16 2
+send 4 1
+setfl 16
+geta 1 # 66 22
+add 1 3 1
+bigprim 2 #7:string="base64Pad"
+getglobal 3 2
+getglobal 2 2
+add 2 3 2
+add 1 1 2
+move 3 1 # 67 12
+seta 3
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 125
+numberOfConstants 11
+setfl 17
+setfl 17
+bigprim 1 #0:string=""
+move 3 1
+fixnum 1 0
+move 4 1
+move 5 4
+move 6 4
+jump 104 # 92 4
+bigprim 1 #1:string="toBinaryTable"
+getglobal 1 1
+getpropregstr 7 2 #2:string="charCodeAt"
+move 16 2
+move 17 6
+send 7 1
+setfl 17
+geta 7 # 93 30
+bitandregfix 7 7 127
+getprop 1 1 7
+move 7 1 # 93 12
+getpropregstr 1 2 #2:string="charCodeAt"
+move 16 2
+move 17 6
+send 1 1
+setfl 17
+geta 8 # 94 23
+bigprim 1 #3:string="base64Pad"
+getglobal 1 1
+getpropregstr 9 1 #2:string="charCodeAt"
+fixnum 10 0
+move 16 1
+move 17 10
+send 9 1
+setfl 17
+geta 9 # 94 45
+equal 1 8 9
+isundef 10 1 # 94 23
+jumpfalse 10 18 # 94 23
+isobject 1 8 # 94 23
+jumpfalse 1 6 # 94 23
+getpropregstr 1 8 #4:string="valueOf"
+move 17 8
+send 1 0
+geta 1 # 94 23
+jump 6 # 94 23
+getpropregstr 1 9 #4:string="valueOf"
+move 17 9
+send 1 0
+geta 9 # 94 23
+move 1 8 # 94 23
+equal 1 1 9
+isundef 8 1 # 94 23
+jumpfalse 8 3 # 94 23
+bigprim 1 #5:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 94 23
+move 8 1 # 94 12
+move 9 7 # 96 12
+fixnum 1 -1
+move 10 1
+equalregfix 1 9 -1
+isundef 11 1 # 96 12
+jumpfalse 11 18 # 96 12
+isobject 1 9 # 96 12
+jumpfalse 1 6 # 96 12
+getpropregstr 1 9 #4:string="valueOf"
+move 17 9
+send 1 0
+geta 1 # 96 12
+jump 6 # 96 12
+getpropfixstr 1 -1 #4:string="valueOf"
+move 17 10
+send 1 0
+geta 10 # 96 12
+move 1 9 # 96 12
+equal 1 1 10
+isundef 9 1 # 96 12
+jumpfalse 9 3 # 96 12
+bigprim 1 #5:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 96 12
+jumpfalse 1 2 # 96 12
+jump 30
+leftshiftregfix 1 5 6
+bitor 1 1 7
+move 5 1 # 99 8
+addregfix 1 4 6
+move 4 1 # 100 8
+move 1 4 # 103 12
+lessthanequalfixreg 1 8 1
+jumpfalse 1 22 # 103 12
+subregfix 1 4 8
+move 4 1 # 104 12
+not 1 8
+jumpfalse 1 14 # 106 16
+bigprim 1 #6:string="String"
+getglobal 1 1
+getpropregstr 7 1 #7:string="fromCharCode"
+move 8 5 # 107 47
+rightshift 8 8 4
+bitandregfix 8 8 255
+move 16 1
+move 17 8
+send 7 1
+setfl 17
+geta 1 # 107 26
+add 1 3 1
+move 3 1 # 107 16
+leftshiftfixreg 1 1 4
+subregfix 1 1 1
+bitand 1 5 1
+move 5 1 # 108 12
+addregfix 1 6 1
+move 6 1 # 92 37
+move 1 6 # 92 20
+getpropregstr 7 2 #8:string="length"
+lessthan 1 1 7
+jumptrue 1 -106 # 92 20
+jumpfalse 4 7 # 113 8
+bigprim 1 #9:string="print"
+getglobal 1 1
+bigprim 2 #10:string="Corrupted\sbase64\sstring"
+move 17 2
+call 1 1
+setfl 17
+seta 3
+ret

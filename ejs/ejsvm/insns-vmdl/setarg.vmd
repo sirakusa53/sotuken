@@ -1,0 +1,17 @@
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, needContext, tailCall)
+setarg : (int, Subscript, JSValue) -> void
+
+setarg (link, index, v) {
+    // Setarg(link, index, v);
+
+    FunctionFrame fr;
+    JSValue arguments;
+    fr <- get_lp();
+    do(int i = 0 to link-1 step 1){
+        fr <- fframe_prev(fr);
+    }
+    arguments <- fframe_arguments(fr);
+    set_array_prop(arguments, small_cint_to_fixnum(subscriptToCint(index)), v);
+}

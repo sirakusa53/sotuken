@@ -1,0 +1,115 @@
+fingerprint 82
+funcLength 3
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 58
+numberOfConstants 10
+setfl 12
+setfl 12
+makeclosure 1 0 # 7 0
+bigprim 2 #0:string="fast3bitlookup"
+setglobal 2 1
+makeclosure 1 1 # 28 0
+bigprim 3 #1:string="TimeFunc"
+setglobal 3 1
+fixnum 1 0
+bigprim 4 #2:string="result"
+setglobal 4 1
+getglobal 1 3
+getglobal 2 2
+move 12 2
+call 1 1
+setfl 12
+geta 1 # 36 6
+bigprim 2 #3:string="sum"
+setglobal 2 1
+fixnum 1 512000
+bigprim 3 #4:string="expected"
+setglobal 3 1
+getglobal 1 2
+getglobal 4 3
+equal 5 1 4
+isundef 6 5 # 39 4
+jumpfalse 6 17 # 39 4
+isobject 5 1 # 39 4
+jumpfalse 5 6 # 39 4
+getpropregstr 5 1 #5:string="valueOf"
+move 12 1
+send 5 0
+geta 1 # 39 4
+jump 5 # 39 4
+getpropregstr 5 4 #5:string="valueOf"
+move 12 4
+send 5 0
+geta 4 # 39 4
+equal 5 1 4
+isundef 1 5 # 39 4
+jumpfalse 1 3 # 39 4
+bigprim 1 #6:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 39 4
+not 1 5
+jumpfalse 1 12 # 39 4
+bigprim 1 #7:string="print"
+getglobal 1 1
+getglobal 3 3
+addstrreg 3 #8:string="ERROR:\sbad\sresult:\sexpected\s" 3
+addregstr 3 3 #9:string="\sbut\sgot\s"
+getglobal 2 2
+add 2 3 2
+move 12 2
+call 1 1
+setfl 12
+geta 1 # 41 4
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 20
+numberOfConstants 0
+setfl 9
+setfl 9
+fixnum 1 59796
+move 3 1
+leftshiftregfix 4 2 1
+bitandregfix 4 4 14
+rightshift 1 1 4
+bitandfixreg 1 3 1
+rightshiftregfix 4 2 2
+bitandregfix 4 4 14
+rightshift 4 3 4
+bitandfixreg 4 3 4
+add 1 1 4
+rightshiftregfix 2 2 5
+bitandregfix 2 2 6
+rightshift 2 3 2
+bitandfixreg 2 3 2
+add 1 1 2
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 20
+numberOfConstants 0
+setfl 11
+setfl 11
+fixnum 1 0
+move 3 1
+jump 12 # 31 0
+fixnum 4 0
+jump 7 # 32 0
+move 11 4
+call 2 1
+setfl 11
+geta 5 # 32 32
+add 1 1 5
+addregfix 4 4 1
+lessthanregfix 5 4 256
+jumptrue 5 -7 # 32 13
+addregfix 3 3 1
+lessthanregfix 4 3 500
+jumptrue 4 -12 # 31 13
+seta 1
+ret

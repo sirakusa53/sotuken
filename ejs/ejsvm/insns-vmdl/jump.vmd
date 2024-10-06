@@ -1,0 +1,8 @@
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, tailCall)
+jump : InstructionDisplacement -> void
+
+jump (d0) {
+    set_pc_relative(d0);
+}

@@ -1,0 +1,7 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, builtinFunction) math_sin : (JSValue, JSValue) ->JSValue
+math_sin(placeHolder, x){
+  return math_func(SIN, x);
+}

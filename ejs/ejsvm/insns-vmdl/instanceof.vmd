@@ -1,0 +1,26 @@
+#include "../header-vmdl/patterns.vmdh"
+
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, tailCall)
+instanceof : (JSValue, JSValue) -> JSValue
+
+instanceof (v1, v2) {
+    top: match (v1, v2) {
+      case (object v1 && callable v2) {
+        // //NOTE! Wrap function
+        // JSValue wrapped_return_value = JS_EMPTY;
+        // Instanceof(v1, v2);
+        // return wrapped_return_value;
+
+        JSValue ctor_prototype = get_prop(v2, gconsts.g_string_prototype);
+        if (!is_jsobject(ctor_prototype))
+          return JS_FALSE;
+        JSValue __proto__ = v1;
+        return instanceof_helper(__proto__, ctor_prototype);
+      }
+      case (true) {
+          return JS_FALSE;
+      }
+    }
+}

@@ -1,0 +1,17 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) string_trim: JSValue -> JSValue 
+string_trim(o){
+  /* 1. */
+  if (o == JS_NULL || o == JS_UNDEFINED){
+    type_error_exception("string_trim");
+    return JS_EMPTY;
+  }
+  /* 2. */
+  JSValue s = to_string(o);
+  /* 3. */
+  JSValue t = ejs_string_trim(s);
+  /* 4. */
+  return t;
+}

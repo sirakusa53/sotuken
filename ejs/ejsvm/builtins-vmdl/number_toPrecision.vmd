@@ -1,0 +1,23 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) number_toPrecision: (JSValue, JSValue) -> JSValue 
+number_toPrecision(o, d){
+    JSValue num = to_number(o);
+    
+    if(na < 1 || d == JS_UNDEFINED){
+        JSValue fn = get_prop(gconsts.g_prototype_Number, gconsts.g_string_tostring);
+        JSValue ret;
+        match(fn){
+            case(Builtin fn){
+                ret <- invoke_builtin(o, fn, TRUE, JS_UNDEFINED, 0);
+            }
+            case(true){
+                LOG_EXIT("number_toPrecision: Number.toString is not builtin-function");
+                ret <- JS_EMPTY;
+            }
+        }
+        return ret;
+    }
+    return toPrecision_helper(num, d);
+}

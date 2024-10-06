@@ -1,0 +1,24 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) math_max: JSValue -> JSValue 
+math_max(math){
+    double r = -INFINITY;
+    do(int i=0 to n_rest-1 step 1){
+        JSValue v = rest[i];
+        main: match(v){
+            case(Number v){
+                if(is_nan(v))
+                    r <- NAN;
+                double x = number_to_double(v);
+                if(r < x)
+                    r <- x;
+            }
+            case(true){
+                JSValue w = to_number(v);
+                rematch main(w);
+            }
+        }
+    }
+    return double_to_number(r);
+}

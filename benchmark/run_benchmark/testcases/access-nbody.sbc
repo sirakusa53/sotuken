@@ -1,0 +1,682 @@
+fingerprint 82
+funcLength 12
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 104
+numberOfConstants 25
+setfl 12
+setfl 12
+makeclosure 1 0 # 9 0
+bigprim 2 #0:string="Body"
+setglobal 2 1
+makeclosure 1 1 # 26 0
+bigprim 3 #1:string="Jupiter"
+setglobal 3 1
+makeclosure 1 2 # 38 0
+bigprim 3 #2:string="Saturn"
+setglobal 3 1
+makeclosure 1 3 # 50 0
+bigprim 3 #3:string="Uranus"
+setglobal 3 1
+makeclosure 1 4 # 62 0
+bigprim 3 #4:string="Neptune"
+setglobal 3 1
+makeclosure 1 5 # 74 0
+bigprim 3 #5:string="Sun"
+setglobal 3 1
+makeclosure 1 6 # 79 0
+bigprim 3 #6:string="NBodySystem"
+setglobal 3 1
+bigprim 1 #7:number=3.141592653589793
+bigprim 4 #8:string="PI"
+setglobal 4 1
+getglobal 1 4
+mulfixreg 1 4 1
+getglobal 4 4
+mul 1 1 4
+bigprim 4 #9:string="SOLAR_MASS"
+setglobal 4 1
+bigprim 1 #10:number=365.24
+bigprim 4 #11:string="DAYS_PER_YEAR"
+setglobal 4 1
+makeclosure 1 7 # 19 32
+getglobal 2 2
+getpropregstr 2 2 #12:string="prototype"
+setpropregstrreg 2 #13:string="offsetMomentum" 1
+makeclosure 1 8 # 95 32
+getglobal 2 3
+getpropregstr 2 2 #12:string="prototype"
+setpropregstrreg 2 #14:string="advance" 1
+makeclosure 1 9 # 128 31
+getglobal 2 3
+getpropregstr 2 2 #12:string="prototype"
+setpropregstrreg 2 #15:string="energy" 1
+fixnum 1 0
+bigprim 2 #16:string="ret"
+setglobal 2 1
+fixnum 1 3
+bigprim 2 #17:string="n"
+setglobal 2 1
+jump 7 # 156 0
+makeclosure 1 10 # 157 5
+call 1 0
+setfl 12
+getglobal 1 2
+mulregfix 1 1 2
+setglobal 2 1
+bigprim 2 #17:string="n"
+getglobal 1 2
+lessthanequalregfix 1 1 24
+jumptrue 1 -9 # 156 17
+bigprim 1 #18:number=-1.3524862408537381
+bigprim 2 #19:string="expected"
+setglobal 2 1
+bigprim 3 #16:string="ret"
+getglobal 1 3
+getglobal 4 2
+equal 5 1 4
+isundef 6 5 # 172 4
+jumpfalse 6 17 # 172 4
+isobject 5 1 # 172 4
+jumpfalse 5 6 # 172 4
+getpropregstr 5 1 #20:string="valueOf"
+move 12 1
+send 5 0
+geta 1 # 172 4
+jump 5 # 172 4
+getpropregstr 5 4 #20:string="valueOf"
+move 12 4
+send 5 0
+geta 4 # 172 4
+equal 5 1 4
+isundef 1 5 # 172 4
+jumpfalse 1 3 # 172 4
+bigprim 1 #21:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 172 4
+not 1 5
+jumpfalse 1 12 # 172 4
+bigprim 1 #22:string="print"
+getglobal 1 1
+getglobal 2 2
+addstrreg 2 #23:string="ERROR:\sbad\sresult:\sexpected\s" 2
+addregstr 2 2 #24:string="\sbut\sgot\s"
+getglobal 3 3
+add 2 2 3
+move 12 2
+call 1 1
+setfl 12
+geta 1 # 174 4
+seta 1
+ret
+callentry 0
+sendentry 2
+numberOfLocals 0
+numberOfInstructions 13
+numberOfConstants 7
+setfl 13
+getglobalobj 1 # 9 0
+setfl 13
+setpropregstrreg 1 #0:string="x" 2
+setpropregstrreg 1 #1:string="y" 3
+setpropregstrreg 1 #2:string="z" 4
+setpropregstrreg 1 #3:string="vx" 5
+setpropregstrreg 1 #4:string="vy" 6
+setpropregstrreg 1 #5:string="vz" 7
+setpropregstrreg 1 #6:string="mass" 8
+specconst 1 undefined
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 30
+numberOfConstants 10
+setfl 21
+setfl 21
+specconst 1 undefined
+bigprim 2 #0:string="Body"
+getglobal 2 2
+bigprim 3 #1:number=4.841431442464721
+bigprim 4 #2:number=-1.1603200440274284
+bigprim 5 #3:number=-0.10362204447112311
+bigprim 6 #4:string="DAYS_PER_YEAR"
+getglobal 7 6
+mulfloreg 7 #5:number=0.001660076642744037 7
+getglobal 8 6
+mulfloreg 8 #6:number=0.007699011184197404 8
+getglobal 6 6
+mulfloreg 6 #7:number=-6.90460016972063E-5 6
+bigprim 9 #8:string="SOLAR_MASS"
+getglobal 9 9
+mulfloreg 9 #9:number=9.547919384243266E-4 9
+move 15 3
+move 16 4
+move 17 5
+move 18 7
+move 19 8
+move 20 6
+move 21 9
+construct 1 2 7
+setfl 21
+getnewa 1 # 27 14
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 30
+numberOfConstants 10
+setfl 21
+setfl 21
+specconst 1 undefined
+bigprim 2 #0:string="Body"
+getglobal 2 2
+bigprim 3 #1:number=8.34336671824458
+bigprim 4 #2:number=4.124798564124305
+bigprim 5 #3:number=-0.4035234171143214
+bigprim 6 #4:string="DAYS_PER_YEAR"
+getglobal 7 6
+mulfloreg 7 #5:number=-0.002767425107268624 7
+getglobal 8 6
+mulfloreg 8 #6:number=0.004998528012349172 8
+getglobal 6 6
+mulfloreg 6 #7:number=2.3041729757376393E-5 6
+bigprim 9 #8:string="SOLAR_MASS"
+getglobal 9 9
+mulfloreg 9 #9:number=2.858859806661308E-4 9
+move 15 3
+move 16 4
+move 17 5
+move 18 7
+move 19 8
+move 20 6
+move 21 9
+construct 1 2 7
+setfl 21
+getnewa 1 # 39 14
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 30
+numberOfConstants 10
+setfl 21
+setfl 21
+specconst 1 undefined
+bigprim 2 #0:string="Body"
+getglobal 2 2
+bigprim 3 #1:number=12.894369562139131
+bigprim 4 #2:number=-15.111151401698631
+bigprim 5 #3:number=-0.22330757889265573
+bigprim 6 #4:string="DAYS_PER_YEAR"
+getglobal 7 6
+mulfloreg 7 #5:number=0.002964601375647616 7
+getglobal 8 6
+mulfloreg 8 #6:number=0.0023784717395948095 8
+getglobal 6 6
+mulfloreg 6 #7:number=-2.9658956854023756E-5 6
+bigprim 9 #8:string="SOLAR_MASS"
+getglobal 9 9
+mulfloreg 9 #9:number=4.366244043351563E-5 9
+move 15 3
+move 16 4
+move 17 5
+move 18 7
+move 19 8
+move 20 6
+move 21 9
+construct 1 2 7
+setfl 21
+getnewa 1 # 51 14
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 30
+numberOfConstants 10
+setfl 21
+setfl 21
+specconst 1 undefined
+bigprim 2 #0:string="Body"
+getglobal 2 2
+bigprim 3 #1:number=15.379697114850917
+bigprim 4 #2:number=-25.919314609987964
+bigprim 5 #3:number=0.17925877295037118
+bigprim 6 #4:string="DAYS_PER_YEAR"
+getglobal 7 6
+mulfloreg 7 #5:number=0.0026806777249038932 7
+getglobal 8 6
+mulfloreg 8 #6:number=0.001628241700382423 8
+getglobal 6 6
+mulfloreg 6 #7:number=-9.515922545197159E-5 6
+bigprim 9 #8:string="SOLAR_MASS"
+getglobal 9 9
+mulfloreg 9 #9:number=5.1513890204661145E-5 9
+move 15 3
+move 16 4
+move 17 5
+move 18 7
+move 19 8
+move 20 6
+move 21 9
+construct 1 2 7
+setfl 21
+getnewa 1 # 63 14
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 20
+numberOfConstants 2
+setfl 16
+setfl 16
+specconst 1 undefined
+bigprim 2 #0:string="Body"
+getglobal 2 2
+fixnum 3 0
+bigprim 4 #1:string="SOLAR_MASS"
+getglobal 4 4
+move 10 3
+move 11 3
+move 12 3
+move 13 3
+move 14 3
+move 15 3
+move 16 4
+construct 1 2 7
+setfl 16
+getnewa 1 # 75 13
+seta 1
+ret
+callentry 0
+sendentry 2
+numberOfLocals 0
+numberOfInstructions 46
+numberOfConstants 7
+setfl 17
+getglobalobj 1 # 79 0
+setfl 17
+setpropregstrreg 1 #0:string="bodies" 2
+fixnum 2 0
+move 3 2
+move 4 3
+move 5 3
+getpropregstr 2 1 #0:string="bodies"
+getpropregstr 2 2 #1:string="length"
+move 6 2 # 84 7
+move 7 3
+jump 20 # 85 3
+getpropregstr 2 1 #0:string="bodies"
+getprop 2 2 7
+move 8 2 # 86 10
+getpropregstr 2 8 #2:string="mass"
+move 9 2 # 87 10
+getpropregstr 2 8 #3:string="vx"
+mul 2 2 9
+add 2 3 2
+move 3 2 # 88 6
+getpropregstr 2 8 #4:string="vy"
+mul 2 2 9
+add 2 4 2
+move 4 2 # 89 6
+getpropregstr 2 8 #5:string="vz"
+mul 2 2 9
+add 2 5 2
+move 5 2 # 90 6
+addregfix 2 7 1
+move 7 2 # 85 25
+lessthan 2 7 6
+jumptrue 2 -20 # 85 17
+getpropregstr 1 1 #0:string="bodies"
+getpropregfix 1 1 0
+getpropregstr 2 1 #6:string="offsetMomentum"
+move 14 1
+move 15 3
+move 16 4
+move 17 5
+send 2 3
+setfl 17
+specconst 1 undefined
+seta 1
+ret
+callentry 0
+sendentry 2
+numberOfLocals 0
+numberOfInstructions 18
+numberOfConstants 4
+setfl 11
+getglobalobj 1 # 19 32
+setfl 11
+mulregfix 2 2 -1
+bigprim 5 #0:string="SOLAR_MASS"
+getglobal 6 5
+div 2 2 6
+setpropregstrreg 1 #1:string="vx" 2
+mulregfix 2 3 -1
+getglobal 3 5
+div 2 2 3
+setpropregstrreg 1 #2:string="vy" 2
+mulregfix 2 4 -1
+getglobal 3 5
+div 2 2 3
+setpropregstrreg 1 #3:string="vz" 2
+seta 1
+ret
+callentry 0
+sendentry 2
+numberOfLocals 0
+numberOfInstructions 136
+numberOfConstants 11
+setfl 20
+getglobalobj 1 # 95 32
+setfl 20
+getpropregstr 3 1 #0:string="bodies"
+getpropregstr 3 3 #1:string="length"
+move 4 3 # 97 7
+fixnum 3 0
+move 5 3
+jump 95 # 99 3
+getpropregstr 3 1 #0:string="bodies"
+getprop 3 3 5
+move 6 3 # 100 10
+addregfix 3 5 1
+move 7 3 # 101 15
+jump 85 # 101 6
+getpropregstr 3 1 #0:string="bodies"
+getprop 3 3 7
+move 8 3 # 102 13
+move 3 6 # 103 14
+getpropregstr 3 3 #2:string="x"
+getpropregstr 9 8 #2:string="x"
+sub 3 3 9
+move 9 3 # 103 9
+move 3 6 # 104 14
+getpropregstr 3 3 #3:string="y"
+getpropregstr 10 8 #3:string="y"
+sub 3 3 10
+move 10 3 # 104 9
+move 3 6 # 105 14
+getpropregstr 3 3 #4:string="z"
+getpropregstr 11 8 #4:string="z"
+sub 3 3 11
+move 11 3 # 105 9
+bigprim 3 #5:string="Math"
+getglobal 3 3
+getpropregstr 12 3 #6:string="sqrt"
+move 13 9 # 107 30
+mul 13 13 9
+move 14 10 # 107 38
+mul 14 14 10
+add 13 13 14
+move 14 11 # 107 46
+mul 14 14 11
+add 13 13 14
+move 19 3
+move 20 13
+send 12 1
+setfl 20
+geta 3 # 107 20
+move 12 3 # 108 21
+mul 12 12 3
+mul 3 12 3
+div 3 2 3
+move 12 3 # 108 9
+move 3 6 # 110 9
+getpropregstr 3 3 #7:string="vx"
+move 13 9 # 110 21
+move 14 8 # 110 26
+getpropregstr 14 14 #8:string="mass"
+mul 13 13 14
+mul 13 13 12
+sub 3 3 13
+setpropregstrreg 6 #7:string="vx" 3
+move 3 6 # 111 9
+getpropregstr 3 3 #9:string="vy"
+move 13 10 # 111 21
+getpropregstr 14 8 #8:string="mass"
+mul 13 13 14
+mul 13 13 12
+sub 3 3 13
+setpropregstrreg 6 #9:string="vy" 3
+move 3 6 # 112 9
+getpropregstr 3 3 #10:string="vz"
+move 13 11 # 112 21
+getpropregstr 14 8 #8:string="mass"
+mul 13 13 14
+mul 13 13 12
+sub 3 3 13
+setpropregstrreg 6 #10:string="vz" 3
+getpropregstr 3 8 #7:string="vx"
+getpropregstr 13 6 #8:string="mass"
+mul 9 9 13
+mul 9 9 12
+add 3 3 9
+setpropregstrreg 8 #7:string="vx" 3
+getpropregstr 3 8 #9:string="vy"
+getpropregstr 9 6 #8:string="mass"
+mul 9 10 9
+mul 9 9 12
+add 3 3 9
+setpropregstrreg 8 #9:string="vy" 3
+getpropregstr 3 8 #10:string="vz"
+getpropregstr 9 6 #8:string="mass"
+mul 9 11 9
+mul 9 9 12
+add 3 3 9
+setpropregstrreg 8 #10:string="vz" 3
+addregfix 3 7 1
+move 7 3 # 101 30
+lessthan 3 7 4
+jumptrue 3 -85 # 101 22
+addregfix 3 5 1
+move 5 3 # 99 25
+lessthan 3 5 4
+jumptrue 3 -95 # 99 17
+fixnum 3 0
+move 5 3
+jump 24 # 120 3
+getpropregstr 3 1 #0:string="bodies"
+getprop 3 3 5
+move 6 3 # 121 10
+move 3 6 # 122 6
+getpropregstr 3 3 #2:string="x"
+getpropregstr 7 6 #7:string="vx"
+mul 7 2 7
+add 3 3 7
+setpropregstrreg 6 #2:string="x" 3
+move 3 6 # 123 6
+getpropregstr 3 3 #3:string="y"
+getpropregstr 7 6 #9:string="vy"
+mul 7 2 7
+add 3 3 7
+setpropregstrreg 6 #3:string="y" 3
+move 3 6 # 124 6
+getpropregstr 3 3 #4:string="z"
+getpropregstr 7 6 #10:string="vz"
+mul 7 2 7
+add 3 3 7
+setpropregstrreg 6 #4:string="z" 3
+addregfix 3 5 1
+move 5 3 # 120 25
+lessthan 3 5 4
+jumptrue 3 -24 # 120 17
+specconst 1 undefined
+seta 1
+ret
+callentry 0
+sendentry 2
+numberOfLocals 0
+numberOfInstructions 82
+numberOfConstants 12
+setfl 18
+getglobalobj 1 # 128 31
+setfl 18
+fixnum 2 0
+move 3 2
+getpropregstr 2 1 #0:string="bodies"
+getpropregstr 2 2 #1:string="length"
+move 4 2 # 131 7
+move 5 3
+jump 69 # 133 3
+getpropregstr 2 1 #0:string="bodies"
+getprop 2 2 5
+move 6 2 # 134 10
+getpropregstr 2 6 #2:string="mass"
+mulfloreg 2 #3:number=0.5 2
+move 7 6 # 137 11
+getpropregstr 7 7 #4:string="vx"
+getpropregstr 8 6 #4:string="vx"
+mul 7 7 8
+move 8 6 # 138 11
+getpropregstr 8 8 #5:string="vy"
+getpropregstr 9 6 #5:string="vy"
+mul 8 8 9
+add 7 7 8
+move 8 6 # 139 11
+getpropregstr 8 8 #6:string="vz"
+getpropregstr 9 6 #6:string="vz"
+mul 8 8 9
+add 7 7 8
+mul 2 2 7
+add 2 3 2
+move 3 2 # 136 6
+addregfix 2 5 1
+move 7 2 # 141 15
+jump 40 # 141 6
+getpropregstr 2 1 #0:string="bodies"
+getprop 2 2 7
+move 8 2 # 142 13
+move 2 6 # 143 14
+getpropregstr 2 2 #7:string="x"
+getpropregstr 9 8 #7:string="x"
+sub 2 2 9
+move 9 2 # 143 9
+move 2 6 # 144 14
+getpropregstr 2 2 #8:string="y"
+getpropregstr 10 8 #8:string="y"
+sub 2 2 10
+move 10 2 # 144 9
+move 2 6 # 145 14
+getpropregstr 2 2 #9:string="z"
+getpropregstr 11 8 #9:string="z"
+sub 2 2 11
+bigprim 11 #10:string="Math"
+getglobal 11 11
+getpropregstr 12 11 #11:string="sqrt"
+mul 9 9 9
+mul 10 10 10
+add 9 9 10
+mul 2 2 2
+add 2 9 2
+move 17 11
+move 18 2
+send 12 1
+setfl 18
+geta 2 # 147 20
+move 9 6 # 148 15
+getpropregstr 9 9 #2:string="mass"
+getpropregstr 8 8 #2:string="mass"
+mul 8 9 8
+div 2 8 2
+sub 2 3 2
+move 3 2 # 148 9
+addregfix 2 7 1
+move 7 2 # 141 30
+lessthan 2 7 4
+jumptrue 2 -40 # 141 22
+addregfix 2 5 1
+move 5 2 # 133 25
+lessthan 2 5 4
+jumptrue 2 -69 # 133 17
+seta 3
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 81
+numberOfConstants 12
+setfl 18
+setfl 18
+specconst 1 undefined
+bigprim 2 #0:string="NBodySystem"
+getglobal 2 2
+bigprim 3 #1:string="Array"
+getglobal 3 3
+bigprim 4 #2:string="Sun"
+getglobal 4 4
+call 4 0
+setfl 18
+geta 4 # 159 11
+bigprim 5 #3:string="Jupiter"
+getglobal 5 5
+call 5 0
+setfl 18
+geta 5 # 159 17
+bigprim 6 #4:string="Saturn"
+getglobal 6 6
+call 6 0
+setfl 18
+geta 6 # 159 27
+bigprim 7 #5:string="Uranus"
+getglobal 7 7
+call 7 0
+setfl 18
+geta 7 # 159 36
+bigprim 8 #6:string="Neptune"
+getglobal 8 8
+call 8 0
+setfl 18
+geta 8 # 159 45
+move 14 4
+move 15 5
+move 16 6
+move 17 7
+move 18 8
+call 3 5
+setfl 18
+geta 3 # 158 38
+move 18 3
+construct 1 2 1
+setfl 18
+getnewa 1 # 158 25
+move 2 1 # 158 12
+bigprim 1 #7:string="n"
+getglobal 1 1
+mulregfix 1 1 100
+move 3 1 # 161 12
+bigprim 4 #8:string="ret"
+getglobal 1 4
+getpropregstr 5 2 #9:string="energy"
+move 18 2
+send 5 0
+setfl 18
+geta 5 # 163 15
+add 1 1 5
+setglobal 4 1
+fixnum 1 0
+jump 8 # 164 8
+getpropregstr 4 2 #10:string="advance"
+bigprim 5 #11:number=0.01
+move 17 2
+move 18 5
+send 4 1
+setfl 18
+addregfix 1 1 1
+lessthan 4 1 3
+jumptrue 4 -8 # 164 22
+bigprim 3 #8:string="ret"
+getglobal 1 3
+getpropregstr 4 2 #9:string="energy"
+move 18 2
+send 4 0
+setfl 18
+geta 2 # 167 15
+add 1 1 2
+setglobal 3 1
+specconst 1 undefined
+seta 1
+ret

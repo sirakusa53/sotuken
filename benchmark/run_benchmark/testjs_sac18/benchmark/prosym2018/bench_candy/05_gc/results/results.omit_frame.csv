@@ -1,0 +1,25 @@
+filename,omit_frame,omit_frame (with optimisation)
+3d-cube,2.6660,2.4097
+3d-morph,1.8735,1.8689
+access-binary-trees,2.8293,0.2944
+access-fannkuch,0,0
+access-nbody,3.0509,3.0424
+access-nsieve,0,0
+bitops-3bit-bits-in-byte,2.2290,0.3181
+bitops-bits-in-byte,1.4853,0
+bitops-bitwise-and,0,0
+controlflow-recursive,4.2525,0
+getlocal,14.7827,1.9669
+getprop,14.6607,1.9062
+loop,14.2574,0
+math-partial-sums,1.2293,1.3786
+math-spectral-norm,2.6628,0.6089
+move_get,14.7684,0
+move_set,14.6498,0
+setlocal,14.2703,0
+setprop,14.3705,0
+string-base64,7.3093,7.3296
+string-fasta,2.4434,1.6648
+tak,488.7929,0
+tak_ft,2.3663,0
+taknop,74.0642,0

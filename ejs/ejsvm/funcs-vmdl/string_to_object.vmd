@@ -1,0 +1,6 @@
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, makeInline) string_to_object : String -> JSObject
+string_to_object(v){
+    return new_string_object("string_to_object", gshapes.g_shape_String , v);
+}

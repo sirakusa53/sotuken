@@ -1,0 +1,8 @@
+\inst throw (Value src)
+
+\otherwise \{
+  save_context();
+  set_a(context, src);
+  exhandler_throw(context);
+  /* exhandler_throw never returns */
+\}

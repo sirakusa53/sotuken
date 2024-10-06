@@ -1,0 +1,1817 @@
+fingerprint 82
+funcLength 31
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 67
+numberOfConstants 13
+setfl 11
+setfl 11
+makeclosure 1 0 # 1 0
+bigprim 2 #0:string="arrayExists"
+setglobal 2 1
+makeclosure 1 1 # 8 28
+bigprim 2 #1:string="Date"
+getglobal 3 2
+getpropregstr 3 3 #2:string="prototype"
+setpropregstrreg 3 #3:string="formatDate" 1
+getglobal 2 2
+bigprim 3 #4:string="1/1/2007\s1:11:11"
+move 11 3
+construct 1 2 1
+setfl 11
+getnewa 1 # 292 15
+bigprim 2 #5:string="date"
+setglobal 2 1
+fixnum 2 0
+bigprim 3 #6:string="i"
+setglobal 3 2
+jump 40 # 294 0
+bigprim 2 #5:string="date"
+getglobal 1 2
+getpropregstr 3 1 #3:string="formatDate"
+bigprim 4 #7:string="Y-m-d"
+move 10 1
+move 11 4
+send 3 1
+setfl 11
+geta 1 # 295 22
+bigprim 3 #8:string="shortFormat"
+setglobal 3 1
+getglobal 1 2
+getpropregstr 3 1 #3:string="formatDate"
+bigprim 4 #9:string="l,\sF\sd,\sY\sg:i:s\sA"
+move 10 1
+move 11 4
+send 3 1
+setfl 11
+geta 1 # 296 21
+bigprim 3 #10:string="longFormat"
+setglobal 3 1
+getglobal 1 2
+getpropregstr 3 1 #11:string="setTime"
+getglobal 2 2
+getpropregstr 4 2 #12:string="getTime"
+move 11 2
+send 4 0
+setfl 11
+geta 2 # 297 17
+fixnum 4 84266956
+add 2 2 4
+move 10 1
+move 11 2
+send 3 1
+setfl 11
+geta 1 # 297 4
+getglobal 2 5
+addregfix 2 2 1
+setglobal 5 2
+bigprim 5 #6:string="i"
+getglobal 2 5
+lessthanregfix 2 2 500
+jumptrue 2 -42 # 294 12
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 37
+numberOfConstants 3
+setfl 11
+setfl 11
+fixnum 1 0
+jump 27 # 2 4
+getprop 4 2 1
+equal 5 4 3
+isundef 6 5 # 3 12
+jumpfalse 6 18 # 3 12
+isobject 5 4 # 3 12
+jumpfalse 5 7 # 3 12
+getpropregstr 5 4 #0:string="valueOf"
+move 11 4
+send 5 0
+geta 4 # 3 12
+move 5 3 # 3 12
+jump 5 # 3 12
+getpropregstr 5 3 #0:string="valueOf"
+move 11 3
+send 5 0
+geta 5 # 3 12
+equal 5 4 5
+isundef 4 5 # 3 12
+jumpfalse 4 3 # 3 12
+bigprim 1 #1:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 3 12
+jumpfalse 5 4 # 3 12
+specconst 5 true
+seta 5
+ret
+addregfix 1 1 1
+move 4 1 # 2 20
+getpropregstr 5 2 #2:string="length"
+lessthan 4 4 5
+jumptrue 4 -29 # 2 20
+specconst 5 false
+seta 5
+ret
+callentry 0
+sendentry 2
+numberOfLocals 18
+numberOfInstructions 266
+numberOfConstants 82
+setfl 15
+getglobalobj 1 # 8 28
+newframe 18 0 # 8 28
+setfl 15
+makeclosure 4 6 # 75 4
+setlocal 0 0 4
+makeclosure 4 11 # 103 4
+setlocal 0 1 4
+makeclosure 4 12 # 108 4
+setlocal 0 2 4
+makeclosure 4 13 # 113 4
+setlocal 0 3 4
+makeclosure 4 15 # 121 4
+setlocal 0 4 4
+makeclosure 4 17 # 140 4
+setlocal 0 5 4
+makeclosure 4 18 # 144 4
+setlocal 0 6 4
+makeclosure 4 19 # 148 4
+setlocal 0 7 4
+makeclosure 4 22 # 170 4
+setlocal 0 8 4
+makeclosure 4 26 # 226 4
+setlocal 0 9 4
+makeclosure 4 27 # 231 4
+setlocal 0 10 4
+makeclosure 4 29 # 258 4
+setlocal 0 11 4
+bigprim 5 #0:string="Array"
+getglobal 5 5
+fixnum 6 28
+move 15 6
+construct 4 5 1
+setfl 15
+getnewa 4 # 26 22
+setpropregfixstr 4 0 #1:string="a"
+setpropregfixstr 4 1 #2:string="A"
+setpropregfixstr 4 2 #3:string="B"
+setpropregfixstr 4 3 #4:string="d"
+setpropregfixstr 4 4 #5:string="D"
+setpropregfixstr 4 5 #6:string="F"
+setpropregfixstr 4 6 #7:string="g"
+setpropregfixstr 4 7 #8:string="G"
+setpropregfixstr 4 8 #9:string="h"
+setpropregfixstr 4 9 #10:string="H"
+setpropregfixstr 4 10 #11:string="i"
+setpropregfixstr 4 11 #12:string="j"
+setpropregfixstr 4 12 #13:string="l"
+setpropregfixstr 4 13 #14:string="L"
+setpropregfixstr 4 14 #15:string="m"
+setpropregfixstr 4 15 #16:string="M"
+setpropregfixstr 4 16 #17:string="n"
+setpropregfixstr 4 17 #18:string="O"
+setpropregfixstr 4 18 #19:string="r"
+setpropregfixstr 4 19 #20:string="s"
+setpropregfixstr 4 20 #21:string="S"
+setpropregfixstr 4 21 #22:string="t"
+setpropregfixstr 4 22 #23:string="U"
+setpropregfixstr 4 23 #24:string="w"
+setpropregfixstr 4 24 #25:string="W"
+setpropregfixstr 4 25 #26:string="y"
+setpropregfixstr 4 26 #27:string="Y"
+setpropregfixstr 4 27 #28:string="z"
+move 5 4 # 26 8
+bigprim 6 #0:string="Array"
+getglobal 6 6
+fixnum 7 7
+move 15 7
+construct 4 6 1
+setfl 15
+getnewa 4 # 29 22
+setpropregfixstr 4 0 #29:string="Sunday"
+setpropregfixstr 4 1 #30:string="Monday"
+setpropregfixstr 4 2 #31:string="Tuesday"
+setpropregfixstr 4 3 #32:string="Wednesday"
+setpropregfixstr 4 4 #33:string="Thursday"
+setpropregfixstr 4 5 #34:string="Friday"
+setpropregfixstr 4 6 #35:string="Saturday"
+setlocal 0 12 4
+bigprim 6 #0:string="Array"
+getglobal 6 6
+move 15 7
+construct 4 6 1
+setfl 15
+getnewa 4 # 31 22
+setpropregfixstr 4 0 #36:string="Sun"
+setpropregfixstr 4 1 #37:string="Mon"
+setpropregfixstr 4 2 #38:string="Tue"
+setpropregfixstr 4 3 #39:string="Wed"
+setpropregfixstr 4 4 #40:string="Thu"
+setpropregfixstr 4 5 #41:string="Fri"
+setpropregfixstr 4 6 #42:string="Sat"
+setlocal 0 13 4
+bigprim 6 #0:string="Array"
+getglobal 6 6
+fixnum 7 12
+move 15 7
+construct 4 6 1
+setfl 15
+getnewa 4 # 33 22
+setpropregfixstr 4 0 #43:string="Jan"
+setpropregfixstr 4 1 #44:string="Feb"
+setpropregfixstr 4 2 #45:string="Mar"
+setpropregfixstr 4 3 #46:string="Apr"
+setpropregfixstr 4 4 #47:string="May"
+setpropregfixstr 4 5 #48:string="Jun"
+setpropregfixstr 4 6 #49:string="Jul"
+setpropregfixstr 4 7 #50:string="Aug"
+setpropregfixstr 4 8 #51:string="Sep"
+setpropregfixstr 4 9 #52:string="Oct"
+setpropregfixstr 4 10 #53:string="Nov"
+setpropregfixstr 4 11 #54:string="Dec"
+setlocal 0 14 4
+bigprim 6 #0:string="Array"
+getglobal 6 6
+move 15 7
+construct 4 6 1
+setfl 15
+getnewa 4 # 36 22
+setpropregfixstr 4 0 #55:string="January"
+setpropregfixstr 4 1 #56:string="February"
+setpropregfixstr 4 2 #57:string="March"
+setpropregfixstr 4 3 #58:string="April"
+setpropregfixstr 4 4 #47:string="May"
+setpropregfixstr 4 5 #59:string="June"
+setpropregfixstr 4 6 #60:string="July"
+setpropregfixstr 4 7 #61:string="August"
+setpropregfixstr 4 8 #62:string="September"
+setpropregfixstr 4 9 #63:string="October"
+setpropregfixstr 4 10 #64:string="November"
+setpropregfixstr 4 11 #65:string="December"
+setlocal 0 15 4
+bigprim 6 #0:string="Array"
+getglobal 6 6
+fixnum 7 31
+move 15 7
+construct 4 6 1
+setfl 15
+getnewa 4 # 39 21
+setpropregfixstr 4 0 #66:string="st"
+setpropregfixstr 4 1 #67:string="nd"
+setpropregfixstr 4 2 #68:string="rd"
+setpropregfixstr 4 3 #69:string="th"
+setpropregfixstr 4 4 #69:string="th"
+setpropregfixstr 4 5 #69:string="th"
+setpropregfixstr 4 6 #69:string="th"
+setpropregfixstr 4 7 #69:string="th"
+setpropregfixstr 4 8 #69:string="th"
+setpropregfixstr 4 9 #69:string="th"
+setpropregfixstr 4 10 #69:string="th"
+setpropregfixstr 4 11 #69:string="th"
+setpropregfixstr 4 12 #69:string="th"
+setpropregfixstr 4 13 #69:string="th"
+setpropregfixstr 4 14 #69:string="th"
+setpropregfixstr 4 15 #69:string="th"
+setpropregfixstr 4 16 #69:string="th"
+setpropregfixstr 4 17 #69:string="th"
+setpropregfixstr 4 18 #69:string="th"
+setpropregfixstr 4 19 #69:string="th"
+setpropregfixstr 4 20 #66:string="st"
+setpropregfixstr 4 21 #67:string="nd"
+setpropregfixstr 4 22 #68:string="rd"
+setpropregfixstr 4 23 #69:string="th"
+setpropregfixstr 4 24 #69:string="th"
+setpropregfixstr 4 25 #69:string="th"
+setpropregfixstr 4 26 #69:string="th"
+setpropregfixstr 4 27 #69:string="th"
+setpropregfixstr 4 28 #69:string="th"
+setpropregfixstr 4 29 #69:string="th"
+setpropregfixstr 4 30 #66:string="st"
+setlocal 0 16 4
+setlocal 0 17 1
+jumpfalse 3 14 # 266 8
+getlocal 1 0 17 # 268 23
+getpropregstr 4 1 #70:string="getTime"
+move 15 1
+send 4 0
+setfl 15
+geta 4 # 268 23
+move 8 4 # 268 12
+getlocal 1 0 17 # 269 8
+getpropregstr 4 1 #71:string="setTime"
+move 14 1
+move 15 3
+send 4 1
+setfl 15
+getpropregstr 1 2 #72:string="split"
+bigprim 3 #73:string=""
+move 14 2
+move 15 3
+send 1 1
+setfl 15
+geta 4 # 272 13
+move 1 4 # 272 8
+fixnum 4 0
+move 2 4
+jump 52 # 274 4
+getprop 3 1 2
+bigprim 6 #74:string="\\"
+equalregstr 4 3 #74:string="\\"
+isundef 7 4 # 275 12
+jumpfalse 7 17 # 275 12
+isobject 4 3 # 275 12
+jumpfalse 4 6 # 275 12
+getpropregstr 4 3 #75:string="valueOf"
+move 15 3
+send 4 0
+geta 3 # 275 12
+jump 5 # 275 12
+getpropregstr 4 6 #75:string="valueOf"
+move 15 6
+send 4 0
+geta 6 # 275 12
+equal 4 3 6
+isundef 3 4 # 275 12
+jumpfalse 3 3 # 275 12
+bigprim 1 #76:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 275 12
+jumpfalse 4 10 # 275 12
+getpropregstr 3 1 #77:string="splice"
+move 4 2 # 277 22
+fixnum 6 1
+move 13 1
+move 14 4
+move 15 6
+send 3 2
+setfl 15
+jump 19 # 278 15
+bigprim 3 #78:string="arrayExists"
+getglobal 3 3
+getprop 4 1 2
+move 14 5
+move 15 4
+call 3 2
+setfl 15
+geta 4 # 279 16
+jumpfalse 4 10 # 279 16
+bigprim 3 #79:string="eval"
+getglobal 3 3
+getprop 4 1 2
+addregstr 4 4 #80:string="()"
+move 15 4
+call 3 1
+setfl 15
+geta 4 # 280 25
+setprop 1 2 4
+move 4 2 # 283 8
+addregfix 2 4 1
+getprop 3 1 2
+jumptrue 3 -52 # 274 11
+jumpfalse 8 7 # 286 8
+getlocal 2 0 17 # 287 8
+getpropregstr 3 2 #71:string="setTime"
+move 14 2
+move 15 8
+send 3 1
+setfl 15
+getpropregstr 2 1 #81:string="join"
+bigprim 3 #73:string=""
+move 14 1
+move 15 3
+send 2 1
+setfl 15
+geta 4 # 289 11
+seta 4
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 15
+numberOfConstants 3
+setfl 7
+setfl 7
+getlocal 1 0 17 # 47 15
+getpropregstr 2 1 #0:string="getHours"
+move 7 1
+send 2 0
+setfl 7
+geta 1 # 47 15
+lessthanfixreg 1 11 1
+jumpfalse 1 3 # 47 15
+bigprim 1 #1:string="pm"
+jump 2 # 47 37
+bigprim 1 #2:string="am"
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 15
+numberOfConstants 3
+setfl 7
+setfl 7
+getlocal 1 0 17 # 51 15
+getpropregstr 2 1 #0:string="getHours"
+move 7 1
+send 2 0
+setfl 7
+geta 1 # 51 15
+lessthanfixreg 1 11 1
+jumpfalse 1 3 # 51 15
+bigprim 1 #1:string="PM"
+jump 2 # 51 37
+bigprim 1 #2:string="AM"
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 105
+numberOfConstants 13
+setfl 11
+setfl 11
+getlocal 1 0 17 # 58 19
+getpropregstr 2 1 #0:string="getTimezoneOffset"
+move 11 1
+send 2 0
+setfl 11
+geta 1 # 58 19
+addregfix 1 1 60
+mulregfix 1 1 60
+getlocal 2 0 17 # 59 26
+getpropregstr 3 2 #1:string="getHours"
+move 11 2
+send 3 0
+setfl 11
+geta 2 # 59 26
+mulregfix 2 2 3600
+getlocal 3 0 17 # 60 26
+getpropregstr 4 3 #2:string="getMinutes"
+move 11 3
+send 4 0
+setfl 11
+geta 3 # 60 26
+mulregfix 3 3 60
+add 2 2 3
+getlocal 3 0 17 # 61 26
+getpropregstr 4 3 #3:string="getSeconds"
+move 11 3
+send 4 0
+setfl 11
+geta 3 # 61 26
+add 2 2 3
+add 1 2 1
+bigprim 2 #4:string="Math"
+getglobal 2 2
+getpropregstr 3 2 #5:string="floor"
+divregflo 1 1 #6:number=86.4
+move 10 2
+move 11 1
+send 3 1
+setfl 11
+geta 1 # 62 19
+move 2 1 # 62 12
+lessthanfixreg 1 1000 1
+jumpfalse 1 3 # 63 12
+subregfix 1 2 1000
+move 2 1 # 63 25
+lessthanregfix 1 2 0
+jumpfalse 1 3 # 64 12
+addregfix 1 2 1000
+move 2 1 # 64 22
+addstrreg 1 #7:string="" 2
+getpropregstr 3 1 #8:string="length"
+fixnum 4 1
+equalregfix 1 3 1
+isundef 5 1 # 65 12
+jumpfalse 5 18 # 65 12
+isobject 1 3 # 65 12
+jumpfalse 1 6 # 65 12
+getpropregstr 1 3 #9:string="valueOf"
+move 11 3
+send 1 0
+geta 1 # 65 12
+jump 6 # 65 12
+getpropfixstr 1 1 #9:string="valueOf"
+move 11 4
+send 1 0
+geta 4 # 65 12
+move 1 3 # 65 12
+equal 1 1 4
+isundef 3 1 # 65 12
+jumpfalse 3 3 # 65 12
+bigprim 1 #10:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 65 12
+jumpfalse 1 3 # 65 12
+addstrreg 1 #11:string="00" 2
+move 2 1 # 65 35
+addstrreg 1 #7:string="" 2
+getpropregstr 3 1 #8:string="length"
+fixnum 4 2
+equalregfix 1 3 2
+isundef 5 1 # 66 12
+jumpfalse 5 18 # 66 12
+isobject 1 3 # 66 12
+jumpfalse 1 6 # 66 12
+getpropregstr 1 3 #9:string="valueOf"
+move 11 3
+send 1 0
+geta 1 # 66 12
+jump 6 # 66 12
+getpropfixstr 1 2 #9:string="valueOf"
+move 11 4
+send 1 0
+geta 4 # 66 12
+move 1 3 # 66 12
+equal 1 1 4
+isundef 3 1 # 66 12
+jumpfalse 3 3 # 66 12
+bigprim 1 #10:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 66 12
+jumpfalse 1 3 # 66 12
+addstrreg 1 #12:string="0" 2
+move 2 1 # 66 35
+seta 2
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 52
+numberOfConstants 6
+setfl 10
+setfl 10
+bigprim 1 #0:string="String"
+getglobal 1 1
+getlocal 2 0 17 # 72 26
+getpropregstr 3 2 #1:string="getDate"
+move 10 2
+send 3 0
+setfl 10
+geta 2 # 72 26
+move 10 2
+construct 4 1 1
+setfl 10
+getnewa 4 # 72 19
+getpropregstr 1 4 #2:string="length"
+fixnum 2 1
+equalregfix 3 1 1
+isundef 4 3 # 72 15
+jumpfalse 4 17 # 72 15
+isobject 3 1 # 72 15
+jumpfalse 3 6 # 72 15
+getpropregstr 3 1 #3:string="valueOf"
+move 10 1
+send 3 0
+geta 1 # 72 15
+jump 5 # 72 15
+getpropfixstr 3 1 #3:string="valueOf"
+move 10 2
+send 3 0
+geta 2 # 72 15
+equal 3 1 2
+isundef 1 3 # 72 15
+jumpfalse 1 3 # 72 15
+bigprim 1 #4:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 72 15
+jumpfalse 3 9 # 72 15
+getlocal 1 0 17 # 73 12
+getpropregstr 2 1 #1:string="getDate"
+move 10 1
+send 2 0
+setfl 10
+geta 1 # 73 12
+addstrreg 1 #5:string="0" 1
+jump 7 # 73 8
+getlocal 1 0 17 # 73 29
+getpropregstr 2 1 #1:string="getDate"
+move 10 1
+send 2 0
+setfl 10
+geta 1 # 73 29
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 12
+numberOfConstants 1
+setfl 8
+setfl 8
+getlocal 1 0 13 # 77 15
+getlocal 2 0 17 # 77 25
+getpropregstr 3 2 #0:string="getDay"
+move 8 2
+send 3 0
+setfl 8
+geta 2 # 77 25
+getprop 1 1 2
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 12
+numberOfConstants 1
+setfl 8
+setfl 8
+getlocal 1 0 15 # 81 15
+getlocal 2 0 17 # 81 26
+getpropregstr 3 2 #0:string="getMonth"
+move 8 2
+send 3 0
+setfl 8
+geta 2 # 81 26
+getprop 1 1 2
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 26
+numberOfConstants 1
+setfl 7
+setfl 7
+getlocal 1 0 17 # 85 15
+getpropregstr 2 1 #0:string="getHours"
+move 7 1
+send 2 0
+setfl 7
+geta 1 # 85 15
+lessthanfixreg 1 12 1
+jumpfalse 1 9 # 85 15
+getlocal 1 0 17 # 85 37
+getpropregstr 2 1 #0:string="getHours"
+move 7 1
+send 2 0
+setfl 7
+geta 1 # 85 37
+subregfix 1 1 12
+jump 7 # 85 37
+getlocal 1 0 17 # 85 58
+getpropregstr 2 1 #0:string="getHours"
+move 7 1
+send 2 0
+setfl 7
+geta 1 # 85 58
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 10
+numberOfConstants 1
+setfl 7
+setfl 7
+getlocal 1 0 17 # 89 15
+getpropregstr 2 1 #0:string="getHours"
+move 7 1
+send 2 0
+setfl 7
+geta 1 # 89 15
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 115
+numberOfConstants 6
+setfl 10
+setfl 10
+getlocal 1 0 17 # 93 12
+getpropregstr 2 1 #0:string="getHours"
+move 10 1
+send 2 0
+setfl 10
+geta 1 # 93 12
+lessthanfixreg 1 12 1
+jumpfalse 1 55 # 93 12
+specconst 1 undefined
+bigprim 2 #1:string="String"
+getglobal 2 2
+getlocal 3 0 17 # 94 29
+getpropregstr 4 3 #0:string="getHours"
+move 10 3
+send 4 0
+setfl 10
+geta 3 # 94 29
+subregfix 3 3 12
+move 10 3
+construct 1 2 1
+setfl 10
+getnewa 1 # 94 22
+getpropregstr 1 1 #2:string="length"
+fixnum 2 1
+equalregfix 3 1 1
+isundef 4 3 # 95 17
+jumpfalse 4 17 # 95 17
+isobject 3 1 # 95 17
+jumpfalse 3 6 # 95 17
+getpropregstr 3 1 #3:string="valueOf"
+move 10 1
+send 3 0
+geta 1 # 95 17
+jump 5 # 95 17
+getpropfixstr 3 1 #3:string="valueOf"
+move 10 2
+send 3 0
+geta 2 # 95 17
+equal 3 1 2
+isundef 1 3 # 95 17
+jumpfalse 1 3 # 95 17
+bigprim 1 #4:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 95 17
+jumpfalse 3 10 # 95 17
+getlocal 1 0 17 # 96 16
+getpropregstr 2 1 #0:string="getHours"
+move 10 1
+send 2 0
+setfl 10
+geta 1 # 96 16
+subregfix 1 1 12
+addstrreg 1 #5:string="0" 1
+jump 8 # 96 10
+getlocal 1 0 17 # 96 38
+getpropregstr 2 1 #0:string="getHours"
+move 10 1
+send 2 0
+setfl 10
+geta 1 # 96 38
+subregfix 1 1 12
+seta 1
+ret
+specconst 1 undefined
+bigprim 2 #1:string="String"
+getglobal 2 2
+getlocal 3 0 17 # 98 29
+getpropregstr 4 3 #0:string="getHours"
+move 10 3
+send 4 0
+setfl 10
+geta 3 # 98 29
+move 10 3
+construct 1 2 1
+setfl 10
+getnewa 1 # 98 22
+getpropregstr 1 1 #2:string="length"
+fixnum 2 1
+equalregfix 3 1 1
+isundef 4 3 # 99 17
+jumpfalse 4 17 # 99 17
+isobject 3 1 # 99 17
+jumpfalse 3 6 # 99 17
+getpropregstr 3 1 #3:string="valueOf"
+move 10 1
+send 3 0
+geta 1 # 99 17
+jump 5 # 99 17
+getpropfixstr 3 1 #3:string="valueOf"
+move 10 2
+send 3 0
+geta 2 # 99 17
+equal 3 1 2
+isundef 1 3 # 99 17
+jumpfalse 1 3 # 99 17
+bigprim 1 #4:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 99 17
+jumpfalse 3 9 # 99 17
+getlocal 1 0 17 # 100 14
+getpropregstr 2 1 #0:string="getHours"
+move 10 1
+send 2 0
+setfl 10
+geta 1 # 100 14
+addstrreg 1 #5:string="0" 1
+jump 7 # 100 10
+getlocal 1 0 17 # 100 32
+getpropregstr 2 1 #0:string="getHours"
+move 10 1
+send 2 0
+setfl 10
+geta 1 # 100 32
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 52
+numberOfConstants 6
+setfl 10
+setfl 10
+bigprim 1 #0:string="String"
+getglobal 1 1
+getlocal 2 0 17 # 105 26
+getpropregstr 3 2 #1:string="getHours"
+move 10 2
+send 3 0
+setfl 10
+geta 2 # 105 26
+move 10 2
+construct 4 1 1
+setfl 10
+getnewa 4 # 105 19
+getpropregstr 1 4 #2:string="length"
+fixnum 2 1
+equalregfix 3 1 1
+isundef 4 3 # 105 15
+jumpfalse 4 17 # 105 15
+isobject 3 1 # 105 15
+jumpfalse 3 6 # 105 15
+getpropregstr 3 1 #3:string="valueOf"
+move 10 1
+send 3 0
+geta 1 # 105 15
+jump 5 # 105 15
+getpropfixstr 3 1 #3:string="valueOf"
+move 10 2
+send 3 0
+geta 2 # 105 15
+equal 3 1 2
+isundef 1 3 # 105 15
+jumpfalse 1 3 # 105 15
+bigprim 1 #4:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 105 15
+jumpfalse 3 9 # 105 15
+getlocal 1 0 17 # 106 12
+getpropregstr 2 1 #1:string="getHours"
+move 10 1
+send 2 0
+setfl 10
+geta 1 # 106 12
+addstrreg 1 #5:string="0" 1
+jump 7 # 106 8
+getlocal 1 0 17 # 106 30
+getpropregstr 2 1 #1:string="getHours"
+move 10 1
+send 2 0
+setfl 10
+geta 1 # 106 30
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 52
+numberOfConstants 6
+setfl 10
+setfl 10
+bigprim 1 #0:string="String"
+getglobal 1 1
+getlocal 2 0 17 # 110 26
+getpropregstr 3 2 #1:string="getMinutes"
+move 10 2
+send 3 0
+setfl 10
+geta 2 # 110 26
+move 10 2
+construct 4 1 1
+setfl 10
+getnewa 4 # 110 19
+getpropregstr 1 4 #2:string="length"
+fixnum 2 1
+equalregfix 3 1 1
+isundef 4 3 # 110 15
+jumpfalse 4 17 # 110 15
+isobject 3 1 # 110 15
+jumpfalse 3 6 # 110 15
+getpropregstr 3 1 #3:string="valueOf"
+move 10 1
+send 3 0
+geta 1 # 110 15
+jump 5 # 110 15
+getpropfixstr 3 1 #3:string="valueOf"
+move 10 2
+send 3 0
+geta 2 # 110 15
+equal 3 1 2
+isundef 1 3 # 110 15
+jumpfalse 1 3 # 110 15
+bigprim 1 #4:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 110 15
+jumpfalse 3 9 # 110 15
+getlocal 1 0 17 # 111 12
+getpropregstr 2 1 #1:string="getMinutes"
+move 10 1
+send 2 0
+setfl 10
+geta 1 # 111 12
+addstrreg 1 #5:string="0" 1
+jump 7 # 111 8
+getlocal 1 0 17 # 111 32
+getpropregstr 2 1 #1:string="getMinutes"
+move 10 1
+send 2 0
+setfl 10
+geta 1 # 111 32
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 10
+numberOfConstants 1
+setfl 7
+setfl 7
+getlocal 1 0 17 # 115 15
+getpropregstr 2 1 #0:string="getDate"
+move 7 1
+send 2 0
+setfl 7
+geta 1 # 115 15
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 12
+numberOfConstants 1
+setfl 8
+setfl 8
+getlocal 1 0 12 # 119 15
+getlocal 2 0 17 # 119 24
+getpropregstr 3 2 #0:string="getDay"
+move 8 2
+send 3 0
+setfl 8
+geta 2 # 119 24
+getprop 1 1 2
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 128
+numberOfConstants 2
+setfl 10
+setfl 10
+getlocal 1 0 10 # 124 17
+call 1 0
+setfl 10
+geta 1 # 124 17
+move 2 1 # 124 12
+modregfix 3 1 4
+fixnum 4 0
+equalregfix 1 3 0
+isundef 5 1 # 126 13
+jumpfalse 5 19 # 126 13
+isobject 1 3 # 126 13
+jumpfalse 1 7 # 126 13
+getpropregstr 1 3 #0:string="valueOf"
+move 10 3
+send 1 0
+geta 1 # 126 13
+move 5 4
+jump 6 # 126 13
+getpropfixstr 1 0 #0:string="valueOf"
+move 10 4
+send 1 0
+geta 5 # 126 13
+move 1 3 # 126 13
+equal 1 1 5
+isundef 3 1 # 126 13
+jumpfalse 3 3 # 126 13
+bigprim 1 #1:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 126 13
+jumpfalse 1 23 # 126 13
+modregfix 1 2 100
+equalregfix 3 1 0
+isundef 5 3 # 126 28
+jumpfalse 5 18 # 126 28
+isobject 3 1 # 126 28
+jumpfalse 3 7 # 126 28
+getpropregstr 3 1 #0:string="valueOf"
+move 10 1
+send 3 0
+geta 1 # 126 28
+move 3 4
+jump 5 # 126 28
+getpropfixstr 3 0 #0:string="valueOf"
+move 10 4
+send 3 0
+geta 3 # 126 28
+equal 3 1 3
+isundef 1 3 # 126 28
+jumpfalse 1 3 # 126 28
+bigprim 1 #1:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 126 28
+not 1 3
+jumptrue 1 69 # 126 12
+modregfix 3 2 4
+equalregfix 1 3 0
+isundef 5 1 # 127 13
+jumpfalse 5 19 # 127 13
+isobject 1 3 # 127 13
+jumpfalse 1 7 # 127 13
+getpropregstr 1 3 #0:string="valueOf"
+move 10 3
+send 1 0
+geta 1 # 127 13
+move 5 4
+jump 6 # 127 13
+getpropfixstr 1 0 #0:string="valueOf"
+move 10 4
+send 1 0
+geta 5 # 127 13
+move 1 3 # 127 13
+equal 1 1 5
+isundef 3 1 # 127 13
+jumpfalse 3 3 # 127 13
+bigprim 1 #1:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 127 13
+jumpfalse 1 23 # 127 13
+modregfix 3 2 100
+equalregfix 1 3 0
+isundef 5 1 # 127 28
+jumpfalse 5 19 # 127 28
+isobject 1 3 # 127 28
+jumpfalse 1 7 # 127 28
+getpropregstr 1 3 #0:string="valueOf"
+move 10 3
+send 1 0
+geta 1 # 127 28
+move 5 4
+jump 6 # 127 28
+getpropfixstr 1 0 #0:string="valueOf"
+move 10 4
+send 1 0
+geta 5 # 127 28
+move 1 3 # 127 28
+equal 1 1 5
+isundef 3 1 # 127 28
+jumpfalse 3 3 # 127 28
+bigprim 1 #1:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 127 28
+jumpfalse 1 23 # 127 13
+modregfix 2 2 400
+equalregfix 1 2 0
+isundef 3 1 # 127 45
+jumpfalse 3 19 # 127 45
+isobject 1 2 # 127 45
+jumpfalse 1 7 # 127 45
+getpropregstr 1 2 #0:string="valueOf"
+move 10 2
+send 1 0
+geta 1 # 127 45
+move 3 4
+jump 6 # 127 45
+getpropfixstr 1 0 #0:string="valueOf"
+move 10 4
+send 1 0
+geta 3 # 127 45
+move 1 2 # 127 45
+equal 1 1 3
+isundef 2 1 # 127 45
+jumpfalse 2 3 # 127 45
+bigprim 1 #1:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 127 45
+jumpfalse 1 4 # 126 12
+fixnum 1 1
+seta 1
+ret
+seta 4
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 28
+numberOfConstants 2
+setfl 7
+setfl 7
+getlocal 1 0 17 # 136 15
+getpropregstr 2 1 #0:string="getMonth"
+move 7 1
+send 2 0
+setfl 7
+geta 1 # 136 15
+lessthanregfix 1 1 9
+jumpfalse 1 10 # 136 15
+getlocal 1 0 17 # 137 13
+getpropregstr 2 1 #0:string="getMonth"
+move 7 1
+send 2 0
+setfl 7
+geta 1 # 137 13
+addregfix 1 1 1
+addstrreg 1 #1:string="0" 1
+jump 8 # 137 8
+getlocal 1 0 17 # 138 8
+getpropregstr 2 1 #0:string="getMonth"
+move 7 1
+send 2 0
+setfl 7
+geta 1 # 138 8
+addregfix 1 1 1
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 12
+numberOfConstants 1
+setfl 8
+setfl 8
+getlocal 1 0 14 # 142 15
+getlocal 2 0 17 # 142 27
+getpropregstr 3 2 #0:string="getMonth"
+move 8 2
+send 3 0
+setfl 8
+geta 2 # 142 27
+getprop 1 1 2
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 11
+numberOfConstants 1
+setfl 7
+setfl 7
+getlocal 1 0 17 # 146 15
+getpropregstr 2 1 #0:string="getMonth"
+move 7 1
+send 2 0
+setfl 7
+geta 1 # 146 15
+addregfix 1 1 1
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 95
+numberOfConstants 11
+setfl 12
+setfl 12
+bigprim 1 #0:string="Math"
+getglobal 2 1
+getpropregstr 3 2 #1:string="abs"
+getlocal 4 0 17 # 150 26
+getpropregstr 5 4 #2:string="getTimezoneOffset"
+move 12 4
+send 5 0
+setfl 12
+geta 4 # 150 26
+move 11 2
+move 12 4
+send 3 1
+setfl 12
+geta 2 # 150 17
+move 3 2 # 150 12
+getglobal 1 1
+getpropregstr 4 1 #3:string="floor"
+divregfix 2 2 60
+move 11 1
+move 12 2
+send 4 1
+setfl 12
+geta 1 # 151 19
+addstrreg 2 #4:string="" 1
+move 1 2 # 151 12
+modregfix 2 3 60
+addstrreg 2 #4:string="" 2
+move 3 2 # 152 12
+getpropregstr 2 1 #5:string="length"
+fixnum 4 1
+equalregfix 5 2 1
+isundef 6 5 # 153 8
+jumpfalse 6 18 # 153 8
+isobject 5 2 # 153 8
+jumpfalse 5 7 # 153 8
+getpropregstr 5 2 #6:string="valueOf"
+move 12 2
+send 5 0
+geta 2 # 153 8
+move 5 4
+jump 5 # 153 8
+getpropfixstr 5 1 #6:string="valueOf"
+move 12 4
+send 5 0
+geta 5 # 153 8
+equal 5 2 5
+isundef 2 5 # 153 8
+jumpfalse 2 3 # 153 8
+bigprim 1 #7:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 153 8
+jumpfalse 5 4 # 153 8
+addstrreg 2 #8:string="0" 1
+move 1 2 # 153 23
+jump 1 # 153 23
+getpropregstr 2 3 #5:string="length"
+equalregfix 5 2 1
+isundef 6 5 # 154 8
+jumpfalse 6 17 # 154 8
+isobject 5 2 # 154 8
+jumpfalse 5 6 # 154 8
+getpropregstr 5 2 #6:string="valueOf"
+move 12 2
+send 5 0
+geta 2 # 154 8
+jump 5 # 154 8
+getpropfixstr 5 1 #6:string="valueOf"
+move 12 4
+send 5 0
+geta 4 # 154 8
+equal 5 2 4
+isundef 2 5 # 154 8
+jumpfalse 2 3 # 154 8
+bigprim 1 #7:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 154 8
+jumpfalse 5 4 # 154 8
+addstrreg 2 #8:string="0" 3
+move 3 2 # 154 23
+jump 1 # 154 23
+getlocal 2 0 17 # 155 15
+getpropregstr 4 2 #2:string="getTimezoneOffset"
+move 12 2
+send 4 0
+setfl 12
+geta 2 # 155 15
+lessthanregfix 2 2 0
+jumpfalse 2 4 # 155 15
+addstrreg 1 #9:string="+" 1
+add 2 1 3
+jump 3 # 155 46
+addstrreg 1 #10:string="-" 1
+add 2 1 3
+seta 2
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 50
+numberOfConstants 3
+setfl 7
+setfl 7
+getlocal 1 0 0 # 161 12
+call 1 0
+setfl 7
+geta 1 # 161 12
+addregstr 1 1 #0:string=",\s"
+getlocal 2 0 3 # 161 25
+call 2 0
+setfl 7
+geta 2 # 161 25
+add 1 1 2
+addregstr 1 1 #1:string="\s"
+getlocal 2 0 5 # 161 37
+call 2 0
+setfl 7
+geta 2 # 161 37
+add 1 1 2
+addregstr 1 1 #1:string="\s"
+getlocal 2 0 10 # 161 49
+call 2 0
+setfl 7
+geta 2 # 161 49
+add 1 1 2
+addregstr 1 1 #1:string="\s"
+getlocal 2 0 1 # 163 18
+call 2 0
+setfl 7
+geta 2 # 163 18
+add 1 1 2
+addregstr 1 1 #2:string=":"
+getlocal 2 0 2 # 163 30
+call 2 0
+setfl 7
+geta 2 # 163 30
+add 1 1 2
+addregstr 1 1 #2:string=":"
+getlocal 2 0 8 # 163 42
+call 2 0
+setfl 7
+geta 2 # 163 42
+add 1 1 2
+addregstr 1 1 #1:string="\s"
+getlocal 2 0 7 # 163 54
+call 2 0
+setfl 7
+geta 2 # 163 54
+add 1 1 2
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 13
+numberOfConstants 1
+setfl 8
+setfl 8
+getlocal 1 0 16 # 168 15
+getlocal 2 0 17 # 168 26
+getpropregstr 3 2 #0:string="getDate"
+move 8 2
+send 3 0
+setfl 8
+geta 2 # 168 26
+subregfix 2 2 1
+getprop 1 1 2
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 52
+numberOfConstants 6
+setfl 10
+setfl 10
+bigprim 1 #0:string="String"
+getglobal 1 1
+getlocal 2 0 17 # 172 26
+getpropregstr 3 2 #1:string="getSeconds"
+move 10 2
+send 3 0
+setfl 10
+geta 2 # 172 26
+move 10 2
+construct 4 1 1
+setfl 10
+getnewa 4 # 172 19
+getpropregstr 1 4 #2:string="length"
+fixnum 2 1
+equalregfix 3 1 1
+isundef 4 3 # 172 15
+jumpfalse 4 17 # 172 15
+isobject 3 1 # 172 15
+jumpfalse 3 6 # 172 15
+getpropregstr 3 1 #3:string="valueOf"
+move 10 1
+send 3 0
+geta 1 # 172 15
+jump 5 # 172 15
+getpropfixstr 3 1 #3:string="valueOf"
+move 10 2
+send 3 0
+geta 2 # 172 15
+equal 3 1 2
+isundef 1 3 # 172 15
+jumpfalse 1 3 # 172 15
+bigprim 1 #4:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 172 15
+jumpfalse 3 9 # 172 15
+getlocal 1 0 17 # 173 12
+getpropregstr 2 1 #1:string="getSeconds"
+move 10 1
+send 2 0
+setfl 10
+geta 1 # 173 12
+addstrreg 1 #5:string="0" 1
+jump 7 # 173 8
+getlocal 1 0 17 # 173 32
+getpropregstr 2 1 #1:string="getSeconds"
+move 10 1
+send 2 0
+setfl 10
+geta 1 # 173 32
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 86
+numberOfConstants 3
+setfl 11
+setfl 11
+specconst 1 undefined
+bigprim 2 #0:string="Array"
+getglobal 2 2
+fixnum 3 13
+move 11 3
+construct 1 2 1
+setfl 11
+getnewa 1 # 178 27
+setpropregfixspec 1 0 null
+setpropregfixfix 1 1 31
+setpropregfixfix 1 2 28
+setpropregfixfix 1 3 31
+setpropregfixfix 1 4 30
+setpropregfixfix 1 5 31
+setpropregfixfix 1 6 30
+setpropregfixfix 1 7 31
+setpropregfixfix 1 8 31
+setpropregfixfix 1 9 30
+setpropregfixfix 1 10 31
+setpropregfixfix 1 11 30
+setpropregfixfix 1 12 31
+move 2 1 # 178 12
+getlocal 1 0 4 # 179 12
+call 1 0
+setfl 11
+geta 3 # 179 12
+fixnum 4 1
+equalregfix 1 3 1
+isundef 5 1 # 179 12
+jumpfalse 5 18 # 179 12
+isobject 1 3 # 179 12
+jumpfalse 1 6 # 179 12
+getpropregstr 1 3 #1:string="valueOf"
+move 11 3
+send 1 0
+geta 1 # 179 12
+jump 6 # 179 12
+getpropfixstr 1 1 #1:string="valueOf"
+move 11 4
+send 1 0
+geta 4 # 179 12
+move 1 3 # 179 12
+equal 1 1 4
+isundef 3 1 # 179 12
+jumpfalse 3 3 # 179 12
+bigprim 1 #2:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 179 12
+jumpfalse 1 26 # 179 12
+getlocal 1 0 6 # 179 22
+call 1 0
+setfl 11
+geta 3 # 179 22
+fixnum 4 2
+equalregfix 1 3 2
+isundef 5 1 # 179 22
+jumpfalse 5 18 # 179 22
+isobject 1 3 # 179 22
+jumpfalse 1 6 # 179 22
+getpropregstr 1 3 #1:string="valueOf"
+move 11 3
+send 1 0
+geta 1 # 179 22
+jump 6 # 179 22
+getpropfixstr 1 2 #1:string="valueOf"
+move 11 4
+send 1 0
+geta 4 # 179 22
+move 1 3 # 179 22
+equal 1 1 4
+isundef 3 1 # 179 22
+jumpfalse 3 3 # 179 22
+bigprim 1 #2:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 179 22
+jumpfalse 1 4 # 179 12
+fixnum 1 29
+seta 1
+ret
+getlocal 1 0 6 # 180 28
+call 1 0
+setfl 11
+geta 1 # 180 28
+getprop 1 2 1
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 19
+numberOfConstants 3
+setfl 10
+setfl 10
+bigprim 1 #0:string="Math"
+getglobal 1 1
+getpropregstr 2 1 #1:string="round"
+getlocal 3 0 17 # 184 26
+getpropregstr 4 3 #2:string="getTime"
+move 10 3
+send 4 0
+setfl 10
+geta 3 # 184 26
+divregfix 3 3 1000
+move 9 1
+move 10 3
+send 2 1
+setfl 10
+geta 1 # 184 15
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 174
+numberOfConstants 11
+setfl 13
+setfl 13
+getlocal 1 0 4 # 193 27
+call 1 0
+setfl 13
+geta 1 # 193 27
+addfixreg 1 364 1
+getlocal 2 0 11 # 193 33
+call 2 0
+setfl 13
+geta 2 # 193 33
+sub 1 1 2
+move 2 1 # 193 12
+getlocal 1 0 11 # 194 23
+call 1 0
+setfl 13
+geta 1 # 194 23
+move 3 1 # 194 12
+getlocal 1 0 9 # 195 22
+call 1 0
+setfl 13
+geta 1 # 195 22
+fixnum 4 0
+equalregfix 5 1 0
+isundef 6 5 # 195 22
+jumpfalse 6 18 # 195 22
+isobject 5 1 # 195 22
+jumpfalse 5 7 # 195 22
+getpropregstr 5 1 #0:string="valueOf"
+move 13 1
+send 5 0
+geta 1 # 195 22
+move 5 4
+jump 5 # 195 22
+getpropfixstr 5 0 #0:string="valueOf"
+move 13 4
+send 5 0
+geta 5 # 195 22
+equal 5 1 5
+isundef 1 5 # 195 22
+jumpfalse 1 3 # 195 22
+bigprim 1 #1:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 195 22
+not 1 5
+jumpfalse 1 7 # 195 22
+getlocal 1 0 9 # 195 29
+call 1 0
+setfl 13
+geta 1 # 195 29
+subregfix 1 1 1
+jump 2 # 195 29
+fixnum 1 6
+move 5 1 # 195 12
+lessthanequalregfix 1 2 2
+jumpfalse 1 3 # 196 12
+subfixreg 1 2 2
+lessthanequal 1 5 1
+jumpfalse 1 4 # 196 12
+fixnum 1 1
+seta 1
+ret
+bigprim 2 #2:string="Date"
+getglobal 5 2
+getlocal 6 0 10 # 201 41
+call 6 0
+setfl 13
+geta 6 # 201 41
+addstrreg 6 #3:string="January\s1\s" 6
+addregstr 6 6 #4:string="\s00:00:00"
+move 13 6
+construct 1 5 1
+setfl 13
+getnewa 1 # 201 21
+getpropregstr 5 1 #5:string="getDay"
+move 13 1
+send 5 0
+setfl 13
+geta 5 # 202 20
+equalregfix 6 5 0
+isundef 7 6 # 202 20
+jumpfalse 7 17 # 202 20
+isobject 6 5 # 202 20
+jumpfalse 6 6 # 202 20
+getpropregstr 6 5 #0:string="valueOf"
+move 13 5
+send 6 0
+geta 5 # 202 20
+jump 5 # 202 20
+getpropfixstr 6 0 #0:string="valueOf"
+move 13 4
+send 6 0
+geta 4 # 202 20
+equal 6 5 4
+isundef 4 6 # 202 20
+jumpfalse 4 3 # 202 20
+bigprim 1 #1:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 202 20
+not 4 6
+jumpfalse 4 8 # 202 20
+getpropregstr 4 1 #5:string="getDay"
+move 13 1
+send 4 0
+setfl 13
+geta 1 # 202 35
+subregfix 1 1 1
+jump 2 # 202 35
+fixnum 1 6
+move 4 1 # 202 12
+lessthanequalregfix 1 3 2
+jumpfalse 1 2 # 204 12
+lessthanequalfixreg 1 4 4
+jumpfalse 1 3 # 204 12
+subfixreg 1 6 4
+lessthanequal 1 1 3
+jumpfalse 1 23 # 204 12
+specconst 1 undefined
+getglobal 2 2
+getlocal 3 0 10 # 212 52
+call 3 0
+setfl 13
+geta 3 # 212 52
+subregfix 3 3 1
+addstrreg 3 #6:string="December\s31\s" 3
+addregstr 3 3 #4:string="\s00:00:00"
+move 13 3
+construct 1 2 1
+setfl 13
+getnewa 1 # 212 29
+getpropregstr 2 1 #7:string="formatDate"
+bigprim 3 #8:string="W"
+move 12 1
+move 13 3
+send 2 1
+setfl 13
+geta 1 # 213 19
+seta 1
+ret
+lessthanequalregfix 1 4 3
+jumpfalse 1 18 # 218 12
+bigprim 1 #9:string="Math"
+getglobal 1 1
+getpropregstr 2 1 #10:string="floor"
+getlocal 3 0 11 # 220 37
+call 3 0
+setfl 13
+geta 3 # 220 37
+add 3 3 4
+divregfix 3 3 7
+move 12 1
+move 13 3
+send 2 1
+setfl 13
+geta 1 # 220 23
+addfixreg 1 1 1
+seta 1
+ret
+bigprim 1 #9:string="Math"
+getglobal 1 1
+getpropregstr 2 1 #10:string="floor"
+getlocal 3 0 11 # 223 37
+call 3 0
+setfl 13
+geta 3 # 223 37
+subfixreg 4 7 4
+sub 3 3 4
+divregfix 3 3 7
+move 12 1
+move 13 3
+send 2 1
+setfl 13
+geta 1 # 223 23
+addfixreg 1 1 1
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 10
+numberOfConstants 1
+setfl 7
+setfl 7
+getlocal 1 0 17 # 228 15
+getpropregstr 2 1 #0:string="getDay"
+move 7 1
+send 2 0
+setfl 7
+geta 1 # 228 15
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 64
+numberOfConstants 6
+setfl 10
+setfl 10
+getlocal 1 0 17 # 237 12
+getpropregstr 1 1 #0:string="getFullYear"
+jumpfalse 1 45 # 237 12
+specconst 1 undefined
+bigprim 2 #1:string="Date"
+getglobal 2 2
+bigprim 3 #2:string="January\s1\s2001\s00:00:00\s+0000"
+move 10 3
+construct 1 2 1
+setfl 10
+getnewa 1 # 238 30
+getpropregstr 2 1 #0:string="getFullYear"
+move 10 1
+send 2 0
+setfl 10
+geta 1 # 239 20
+move 2 1 # 240 16
+fixnum 3 2001
+equalregfix 1 1 2001
+isundef 4 1 # 240 16
+jumpfalse 4 18 # 240 16
+isobject 1 2 # 240 16
+jumpfalse 1 6 # 240 16
+getpropregstr 1 2 #3:string="valueOf"
+move 10 2
+send 1 0
+geta 1 # 240 16
+jump 6 # 240 16
+getpropfixstr 1 2001 #3:string="valueOf"
+move 10 3
+send 1 0
+geta 3 # 240 16
+move 1 2 # 240 16
+equal 1 1 3
+isundef 2 1 # 240 16
+jumpfalse 2 3 # 240 16
+bigprim 1 #4:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 240 16
+jumpfalse 1 9 # 240 16
+getlocal 1 0 17 # 242 23
+getpropregstr 2 1 #0:string="getFullYear"
+move 10 1
+send 2 0
+setfl 10
+geta 1 # 242 23
+seta 1
+ret
+getlocal 1 0 17 # 248 16
+getpropregstr 2 1 #5:string="getYear"
+move 10 1
+send 2 0
+setfl 10
+geta 1 # 248 16
+modregfix 1 1 100
+lessthanregfix 2 1 38
+jumpfalse 2 3 # 250 14
+fixnum 2 2000
+jump 2 # 250 24
+fixnum 2 1900
+add 1 1 2
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 19
+numberOfConstants 3
+setfl 11
+setfl 11
+getlocal 1 0 10 # 255 16
+call 1 0
+setfl 11
+geta 1 # 255 16
+addregstr 1 1 #0:string=""
+getpropregstr 2 1 #1:string="substring"
+getpropregstr 3 1 #2:string="length"
+subregfix 3 3 2
+getpropregstr 4 1 #2:string="length"
+move 9 1
+move 10 3
+move 11 4
+send 2 2
+setfl 11
+geta 1 # 256 15
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 41
+numberOfConstants 6
+setfl 9
+setfl 9
+specconst 1 undefined
+bigprim 2 #0:string="Date"
+getglobal 2 2
+getlocal 3 0 10 # 260 40
+call 3 0
+setfl 9
+geta 3 # 260 40
+addstrreg 3 #1:string="January\s1\s" 3
+addregstr 3 3 #2:string="\s00:00:00"
+move 9 3
+construct 1 2 1
+setfl 9
+getnewa 1 # 260 20
+getlocal 2 0 17 # 261 19
+getpropregstr 3 2 #3:string="getTime"
+move 9 2
+send 3 0
+setfl 9
+geta 2 # 261 19
+getpropregstr 3 1 #3:string="getTime"
+move 9 1
+send 3 0
+setfl 9
+geta 1 # 261 36
+sub 1 2 1
+bigprim 2 #4:string="Math"
+getglobal 2 2
+getpropregstr 3 2 #5:string="floor"
+divregfix 1 1 1000
+divregfix 1 1 60
+divregfix 1 1 60
+divregfix 1 1 24
+move 8 2
+move 9 1
+send 3 1
+setfl 9
+geta 1 # 262 15
+seta 1
+ret

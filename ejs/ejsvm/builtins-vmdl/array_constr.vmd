@@ -1,0 +1,59 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) array_constr : (JSValue, JSValue) -> JSValue 
+array_constr(placeHolder, element0){
+    JSValue rsv;
+    int size;
+    int length;
+    int needCopy = true;
+
+    /* compute sizes */
+    if(na == 0){
+        length <- 0;
+        needCopy <- false;
+    }else if(na == 1){
+      JSValue n = element0;
+      match(n){
+          case(Fixnum n){
+              length <- to_cint(n);
+              if(length < 0 || length > (to_unsigned_long(1) << 32) - 1){
+                /* TODO: throw RangeError */
+                LOG_EXIT("RangeError: Invalid array length");
+              }else{
+                  needCopy <- false;
+              }
+          }
+          case(true){
+              length <- 1;
+          }
+      }
+    } else {
+      /*
+       * na >= 2, e.g., Array(2,4,5,1)
+       * This means that the array's length is four whose elements are
+       * 2, 4, 5, and 1.
+       */
+      length <- na;
+    }
+    size <- length;
+    
+    /* allocate the array */
+#ifdef ALLOC_SITE_CACHE
+    rsv <- create_array_object(DEBUG_NAME("array_ctor"), size);
+#else /* ALLOC_SITE_CACHE */
+    rsv <- new_array_object(DEBUG_NAME("array_ctor"), gshapes.g_shape_Array, size);
+#endif /* ALLOC_SITE_CACHE */
+    /* NOTE: rsv sould be GC_PUSH/GC_POP here */
+    set_jsarray_length(rsv, cint_to_number(length));
+
+    /* fill elements if supplied */
+    if(needCopy) {
+        JSValue[] body = get_jsarray_body(rsv);
+        body[0] <- element0;
+        do(int i = 0 to n_rest-1 step 1){
+            body[i+1] <- rest[i];
+        }
+    }
+    return rsv;
+}

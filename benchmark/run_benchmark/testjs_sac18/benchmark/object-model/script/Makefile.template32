@@ -1,0 +1,88 @@
+.PRECIOUS: %.c %.h %.o
+
+##
+## configuration files
+##
+
+DATATYPES = $(EJSVM_DIR)/datatypes/default_32.def
+OPERANDSPEC = $(EJSVM_DIR)/operand-spec/any.spec
+# OPERANDSPEC = $(EJSVM_DIR)/operand-spec/fixnum-unspec.spec
+#SUPERINSNSPEC = $(EJSVM_DIR)/superinsn-spec/all.si
+#SUPERINSNTYPE = 4
+#VMDLC_FLAGS=-no-match-opt
+
+##
+## compile flags
+##
+
+#CPPFLAGS = -m32 -O2 -DNDEBUG -UDEBUG $(HEAPSIZE)
+CPPFLAGS = -m32 -Os -DNDEBUG -UDEBUG $(HEAPSIZE)
+# CPPFLAGS = --m32 O0 -g $(HEAPSIZE)
+INSNGEN_FLAGS = -Xgen:pad_cases true -Xcmp:opt_pass MR:S -Xcmp:rand_seed 0
+LDFLAGS = -m32
+
+GC_CXX=true
+
+##
+## VMDL
+##
+USE_VMDL=false
+
+##
+## commands
+##
+
+CC = gcc
+#SED = gsed
+SED = sed
+#PYTHON = python
+PYTHON = python3
+# CPP_VMDL = $(CPP) -E -x c -P
+COCCINELLE = spatch
+# COCCINELLE = spatch --python python3
+
+##
+## paths
+##
+
+INCLUDES =
+# INCLUDES = -I/opt/local/include
+LIBS =
+# LIBS = -L/opt/local/lib
+
+## 
+## options
+## 
+
+OPT_REGEXP    = none
+
+## heap size in bytes
+HEAPSIZE      = -DJS_SPACE_BYTES=10485760
+
+## enable profiling to create customised VM
+# CPPFLAGS       += -DPROFILE
+
+## word size
+# INSN32/64    -- instruction size
+# JSVALUE32/64 -- JSValue size  (>= ponter size)
+# ALIGN32/64   -- alignment of heap-allocated data
+CPPFLAGS        += -DBIT_INSN32 -DBIT_ALIGN32 -DBIT_JSVALUE32
+#CPPFLAGS        += -DBIT_INSN64 -DBIT_ALIGN64 -DBIT_JSVALUE64
+
+##
+## developer options
+##
+
+## accept SBC files
+CPPFLAGS       += -DUSE_SBC
+CPPFLAGS       += -DNEW_ASIZE_STRATEGY
+
+##
+## debug/sanity check options
+##
+
+CPPFLAGS    += -DNO_SRAND
+
+##
+## generated options below
+##

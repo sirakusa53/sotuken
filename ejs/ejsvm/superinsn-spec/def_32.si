@@ -1,0 +1,69 @@
+add(-,_,fixnum): addregfix
+add(-,_,string): addregstr
+add(-,fixnum,_): addfixreg
+add(-,string,_): addstrreg
+add(-,string,fixnum): addstrfix
+add(-,string,flonum): addstrflo
+
+bitand(-,_,fixnum): bitandregfix
+bitand(-,fixnum,_): bitandfixreg
+
+bitor(-,_,fixnum): bitorregfix
+
+div(-,_,fixnum): divregfix
+div(-,fixnum,_): divfixreg
+
+eq(-,_,fixnum): eqregfix
+eq(-,_,string): eqregstr
+eq(-,_,special): eqregspec
+eq(-,fixnum,_): eqfixreg
+
+equal(-,_,fixnum): equalregfix
+equal(-,_,flonum): equalregflo
+equal(-,_,string): equalregstr
+equal(-,_,special): equalregspec
+equal(-,fixnum,_): equalfixreg
+
+getprop(-,_,fixnum): getpropregfix
+getprop(-,_,string): getpropregstr
+getprop(-,fixnum,string): getpropfixstr
+getprop(-,flonum,string): getpropflostr
+getprop(-,special,string): getpropspecstr
+
+leftshift(-,_,fixnum): leftshiftregfix
+leftshift(-,fixnum,_): leftshiftfixreg
+
+lessthan(-,_,fixnum): lessthanregfix
+lessthan(-,_,flonum): lessthanregflo
+lessthan(-,fixnum,_): lessthanfixreg
+
+lessthanequal(-,_,fixnum): lessthanequalregfix
+lessthanequal(-,fixnum,_): lessthanequalfixreg
+lessthanequal(-,flonum,_): lessthanequalfloreg
+
+mod(-,_,fixnum): modregfix
+
+mul(-,_,fixnum): mulregfix
+mul(-,fixnum,_): mulfixreg
+mul(-,flonum,_): mulfloreg
+
+rightshift(-,_,fixnum): rightshiftregfix
+
+sub(-,_,fixnum): subregfix
+sub(-,_,flonum): subregflo
+sub(-,fixnum,_): subfixreg
+
+unsignedrightshift(-,_,fixnum): unsignedrightshiftregfix
+
+setprop(_,_,fixnum): setpropregregfix
+setprop(_,_,string): setpropregregstr
+setprop(_,_,special): setpropregregspec
+setprop(_,fixnum,_): setpropregfixreg
+setprop(_,fixnum,fixnum): setpropregfixfix
+setprop(_,fixnum,flonum): setpropregfixflo
+setprop(_,fixnum,special): setpropregfixspec
+setprop(_,string,_): setpropregstrreg
+setprop(_,string,fixnum): setpropregstrfix
+setprop(_,string,flonum): setpropregstrflo
+setprop(_,string,string): setpropregstrstr
+setprop(_,string,special): setpropregstrspec

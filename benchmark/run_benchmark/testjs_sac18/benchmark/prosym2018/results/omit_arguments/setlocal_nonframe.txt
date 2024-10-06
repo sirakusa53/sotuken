@@ -1,0 +1,7 @@
+======== setlocal_nonframe ========
+0: total CPU time = 0.313 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 2390, n_exit_hc = 1227
+1: total CPU time = 0.261 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 2390, n_exit_hc = 1227
+
+======== setlocal_nonframe Optimisation ========
+0: total CPU time = 0.126 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 342, n_exit_hc = 203
+1: total CPU time = 0.113 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 342, n_exit_hc = 203

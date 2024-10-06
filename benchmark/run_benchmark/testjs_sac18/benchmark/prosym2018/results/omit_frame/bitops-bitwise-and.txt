@@ -1,0 +1,7 @@
+======== bitops-bitwise-and ========
+0: total CPU time = 53.628 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 337, n_exit_hc = 200
+1: total CPU time = 54.914 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 337, n_exit_hc = 200
+
+======== bitops-bitwise-and Optimisation ========
+0: total CPU time = 60.679 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 337, n_exit_hc = 200
+1: total CPU time = 53.477 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 337, n_exit_hc = 200

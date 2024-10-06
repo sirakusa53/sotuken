@@ -1,0 +1,11 @@
+======== tak ========
+0: total CPU time = 4576.554 msec, total GC time = 476.854 msec (#GC = 1979) n_hc = 20, n_enter_hc = 64028432, n_exit_hc = 32014248
+1: total CPU time = 4500.59 msec, total GC time = 14.57 msec (#GC = 1979) n_hc = 20, n_enter_hc = 64028432, n_exit_hc = 32014248
+2: total CPU time = 4482.136 msec, total GC time = 111.28 msec (#GC = 1979) n_hc = 20, n_enter_hc = 64028432, n_exit_hc = 32014248
+3: total CPU time = 4496.811 msec, total GC time = 0.0 msec (#GC = 1979) n_hc = 20, n_enter_hc = 64028432, n_exit_hc = 32014248
+4: total CPU time = 4539.521 msec, total GC time = 479.424 msec (#GC = 1979) n_hc = 20, n_enter_hc = 64028432, n_exit_hc = 32014248
+5: total CPU time = 4458.643 msec, total GC time = 0.0 msec (#GC = 1979) n_hc = 20, n_enter_hc = 64028432, n_exit_hc = 32014248
+6: total CPU time = 4490.735 msec, total GC time = 0.0 msec (#GC = 1979) n_hc = 20, n_enter_hc = 64028432, n_exit_hc = 32014248
+7: total CPU time = 4514.865 msec, total GC time = 457.509 msec (#GC = 1979) n_hc = 20, n_enter_hc = 64028432, n_exit_hc = 32014248
+8: total CPU time = 4472.181 msec, total GC time = 37.799 msec (#GC = 1979) n_hc = 20, n_enter_hc = 64028432, n_exit_hc = 32014248
+9: total CPU time = 4486.576 msec, total GC time = 475.492 msec (#GC = 1979) n_hc = 20, n_enter_hc = 64028432, n_exit_hc = 32014248

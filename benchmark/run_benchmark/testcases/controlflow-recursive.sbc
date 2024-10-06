@@ -1,0 +1,270 @@
+fingerprint 82
+funcLength 4
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 108
+numberOfConstants 11
+setfl 15
+setfl 15
+makeclosure 1 0 # 5 0
+bigprim 2 #0:string="ack"
+setglobal 2 1
+makeclosure 1 1 # 11 0
+bigprim 2 #1:string="fib"
+setglobal 2 1
+makeclosure 1 2 # 16 0
+bigprim 2 #2:string="tak"
+setglobal 2 1
+fixnum 1 0
+bigprim 2 #3:string="result"
+setglobal 2 1
+fixnum 1 3
+bigprim 2 #4:string="i"
+setglobal 2 1
+jump 47 # 23 0
+bigprim 2 #3:string="result"
+getglobal 1 2
+bigprim 3 #0:string="ack"
+getglobal 3 3
+fixnum 4 3
+getglobal 5 7
+move 14 4
+move 15 5
+call 3 2
+setfl 15
+geta 3 # 24 14
+add 1 1 3
+setglobal 2 1
+getglobal 1 2
+bigprim 3 #1:string="fib"
+getglobal 3 3
+getglobal 4 7
+addfixreg 4 17 4
+move 15 4
+call 3 1
+setfl 15
+geta 3 # 25 14
+add 1 1 3
+setglobal 2 1
+getglobal 1 2
+bigprim 3 #2:string="tak"
+getglobal 3 3
+getglobal 4 7
+mulfixreg 4 3 4
+addregfix 4 4 3
+getglobal 5 7
+mulfixreg 5 2 5
+addregfix 5 5 2
+getglobal 6 7
+addregfix 6 6 1
+move 13 4
+move 14 5
+move 15 6
+call 3 3
+setfl 15
+geta 3 # 26 14
+add 1 1 3
+setglobal 2 1
+getglobal 1 7
+addregfix 1 1 1
+setglobal 7 1
+bigprim 7 #4:string="i"
+getglobal 1 7
+lessthanequalregfix 1 1 5
+jumptrue 1 -49 # 23 17
+fixnum 1 57775
+bigprim 2 #5:string="expected"
+setglobal 2 1
+bigprim 3 #3:string="result"
+getglobal 1 3
+getglobal 4 2
+equal 7 1 4
+isundef 5 7 # 30 4
+jumpfalse 5 17 # 30 4
+isobject 7 1 # 30 4
+jumpfalse 7 6 # 30 4
+getpropregstr 7 1 #6:string="valueOf"
+move 15 1
+send 7 0
+geta 1 # 30 4
+jump 5 # 30 4
+getpropregstr 7 4 #6:string="valueOf"
+move 15 4
+send 7 0
+geta 4 # 30 4
+equal 7 1 4
+isundef 1 7 # 30 4
+jumpfalse 1 3 # 30 4
+bigprim 1 #7:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 30 4
+not 1 7
+jumpfalse 1 12 # 30 4
+bigprim 1 #8:string="print"
+getglobal 1 1
+getglobal 2 2
+addstrreg 2 #9:string="ERROR:\sbad\sresult:\sexpected\s" 2
+addregstr 2 2 #10:string="\sbut\sgot\s"
+getglobal 3 3
+add 2 2 3
+move 15 2
+call 1 1
+setfl 15
+geta 1 # 32 4
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 77
+numberOfConstants 3
+setfl 12
+setfl 12
+fixnum 1 0
+equalregfix 4 2 0
+isundef 5 4 # 6 7
+jumpfalse 5 19 # 6 7
+isobject 4 2 # 6 7
+jumpfalse 4 7 # 6 7
+getpropregstr 4 2 #0:string="valueOf"
+move 12 2
+send 4 0
+geta 4 # 6 7
+move 5 1
+jump 6 # 6 7
+getpropfixstr 4 0 #0:string="valueOf"
+move 12 1
+send 4 0
+geta 5 # 6 7
+move 4 2 # 6 7
+equal 4 4 5
+isundef 5 4 # 6 7
+jumpfalse 5 3 # 6 7
+bigprim 1 #1:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 6 7
+jumpfalse 4 4 # 6 7
+addregfix 4 3 1
+seta 4
+ret
+equalregfix 4 3 0
+isundef 5 4 # 7 7
+jumpfalse 5 18 # 7 7
+isobject 4 3 # 7 7
+jumpfalse 4 6 # 7 7
+getpropregstr 4 3 #0:string="valueOf"
+move 12 3
+send 4 0
+geta 4 # 7 7
+jump 6 # 7 7
+getpropfixstr 4 0 #0:string="valueOf"
+move 12 1
+send 4 0
+geta 1 # 7 7
+move 4 3 # 7 7
+equal 4 4 1
+isundef 1 4 # 7 7
+jumpfalse 1 3 # 7 7
+bigprim 1 #1:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 7 7
+jumpfalse 4 12 # 7 7
+bigprim 1 #2:string="ack"
+getglobal 1 1
+fixnum 3 1
+subregfix 2 2 1
+move 11 2
+move 12 3
+call 1 2
+setfl 12
+geta 4 # 7 22
+seta 4
+ret
+bigprim 1 #2:string="ack"
+getglobal 4 1
+subregfix 5 2 1
+getglobal 1 1
+subregfix 3 3 1
+move 11 2
+move 12 3
+call 1 2
+setfl 12
+geta 1 # 8 19
+move 11 5
+move 12 1
+call 4 2
+setfl 12
+geta 4 # 8 10
+seta 4
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 23
+numberOfConstants 1
+setfl 10
+setfl 10
+lessthanregfix 1 2 2
+jumpfalse 1 4 # 12 8
+fixnum 1 1
+seta 1
+ret
+bigprim 1 #0:string="fib"
+getglobal 3 1
+subregfix 4 2 2
+move 10 4
+call 3 1
+setfl 10
+geta 3 # 13 11
+getglobal 1 1
+subregfix 2 2 1
+move 10 2
+call 1 1
+setfl 10
+geta 1 # 13 22
+add 1 3 1
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 40
+numberOfConstants 1
+setfl 16
+setfl 16
+lessthanequal 1 2 3
+jumpfalse 1 3 # 17 8
+seta 4
+ret
+bigprim 1 #0:string="tak"
+getglobal 5 1
+getglobal 6 1
+subregfix 7 2 1
+move 14 7
+move 15 3
+move 16 4
+call 6 3
+setfl 16
+geta 6 # 18 15
+getglobal 7 1
+subregfix 8 3 1
+move 14 8
+move 15 4
+move 16 2
+call 7 3
+setfl 16
+geta 7 # 18 29
+getglobal 1 1
+subregfix 4 4 1
+move 14 4
+move 15 2
+move 16 3
+call 1 3
+setfl 16
+geta 1 # 18 43
+move 14 6
+move 15 7
+move 16 1
+call 5 3
+setfl 16
+geta 1 # 18 11
+seta 1
+ret

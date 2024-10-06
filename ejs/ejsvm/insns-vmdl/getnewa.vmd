@@ -1,0 +1,16 @@
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, needContext, tailCall)
+getnewa : void -> JSValue
+
+getnewa () {
+  /*
+   getnewa dst
+     dst : destination register
+   $dst = (get_a(context) instanceof Object)? a : dst;
+ */
+
+  JSValue a = get_a();
+  if (is_jsobject(a))
+    return a;
+}

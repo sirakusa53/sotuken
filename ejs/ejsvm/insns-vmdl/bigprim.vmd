@@ -1,0 +1,8 @@
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, tailCall)
+bigprim : ConstantDisplacement -> JSValue
+
+bigprim (d1) {
+    return GetLiteral(curfn, d1);
+}

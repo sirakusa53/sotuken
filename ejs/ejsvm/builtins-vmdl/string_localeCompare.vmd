@@ -1,0 +1,13 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) string_localeCompare: (JSValue, JSValue) -> JSValue
+string_localeCompare(referenceStr, compareString){
+    JSValue s0 = to_string(referenceStr);
+    JSValue s1 = (na >= 1) ? to_string(compareString) : to_string(JS_UNDEFINED);
+    cstring cs0 = string_to_cstr(s0);
+    cstring cs1 = string_to_cstr(s1);
+    int r = strcmp(cs0, cs1); /* implementation-defined */
+    JSValue ret = (r > 0) ? FIXNUM_ONE : ((r < 0) ? FIXNUM_MINUS_ONE : FIXNUM_ZERO);
+    return ret;
+}

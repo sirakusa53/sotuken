@@ -1,0 +1,7 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) string_constr: (JSValue, JSValue) -> JSValue 
+string_constr(placeHolder, element){
+    return new_string_object(DEBUG_NAME("string_constr"), gshapes.g_shape_String, na > 0 ? element: gconsts.g_string_empty);
+}

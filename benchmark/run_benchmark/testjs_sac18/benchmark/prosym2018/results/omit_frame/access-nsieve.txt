@@ -1,0 +1,7 @@
+======== access-nsieve ========
+0: total CPU time = 33.577 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 369, n_exit_hc = 219
+1: total CPU time = 30.397 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 369, n_exit_hc = 219
+
+======== access-nsieve Optimisation ========
+0: total CPU time = 20.706 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 361, n_exit_hc = 215
+1: total CPU time = 21.542 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 361, n_exit_hc = 215

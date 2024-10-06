@@ -1,0 +1,320 @@
+fingerprint 82
+funcLength 4
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 199
+numberOfConstants 22
+setfl 15
+setfl 15
+makeclosure 1 0 # 5 0
+bigprim 2 #0:string="TreeNode"
+setglobal 2 1
+makeclosure 1 1 # 16 0
+bigprim 3 #1:string="bottomUpTree"
+setglobal 3 1
+makeclosure 1 2 # 11 31
+getglobal 2 2
+getpropregstr 2 2 #2:string="prototype"
+setpropregstrreg 2 #3:string="itemCheck" 1
+fixnum 1 0
+bigprim 2 #4:string="ret"
+setglobal 2 1
+fixnum 1 4
+bigprim 2 #5:string="n"
+setglobal 2 1
+jump 137 # 31 0
+fixnum 1 4
+bigprim 2 #6:string="minDepth"
+setglobal 2 1
+bigprim 1 #7:string="Math"
+getglobal 1 1
+getpropregstr 3 1 #8:string="max"
+getglobal 4 2
+addregfix 4 4 2
+getglobal 5 5
+move 13 1
+move 14 4
+move 15 5
+send 3 2
+setfl 15
+geta 1 # 33 19
+bigprim 3 #9:string="maxDepth"
+setglobal 3 1
+getglobal 1 3
+addregfix 1 1 1
+bigprim 4 #10:string="stretchDepth"
+setglobal 4 1
+bigprim 5 #1:string="bottomUpTree"
+getglobal 1 5
+fixnum 6 0
+getglobal 4 4
+move 14 6
+move 15 4
+call 1 2
+setfl 15
+geta 1 # 36 16
+getpropregstr 4 1 #3:string="itemCheck"
+move 15 1
+send 4 0
+setfl 15
+geta 1 # 36 16
+bigprim 4 #11:string="check"
+setglobal 4 1
+getglobal 1 5
+getglobal 3 3
+move 14 6
+move 15 3
+call 1 2
+setfl 15
+geta 1 # 38 24
+bigprim 3 #12:string="longLivedTree"
+setglobal 3 1
+getglobal 1 2
+bigprim 2 #13:string="depth"
+setglobal 2 1
+jump 66 # 39 4
+fixnum 2 1
+getglobal 1 1
+getglobal 3 3
+sub 1 1 3
+bigprim 3 #6:string="minDepth"
+getglobal 3 3
+add 1 1 3
+leftshiftfixreg 1 1 1
+bigprim 3 #14:string="iterations"
+setglobal 3 1
+fixnum 1 0
+bigprim 3 #11:string="check"
+setglobal 3 1
+bigprim 1 #15:string="i"
+setglobal 1 2
+jump 40 # 43 8
+bigprim 2 #11:string="check"
+getglobal 1 2
+bigprim 3 #1:string="bottomUpTree"
+getglobal 4 3
+getglobal 6 5
+bigprim 7 #13:string="depth"
+getglobal 8 7
+move 14 6
+move 15 8
+call 4 2
+setfl 15
+geta 4 # 44 21
+getpropregstr 6 4 #3:string="itemCheck"
+move 15 4
+send 6 0
+setfl 15
+geta 4 # 44 21
+add 1 1 4
+setglobal 2 1
+getglobal 1 2
+getglobal 3 3
+getglobal 4 5
+mulregfix 4 4 -1
+getglobal 6 7
+move 14 4
+move 15 6
+call 3 2
+setfl 15
+geta 3 # 45 21
+getpropregstr 4 3 #3:string="itemCheck"
+move 15 3
+send 4 0
+setfl 15
+geta 3 # 45 21
+add 1 1 3
+setglobal 2 1
+getglobal 1 5
+addregfix 1 1 1
+setglobal 5 1
+bigprim 5 #15:string="i"
+getglobal 1 5
+bigprim 2 #14:string="iterations"
+getglobal 2 2
+lessthanequal 1 1 2
+jumptrue 1 -44 # 43 22
+bigprim 1 #13:string="depth"
+getglobal 2 1
+addregfix 2 2 2
+setglobal 1 2
+bigprim 3 #13:string="depth"
+getglobal 2 3
+bigprim 1 #9:string="maxDepth"
+getglobal 4 1
+lessthanequal 2 2 4
+jumptrue 2 -70 # 39 29
+bigprim 2 #4:string="ret"
+getglobal 1 2
+bigprim 3 #12:string="longLivedTree"
+getglobal 3 3
+getpropregstr 4 3 #3:string="itemCheck"
+move 15 3
+send 4 0
+setfl 15
+geta 3 # 49 11
+add 1 1 3
+setglobal 2 1
+bigprim 1 #5:string="n"
+getglobal 2 1
+addregfix 2 2 1
+setglobal 1 2
+bigprim 5 #5:string="n"
+getglobal 1 5
+lessthanequalregfix 1 1 7
+jumptrue 1 -139 # 31 17
+fixnum 1 -4
+bigprim 2 #16:string="expected"
+setglobal 2 1
+bigprim 3 #4:string="ret"
+getglobal 1 3
+getglobal 4 2
+equal 5 1 4
+isundef 6 5 # 53 4
+jumpfalse 6 17 # 53 4
+isobject 5 1 # 53 4
+jumpfalse 5 6 # 53 4
+getpropregstr 5 1 #17:string="valueOf"
+move 15 1
+send 5 0
+geta 1 # 53 4
+jump 5 # 53 4
+getpropregstr 5 4 #17:string="valueOf"
+move 15 4
+send 5 0
+geta 4 # 53 4
+equal 5 1 4
+isundef 1 5 # 53 4
+jumpfalse 1 3 # 53 4
+bigprim 1 #18:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 53 4
+not 1 5
+jumpfalse 1 12 # 53 4
+bigprim 1 #19:string="print"
+getglobal 1 1
+getglobal 2 2
+addstrreg 2 #20:string="ERROR:\sbad\sresult:\sexpected\s" 2
+addregstr 2 2 #21:string="\sbut\sgot\s"
+getglobal 3 3
+add 2 2 3
+move 15 2
+call 1 1
+setfl 15
+geta 1 # 55 4
+seta 1
+ret
+callentry 0
+sendentry 2
+numberOfLocals 0
+numberOfInstructions 9
+numberOfConstants 3
+setfl 9
+getglobalobj 1 # 5 0
+setfl 9
+setpropregstrreg 1 #0:string="left" 2
+setpropregstrreg 1 #1:string="right" 3
+setpropregstrreg 1 #2:string="item" 4
+specconst 1 undefined
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 45
+numberOfConstants 2
+setfl 16
+setfl 16
+lessthanfixreg 1 0 3
+jumpfalse 1 30 # 17 7
+specconst 1 undefined
+bigprim 4 #0:string="TreeNode"
+getglobal 4 4
+bigprim 5 #1:string="bottomUpTree"
+getglobal 6 5
+mulfixreg 7 2 2
+subregfix 7 7 1
+subregfix 8 3 1
+move 15 7
+move 16 8
+call 6 2
+setfl 16
+geta 6 # 19 10
+getglobal 5 5
+mulfixreg 7 2 2
+subregfix 3 3 1
+move 15 7
+move 16 3
+call 5 2
+setfl 16
+geta 3 # 20 10
+move 14 6
+move 15 3
+move 16 2
+construct 1 4 3
+setfl 16
+getnewa 1 # 18 17
+seta 1
+ret
+specconst 1 undefined
+bigprim 3 #0:string="TreeNode"
+getglobal 3 3
+specconst 4 null
+move 14 4
+move 15 4
+move 16 2
+construct 1 3 3
+setfl 16
+getnewa 1 # 25 17
+seta 1
+ret
+callentry 0
+sendentry 2
+numberOfLocals 0
+numberOfInstructions 45
+numberOfConstants 6
+setfl 10
+getglobalobj 1 # 11 31
+setfl 10
+getpropregstr 2 1 #0:string="left"
+specconst 3 null
+equalregspec 4 2 null
+isundef 5 4 # 12 7
+jumpfalse 5 17 # 12 7
+isobject 4 2 # 12 7
+jumpfalse 4 6 # 12 7
+getpropregstr 4 2 #1:string="valueOf"
+move 10 2
+send 4 0
+geta 2 # 12 7
+jump 5 # 12 7
+getpropspecstr 4 null #1:string="valueOf"
+move 10 3
+send 4 0
+geta 3 # 12 7
+equal 4 2 3
+isundef 2 4 # 12 7
+jumpfalse 2 3 # 12 7
+bigprim 1 #2:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 12 7
+jumpfalse 4 4 # 12 7
+getpropregstr 4 1 #3:string="item"
+seta 4
+ret
+getpropregstr 2 1 #3:string="item"
+getpropregstr 3 1 #0:string="left"
+getpropregstr 4 3 #4:string="itemCheck"
+move 10 3
+send 4 0
+setfl 10
+geta 3 # 13 27
+add 2 2 3
+getpropregstr 1 1 #5:string="right"
+getpropregstr 3 1 #4:string="itemCheck"
+move 10 1
+send 3 0
+setfl 10
+geta 1 # 13 51
+sub 4 2 1
+seta 4
+ret

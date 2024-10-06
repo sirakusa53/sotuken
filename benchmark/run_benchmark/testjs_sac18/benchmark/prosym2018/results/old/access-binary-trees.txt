@@ -1,0 +1,3 @@
+======== access-binary-trees ========
+0: total CPU time = 39.991 msec, total GC time = 4.570 msec (#GC = 9) n_hc = 24, n_enter_hc = 463145, n_exit_hc = 294714
+1: total CPU time = 45.936 msec, total GC time = 5.159 msec (#GC = 9) n_hc = 24, n_enter_hc = 463145, n_exit_hc = 294714

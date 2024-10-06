@@ -1,0 +1,41 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) array_concat : void -> JSValue 
+array_concat(){
+    JSValue a = new_array_object(DEBUG_NAME("array_concat"), gshapes.g_shape_Array, 0);
+    uintjsv_t n = cint_to_uintjsv_t(0);
+    int len = 0;
+
+    do(int i=0 to n_rest-1 step 1){
+        JSValue e = rest[i];
+        match(e){
+            case(Array e){
+                len <- number_to_cint(get_jsarray_length(e));
+                if(n + cint_to_uintjsv_t(len) > MAX_ARRAY_LENGTH){
+                    /* This should be improved */
+                    LOG_EXIT("New array length is more than VM limit (MAX_ARRAY_LENGTH)");
+                }
+                do(int k=0 to len-1 step 1){
+                    if(has_array_element(e, k)){
+                        JSValue subElement = get_array_element(e, k);
+                        set_array_prop(a, cint_to_number(uintjsv_t_to_cint(n)), subElement);
+                    }
+                    n <- n + 1;
+                }
+            }
+            case(true){
+                if(n > MAX_ARRAY_LENGTH){
+                    /* This should be improved */
+                    LOG_EXIT("New array length is more than VM limit (MAX_ARRAY_LENGTH)");
+                }
+                set_array_prop(a, cint_to_number(uintjsv_t_to_cint(n)), e);
+                n <- n + 1;
+            }
+        }
+    }
+    /* is the two lines below necessary? */
+    // set_jsarray_length(a, n);
+    // set_prop_direct(a, gconsts.g_string_length, cint_to_number(uintjsv_t_to_cint(n)), ATTR_NONE);
+    return a;
+}

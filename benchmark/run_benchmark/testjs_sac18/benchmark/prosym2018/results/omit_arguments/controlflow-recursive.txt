@@ -1,0 +1,7 @@
+======== controlflow-recursive ========
+0: total CPU time = 68.947 msec, total GC time = 6.823 msec (#GC = 14) n_hc = 20, n_enter_hc = 491330, n_exit_hc = 245698
+1: total CPU time = 62.814 msec, total GC time = 7.445 msec (#GC = 14) n_hc = 20, n_enter_hc = 491330, n_exit_hc = 245698
+
+======== controlflow-recursive Optimisation ========
+0: total CPU time = 20.80 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 352, n_exit_hc = 209
+1: total CPU time = 19.765 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 352, n_exit_hc = 209

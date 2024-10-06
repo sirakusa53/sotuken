@@ -1,0 +1,10 @@
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, needContext, tailCall)
+exitframe : void -> void
+
+exitframe () {
+    // Exitframe();
+    FunctionFrame fr = get_lp();
+    set_lp(fframe_prev(fr));
+}

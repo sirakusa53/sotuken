@@ -1,0 +1,7 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, builtinFunction) math_atan2 : (JSValue, JSValue, JSValue) -> JSValue
+math_atan2(placeHolder, y, x){
+  math_func2(ATAN2, y, x);
+}

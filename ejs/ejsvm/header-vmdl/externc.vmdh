@@ -1,0 +1,382 @@
+#include "../prefix.h"
+#include "./mappings.vmdh"
+
+/*
+ * unions
+ */
+
+union JSObject = SimpleObject || Array || Function || Builtin || Iterator || Regexp || StringObject || NumberObject || BooleanObject
+union Number = Fixnum || Flonum
+
+/*
+ * variables
+ */
+
+//externC variable fp : int
+//externC variable pc : int
+//externC variable curfn : FunctionTable
+//externC variable regbase : JSValue[]
+//externC variable border : int
+externC variable regstack_limit : int
+
+/*
+ * constants
+ */
+
+externC constant JS_TRUE = "JS_TRUE" : Special
+externC constant JS_FALSE = "JS_FALSE" : Special
+externC constant JS_NULL = "JS_NULL" : Special
+externC constant JS_UNDEFINED = "JS_UNDEFINED" : Special
+externC constant JS_EMPTY = "JS_EMPTY" : Special
+externC constant FIXNUM_ZERO = "FIXNUM_ZERO" : Fixnum
+externC constant FIXNUM_ONE = "FIXNUM_ONE" : Fixnum
+externC constant FIXNUM_MINUS_ONE = "FIXNUM_MINUS_ONE" : Fixnum
+externC constant FIXNUM_TEN = "FIXNUM_TEN" : Fixnum
+externC constant HINT_STRING = "HINT_STRING" : int
+externC constant HINT_NUMBER = "HINT_NUMBER" : int
+externC constant NAN = "NAN" : double
+externC constant INFINITY = "INFINITY" : double
+externC constant SUCCESS = "SUCCESS" : int
+externC constant MAX_ARRAY_LENGTH = "MAX_ARRAY_LENGTH" : uintjsv_t
+externC constant ATTR_NONE = "ATTR_NONE" : int
+externC constant TRUE = "TRUE" : int
+externC constant FALSE = "FALSE": int
+externC constant ARRAY_NULL = "NULL" : JSValue[]
+externC constant PARSE_INT_RADIX_AUTO = "PARSE_INT_RADIX_AUTO" : int32_t
+externC constant CHAR_CODE_SPACE = "' '" : int
+externC constant CHAR_CODE_NULL = "'\\0'" : int
+externC constant MAX_VALUE_SIGNED_32BIT = "(cint)((((uint64_t) 1) << 32) - 1)" : int
+externC constant RAND_MAX = "RAND_MAX" : int
+
+/*
+ * XXXFunc functions
+ */
+externC constant FABS = "&fabs" : DDFunc
+externC constant SQRT = "&sqrt" : DDFunc
+externC constant SIN = "&sin" : DDFunc
+externC constant COS = "&cos" : DDFunc
+externC constant TAN = "&tan" : DDFunc
+externC constant ASIN = "&asin" : DDFunc
+externC constant ACOS = "&acos" : DDFunc
+externC constant ATAN = "&atan" : DDFunc
+externC constant ATAN2 = "&atan2" : DDDFunc
+externC constant EXP = "&exp" : DDFunc
+externC constant LOG = "&log" : DDFunc
+externC constant CEIL = "&ceil" : DDFunc
+externC constant FLOOR = "&floor" : DDFunc
+externC constant ROUND = "&round" : DDFunc
+externC constant POW = "&pow" : DDDFunc
+
+/*
+ * fixnum
+ */
+
+/* wrapped */
+externC FIXNUM_LESSTHAN: (Fixnum, Fixnum) -> int
+externC FIXNUM_LESSTHANEQ: (Fixnum, Fixnum) -> int
+externC FIXNUM_EQ: (Fixnum, Fixnum) -> int
+externC FIXNUM_AND: (Fixnum, Fixnum) -> Fixnum
+externC FIXNUM_OR: (Fixnum, Fixnum) -> Fixnum
+/* native */
+
+/*
+ * bool
+ */
+
+/* wrapped */
+externC IsFlonumInfinity : JSValue -> int
+externC IsFlonumNegInfinity : JSValue -> int
+externC IsFlonumNan : JSValue -> int
+externC IsFixnumZero : JSValue -> int
+externC IsSend : int -> int
+externC IsTailSend : int -> int
+externC isNullPointer : Top -> int
+/* native */
+externC half_fixnum_range : int -> int
+externC is_string : JSValue -> int
+externC is_fixnum_range_cint : int -> int
+externC is_null : JSValue -> int
+externC is_nan : JSValue -> int
+externC is_undefined : JSValue -> int
+externC is_primitive : JSValue -> int
+externC is_jsobject : JSValue -> int
+externC true_false : int -> Special
+externC false_true : int -> Special
+
+/*
+ * string
+ */
+/* wrapped */
+externC cstringPutCharAt : (cstring, int, int) -> void
+externC (needContext) vmdlStringConcat : (String, String) -> void
+/* native */
+externC string_length : String -> int
+externC (needContext, triggerGC) string_make_substring : (String, int, int) -> String
+externC string_char_code_at : (String, int) -> int
+externC (needContext, triggerGC) getCharString: int -> String
+externC (needContext) to_upper_lower : (JSValue, int) -> String
+externC (needContext) string_indexOf_ : (JSValue[], int, int) -> Number
+externC (needContext, triggerGC) ejs_string_trim : String -> String
+externC (needContext, triggerGC) numobj_to_string_radix : (NumberObject, int) -> String
+
+/*
+ * Allocate
+ */
+
+/* wrapped */
+externC (needContext, triggerGC) Create_simple_object_with_constructor : Function -> JSObject
+externC (needContext, triggerGC) AllocateJSArray : int -> JSValue[] heap
+externC (needContext, triggerGC) AllocateUnwindProtect : void -> UnwindProtect
+externC AllocateCintArray : int -> int[]
+externC AllocateCdoubleArray : int -> double[]
+externC AllocateCstring : int -> cstring
+/* native */
+externC (needContext, triggerGC) initialize_new_object : (JSValue, JSValue) -> JSObject
+externC (needContext, triggerGC) new_normal_function : Subscript -> JSValue
+externC (needContext, triggerGC) new_iterator : JSValue -> JSValue
+externC (needContext, triggerGC) new_normal_array : void -> Array
+externC (needContext, triggerGC) new_boolean_object : (cstring, ShapePtr, JSValue) -> BooleanObject
+externC (needContext, triggerGC) new_string_object : (cstring, ShapePtr, JSValue) -> StringObject
+externC (needContext, triggerGC) new_number_object : (cstring, ShapePtr, JSValue) -> NumberObject
+externC (needContext, triggerGC) new_array_object : (cstring, ShapePtr, int) -> Array
+externC (needContext, triggerGC) create_array_object : (cstring, int) -> Array
+externC free : Top -> void
+
+/*
+ * Conversion
+ */
+
+/* wrapped */
+externC CstrToString : cstring -> String
+externC instructionDisplacementToCint : InstructionDisplacement -> int
+externC cintToInstructionDisplacement : int -> InstructionDisplacement
+externC intToSubscript : int -> Subscript
+externC subscriptToCint : Subscript -> int
+externC uintjsv_tToCint : uintjsv_t -> int
+
+/* native */
+externC fixnum_to_intjsv_t : Fixnum -> intjsv_t
+externC int32_to_cint : int32_t -> int
+externC cint_to_uintjsv_t : int -> uintjsv_t
+externC uintjsv_t_to_cint : uintjsv_t -> int
+externC to_unsigned_long : int -> int
+externC (needContext, triggerGC) int32_to_number : int32_t -> Number
+externC cint_to_int32 : int -> int32_t
+externC (needContext, triggerGC) uint32_to_number : uint32_t -> Number
+externC cint_to_uint32 : int -> uint32_t
+externC cint_to_double : int -> double
+externC double_to_cint : double -> int
+externC fixnum_to_cint : Fixnum -> int
+externC fixnum_to_double : Fixnum -> double
+externC cint_to_string : int -> String
+externC double_to_string : double -> String
+externC (needContext, triggerGC) double_to_number : double -> Number
+externC (needContext, triggerGC) double_to_flonum : double -> Flonum
+externC flonum_to_double : Flonum -> double
+externC (needContext) array_to_string : (Array, String) -> String
+externC string_to_cstr: String -> cstring
+externC string_value : String -> cstring
+externC (needContext, triggerGC) Object_to_primitive_hint_number: JSObject -> JSValue
+externC flonum_to_cint : Flonum -> int
+externC flonum_to_int : Flonum -> int
+externC (needContext, triggerGC) cint_to_number : int -> Number
+externC small_cint_to_fixnum : int -> Fixnum
+externC (needContext, triggerGC) concat : (String, String) -> String
+externC (needContext, triggerGC) cstr_parse_int : (cstring, int) -> Number
+externC (needContext, triggerGC) cstr_parse_float : cstring -> Number
+externC (needContext, triggerGC) cstr_to_string : cstring -> String
+externC UNUSE : Top -> void
+
+/*
+ * vmloop
+ */
+
+/* wrapped */
+externC Lcall_stack_push : void -> void
+externC (needContext) LCallStackPop : void -> (int, int)
+/* native */
+externC save_context : void -> void
+externC update_context : void -> void
+externC instanceof_helper : (JSValue, JSValue) -> Special
+externC set_pc_relative : InstructionDisplacement -> void
+externC NEXT_INSN_NOINCPC : void -> void
+externC NEXT_INSN_INCPC : void -> void
+
+/*
+ * context
+ */
+/* wrapped */
+/* NOTE: 'Set_sp' is an old wrap function. Use 'set_sp' instead. */
+externC Set_sp : int -> void
+externC setFFrameArgument : (FunctionFrame, JSValue) -> void
+externC setFFrameLocalsIndex : (FunctionFrame, int, JSValue) -> void
+externC (needContext) getStack : int -> JSValue[]
+/* native */
+externC (needContext) set_fp : int -> void
+externC (needContext) set_cf : FunctionTable -> void
+externC (needContext) set_lp : FunctionFrame -> void
+externC (needContext) set_sp : int -> void
+externC (needContext) set_pc : int -> void
+externC (needContext) get_cf : void -> FunctionTable
+externC (needContext) get_lp : void -> FunctionFrame
+externC (needContext) get_sp : void -> int
+externC (needContext) get_ac : void -> int
+externC (needContext, triggerGC) new_frame : (FunctionTable, FunctionFrame, int) -> FunctionFrame
+externC fframe_prev : FunctionFrame -> FunctionFrame
+/* Is the return value Array type? */
+externC fframe_arguments : FunctionFrame -> Array
+externC fframe_locals_idx : (FunctionFrame, Subscript) -> JSValue
+externC (needContext) restore_special_registers : (JSValue[], int) -> void
+
+externC set_dst : JSValue -> void
+
+/*
+ * call
+ */
+/* wrapped */
+externC (needContext, triggerGC) Tailcall_builtin : (JSValue, int, int) -> void
+/* native */
+externC (needContext, triggerGC) call_function : (JSValue, int, int) -> void
+externC (needContext, triggerGC) call_builtin : (JSValue, int, int, int) -> void
+externC (needContext, triggerGC) tailcall_function : (JSValue, int, int) -> void
+externC (needContext) invoke_function0 : (JSValue, Function, int) -> JSValue
+externC (needContext) invoke_builtin0 : (JSValue, Builtin, int) -> JSValue
+externC (needContext, triggerGC) invoke_function : (JSValue, Function, int, JSValue, int) -> JSValue
+externC (needContext, triggerGC) invoke_builtin : (JSValue, Builtin, int, JSValue, int) -> JSValue
+externC (needContext, triggerGC) send_function3 : (JSValue, Function, JSValue, JSValue, JSValue) -> JSValue
+externC (needContext, triggerGC) send_builtin3 : (JSValue, Builtin, JSValue, JSValue, JSValue) -> JSValue
+
+/*
+ * C lib
+ */
+
+/* wrapped */
+externC IsEmptyCstring : cstring -> int
+externC Strtol : (cstring, int) -> (int, cstring)
+externC Strtod : (cstring) -> (double, cstring)
+/* NOTE: This function will be removed */
+externC LogicalRightShift : (int, int) -> int
+/* native */
+externC floor : double -> double
+externC ceil : double -> double
+externC isnan : double -> int
+externC isinf : double -> int
+externC strcmp: (cstring, cstring) -> int
+
+/*
+ * instruction
+ */
+
+/* wrapped */
+externC Nop : void -> void
+externC Get_opcode : void -> int
+/* native */
+externC NOT_IMPLEMENTED : void -> void
+
+/*
+ * wrapper instruction
+ */
+
+/* wrapped */
+externC Pophandler : void -> void
+externC (triggerGC) Pushhandler : InstructionDisplacement -> void
+externC Poplocal : void -> void
+externC Ret : void -> void
+externC (triggerGC) Newframe : (int, int) -> void
+externC (needContext) Exitframe : void -> void
+externC (needContext, triggerGC) Makeclosure : Subscript -> Function
+externC (needContext, triggerGC) Get_global : String -> JSValue
+externC Nextpropnameidx : JSValue -> JSValue
+externC (needContext) Setlocal : (int, Subscript, JSValue) -> void
+externC (needContext, triggerGC) SetglobalInl : (String, JSValue) -> void
+externC (needContext, triggerGC) Setglobal : (String, JSValue) -> void
+externC (needContext) Setfl : int -> void
+externC (needContext) Setarg : (int, Subscript, JSValue) -> void
+externC (needContext) Localret : void -> InstructionDisplacement
+externC (needContext, triggerGC) Getlocal: (int, Subscript) -> JSValue
+externC (needContext, triggerGC) Getarguments: (int, Subscript) -> JSValue
+externC Instanceof : (JSValue, JSValue) -> JSValue
+externC iteratorGetNextPropName : JSValue -> JSValue
+/* native */
+
+/*
+ * builtin
+ */
+
+/* wrapped */
+externC printfDebugArray : (cstring, int, int, int) -> void
+/* native */
+externC (needContext, triggerGC) asort : (Array, int, int, JSValue) -> void
+externC (needContext) eq_helper : (JSValue, JSValue) -> int
+externC (needContext, triggerGC) reduce_helper : (int, int, JSValue, JSValue, JSValue, int) -> JSValue
+externC (needContext) split_match : (JSValue, int, JSValue) -> (int, Array)
+
+/*
+ * misc
+ */
+externC get_jsarray_length : Array -> Number
+externC get_jsarray_size : Array -> uintjsv_t
+externC get_jsarray_body : Array -> JSValue[]
+externC get_jsarray_element : (Array, int) -> JSValue
+externC set_jsarray_length : (Array, Number) -> void
+externC delete_array_element : (Array, int) -> void
+externC set_jsboolean_object_value : (BooleanObject, Special) -> void
+externC get_jsboolean_object_value : (BooleanObject) -> Special
+externC set_jsnumber_object_value : (NumberObject, Number) -> void
+externC get_jsnumber_object_value : NumberObject -> Number
+externC get_jsstring_object_value : StringObject -> String
+externC (needContext, triggerGC) get_array_prop: (Array, JSValue) -> JSValue
+externC (needContext, triggerGC) get_array_element : (Array, int) -> JSValue
+externC (needContext, triggerGC) set_array_element : (Array, int, JSValue) -> void
+externC get_prop : (JSValue, JSValue) -> JSValue
+externC get_prop_prototype_chain : (JSValue, JSValue) -> JSValue
+externC (needContext, triggerGC) getObjectProp: (JSObject, JSValue) -> JSValue
+externC (needContext, triggerGC) set_prop_direct : (Array, String, Number, int) -> void
+/* What is this ? */
+// externC (needContext) set_array_prop : (JSValue, Fixnum, JSValue) -> void
+externC (needContext, triggerGC) set_array_prop: (Array, JSValue, JSValue) -> void
+externC (needContext, triggerGC) set_object_prop: (JSObject, JSValue, JSValue) -> void
+externC (needContext, triggerGC) SetObjectPropInl: (JSObject, JSValue, JSValue) -> void
+externC has_array_element : (JSValue, int) -> int
+
+externC (needContext) print_value_simple : JSValue -> void
+externC printf : cstring -> void
+externC printf_int : (cstring, int) -> void
+externC PutLnChar : void -> void
+externC LOG_EXIT : cstring -> void
+externC (needContext) LOG_EXIT2 : cstring -> void
+externC LOG_EXIT_2_ARGS : (cstring, Top) -> void
+externC LOG_ERR : cstring -> void
+externC type_error : cstring -> void
+externC type_error_exception : cstring -> void
+externC not_implemented : cstring -> void
+externC Ret_minus_one : void -> void
+externC Ret_one : void -> void
+externC DEBUG_NAME : cstring -> cstring
+externC (needContext, triggerGC) try_gc : void -> void
+externC assert : int -> void
+
+externC max : (int, int) -> int
+externC min : (int, int) -> int
+externC abs : int -> int
+externC rand : void -> int
+
+externC Not : JSValue -> JSValue
+externC GetLiteral : (FunctionTable, ConstantDisplacement) -> JSValue
+externC Seta : JSValue -> void
+externC Setarray : (JSValue, Subscript, JSValue) -> void
+externC (needContext, triggerGC) exhandler_throw : void -> void
+externC (needContext, triggerGC) get_a : void -> JSValue
+externC (needContext, triggerGC) get_err : void -> JSValue
+externC (needContext, triggerGC) Get_prop_object_inl : (JSObject, JSValue) -> JSValue
+externC get_jmp_buf_addr : void -> jmp_buf
+externC (needContext, triggerGC) GetGlobalInl : (JSValue, String) -> JSValue
+externC callDDFunc : (DDFunc, double) -> double
+externC callDDDFunc : (DDFunc, double, double) -> double
+externC (needContext) math_func : (DDFunc, JSValue) -> JSValue
+externC (needContext) math_func2 : (DDDFunc, JSValue, JSValue) -> JSValue
+externC toFixed_helper : (JSValue, int) -> String
+externC (needContext, triggerGC) toExponential_helper : (JSValue, JSValue, int) -> String
+externC (needContext, triggerGC) toPrecision_helper : (JSValue, JSValue) -> String
+
+#include "./funcs-vmdl.vmdh"

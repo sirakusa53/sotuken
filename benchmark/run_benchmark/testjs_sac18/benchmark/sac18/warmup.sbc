@@ -1,0 +1,42 @@
+funcLength 1
+callentry 0
+sendentry 0
+numberOfLocals 0
+numberOfInstruction 37
+getglobalobj 1
+setfl 24
+fixnum 2 0
+string 3 "sum"
+setglobal 3 2
+fixnum 4 0
+string 5 "i"
+setglobal 5 4
+jump 14
+string 7 "sum"
+getglobal 6 7
+string 9 "i"
+getglobal 8 9
+add 2 6 8
+string 10 "sum"
+setglobal 10 2
+string 14 "i"
+getglobal 11 14
+fixnum 12 1
+add 13 11 12
+string 15 "i"
+setglobal 15 13
+string 18 "i"
+getglobal 17 18
+number 19 1.0E7
+lessthan 16 17 19
+jumptrue 16 -17
+string 21 "sum"
+getglobal 20 21
+move 24 20
+string 23 "print"
+getglobal 22 23
+call 22 1
+setfl 24
+geta 2
+seta 2
+ret

@@ -1,0 +1,13 @@
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, needContext, tailCall)
+ret : void -> void
+
+ret () {
+    // Ret();
+    if (fp == border) Ret_one();
+    JSValue[] stack = getStack(0);
+    restore_special_registers(stack, fp - 4);
+    set_sp(fp - 5);
+    update_context();
+}

@@ -1,0 +1,7 @@
+======== taknop ========
+0: total CPU time = 1266.555 msec, total GC time = 145.398 msec (#GC = 304) n_hc = 20, n_enter_hc = 9845624, n_exit_hc = 4922844
+1: total CPU time = 1297.418 msec, total GC time = 152.512 msec (#GC = 304) n_hc = 20, n_enter_hc = 9845624, n_exit_hc = 4922844
+
+======== taknop Optimisation ========
+0: total CPU time = 400.581 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 342, n_exit_hc = 203
+1: total CPU time = 408.767 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 342, n_exit_hc = 203

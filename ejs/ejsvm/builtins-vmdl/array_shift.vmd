@@ -1,0 +1,41 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) array_shift: JSValue -> JSValue 
+array_shift(arr){
+  JSValue first;
+
+  match(arr){
+    case(Array arr){
+      int len = to_cint(get_jsarray_length(arr));
+      if (len <= 0) {
+        return JS_UNDEFINED;
+      }
+    
+      first <- get_array_element(arr, 0);
+      assert(first != JS_EMPTY);
+      /* NOTE: 'first' is the target of GC_PUSH/GC_POP here. */
+      do(int from = 1 to len-1 step 1) {
+        int to_ = from - 1;
+        if (has_array_element(arr, from)) {
+          JSValue fromVal = get_array_element(arr, from);
+          set_array_prop(arr, cint_to_number(to_), fromVal);
+        } else {
+          delete_array_element(arr, to_);
+        }
+      }
+      delete_array_element(arr, len - 1);
+      /* should reallocate (shorten) body array here? */
+      len <- len -1;
+      /* This is a bug. */
+      // set_jsarray_length(arr, len);
+      set_jsarray_length(arr, cint_to_number(len));
+      set_prop_direct(arr, gconsts.g_string_length, cint_to_number(len), ATTR_NONE);
+    }
+    case(true){
+        first <- JS_EMPTY;
+        LOG_EXIT("type error: array_shift");
+    }
+  }
+  return first;
+}

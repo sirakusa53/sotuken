@@ -1,0 +1,352 @@
+fingerprint 82
+funcLength 5
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 135
+numberOfConstants 42
+setfl 16
+setfl 16
+makeclosure 1 0 # 8 0
+bigprim 2 #0:string="rand"
+setglobal 2 1
+makeclosure 1 1 # 36 0
+bigprim 2 #1:string="makeCumulative"
+setglobal 2 1
+makeclosure 1 2 # 44 0
+bigprim 2 #2:string="fastaRepeat"
+setglobal 2 1
+makeclosure 1 3 # 60 0
+bigprim 3 #3:string="fastaRandom"
+setglobal 3 1
+fixnum 1 42
+bigprim 4 #4:string="last"
+setglobal 4 1
+fixnum 1 3877
+bigprim 4 #5:string="A"
+setglobal 4 1
+fixnum 1 29573
+bigprim 4 #6:string="C"
+setglobal 4 1
+fixnum 1 139968
+bigprim 4 #7:string="M"
+setglobal 4 1
+bigprim 1 #8:string="GGCCGGGCGCGGTGGCTCACGCCTGTAATCCCAGCACTTTGGGAGGCCGAGGCGGGCGGATCACCTGAGGTCAGGAGTTCGAGACCAGCCTGGCCAACATGGTGAAACCCCGTCTCTACTAAAAATACAAAAATTAGCCGGGCGTGGTGGCGCGCGCCTGTAATCCCAGCTACTCGGGAGGCTGAGGCAGGAGAATCGCTTGAACCCGGGAGGCGGAGGTTGCAGTGAGCCGAGATCGCGCCACTGCACTCCAGCCTGGGCGACAGAGCGAGACTCCGTCTCAAAAA"
+bigprim 4 #9:string="ALU"
+setglobal 4 1
+bigprim 5 #10:string="Object"
+getglobal 5 5
+construct 1 5 0
+setfl 16
+getnewa 1 # 22 10
+setpropregstrflo 1 #11:string="a" #12:number=0.27
+setpropregstrflo 1 #13:string="c" #14:number=0.12
+setpropregstrflo 1 #15:string="g" #14:number=0.12
+setpropregstrflo 1 #16:string="t" #12:number=0.27
+setpropregstrflo 1 #17:string="B" #18:number=0.02
+setpropregstrflo 1 #19:string="D" #18:number=0.02
+setpropregstrflo 1 #20:string="H" #18:number=0.02
+setpropregstrflo 1 #21:string="K" #18:number=0.02
+setpropregstrflo 1 #7:string="M" #18:number=0.02
+setpropregstrflo 1 #22:string="N" #18:number=0.02
+setpropregstrflo 1 #23:string="R" #18:number=0.02
+setpropregstrflo 1 #24:string="S" #18:number=0.02
+setpropregstrflo 1 #25:string="V" #18:number=0.02
+setpropregstrflo 1 #26:string="W" #18:number=0.02
+setpropregstrflo 1 #27:string="Y" #18:number=0.02
+bigprim 5 #28:string="IUB"
+setglobal 5 1
+bigprim 6 #10:string="Object"
+getglobal 6 6
+construct 1 6 0
+setfl 16
+getnewa 1 # 29 14
+setpropregstrflo 1 #11:string="a" #29:number=0.302954942668
+setpropregstrflo 1 #13:string="c" #30:number=0.1979883004921
+setpropregstrflo 1 #15:string="g" #31:number=0.1975473066391
+setpropregstrflo 1 #16:string="t" #32:number=0.3015094502008
+bigprim 6 #33:string="HomoSap"
+setglobal 6 1
+fixnum 1 0
+bigprim 7 #34:string="ret"
+setglobal 7 1
+fixnum 1 7
+bigprim 8 #35:string="count"
+setglobal 8 1
+getglobal 1 2
+getglobal 2 8
+mulfixreg 2 2 2
+fixnum 9 100000
+mul 2 2 9
+getglobal 4 4
+move 15 2
+move 16 4
+call 1 2
+setfl 16
+getglobal 1 3
+getglobal 2 8
+mulfixreg 2 3 2
+mulregfix 2 2 1000
+getglobal 4 5
+move 15 2
+move 16 4
+call 1 2
+setfl 16
+getglobal 1 3
+getglobal 2 8
+mulfixreg 2 5 2
+mulregfix 2 2 1000
+getglobal 3 6
+move 15 2
+move 16 3
+call 1 2
+setfl 16
+fixnum 1 1456000
+bigprim 2 #36:string="expected"
+setglobal 2 1
+getglobal 1 7
+getglobal 3 2
+equal 4 1 3
+isundef 5 4 # 88 4
+jumpfalse 5 17 # 88 4
+isobject 4 1 # 88 4
+jumpfalse 4 6 # 88 4
+getpropregstr 4 1 #37:string="valueOf"
+move 16 1
+send 4 0
+geta 1 # 88 4
+jump 5 # 88 4
+getpropregstr 4 3 #37:string="valueOf"
+move 16 3
+send 4 0
+geta 3 # 88 4
+equal 4 1 3
+isundef 1 4 # 88 4
+jumpfalse 1 3 # 88 4
+bigprim 1 #38:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 88 4
+not 1 4
+jumpfalse 1 12 # 88 4
+bigprim 1 #39:string="print"
+getglobal 1 1
+getglobal 2 2
+addstrreg 2 #40:string="ERROR:\sbad\sresult:\sexpected\s" 2
+addregstr 2 2 #41:string="\sbut\sgot\s"
+getglobal 3 7
+add 2 2 3
+move 16 2
+call 1 1
+setfl 16
+geta 1 # 90 4
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 20
+numberOfConstants 4
+setfl 10
+setfl 10
+bigprim 1 #0:string="last"
+getglobal 3 1
+bigprim 4 #1:string="A"
+getglobal 4 4
+mul 3 3 4
+bigprim 4 #2:string="C"
+getglobal 4 4
+add 3 3 4
+bigprim 4 #3:string="M"
+getglobal 5 4
+mod 3 3 5
+setglobal 1 3
+getglobal 1 1
+mul 1 2 1
+getglobal 2 4
+div 3 1 2
+seta 3
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 21
+numberOfConstants 0
+setfl 10
+setfl 10
+specconst 1 null
+move 3 1
+makeiterator 4 2 # 38 2
+nextpropnameidx 1 4 # 38 2
+move 5 1 # 38 11
+isundef 1 1 # 38 2
+jumptrue 1 10 # 38 2
+move 1 3 # 39 8
+jumpfalse 1 5 # 39 8
+getprop 1 2 5
+getprop 3 2 3
+add 1 1 3
+setprop 2 5 1
+move 1 5 # 40 11
+move 3 1 # 40 4
+jump -12 # 38 23
+specconst 1 undefined
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 68
+numberOfConstants 3
+setfl 16
+setfl 16
+fixnum 1 0
+move 4 1
+fixnum 1 60
+move 5 1
+jump 55 # 46 2
+move 1 2 # 47 8
+lessthan 1 1 5
+jumpfalse 1 3 # 47 8
+move 1 2 # 47 27
+move 5 1 # 47 18
+move 1 4 # 48 8
+add 1 1 5
+getpropregstr 6 3 #0:string="length"
+lessthan 1 1 6
+jumpfalse 1 19 # 48 8
+bigprim 6 #1:string="ret"
+getglobal 1 6
+getpropregstr 7 3 #2:string="substring"
+move 8 4 # 49 27
+move 9 4 # 49 33
+add 9 9 5
+move 14 3
+move 15 8
+move 16 9
+send 7 2
+setfl 16
+geta 7 # 49 13
+getpropregstr 7 7 #0:string="length"
+add 1 1 7
+setglobal 6 1
+add 1 4 5
+move 4 1 # 50 6
+jump 25 # 51 11
+getpropregstr 1 3 #2:string="substring"
+move 15 3
+move 16 4
+send 1 1
+setfl 16
+geta 1 # 52 14
+move 6 1 # 52 10
+move 1 5 # 53 13
+getpropregstr 4 6 #0:string="length"
+sub 1 1 4
+move 4 1 # 53 6
+bigprim 7 #1:string="ret"
+getglobal 1 7
+getpropregstr 8 3 #2:string="substring"
+move 14 3
+move 15 9
+move 16 4
+send 8 2
+setfl 16
+geta 8 # 54 18
+add 6 6 8
+getpropregstr 6 6 #0:string="length"
+add 1 1 6
+setglobal 7 1
+sub 1 2 5
+move 2 1 # 56 4
+move 1 2 # 46 9
+fixnum 9 0
+lessthanfixreg 1 0 1
+jumptrue 1 -57 # 46 9
+specconst 1 undefined
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 81
+numberOfConstants 7
+setfl 15
+setfl 15
+specconst 1 undefined
+bigprim 4 #0:string="Array"
+getglobal 4 4
+fixnum 5 60
+move 15 5
+construct 1 4 1
+setfl 15
+getnewa 1 # 61 17
+move 4 1 # 61 6
+bigprim 1 #1:string="makeCumulative"
+getglobal 1 1
+move 15 3
+call 1 1
+setfl 15
+jump 58 # 63 2
+move 1 2 # 64 8
+getpropregstr 5 4 #2:string="length"
+lessthan 1 1 5
+jumpfalse 1 8 # 64 8
+bigprim 4 #0:string="Array"
+getglobal 4 4
+move 15 2
+construct 1 4 1
+setfl 15
+getnewa 1 # 64 34
+move 4 1 # 64 23
+jump 25 # 65 4
+bigprim 1 #3:string="rand"
+getglobal 1 1
+fixnum 5 1
+move 15 5
+call 1 1
+setfl 15
+geta 1 # 66 14
+move 5 1 # 66 10
+makeiterator 6 3 # 67 6
+nextpropnameidx 1 6 # 67 6
+move 7 1 # 67 15
+isundef 1 1 # 67 6
+jumptrue 1 10 # 67 6
+move 1 5 # 68 12
+getprop 8 3 7
+lessthan 1 1 8
+jumpfalse 1 5 # 68 12
+move 1 7 # 69 20
+move 5 4 # 69 10
+setprop 5 9 1
+jump 2
+jump -12 # 67 27
+addregfix 1 9 1
+move 9 1 # 65 33
+move 1 9 # 65 18
+move 5 4 # 65 20
+getpropregstr 5 5 #2:string="length"
+lessthan 1 1 5
+jumptrue 1 -28 # 65 18
+bigprim 5 #4:string="ret"
+getglobal 1 5
+move 9 4 # 74 11
+getpropregstr 6 9 #5:string="join"
+bigprim 7 #6:string=""
+move 14 9
+move 15 7
+send 6 1
+setfl 15
+geta 9 # 74 11
+getpropregstr 9 9 #2:string="length"
+add 1 1 9
+setglobal 5 1
+getpropregstr 1 4 #2:string="length"
+sub 1 2 1
+move 2 1 # 75 4
+move 1 2 # 63 9
+fixnum 9 0
+lessthanfixreg 1 0 1
+jumptrue 1 -60 # 63 9
+specconst 1 undefined
+seta 1
+ret

@@ -1,0 +1,8 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) number_constr_nonew: (JSValue, JSValue) -> JSValue 
+number_constr_nonew(placeHolder, element){
+    JSValue ret = (na > 0) ? to_number(element) : FIXNUM_ZERO;
+    return ret;
+}

@@ -1,0 +1,2436 @@
+fingerprint 82
+funcLength 24
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 510
+numberOfConstants 32
+setfl 15
+setfl 15
+makeclosure 1 0 # 13 0
+bigprim 2 #0:string="Cipher"
+setglobal 2 1
+makeclosure 1 1 # 39 0
+bigprim 2 #1:string="SubBytes"
+setglobal 2 1
+makeclosure 1 2 # 47 0
+bigprim 2 #2:string="ShiftRows"
+setglobal 2 1
+makeclosure 1 3 # 57 0
+bigprim 2 #3:string="MixColumns"
+setglobal 2 1
+makeclosure 1 4 # 75 0
+bigprim 2 #4:string="AddRoundKey"
+setglobal 2 1
+makeclosure 1 5 # 83 0
+bigprim 2 #5:string="KeyExpansion"
+setglobal 2 1
+makeclosure 1 6 # 111 0
+bigprim 2 #6:string="SubWord"
+setglobal 2 1
+makeclosure 1 7 # 116 0
+bigprim 2 #7:string="RotWord"
+setglobal 2 1
+makeclosure 1 8 # 164 0
+bigprim 2 #8:string="AESEncryptCtr"
+setglobal 2 1
+makeclosure 1 9 # 230 0
+bigprim 3 #9:string="AESDecryptCtr"
+setglobal 3 1
+makeclosure 1 10 # 278 0
+bigprim 4 #10:string="escCtrlChars"
+setglobal 4 1
+makeclosure 1 12 # 282 0
+bigprim 4 #11:string="unescCtrlChars"
+setglobal 4 1
+makeclosure 1 14 # 292 0
+bigprim 4 #12:string="encodeBase64"
+setglobal 4 1
+makeclosure 1 15 # 320 0
+bigprim 4 #13:string="decodeBase64"
+setglobal 4 1
+makeclosure 1 16 # 343 0
+bigprim 4 #14:string="encodeUTF8"
+setglobal 4 1
+makeclosure 1 19 # 359 0
+bigprim 4 #15:string="decodeUTF8"
+setglobal 4 1
+makeclosure 1 22 # 376 0
+bigprim 4 #16:string="byteArrayToHexStr"
+setglobal 4 1
+bigprim 4 #17:string="Array"
+getglobal 4 4
+fixnum 5 256
+move 15 5
+construct 1 4 1
+setfl 15
+getnewa 1 # 124 12
+setpropregfixfix 1 0 99
+setpropregfixfix 1 1 124
+setpropregfixfix 1 2 119
+setpropregfixfix 1 3 123
+setpropregfixfix 1 4 242
+setpropregfixfix 1 5 107
+setpropregfixfix 1 6 111
+setpropregfixfix 1 7 197
+setpropregfixfix 1 8 48
+setpropregfixfix 1 9 1
+setpropregfixfix 1 10 103
+setpropregfixfix 1 11 43
+setpropregfixfix 1 12 254
+setpropregfixfix 1 13 215
+setpropregfixfix 1 14 171
+setpropregfixfix 1 15 118
+setpropregfixfix 1 16 202
+setpropregfixfix 1 17 130
+setpropregfixfix 1 18 201
+setpropregfixfix 1 19 125
+setpropregfixfix 1 20 250
+setpropregfixfix 1 21 89
+setpropregfixfix 1 22 71
+setpropregfixfix 1 23 240
+setpropregfixfix 1 24 173
+setpropregfixfix 1 25 212
+setpropregfixfix 1 26 162
+setpropregfixfix 1 27 175
+setpropregfixfix 1 28 156
+setpropregfixfix 1 29 164
+setpropregfixfix 1 30 114
+setpropregfixfix 1 31 192
+setpropregfixfix 1 32 183
+setpropregfixfix 1 33 253
+setpropregfixfix 1 34 147
+setpropregfixfix 1 35 38
+setpropregfixfix 1 36 54
+setpropregfixfix 1 37 63
+setpropregfixfix 1 38 247
+setpropregfixfix 1 39 204
+setpropregfixfix 1 40 52
+setpropregfixfix 1 41 165
+setpropregfixfix 1 42 229
+setpropregfixfix 1 43 241
+setpropregfixfix 1 44 113
+setpropregfixfix 1 45 216
+setpropregfixfix 1 46 49
+setpropregfixfix 1 47 21
+setpropregfixfix 1 48 4
+setpropregfixfix 1 49 199
+setpropregfixfix 1 50 35
+setpropregfixfix 1 51 195
+setpropregfixfix 1 52 24
+setpropregfixfix 1 53 150
+setpropregfixfix 1 54 5
+setpropregfixfix 1 55 154
+setpropregfixfix 1 56 7
+setpropregfixfix 1 57 18
+setpropregfixfix 1 58 128
+setpropregfixfix 1 59 226
+setpropregfixfix 1 60 235
+setpropregfixfix 1 61 39
+setpropregfixfix 1 62 178
+setpropregfixfix 1 63 117
+setpropregfixfix 1 64 9
+setpropregfixfix 1 65 131
+setpropregfixfix 1 66 44
+setpropregfixfix 1 67 26
+setpropregfixfix 1 68 27
+setpropregfixfix 1 69 110
+setpropregfixfix 1 70 90
+setpropregfixfix 1 71 160
+setpropregfixfix 1 72 82
+setpropregfixfix 1 73 59
+setpropregfixfix 1 74 214
+setpropregfixfix 1 75 179
+setpropregfixfix 1 76 41
+setpropregfixfix 1 77 227
+setpropregfixfix 1 78 47
+setpropregfixfix 1 79 132
+setpropregfixfix 1 80 83
+setpropregfixfix 1 81 209
+setpropregfixfix 1 82 0
+setpropregfixfix 1 83 237
+setpropregfixfix 1 84 32
+setpropregfixfix 1 85 252
+setpropregfixfix 1 86 177
+setpropregfixfix 1 87 91
+setpropregfixfix 1 88 106
+setpropregfixfix 1 89 203
+setpropregfixfix 1 90 190
+setpropregfixfix 1 91 57
+setpropregfixfix 1 92 74
+setpropregfixfix 1 93 76
+setpropregfixfix 1 94 88
+setpropregfixfix 1 95 207
+setpropregfixfix 1 96 208
+setpropregfixfix 1 97 239
+setpropregfixfix 1 98 170
+setpropregfixfix 1 99 251
+setpropregfixfix 1 100 67
+setpropregfixfix 1 101 77
+setpropregfixfix 1 102 51
+setpropregfixfix 1 103 133
+setpropregfixfix 1 104 69
+setpropregfixfix 1 105 249
+setpropregfixfix 1 106 2
+setpropregfixfix 1 107 127
+setpropregfixfix 1 108 80
+setpropregfixfix 1 109 60
+setpropregfixfix 1 110 159
+setpropregfixfix 1 111 168
+setpropregfixfix 1 112 81
+setpropregfixfix 1 113 163
+setpropregfixfix 1 114 64
+setpropregfixfix 1 115 143
+setpropregfixfix 1 116 146
+setpropregfixfix 1 117 157
+setpropregfixfix 1 118 56
+setpropregfixfix 1 119 245
+setpropregfixfix 1 120 188
+setpropregfixfix 1 121 182
+setpropregfixfix 1 122 218
+setpropregfixfix 1 123 33
+setpropregfixfix 1 124 16
+setpropregfixfix 1 125 255
+setpropregfixfix 1 126 243
+setpropregfixfix 1 127 210
+setpropregfixfix 1 128 205
+setpropregfixfix 1 129 12
+setpropregfixfix 1 130 19
+setpropregfixfix 1 131 236
+setpropregfixfix 1 132 95
+setpropregfixfix 1 133 151
+setpropregfixfix 1 134 68
+setpropregfixfix 1 135 23
+setpropregfixfix 1 136 196
+setpropregfixfix 1 137 167
+setpropregfixfix 1 138 126
+setpropregfixfix 1 139 61
+setpropregfixfix 1 140 100
+setpropregfixfix 1 141 93
+setpropregfixfix 1 142 25
+setpropregfixfix 1 143 115
+setpropregfixfix 1 144 96
+setpropregfixfix 1 145 129
+setpropregfixfix 1 146 79
+setpropregfixfix 1 147 220
+setpropregfixfix 1 148 34
+setpropregfixfix 1 149 42
+setpropregfixfix 1 150 144
+setpropregfixfix 1 151 136
+setpropregfixfix 1 152 70
+setpropregfixfix 1 153 238
+setpropregfixfix 1 154 184
+setpropregfixfix 1 155 20
+setpropregfixfix 1 156 222
+setpropregfixfix 1 157 94
+setpropregfixfix 1 158 11
+setpropregfixfix 1 159 219
+setpropregfixfix 1 160 224
+setpropregfixfix 1 161 50
+setpropregfixfix 1 162 58
+setpropregfixfix 1 163 10
+setpropregfixfix 1 164 73
+setpropregfixfix 1 165 6
+setpropregfixfix 1 166 36
+setpropregfixfix 1 167 92
+setpropregfixfix 1 168 194
+setpropregfixfix 1 169 211
+setpropregfixfix 1 170 172
+setpropregfixfix 1 171 98
+setpropregfixfix 1 172 145
+setpropregfixfix 1 173 149
+setpropregfixfix 1 174 228
+setpropregfixfix 1 175 121
+setpropregfixfix 1 176 231
+setpropregfixfix 1 177 200
+setpropregfixfix 1 178 55
+setpropregfixfix 1 179 109
+setpropregfixfix 1 180 141
+setpropregfixfix 1 181 213
+setpropregfixfix 1 182 78
+setpropregfixfix 1 183 169
+setpropregfixfix 1 184 108
+setpropregfixfix 1 185 86
+setpropregfixfix 1 186 244
+setpropregfixfix 1 187 234
+setpropregfixfix 1 188 101
+setpropregfixfix 1 189 122
+setpropregfixfix 1 190 174
+setpropregfixfix 1 191 8
+setpropregfixfix 1 192 186
+setpropregfixfix 1 193 120
+setpropregfixfix 1 194 37
+setpropregfixfix 1 195 46
+setpropregfixfix 1 196 28
+setpropregfixfix 1 197 166
+setpropregfixfix 1 198 180
+setpropregfixfix 1 199 198
+setpropregfixfix 1 200 232
+setpropregfixfix 1 201 221
+setpropregfixfix 1 202 116
+setpropregfixfix 1 203 31
+setpropregfixfix 1 204 75
+setpropregfixfix 1 205 189
+setpropregfixfix 1 206 139
+setpropregfixfix 1 207 138
+setpropregfixfix 1 208 112
+setpropregfixfix 1 209 62
+setpropregfixfix 1 210 181
+setpropregfixfix 1 211 102
+setpropregfixfix 1 212 72
+setpropregfixfix 1 213 3
+setpropregfixfix 1 214 246
+setpropregfixfix 1 215 14
+setpropregfixfix 1 216 97
+setpropregfixfix 1 217 53
+setpropregfixfix 1 218 87
+setpropregfixfix 1 219 185
+setpropregfixfix 1 220 134
+setpropregfixfix 1 221 193
+setpropregfixfix 1 222 29
+setpropregfixfix 1 223 158
+setpropregfixfix 1 224 225
+setpropregfixfix 1 225 248
+setpropregfixfix 1 226 152
+setpropregfixfix 1 227 17
+setpropregfixfix 1 228 105
+setpropregfixfix 1 229 217
+setpropregfixfix 1 230 142
+setpropregfixfix 1 231 148
+setpropregfixfix 1 232 155
+setpropregfixfix 1 233 30
+setpropregfixfix 1 234 135
+setpropregfixfix 1 235 233
+setpropregfixfix 1 236 206
+setpropregfixfix 1 237 85
+setpropregfixfix 1 238 40
+setpropregfixfix 1 239 223
+setpropregfixfix 1 240 140
+setpropregfixfix 1 241 161
+setpropregfixfix 1 242 137
+setpropregfixfix 1 243 13
+setpropregfixfix 1 244 191
+setpropregfixfix 1 245 230
+setpropregfixfix 1 246 66
+setpropregfixfix 1 247 104
+setpropregfixfix 1 248 65
+setpropregfixfix 1 249 153
+setpropregfixfix 1 250 45
+setpropregfixfix 1 251 15
+setpropregfixfix 1 252 176
+setpropregfixfix 1 253 84
+setpropregfixfix 1 254 187
+setpropregfixfix 1 255 22
+bigprim 4 #18:string="Sbox"
+setglobal 4 1
+bigprim 4 #17:string="Array"
+getglobal 6 4
+fixnum 7 11
+move 15 7
+construct 1 6 1
+setfl 15
+getnewa 1 # 142 11
+getglobal 6 4
+fixnum 7 4
+move 15 7
+construct 4 6 1
+setfl 15
+getnewa 4 # 142 13
+setpropregfixfix 4 0 0
+setpropregfixfix 4 1 0
+setpropregfixfix 4 2 0
+setpropregfixfix 4 3 0
+setpropregfixreg 1 0 4
+bigprim 6 #17:string="Array"
+getglobal 6 6
+move 15 7
+construct 4 6 1
+setfl 15
+getnewa 4 # 143 13
+setpropregfixfix 4 0 1
+setpropregfixfix 4 1 0
+setpropregfixfix 4 2 0
+setpropregfixfix 4 3 0
+setpropregfixreg 1 1 4
+bigprim 6 #17:string="Array"
+getglobal 6 6
+move 15 7
+construct 4 6 1
+setfl 15
+getnewa 4 # 144 13
+setpropregfixfix 4 0 2
+setpropregfixfix 4 1 0
+setpropregfixfix 4 2 0
+setpropregfixfix 4 3 0
+setpropregfixreg 1 2 4
+bigprim 6 #17:string="Array"
+getglobal 6 6
+move 15 7
+construct 4 6 1
+setfl 15
+getnewa 4 # 145 13
+setpropregfixfix 4 0 4
+setpropregfixfix 4 1 0
+setpropregfixfix 4 2 0
+setpropregfixfix 4 3 0
+setpropregfixreg 1 3 4
+bigprim 6 #17:string="Array"
+getglobal 6 6
+move 15 7
+construct 4 6 1
+setfl 15
+getnewa 4 # 146 13
+setpropregfixfix 4 0 8
+setpropregfixfix 4 1 0
+setpropregfixfix 4 2 0
+setpropregfixfix 4 3 0
+setpropregfixreg 1 4 4
+bigprim 6 #17:string="Array"
+getglobal 6 6
+move 15 7
+construct 4 6 1
+setfl 15
+getnewa 4 # 147 13
+setpropregfixfix 4 0 16
+setpropregfixfix 4 1 0
+setpropregfixfix 4 2 0
+setpropregfixfix 4 3 0
+setpropregfixreg 1 5 4
+bigprim 6 #17:string="Array"
+getglobal 6 6
+move 15 7
+construct 4 6 1
+setfl 15
+getnewa 4 # 148 13
+setpropregfixfix 4 0 32
+setpropregfixfix 4 1 0
+setpropregfixfix 4 2 0
+setpropregfixfix 4 3 0
+setpropregfixreg 1 6 4
+bigprim 6 #17:string="Array"
+getglobal 6 6
+move 15 7
+construct 4 6 1
+setfl 15
+getnewa 4 # 149 13
+setpropregfixfix 4 0 64
+setpropregfixfix 4 1 0
+setpropregfixfix 4 2 0
+setpropregfixfix 4 3 0
+setpropregfixreg 1 7 4
+bigprim 6 #17:string="Array"
+getglobal 6 6
+move 15 7
+construct 4 6 1
+setfl 15
+getnewa 4 # 150 13
+setpropregfixfix 4 0 128
+setpropregfixfix 4 1 0
+setpropregfixfix 4 2 0
+setpropregfixfix 4 3 0
+setpropregfixreg 1 8 4
+bigprim 6 #17:string="Array"
+getglobal 6 6
+move 15 7
+construct 4 6 1
+setfl 15
+getnewa 4 # 151 13
+setpropregfixfix 4 0 27
+setpropregfixfix 4 1 0
+setpropregfixfix 4 2 0
+setpropregfixfix 4 3 0
+setpropregfixreg 1 9 4
+bigprim 6 #17:string="Array"
+getglobal 6 6
+move 15 7
+construct 4 6 1
+setfl 15
+getnewa 4 # 152 13
+setpropregfixfix 4 0 54
+setpropregfixfix 4 1 0
+setpropregfixfix 4 2 0
+setpropregfixfix 4 3 0
+setpropregfixreg 1 10 4
+bigprim 4 #19:string="Rcon"
+setglobal 4 1
+bigprim 1 #20:string="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
+bigprim 4 #21:string="b64"
+setglobal 4 1
+bigprim 1 #22:string="ROMEO:\sBut,\ssoft!\swhat\slight\sthrough\syonder\swindow\sbreaks?\nIt\sis\sthe\seast,\sand\sJuliet\sis\sthe\ssun.\nArise,\sfair\ssun,\sand\skill\sthe\senvious\smoon,\nWho\sis\salready\ssick\sand\spale\swith\sgrief,\nThat\sthou\sher\smaid\sart\sfar\smore\sfair\sthan\sshe:\nBe\snot\sher\smaid,\ssince\sshe\sis\senvious;\nHer\svestal\slivery\sis\sbut\ssick\sand\sgreen\nAnd\snone\sbut\sfools\sdo\swear\sit;\scast\sit\soff.\nIt\sis\smy\slady,\sO,\sit\sis\smy\slove!\nO,\sthat\sshe\sknew\sshe\swere!\nShe\sspeaks\syet\sshe\ssays\snothing:\swhat\sof\sthat?\nHer\seye\sdiscourses;\sI\swill\sanswer\sit.\nI\sam\stoo\sbold,\s'tis\snot\sto\sme\sshe\sspeaks:\nTwo\sof\sthe\sfairest\sstars\sin\sall\sthe\sheaven,\nHaving\ssome\sbusiness,\sdo\sentreat\sher\seyes\nTo\stwinkle\sin\stheir\sspheres\still\sthey\sreturn.\nWhat\sif\sher\seyes\swere\sthere,\sthey\sin\sher\shead?\nThe\sbrightness\sof\sher\scheek\swould\sshame\sthose\sstars,\nAs\sdaylight\sdoth\sa\slamp;\sher\seyes\sin\sheaven\nWould\sthrough\sthe\sairy\sregion\sstream\sso\sbright\nThat\sbirds\swould\ssing\sand\sthink\sit\swere\snot\snight.\nSee,\show\sshe\sleans\sher\scheek\supon\sher\shand!\nO,\sthat\sI\swere\sa\sglove\supon\sthat\shand,\nThat\sI\smight\stouch\sthat\scheek!\nJULIET:\sAy\sme!\nROMEO:\sShe\sspeaks:\nO,\sspeak\sagain,\sbright\sangel!\sfor\sthou\sart\nAs\sglorious\sto\sthis\snight,\sbeing\so'er\smy\shead\nAs\sis\sa\swinged\smessenger\sof\sheaven\nUnto\sthe\swhite-upturned\swondering\seyes\nOf\smortals\sthat\sfall\sback\sto\sgaze\son\shim\nWhen\she\sbestrides\sthe\slazy-pacing\sclouds\nAnd\ssails\supon\sthe\sbosom\sof\sthe\sair."
+bigprim 4 #23:string="plainText"
+setglobal 4 1
+bigprim 1 #24:string="O\sRomeo,\sRomeo!\swherefore\sart\sthou\sRomeo?"
+bigprim 6 #25:string="password"
+setglobal 6 1
+getglobal 1 2
+getglobal 2 4
+getglobal 7 6
+move 13 2
+move 14 7
+move 15 5
+call 1 3
+setfl 15
+geta 1 # 421 17
+bigprim 2 #26:string="cipherText"
+setglobal 2 1
+getglobal 1 3
+getglobal 2 2
+getglobal 3 6
+move 13 2
+move 14 3
+move 15 5
+call 1 3
+setfl 15
+geta 1 # 422 20
+bigprim 2 #27:string="decryptedText"
+setglobal 2 1
+getglobal 1 2
+getglobal 3 4
+equal 5 1 3
+isundef 6 5 # 424 4
+jumpfalse 6 17 # 424 4
+isobject 5 1 # 424 4
+jumpfalse 5 6 # 424 4
+getpropregstr 5 1 #28:string="valueOf"
+move 15 1
+send 5 0
+geta 1 # 424 4
+jump 5 # 424 4
+getpropregstr 5 3 #28:string="valueOf"
+move 15 3
+send 5 0
+geta 3 # 424 4
+equal 5 1 3
+isundef 1 5 # 424 4
+jumpfalse 1 3 # 424 4
+bigprim 1 #29:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 424 4
+not 1 5
+jumpfalse 1 7 # 424 4
+getglobal 1 4
+addstrreg 1 #30:string="ERROR:\sbad\sresult:\sexpected\s" 1
+addregstr 1 1 #31:string="\sbut\sgot\s"
+getglobal 2 2
+add 1 1 2
+throw 1
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 173
+numberOfConstants 8
+setfl 19
+setfl 19
+fixnum 1 4
+move 4 1
+getpropregstr 1 3 #0:string="length"
+divregfix 1 1 4
+subregfix 1 1 1
+move 5 1 # 15 6
+bigprim 6 #1:string="Array"
+getglobal 7 6
+move 19 4
+construct 1 7 1
+setfl 19
+getnewa 1 # 17 14
+move 4 6
+getglobal 7 6
+fixnum 8 0
+move 19 8
+construct 6 7 1
+setfl 19
+getnewa 6 # 17 15
+setpropregfixreg 1 0 6
+getglobal 7 4
+move 19 8
+construct 6 7 1
+setfl 19
+getnewa 6 # 17 18
+setpropregfixreg 1 1 6
+getglobal 7 4
+move 19 8
+construct 6 7 1
+setfl 19
+getnewa 6 # 17 21
+setpropregfixreg 1 2 6
+getglobal 4 4
+move 19 8
+construct 6 4 1
+setfl 19
+getnewa 6 # 17 24
+setpropregfixreg 1 3 6
+move 4 1 # 17 6
+jump 17 # 18 2
+getprop 1 2 8
+move 6 8 # 18 35
+modregfix 6 6 4
+getprop 6 4 6
+bigprim 7 #2:string="Math"
+getglobal 7 7
+getpropregstr 9 7 #3:string="floor"
+divregfix 10 8 4
+move 18 7
+move 19 10
+send 9 1
+setfl 19
+geta 7 # 18 40
+setprop 6 7 1
+addregfix 1 8 1
+move 8 1 # 18 24
+move 1 8 # 18 16
+fixnum 7 4
+lessthanregfix 1 1 16
+jumptrue 1 -19 # 18 16
+bigprim 1 #4:string="AddRoundKey"
+getglobal 1 1
+fixnum 2 0
+move 16 4
+move 17 3
+move 18 2
+move 19 7
+call 1 4
+setfl 19
+geta 1 # 20 10
+move 4 1 # 20 2
+fixnum 1 1
+move 2 1
+jump 39 # 22 2
+bigprim 1 #5:string="SubBytes"
+getglobal 1 1
+fixnum 6 4
+move 18 4
+move 19 6
+call 1 2
+setfl 19
+geta 1 # 23 12
+move 4 1 # 23 4
+bigprim 1 #6:string="ShiftRows"
+getglobal 1 1
+move 18 4
+move 19 6
+call 1 2
+setfl 19
+geta 1 # 24 12
+move 4 1 # 24 4
+bigprim 1 #7:string="MixColumns"
+getglobal 1 1
+move 18 4
+move 19 6
+call 1 2
+setfl 19
+geta 1 # 25 12
+move 4 1 # 25 4
+bigprim 1 #4:string="AddRoundKey"
+getglobal 1 1
+move 7 2 # 26 34
+move 16 4
+move 17 3
+move 18 7
+move 19 6
+call 1 4
+setfl 19
+geta 1 # 26 12
+move 4 1 # 26 4
+addregfix 1 2 1
+move 2 1 # 22 30
+lessthan 1 2 5
+jumptrue 1 -39 # 22 20
+bigprim 1 #5:string="SubBytes"
+getglobal 1 1
+fixnum 2 4
+move 18 4
+move 19 2
+call 1 2
+setfl 19
+geta 1 # 29 10
+bigprim 4 #6:string="ShiftRows"
+getglobal 4 4
+move 18 1
+move 19 2
+call 4 2
+setfl 19
+geta 1 # 30 10
+bigprim 4 #4:string="AddRoundKey"
+getglobal 4 4
+move 16 1
+move 17 3
+move 18 5
+move 19 2
+call 4 4
+setfl 19
+geta 1 # 31 10
+move 4 1 # 31 2
+bigprim 2 #1:string="Array"
+getglobal 2 2
+fixnum 3 16
+move 19 3
+construct 1 2 1
+setfl 19
+getnewa 1 # 33 19
+move 2 1 # 33 6
+fixnum 1 0
+move 8 1
+jump 17 # 34 2
+move 1 8 # 34 47
+modregfix 1 1 4
+getprop 1 4 1
+bigprim 3 #2:string="Math"
+getglobal 3 3
+getpropregstr 5 3 #3:string="floor"
+divregfix 6 8 4
+move 18 3
+move 19 6
+send 5 1
+setfl 19
+geta 3 # 34 52
+getprop 1 1 3
+setprop 2 8 1
+addregfix 1 8 1
+move 8 1 # 34 24
+move 1 8 # 34 16
+lessthanregfix 1 1 16
+jumptrue 1 -18 # 34 16
+seta 2
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 21
+numberOfConstants 1
+setfl 11
+setfl 11
+fixnum 1 0
+jump 14 # 40 2
+fixnum 4 0
+jump 9 # 41 4
+bigprim 5 #0:string="Sbox"
+getglobal 5 5
+getprop 6 2 1
+getprop 6 6 4
+getprop 5 5 6
+getprop 6 2 1
+setprop 6 4 5
+addregfix 4 4 1
+lessthan 5 4 3
+jumptrue 5 -9 # 41 18
+addregfix 1 1 1
+lessthanregfix 4 1 4
+jumptrue 4 -14 # 40 16
+seta 2
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 43
+numberOfConstants 1
+setfl 13
+setfl 13
+specconst 1 undefined
+bigprim 4 #0:string="Array"
+getglobal 4 4
+fixnum 5 4
+move 13 5
+construct 1 4 1
+setfl 13
+getnewa 1 # 48 14
+move 4 1 # 48 6
+fixnum 1 1
+move 5 1
+jump 26 # 49 2
+fixnum 1 0
+move 6 1
+jump 9 # 50 4
+getprop 1 2 5
+move 7 6 # 50 41
+add 7 7 5
+mod 7 7 3
+getprop 1 1 7
+setprop 4 6 1
+addregfix 1 6 1
+move 6 1 # 50 23
+lessthanregfix 1 6 4
+jumptrue 1 -9 # 50 18
+fixnum 1 0
+move 6 1
+jump 6 # 51 4
+getprop 1 4 6
+getprop 7 2 5
+setprop 7 6 1
+addregfix 1 6 1
+move 6 1 # 51 23
+lessthanregfix 1 6 4
+jumptrue 1 -6 # 51 18
+addregfix 1 5 1
+move 5 1 # 49 21
+lessthanregfix 1 5 4
+jumptrue 1 -26 # 49 16
+seta 2
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 167
+numberOfConstants 1
+setfl 13
+setfl 13
+fixnum 1 0
+jump 158 # 58 2
+specconst 3 undefined
+bigprim 4 #0:string="Array"
+getglobal 5 4
+move 13 6
+construct 3 5 1
+setfl 13
+getnewa 3 # 59 16
+move 5 3 # 59 8
+getglobal 4 4
+move 13 6
+construct 3 4 1
+setfl 13
+getnewa 3 # 60 16
+move 4 3 # 60 8
+fixnum 3 0
+move 6 3
+jump 25 # 61 4
+getprop 3 2 6
+getprop 3 3 1
+move 7 5 # 62 6
+setprop 7 6 3
+getprop 3 2 6
+getprop 3 3 1
+bitandregfix 3 3 128
+jumpfalse 3 10 # 63 13
+getprop 3 2 6
+getprop 3 3 1
+leftshiftregfix 3 3 1
+bitorregfix 7 3 283
+bitandregfix 3 3 283
+subfixreg 3 0 3
+subregfix 3 3 1
+bitand 3 3 7
+jump 4 # 63 28
+getprop 3 2 6
+getprop 3 3 1
+leftshiftregfix 3 3 1
+move 7 4 # 63 6
+setprop 7 6 3
+addregfix 3 6 1
+move 6 3 # 61 23
+lessthanregfix 3 6 4
+jumptrue 3 -25 # 61 18
+move 3 4 # 66 14
+getpropregfix 3 3 0
+move 6 5 # 66 21
+fixnum 7 1
+getpropregfix 6 6 1
+bitor 7 3 6
+bitand 3 3 6
+subfixreg 3 0 3
+subregfix 3 3 1
+bitand 3 3 7
+getpropregfix 6 4 1
+bitor 7 3 6
+bitand 3 3 6
+subfixreg 3 0 3
+subregfix 3 3 1
+bitand 3 3 7
+move 6 5 # 66 35
+getpropregfix 6 6 2
+bitor 7 3 6
+bitand 3 3 6
+subfixreg 3 0 3
+subregfix 3 3 1
+bitand 3 3 7
+move 6 5 # 66 42
+getpropregfix 6 6 3
+bitor 7 3 6
+bitand 3 3 6
+subfixreg 3 0 3
+subregfix 3 3 1
+bitand 3 3 7
+getpropregfix 6 2 0
+setprop 6 1 3
+getpropregfix 3 5 0
+getpropregfix 6 4 1
+bitor 7 3 6
+bitand 3 3 6
+subfixreg 3 0 3
+subregfix 3 3 1
+bitand 3 3 7
+getpropregfix 6 5 2
+bitor 7 3 6
+bitand 3 3 6
+subfixreg 3 0 3
+subregfix 3 3 1
+bitand 3 3 7
+getpropregfix 6 4 2
+bitor 7 3 6
+bitand 3 3 6
+subfixreg 3 0 3
+subregfix 3 3 1
+bitand 3 3 7
+getpropregfix 6 5 3
+bitor 7 3 6
+bitand 3 3 6
+subfixreg 3 0 3
+subregfix 3 3 1
+bitand 3 3 7
+getpropregfix 6 2 1
+setprop 6 1 3
+getpropregfix 3 5 0
+getpropregfix 6 5 1
+bitor 7 3 6
+bitand 3 3 6
+subfixreg 3 0 3
+subregfix 3 3 1
+bitand 3 3 7
+getpropregfix 6 4 2
+bitor 7 3 6
+bitand 3 3 6
+subfixreg 3 0 3
+subregfix 3 3 1
+bitand 3 3 7
+getpropregfix 6 5 3
+bitor 7 3 6
+bitand 3 3 6
+subfixreg 3 0 3
+subregfix 3 3 1
+bitand 3 3 7
+getpropregfix 6 4 3
+bitor 7 3 6
+bitand 3 3 6
+subfixreg 3 0 3
+subregfix 3 3 1
+bitand 3 3 7
+getpropregfix 6 2 2
+setprop 6 1 3
+getpropregfix 3 5 0
+getpropregfix 6 4 0
+bitor 7 3 6
+bitand 3 3 6
+subfixreg 3 0 3
+subregfix 3 3 1
+bitand 3 3 7
+getpropregfix 6 5 1
+bitor 7 3 6
+bitand 3 3 6
+subfixreg 3 0 3
+subregfix 3 3 1
+bitand 3 3 7
+getpropregfix 5 5 2
+bitor 6 3 5
+bitand 3 3 5
+subfixreg 3 0 3
+subregfix 3 3 1
+bitand 3 3 6
+getpropregfix 4 4 3
+bitor 5 3 4
+bitand 3 3 4
+subfixreg 3 0 3
+subregfix 3 3 1
+bitand 3 3 5
+getpropregfix 4 2 3
+setprop 4 1 3
+addregfix 1 1 1
+move 3 1 # 58 16
+fixnum 6 4
+lessthanregfix 3 3 4
+jumptrue 3 -160 # 58 16
+seta 2
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 27
+numberOfConstants 0
+setfl 14
+setfl 14
+fixnum 1 0
+jump 20 # 76 2
+fixnum 6 0
+jump 15 # 77 4
+getprop 7 2 1
+getprop 7 7 6
+mulregfix 8 4 4
+add 8 8 6
+getprop 8 3 8
+getprop 8 8 1
+bitor 9 7 8
+bitand 7 7 8
+subfixreg 7 0 7
+subregfix 7 7 1
+bitand 7 7 9
+getprop 8 2 1
+setprop 8 6 7
+addregfix 6 6 1
+lessthan 7 6 5
+jumptrue 7 -15 # 77 18
+addregfix 1 1 1
+lessthanregfix 6 1 4
+jumptrue 6 -20 # 76 16
+seta 2
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 199
+numberOfConstants 7
+setfl 16
+setfl 16
+fixnum 1 4
+move 3 1
+getpropregstr 1 2 #0:string="length"
+divregfix 1 1 4
+move 4 1 # 85 6
+addregfix 1 1 6
+move 5 1 # 86 6
+bigprim 6 #1:string="Array"
+getglobal 7 6
+addregfix 8 1 1
+mulfixreg 8 4 8
+move 16 8
+construct 1 7 1
+setfl 16
+getnewa 1 # 88 14
+move 7 1 # 88 6
+getglobal 6 6
+move 16 3
+construct 1 6 1
+setfl 16
+getnewa 1 # 89 17
+move 3 1 # 89 6
+fixnum 1 0
+move 6 1
+jump 27 # 91 2
+specconst 1 undefined
+bigprim 8 #1:string="Array"
+getglobal 8 8
+fixnum 9 4
+move 16 9
+construct 1 8 1
+setfl 16
+getnewa 1 # 92 12
+mulfixreg 8 4 6
+getprop 8 2 8
+setpropregfixreg 1 0 8
+mulfixreg 8 4 6
+addregfix 8 8 1
+getprop 8 2 8
+setpropregfixreg 1 1 8
+mulfixreg 8 4 6
+addregfix 8 8 2
+getprop 8 2 8
+setpropregfixreg 1 2 8
+mulfixreg 8 4 6
+addregfix 8 8 3
+getprop 8 2 8
+setpropregfixreg 1 3 8
+setprop 7 6 1
+addregfix 1 6 1
+move 6 1 # 91 22
+lessthan 1 6 4
+jumptrue 1 -27 # 91 16
+move 6 4 # 96 11
+jump 135 # 96 2
+specconst 1 undefined
+bigprim 2 #1:string="Array"
+getglobal 2 2
+move 16 8
+construct 1 2 1
+setfl 16
+getnewa 1 # 97 15
+setprop 7 6 1
+fixnum 1 0
+move 2 1
+jump 9 # 98 4
+move 1 6 # 98 40
+subregfix 1 1 1
+getprop 1 7 1
+getprop 1 1 2
+move 8 3 # 98 28
+setprop 8 2 1
+addregfix 1 2 1
+move 2 1 # 98 23
+move 1 2 # 98 18
+fixnum 8 4
+lessthanregfix 1 1 4
+jumptrue 1 -11 # 98 18
+mod 2 6 4
+fixnum 9 0
+equalregfix 1 2 0
+isundef 10 1 # 99 8
+jumpfalse 10 19 # 99 8
+isobject 1 2 # 99 8
+jumpfalse 1 7 # 99 8
+getpropregstr 1 2 #2:string="valueOf"
+move 16 2
+send 1 0
+geta 1 # 99 8
+move 10 9
+jump 6 # 99 8
+getpropfixstr 1 0 #2:string="valueOf"
+move 16 9
+send 1 0
+geta 10 # 99 8
+move 1 2 # 99 8
+equal 1 1 10
+isundef 2 1 # 99 8
+jumpfalse 2 3 # 99 8
+bigprim 1 #3:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 99 8
+jumpfalse 1 35 # 99 8
+bigprim 1 #4:string="SubWord"
+getglobal 1 1
+bigprim 2 #5:string="RotWord"
+getglobal 2 2
+move 16 3
+call 2 1
+setfl 16
+geta 2 # 100 21
+move 16 2
+call 1 1
+setfl 16
+geta 1 # 100 13
+move 3 1 # 100 6
+move 2 9
+jump 17 # 101 6
+move 1 3 # 101 30
+getprop 1 1 2
+bigprim 8 #6:string="Rcon"
+getglobal 8 8
+div 9 6 4
+getprop 8 8 9
+getprop 8 8 2
+bitor 9 1 8
+bitand 1 1 8
+subfixreg 1 0 1
+subregfix 1 1 1
+bitand 1 1 9
+move 8 3 # 101 30
+setprop 8 2 1
+addregfix 1 2 1
+move 2 1 # 101 25
+lessthanregfix 1 2 4
+jumptrue 1 -17 # 101 20
+jump 33 # 102 11
+lessthanfixreg 1 6 4
+jumpfalse 1 23 # 102 15
+mod 2 6 4
+move 9 8
+equalregfix 1 2 4
+isundef 10 1 # 102 25
+jumpfalse 10 18 # 102 25
+isobject 1 2 # 102 25
+jumpfalse 1 6 # 102 25
+getpropregstr 1 2 #2:string="valueOf"
+move 16 2
+send 1 0
+geta 1 # 102 25
+jump 6 # 102 25
+getpropfixstr 1 4 #2:string="valueOf"
+move 16 9
+send 1 0
+geta 8 # 102 25
+move 1 2 # 102 25
+equal 1 1 8
+isundef 2 1 # 102 25
+jumpfalse 2 3 # 102 25
+bigprim 1 #3:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 102 25
+jumpfalse 1 8 # 102 15
+bigprim 1 #4:string="SubWord"
+getglobal 1 1
+move 16 3
+call 1 1
+setfl 16
+geta 1 # 103 13
+move 3 1 # 103 6
+fixnum 1 0
+move 2 1
+jump 15 # 105 4
+sub 1 6 4
+getprop 1 7 1
+getprop 1 1 2
+move 8 3 # 105 51
+getprop 8 8 2
+bitor 9 1 8
+bitand 1 1 8
+subfixreg 1 0 1
+subregfix 1 1 1
+bitand 1 1 9
+getprop 8 7 6
+setprop 8 2 1
+addregfix 1 2 1
+move 2 1 # 105 23
+lessthanregfix 1 2 4
+jumptrue 1 -15 # 105 18
+addregfix 1 6 1
+move 6 1 # 96 32
+move 1 6 # 96 17
+fixnum 8 4
+addregfix 2 5 1
+mulfixreg 2 4 2
+lessthan 1 1 2
+jumptrue 1 -139 # 96 17
+seta 7
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 14
+numberOfConstants 1
+setfl 9
+setfl 9
+fixnum 1 0
+jump 7 # 112 2
+bigprim 3 #0:string="Sbox"
+getglobal 3 3
+getprop 4 2 1
+getprop 3 3 4
+setprop 2 1 3
+addregfix 1 1 1
+lessthanregfix 3 1 4
+jumptrue 3 -7 # 112 16
+seta 2
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 15
+numberOfConstants 0
+setfl 8
+setfl 8
+fixnum 1 0
+getpropregfix 3 2 0
+setpropregfixreg 2 4 3
+jump 6 # 118 2
+move 3 1 # 118 35
+addregfix 3 3 1
+getprop 3 2 3
+setprop 2 1 3
+addregfix 1 1 1
+lessthanregfix 3 1 4
+jumptrue 3 -6 # 118 16
+seta 2
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 326
+numberOfConstants 20
+setfl 20
+setfl 20
+fixnum 1 128
+equalregfix 5 4 128
+isundef 6 5 # 165 8
+jumpfalse 6 18 # 165 8
+isobject 5 4 # 165 8
+jumpfalse 5 6 # 165 8
+getpropregstr 5 4 #0:string="valueOf"
+move 20 4
+send 5 0
+geta 5 # 165 8
+jump 6 # 165 8
+getpropfixstr 5 128 #0:string="valueOf"
+move 20 1
+send 5 0
+geta 1 # 165 8
+move 5 4 # 165 8
+equal 5 5 1
+isundef 1 5 # 165 8
+jumpfalse 1 3 # 165 8
+bigprim 1 #1:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 165 8
+jumptrue 5 22 # 165 8
+fixnum 1 192
+equalregfix 5 4 192
+isundef 6 5 # 165 22
+jumpfalse 6 18 # 165 22
+isobject 5 4 # 165 22
+jumpfalse 5 6 # 165 22
+getpropregstr 5 4 #0:string="valueOf"
+move 20 4
+send 5 0
+geta 5 # 165 22
+jump 6 # 165 22
+getpropfixstr 5 192 #0:string="valueOf"
+move 20 1
+send 5 0
+geta 1 # 165 22
+move 5 4 # 165 22
+equal 5 5 1
+isundef 1 5 # 165 22
+jumpfalse 1 3 # 165 22
+bigprim 1 #1:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 165 22
+jumptrue 5 22 # 165 8
+fixnum 1 256
+equalregfix 5 4 256
+isundef 6 5 # 165 36
+jumpfalse 6 18 # 165 36
+isobject 5 4 # 165 36
+jumpfalse 5 6 # 165 36
+getpropregstr 5 4 #0:string="valueOf"
+move 20 4
+send 5 0
+geta 5 # 165 36
+jump 6 # 165 36
+getpropfixstr 5 256 #0:string="valueOf"
+move 20 1
+send 5 0
+geta 1 # 165 36
+move 5 4 # 165 36
+equal 5 5 1
+isundef 1 5 # 165 36
+jumpfalse 1 3 # 165 36
+bigprim 1 #1:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 165 36
+not 1 5
+jumpfalse 1 4 # 165 6
+bigprim 1 #2:string=""
+seta 1
+ret
+divregfix 1 4 8
+move 4 1 # 169 6
+bigprim 5 #3:string="Array"
+getglobal 5 5
+move 20 1
+construct 1 5 1
+setfl 20
+getnewa 1 # 170 20
+move 5 1 # 170 6
+fixnum 1 0
+move 6 1
+jump 11 # 171 2
+getpropregstr 1 3 #4:string="charCodeAt"
+move 19 3
+move 20 6
+send 1 1
+setfl 20
+geta 1 # 171 44
+bitandregfix 1 1 255
+setprop 5 6 1
+addregfix 1 6 1
+move 6 1 # 171 26
+lessthan 1 6 4
+jumptrue 1 -11 # 171 16
+bigprim 1 #5:string="Cipher"
+getglobal 1 1
+bigprim 3 #6:string="KeyExpansion"
+getglobal 3 3
+move 20 5
+call 3 1
+setfl 20
+geta 3 # 172 28
+move 19 5
+move 20 3
+call 1 2
+setfl 20
+geta 1 # 172 12
+getpropregstr 3 1 #7:string="concat"
+getpropregstr 5 1 #8:string="slice"
+fixnum 6 0
+fixnum 7 16
+subregfix 4 4 16
+move 18 1
+move 19 6
+move 20 4
+send 5 2
+setfl 20
+geta 4 # 173 19
+move 19 1
+move 20 4
+send 3 1
+setfl 20
+geta 1 # 173 8
+move 3 1 # 173 2
+move 1 7
+bigprim 4 #3:string="Array"
+getglobal 4 4
+move 20 7
+construct 1 4 1
+setfl 20
+getnewa 1 # 178 25
+move 4 1 # 178 6
+bigprim 1 #9:string="Date"
+getglobal 1 1
+construct 8 1 0
+setfl 20
+getnewa 8 # 179 19
+getpropregstr 1 8 #10:string="getTime"
+move 20 8
+send 1 0
+setfl 20
+geta 1 # 179 14
+move 5 1 # 179 6
+jump 7 # 182 2
+mulregfix 1 6 8
+unsignedrightshift 1 5 1
+bitandregfix 1 1 255
+setprop 4 6 1
+addregfix 1 6 1
+move 6 1 # 182 21
+lessthanregfix 1 6 4
+jumptrue 1 -7 # 182 16
+fixnum 1 0
+move 6 1
+jump 10 # 183 2
+bigprim 1 #11:number=4.294967296E9
+div 1 5 1
+mulregfix 7 6 8
+unsignedrightshift 1 1 7
+bitandregfix 1 1 255
+addregfix 7 6 4
+setprop 4 7 1
+addregfix 1 6 1
+move 6 1 # 183 21
+move 1 6 # 183 16
+lessthanregfix 1 1 4
+jumptrue 1 -11 # 183 16
+bigprim 1 #6:string="KeyExpansion"
+getglobal 1 1
+move 20 3
+call 1 1
+setfl 20
+geta 1 # 186 20
+move 3 1 # 186 6
+bigprim 1 #12:string="Math"
+getglobal 1 1
+getpropregstr 5 1 #13:string="ceil"
+getpropregstr 6 2 #14:string="length"
+divregfix 6 6 16
+move 19 1
+move 20 6
+send 5 1
+setfl 20
+geta 1 # 188 19
+move 5 1 # 188 6
+bigprim 6 #3:string="Array"
+getglobal 6 6
+move 20 1
+construct 1 6 1
+setfl 20
+getnewa 1 # 189 23
+move 7 1 # 189 6
+fixnum 1 0
+move 8 1
+jump 93 # 191 2
+fixnum 1 0
+move 6 1
+jump 9 # 194 4
+move 1 8 # 194 50
+mulregfix 9 6 8
+unsignedrightshift 1 1 9
+bitandregfix 1 1 255
+subfixreg 9 15 6
+setprop 4 9 1
+addregfix 1 6 1
+move 6 1 # 194 23
+lessthanregfix 1 6 4
+jumptrue 1 -9 # 194 18
+fixnum 1 0
+move 6 1
+jump 11 # 195 4
+move 1 8 # 195 52
+bigprim 9 #11:number=4.294967296E9
+div 1 1 9
+mulregfix 9 6 8
+unsignedrightshift 1 1 9
+subfixreg 9 15 6
+subregfix 9 9 4
+setprop 4 9 1
+addregfix 1 6 1
+move 6 1 # 195 23
+move 1 6 # 195 18
+lessthanregfix 1 1 4
+jumptrue 1 -12 # 195 18
+bigprim 1 #5:string="Cipher"
+getglobal 1 1
+move 19 4
+move 20 3
+call 1 2
+setfl 20
+geta 1 # 197 21
+move 9 1 # 197 8
+move 1 8 # 200 22
+subregfix 6 5 1
+lessthan 1 1 6
+jumpfalse 1 3 # 200 22
+fixnum 1 16
+jump 5 # 200 39
+getpropregstr 1 2 #14:string="length"
+subregfix 1 1 1
+modregfix 1 1 16
+addregfix 1 1 1
+move 10 1 # 200 8
+bigprim 1 #2:string=""
+move 11 1
+fixnum 1 0
+move 6 1
+jump 28 # 203 4
+getpropregstr 1 2 #4:string="charCodeAt"
+mulregfix 12 8 16
+add 12 12 6
+move 19 2
+move 20 12
+send 1 1
+setfl 20
+geta 1 # 204 26
+move 12 9 # 205 39
+getprop 12 12 6
+bitor 13 1 12
+bitand 1 1 12
+subfixreg 1 0 1
+subregfix 1 1 1
+bitand 1 1 13
+bigprim 12 #15:string="String"
+getglobal 12 12
+getpropregstr 13 12 #16:string="fromCharCode"
+move 19 12
+move 20 1
+send 13 1
+setfl 20
+geta 1 # 206 12
+add 1 11 1
+move 11 1 # 206 6
+addregfix 1 6 1
+move 6 1 # 203 33
+move 1 6 # 203 18
+lessthan 1 1 10
+jumptrue 1 -29 # 203 18
+bigprim 1 #17:string="escCtrlChars"
+getglobal 1 1
+move 20 11
+call 1 1
+setfl 20
+geta 1 # 210 20
+setprop 7 8 1
+addregfix 1 8 1
+move 8 1 # 191 30
+lessthan 1 8 5
+jumptrue 1 -93 # 191 16
+bigprim 1 #2:string=""
+fixnum 2 0
+move 6 2
+jump 13 # 215 2
+bigprim 2 #15:string="String"
+getglobal 2 2
+getpropregstr 3 2 #16:string="fromCharCode"
+getprop 5 4 6
+move 19 2
+move 20 5
+send 3 1
+setfl 20
+geta 2 # 215 36
+add 1 1 2
+addregfix 2 6 1
+move 6 2 # 215 21
+lessthanregfix 2 6 8
+jumptrue 2 -13 # 215 16
+bigprim 2 #17:string="escCtrlChars"
+getglobal 2 2
+move 20 1
+call 2 1
+setfl 20
+geta 1 # 216 11
+bigprim 2 #18:string="-"
+addregstr 1 1 #18:string="-"
+getpropregstr 3 7 #19:string="join"
+move 19 7
+move 20 2
+send 3 1
+setfl 20
+geta 2 # 219 24
+add 1 1 2
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 281
+numberOfConstants 17
+setfl 18
+setfl 18
+fixnum 1 128
+equalregfix 5 4 128
+isundef 6 5 # 231 8
+jumpfalse 6 18 # 231 8
+isobject 5 4 # 231 8
+jumpfalse 5 6 # 231 8
+getpropregstr 5 4 #0:string="valueOf"
+move 18 4
+send 5 0
+geta 5 # 231 8
+jump 6 # 231 8
+getpropfixstr 5 128 #0:string="valueOf"
+move 18 1
+send 5 0
+geta 1 # 231 8
+move 5 4 # 231 8
+equal 5 5 1
+isundef 1 5 # 231 8
+jumpfalse 1 3 # 231 8
+bigprim 1 #1:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 231 8
+jumptrue 5 22 # 231 8
+fixnum 1 192
+equalregfix 5 4 192
+isundef 6 5 # 231 22
+jumpfalse 6 18 # 231 22
+isobject 5 4 # 231 22
+jumpfalse 5 6 # 231 22
+getpropregstr 5 4 #0:string="valueOf"
+move 18 4
+send 5 0
+geta 5 # 231 22
+jump 6 # 231 22
+getpropfixstr 5 192 #0:string="valueOf"
+move 18 1
+send 5 0
+geta 1 # 231 22
+move 5 4 # 231 22
+equal 5 5 1
+isundef 1 5 # 231 22
+jumpfalse 1 3 # 231 22
+bigprim 1 #1:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 231 22
+jumptrue 5 22 # 231 8
+fixnum 1 256
+equalregfix 5 4 256
+isundef 6 5 # 231 36
+jumpfalse 6 18 # 231 36
+isobject 5 4 # 231 36
+jumpfalse 5 6 # 231 36
+getpropregstr 5 4 #0:string="valueOf"
+move 18 4
+send 5 0
+geta 5 # 231 36
+jump 6 # 231 36
+getpropfixstr 5 256 #0:string="valueOf"
+move 18 1
+send 5 0
+geta 1 # 231 36
+move 5 4 # 231 36
+equal 5 5 1
+isundef 1 5 # 231 36
+jumpfalse 1 3 # 231 36
+bigprim 1 #1:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 231 36
+not 1 5
+jumpfalse 1 4 # 231 6
+bigprim 1 #2:string=""
+seta 1
+ret
+divregfix 1 4 8
+move 4 1 # 233 6
+bigprim 5 #3:string="Array"
+getglobal 5 5
+move 18 1
+construct 1 5 1
+setfl 18
+getnewa 1 # 234 20
+move 5 1 # 234 6
+fixnum 1 0
+move 6 1
+jump 11 # 235 2
+getpropregstr 1 3 #4:string="charCodeAt"
+move 17 3
+move 18 6
+send 1 1
+setfl 18
+geta 1 # 235 44
+bitandregfix 1 1 255
+setprop 5 6 1
+addregfix 1 6 1
+move 6 1 # 235 26
+lessthan 1 6 4
+jumptrue 1 -11 # 235 16
+bigprim 3 #5:string="KeyExpansion"
+getglobal 1 3
+move 18 5
+call 1 1
+setfl 18
+geta 1 # 236 22
+bigprim 6 #6:string="Cipher"
+getglobal 6 6
+move 17 5
+move 18 1
+call 6 2
+setfl 18
+geta 1 # 237 12
+getpropregstr 5 1 #7:string="concat"
+getpropregstr 6 1 #8:string="slice"
+fixnum 7 0
+fixnum 8 16
+subregfix 4 4 16
+move 16 1
+move 17 7
+move 18 4
+send 6 2
+setfl 18
+geta 4 # 238 19
+move 17 1
+move 18 4
+send 5 1
+setfl 18
+geta 1 # 238 8
+getglobal 3 3
+move 18 1
+call 3 1
+setfl 18
+geta 1 # 240 20
+move 3 1 # 240 6
+getpropregstr 1 2 #9:string="split"
+bigprim 4 #10:string="-"
+move 17 2
+move 18 4
+send 1 1
+setfl 18
+geta 1 # 242 15
+move 2 1 # 242 2
+move 1 8
+bigprim 4 #3:string="Array"
+getglobal 4 4
+move 18 8
+construct 1 4 1
+setfl 18
+getnewa 1 # 246 25
+move 4 1 # 246 6
+bigprim 1 #11:string="unescCtrlChars"
+getglobal 1 1
+getpropregfix 5 2 0
+move 18 5
+call 1 1
+setfl 18
+geta 1 # 247 15
+move 5 1 # 247 6
+move 6 7
+jump 9 # 248 2
+getpropregstr 1 5 #4:string="charCodeAt"
+move 17 5
+move 18 6
+send 1 1
+setfl 18
+geta 1 # 248 44
+setprop 4 6 1
+addregfix 6 6 1
+lessthanregfix 7 6 8
+jumptrue 7 -9 # 248 16
+bigprim 5 #3:string="Array"
+getglobal 5 5
+getpropregstr 6 2 #12:string="length"
+fixnum 7 1
+subregfix 6 6 1
+move 18 6
+construct 1 5 1
+setfl 18
+getnewa 1 # 250 22
+move 5 1 # 250 6
+jump 91 # 252 2
+fixnum 1 0
+move 6 1
+jump 10 # 254 4
+move 1 7 # 254 51
+subregfix 1 1 1
+mulregfix 8 6 8
+unsignedrightshift 1 1 8
+bitandregfix 1 1 255
+subfixreg 8 15 6
+setprop 4 8 1
+addregfix 1 6 1
+move 6 1 # 254 23
+lessthanregfix 1 6 4
+jumptrue 1 -10 # 254 18
+fixnum 1 0
+move 6 1
+jump 13 # 255 4
+move 1 7 # 255 53
+bigprim 8 #13:number=4.294967296E9
+div 1 1 8
+subregfix 1 1 1
+mulregfix 8 6 8
+unsignedrightshift 1 1 8
+bitandregfix 1 1 255
+subfixreg 8 15 6
+subregfix 8 8 4
+setprop 4 8 1
+addregfix 1 6 1
+move 6 1 # 255 23
+move 1 6 # 255 18
+lessthanregfix 1 1 4
+jumptrue 1 -14 # 255 18
+bigprim 1 #6:string="Cipher"
+getglobal 1 1
+move 17 4
+move 18 3
+call 1 2
+setfl 18
+geta 1 # 257 21
+move 8 1 # 257 8
+bigprim 1 #11:string="unescCtrlChars"
+getglobal 1 1
+getprop 6 2 7
+move 18 6
+call 1 1
+setfl 18
+geta 1 # 259 20
+setprop 2 7 1
+bigprim 1 #2:string=""
+move 9 1
+fixnum 1 0
+move 6 1
+jump 27 # 262 4
+getprop 1 2 7
+getpropregstr 10 1 #4:string="charCodeAt"
+move 17 1
+move 18 6
+send 10 1
+setfl 18
+geta 1 # 264 27
+move 10 8 # 265 43
+getprop 10 10 6
+bitor 11 1 10
+bitand 1 1 10
+subfixreg 1 0 1
+subregfix 1 1 1
+bitand 1 1 11
+bigprim 10 #14:string="String"
+getglobal 10 10
+getpropregstr 11 10 #15:string="fromCharCode"
+move 17 10
+move 18 1
+send 11 1
+setfl 18
+geta 1 # 266 12
+add 1 9 1
+move 9 1 # 266 6
+addregfix 1 6 1
+move 6 1 # 262 42
+move 1 6 # 262 18
+getprop 10 2 7
+getpropregstr 10 10 #12:string="length"
+lessthan 1 1 10
+jumptrue 1 -30 # 262 18
+move 1 9 # 270 21
+move 6 7 # 270 14
+subregfix 6 6 1
+setprop 5 6 1
+addregfix 1 7 1
+move 7 1 # 252 37
+move 1 7 # 252 16
+getpropregstr 6 2 #12:string="length"
+lessthan 1 1 6
+jumptrue 1 -93 # 252 16
+getpropregstr 1 5 #16:string="join"
+bigprim 2 #2:string=""
+move 17 5
+move 18 2
+send 1 1
+setfl 18
+geta 1 # 273 9
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 13
+numberOfConstants 2
+setfl 11
+setfl 11
+getpropregstr 1 2 #0:string="replace"
+bigprim 3 #1:regexp=1="[\\0\\t\\n\\v\\f\\r\\xa0'\"!-]" # 279 21
+makeclosure 4 11 # 279 48
+move 9 2
+move 10 3
+move 11 4
+send 1 2
+setfl 11
+geta 1 # 279 9
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 13
+numberOfConstants 2
+setfl 9
+setfl 9
+getpropregstr 1 2 #0:string="charCodeAt"
+fixnum 3 0
+move 8 2
+move 9 3
+send 1 1
+setfl 9
+geta 1 # 279 75
+addstrreg 1 #1:string="!" 1
+addregstr 1 1 #1:string="!"
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 13
+numberOfConstants 2
+setfl 11
+setfl 11
+getpropregstr 1 2 #0:string="replace"
+bigprim 3 #1:regexp=1="!\\d\\d?\\d?!" # 283 21
+makeclosure 4 13 # 283 36
+move 9 2
+move 10 3
+move 11 4
+send 1 2
+setfl 11
+geta 1 # 283 9
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 21
+numberOfConstants 3
+setfl 13
+setfl 13
+bigprim 1 #0:string="String"
+getglobal 1 1
+getpropregstr 3 1 #1:string="fromCharCode"
+getpropregstr 4 2 #2:string="slice"
+fixnum 5 1
+fixnum 6 -1
+move 11 2
+move 12 5
+move 13 6
+send 4 2
+setfl 13
+geta 2 # 283 77
+move 12 1
+move 13 2
+send 3 1
+setfl 13
+geta 1 # 283 57
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 113
+numberOfConstants 7
+setfl 17
+setfl 17
+fixnum 1 0
+move 3 1
+bigprim 1 #0:string=""
+move 4 1
+bigprim 1 #1:string="encodeUTF8"
+getglobal 1 1
+move 17 2
+call 1 1
+setfl 17
+geta 1 # 295 9
+move 2 1 # 295 3
+getpropregstr 1 2 #2:string="charCodeAt"
+move 5 3 # 298 26
+addregfix 3 5 1
+move 16 2
+move 17 5
+send 1 1
+setfl 17
+geta 1 # 298 11
+move 5 1 # 298 6
+getpropregstr 1 2 #2:string="charCodeAt"
+move 6 3 # 299 26
+addregfix 3 6 1
+move 16 2
+move 17 6
+send 1 1
+setfl 17
+geta 1 # 299 11
+move 6 1 # 299 6
+getpropregstr 1 2 #2:string="charCodeAt"
+move 7 3 # 300 26
+addregfix 3 7 1
+move 16 2
+move 17 7
+send 1 1
+setfl 17
+geta 1 # 300 11
+move 7 1 # 300 6
+leftshiftregfix 1 5 16
+leftshiftregfix 5 6 8
+bitor 1 1 5
+bitor 1 1 7
+move 5 1 # 302 6
+rightshiftregfix 1 5 18
+bitandregfix 1 1 63
+move 8 1 # 304 6
+rightshiftregfix 1 5 12
+bitandregfix 1 1 63
+move 9 1 # 305 6
+rightshiftregfix 1 5 6
+bitandregfix 1 1 63
+move 10 1 # 306 6
+bitandregfix 1 5 63
+move 5 1 # 307 6
+bigprim 11 #3:string="isNaN"
+getglobal 1 11
+move 17 7
+call 1 1
+setfl 17
+geta 1 # 310 10
+jumpfalse 1 3 # 310 10
+fixnum 1 64
+move 5 1
+getglobal 1 11
+move 17 6
+call 1 1
+setfl 17
+geta 1 # 311 10
+jumpfalse 1 3 # 311 10
+fixnum 1 64
+move 10 1
+bigprim 1 #4:string="b64"
+getglobal 6 1
+getpropregstr 7 6 #5:string="charAt"
+move 16 6
+move 17 8
+send 7 1
+setfl 17
+geta 6 # 314 13
+getglobal 7 1
+getpropregstr 8 7 #5:string="charAt"
+move 16 7
+move 17 9
+send 8 1
+setfl 17
+geta 7 # 314 30
+add 6 6 7
+getglobal 7 1
+getpropregstr 8 7 #5:string="charAt"
+move 16 7
+move 17 10
+send 8 1
+setfl 17
+geta 7 # 314 47
+add 6 6 7
+getglobal 1 1
+getpropregstr 7 1 #5:string="charAt"
+move 16 1
+move 17 5
+send 7 1
+setfl 17
+geta 1 # 314 64
+add 1 6 1
+add 1 4 1
+move 4 1 # 314 6
+move 1 3 # 315 12
+getpropregstr 5 2 #6:string="length"
+lessthan 1 1 5
+jumptrue 1 -97 # 315 12
+seta 4
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 178
+numberOfConstants 10
+setfl 19
+setfl 19
+fixnum 1 0
+move 3 1
+bigprim 1 #0:string=""
+move 4 1
+bigprim 5 #1:string="b64"
+getglobal 1 5
+getpropregstr 6 1 #2:string="indexOf"
+getpropregstr 7 2 #3:string="charAt"
+move 8 3 # 324 34
+addregfix 3 8 1
+move 18 2
+move 19 8
+send 7 1
+setfl 19
+geta 7 # 324 23
+move 18 1
+move 19 7
+send 6 1
+setfl 19
+geta 1 # 324 11
+move 6 1 # 324 6
+getglobal 1 5
+getpropregstr 7 1 #2:string="indexOf"
+getpropregstr 8 2 #3:string="charAt"
+move 9 3 # 325 34
+addregfix 3 9 1
+move 18 2
+move 19 9
+send 8 1
+setfl 19
+geta 8 # 325 23
+move 18 1
+move 19 8
+send 7 1
+setfl 19
+geta 1 # 325 11
+move 7 1 # 325 6
+getglobal 1 5
+getpropregstr 8 1 #2:string="indexOf"
+getpropregstr 9 2 #3:string="charAt"
+move 10 3 # 326 34
+addregfix 3 10 1
+move 18 2
+move 19 10
+send 9 1
+setfl 19
+geta 9 # 326 23
+move 18 1
+move 19 9
+send 8 1
+setfl 19
+geta 1 # 326 11
+move 8 1 # 326 6
+getglobal 1 5
+getpropregstr 5 1 #2:string="indexOf"
+getpropregstr 9 2 #3:string="charAt"
+move 10 3 # 327 34
+addregfix 3 10 1
+move 18 2
+move 19 10
+send 9 1
+setfl 19
+geta 9 # 327 23
+move 18 1
+move 19 9
+send 5 1
+setfl 19
+geta 1 # 327 11
+move 5 1 # 327 6
+leftshiftregfix 1 6 18
+leftshiftregfix 6 7 12
+bitor 1 1 6
+leftshiftregfix 6 8 6
+bitor 1 1 6
+bitor 1 1 5
+move 6 1 # 329 6
+rightshiftregfix 1 6 16
+bitandregfix 1 1 255
+move 7 1 # 331 6
+rightshiftregfix 1 6 8
+bitandregfix 1 1 255
+move 9 1 # 332 6
+bitandregfix 1 6 255
+move 6 1 # 333 6
+fixnum 10 64
+equalregfix 1 8 64
+isundef 11 1 # 335 10
+jumpfalse 11 19 # 335 10
+isobject 1 8 # 335 10
+jumpfalse 1 7 # 335 10
+getpropregstr 1 8 #4:string="valueOf"
+move 19 8
+send 1 0
+geta 1 # 335 10
+move 11 10
+jump 6 # 335 10
+getpropfixstr 1 64 #4:string="valueOf"
+move 19 10
+send 1 0
+geta 11 # 335 10
+move 1 8 # 335 10
+equal 1 1 11
+isundef 8 1 # 335 10
+jumpfalse 8 3 # 335 10
+bigprim 1 #5:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 335 10
+jumpfalse 1 12 # 335 10
+bigprim 1 #6:string="String"
+getglobal 1 1
+getpropregstr 5 1 #7:string="fromCharCode"
+move 18 1
+move 19 7
+send 5 1
+setfl 19
+geta 1 # 335 32
+add 1 4 1
+move 4 1 # 335 25
+jump 47 # 336 11
+move 8 10
+equalregfix 1 5 64
+isundef 11 1 # 336 15
+jumpfalse 11 18 # 336 15
+isobject 1 5 # 336 15
+jumpfalse 1 6 # 336 15
+getpropregstr 1 5 #4:string="valueOf"
+move 19 5
+send 1 0
+geta 1 # 336 15
+jump 6 # 336 15
+getpropfixstr 1 64 #4:string="valueOf"
+move 19 8
+send 1 0
+geta 10 # 336 15
+move 1 5 # 336 15
+equal 1 1 10
+isundef 5 1 # 336 15
+jumpfalse 5 3 # 336 15
+bigprim 1 #5:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 336 15
+jumpfalse 1 13 # 336 15
+bigprim 1 #6:string="String"
+getglobal 1 1
+getpropregstr 5 1 #7:string="fromCharCode"
+move 17 1
+move 18 7
+move 19 9
+send 5 2
+setfl 19
+geta 1 # 336 32
+add 1 4 1
+move 4 1 # 336 25
+jump 13 # 337 25
+bigprim 1 #6:string="String"
+getglobal 1 1
+getpropregstr 5 1 #7:string="fromCharCode"
+move 16 1
+move 17 7
+move 18 9
+move 19 6
+send 5 3
+setfl 19
+geta 1 # 337 32
+add 1 4 1
+move 4 1 # 337 25
+move 1 3 # 338 12
+getpropregstr 5 2 #8:string="length"
+lessthan 1 1 5
+jumptrue 1 -163 # 338 12
+bigprim 1 #9:string="decodeUTF8"
+getglobal 1 1
+move 19 4
+call 1 1
+setfl 19
+geta 1 # 340 10
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 22
+numberOfConstants 3
+setfl 11
+setfl 11
+getpropregstr 1 2 #0:string="replace"
+bigprim 3 #1:regexp=1="[\\u0080-\\u07ff]" # 345 6
+makeclosure 4 17 # 346 6
+move 9 2
+move 10 3
+move 11 4
+send 1 2
+setfl 11
+geta 1 # 344 8
+getpropregstr 2 1 #0:string="replace"
+bigprim 3 #2:regexp=1="[\\u0800-\\uffff]" # 351 6
+makeclosure 4 18 # 352 6
+move 9 1
+move 10 3
+move 11 4
+send 2 2
+setfl 11
+geta 1 # 350 8
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 24
+numberOfConstants 3
+setfl 11
+setfl 11
+getpropregstr 1 2 #0:string="charCodeAt"
+fixnum 3 0
+move 10 2
+move 11 3
+send 1 1
+setfl 11
+geta 1 # 347 17
+bigprim 2 #1:string="String"
+getglobal 2 2
+getpropregstr 3 2 #2:string="fromCharCode"
+rightshiftregfix 4 1 6
+bitorfixreg 4 192 4
+bitandregfix 1 1 63
+bitorfixreg 1 128 1
+move 9 2
+move 10 4
+move 11 1
+send 3 2
+setfl 11
+geta 1 # 348 15
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 28
+numberOfConstants 3
+setfl 13
+setfl 13
+getpropregstr 1 2 #0:string="charCodeAt"
+fixnum 3 0
+move 12 2
+move 13 3
+send 1 1
+setfl 13
+geta 1 # 353 17
+bigprim 2 #1:string="String"
+getglobal 2 2
+getpropregstr 3 2 #2:string="fromCharCode"
+rightshiftregfix 4 1 12
+bitorfixreg 4 224 4
+rightshiftregfix 5 1 6
+bitandregfix 5 5 63
+bitorfixreg 5 128 5
+bitandregfix 1 1 63
+bitorfixreg 1 128 1
+move 10 2
+move 11 4
+move 12 5
+move 13 1
+send 3 3
+setfl 13
+geta 1 # 354 15
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 22
+numberOfConstants 3
+setfl 11
+setfl 11
+getpropregstr 1 2 #0:string="replace"
+bigprim 3 #1:regexp=1="[\\u00c0-\\u00df][\\u0080-\\u00bf]" # 361 6
+makeclosure 4 20 # 362 6
+move 9 2
+move 10 3
+move 11 4
+send 1 2
+setfl 11
+geta 1 # 360 8
+getpropregstr 2 1 #0:string="replace"
+bigprim 3 #2:regexp=1="[\\u00e0-\\u00ef][\\u0080-\\u00bf][\\u0080-\\u00bf]" # 367 6
+makeclosure 4 21 # 368 6
+move 9 1
+move 10 3
+move 11 4
+send 2 2
+setfl 11
+geta 1 # 366 8
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 30
+numberOfConstants 3
+setfl 10
+setfl 10
+getpropregstr 1 2 #0:string="charCodeAt"
+fixnum 3 0
+move 9 2
+move 10 3
+send 1 1
+setfl 10
+geta 1 # 363 18
+bitandregfix 1 1 31
+leftshiftregfix 1 1 6
+getpropregstr 3 2 #0:string="charCodeAt"
+fixnum 4 1
+move 9 2
+move 10 4
+send 3 1
+setfl 10
+geta 2 # 363 45
+bitandregfix 2 2 63
+bitor 1 1 2
+bigprim 2 #1:string="String"
+getglobal 2 2
+getpropregstr 3 2 #2:string="fromCharCode"
+move 9 2
+move 10 1
+send 3 1
+setfl 10
+geta 1 # 364 15
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 39
+numberOfConstants 3
+setfl 10
+setfl 10
+getpropregstr 1 2 #0:string="charCodeAt"
+fixnum 3 0
+move 9 2
+move 10 3
+send 1 1
+setfl 10
+geta 1 # 369 18
+bitandregfix 1 1 15
+leftshiftregfix 1 1 12
+getpropregstr 3 2 #0:string="charCodeAt"
+fixnum 4 1
+move 9 2
+move 10 4
+send 3 1
+setfl 10
+geta 3 # 369 47
+bitandregfix 3 3 4032
+bitor 1 1 3
+getpropregstr 3 2 #0:string="charCodeAt"
+fixnum 4 2
+move 9 2
+move 10 4
+send 3 1
+setfl 10
+geta 2 # 369 74
+bitandregfix 2 2 63
+bitor 1 1 2
+bigprim 2 #1:string="String"
+getglobal 2 2
+getpropregstr 3 2 #2:string="fromCharCode"
+move 9 2
+move 10 1
+send 3 1
+setfl 10
+geta 1 # 370 15
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 22
+numberOfConstants 4
+setfl 12
+setfl 12
+bigprim 1 #0:string=""
+fixnum 3 0
+jump 12 # 378 2
+getprop 4 2 3
+getpropregstr 5 4 #1:string="toString"
+fixnum 6 16
+move 11 4
+move 12 6
+send 5 1
+setfl 12
+geta 4 # 378 38
+addregstr 4 4 #2:string="\s"
+add 1 1 4
+addregfix 3 3 1
+move 4 3 # 378 16
+getpropregstr 5 2 #3:string="length"
+lessthan 4 4 5
+jumptrue 4 -14 # 378 16
+seta 1
+ret

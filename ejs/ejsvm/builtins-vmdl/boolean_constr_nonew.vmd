@@ -1,0 +1,8 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) boolean_constr_nonew: (JSValue, JSValue) -> JSValue 
+boolean_constr_nonew(placeHolder, element){
+    JSValue rsv = (na > 0) ? to_boolean(element) : JS_FALSE;
+    return rsv;
+}

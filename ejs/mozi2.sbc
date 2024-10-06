@@ -1,0 +1,13 @@
+fingerprint 82
+funcLength 1
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 6
+numberOfConstants 1
+setfl 6
+setfl 6
+bigprim 1 #0:string="a"
+setglobal 1 1
+seta 1
+ret

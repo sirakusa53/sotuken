@@ -1,0 +1,8 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, builtinFunction) math_random : JSValue -> JSValue
+math_random(placeHolder){
+  double x = cint_to_double(rand()) / (cint_to_double(RAND_MAX) + 1);
+  return double_to_number(x);
+}

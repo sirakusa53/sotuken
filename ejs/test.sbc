@@ -1,0 +1,62 @@
+fingerprint 82
+funcLength 2
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 13
+numberOfConstants 1
+setfl 8
+setfl 8
+makeclosure 1 0 # 1 10
+bigprim 2 #0:string="sum"
+setglobal 2 1
+getglobal 1 2
+fixnum 2 100
+move 8 2
+call 1 1
+setfl 8
+geta 1 # 2 0
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 37
+numberOfConstants 3
+setfl 10
+setfl 10
+fixnum 1 0
+equalregfix 3 2 0
+isundef 4 3 # 1 27
+jumpfalse 4 19 # 1 27
+isobject 3 2 # 1 27
+jumpfalse 3 7 # 1 27
+getpropregstr 3 2 #0:string="valueOf"
+move 10 2
+send 3 0
+geta 3 # 1 27
+move 4 1
+jump 6 # 1 27
+getpropfixstr 3 0 #0:string="valueOf"
+move 10 1
+send 3 0
+geta 4 # 1 27
+move 3 2 # 1 27
+equal 3 3 4
+isundef 4 3 # 1 27
+jumpfalse 4 3 # 1 27
+bigprim 1 #1:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 1 27
+jumpfalse 3 3 # 1 27
+seta 1
+ret
+bigprim 1 #2:string="sum"
+getglobal 1 1
+subregfix 3 2 1
+move 10 3
+call 1 1
+setfl 10
+geta 1 # 1 59
+add 3 2 1
+seta 3
+ret

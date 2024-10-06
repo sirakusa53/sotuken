@@ -1,0 +1,337 @@
+fingerprint 82
+funcLength 2
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 55
+numberOfConstants 9
+setfl 12
+setfl 12
+makeclosure 1 0 # 5 0
+bigprim 2 #0:string="fannkuch"
+setglobal 2 1
+fixnum 1 8
+bigprim 3 #1:string="n"
+setglobal 3 1
+getglobal 1 2
+getglobal 2 3
+move 12 2
+call 1 1
+setfl 12
+geta 1 # 65 10
+bigprim 2 #2:string="ret"
+setglobal 2 1
+fixnum 1 22
+bigprim 3 #3:string="expected"
+setglobal 3 1
+getglobal 1 2
+getglobal 4 3
+equal 5 1 4
+isundef 6 5 # 68 4
+jumpfalse 6 17 # 68 4
+isobject 5 1 # 68 4
+jumpfalse 5 6 # 68 4
+getpropregstr 5 1 #4:string="valueOf"
+move 12 1
+send 5 0
+geta 1 # 68 4
+jump 5 # 68 4
+getpropregstr 5 4 #4:string="valueOf"
+move 12 4
+send 5 0
+geta 4 # 68 4
+equal 5 1 4
+isundef 1 5 # 68 4
+jumpfalse 1 3 # 68 4
+bigprim 1 #5:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 68 4
+not 1 5
+jumpfalse 1 12 # 68 4
+bigprim 1 #6:string="print"
+getglobal 1 1
+getglobal 3 3
+addstrreg 3 #7:string="ERROR:\sbad\sresult:\sexpected\s" 3
+addregstr 3 3 #8:string="\sbut\sgot\s"
+getglobal 2 2
+add 2 3 2
+move 12 2
+call 1 1
+setfl 12
+geta 1 # 70 4
+seta 1
+ret
+callentry 0
+sendentry 1
+numberOfLocals 0
+numberOfInstructions 270
+numberOfConstants 5
+setfl 22
+setfl 22
+fixnum 1 0
+move 3 1
+bigprim 4 #0:string="Array"
+getglobal 1 4
+move 22 2
+call 1 1
+setfl 22
+geta 1 # 7 14
+move 5 1 # 7 7
+getglobal 1 4
+move 22 2
+call 1 1
+setfl 22
+geta 1 # 8 15
+move 6 1 # 8 7
+getglobal 1 4
+move 22 2
+call 1 1
+setfl 22
+geta 1 # 9 15
+move 7 1 # 9 7
+getglobal 1 4
+move 22 2
+call 1 1
+setfl 22
+geta 1 # 10 17
+move 4 1 # 10 7
+move 8 3
+subregfix 1 2 1
+move 9 1 # 12 7
+move 10 3
+jump 5 # 14 3
+move 1 10 # 14 42
+setprop 6 10 1
+addregfix 1 10 1
+move 10 1 # 14 26
+lessthan 1 10 2
+jumptrue 1 -5 # 14 19
+move 11 2 # 15 7
+jump 224 # 17 3
+lessthanregfix 1 3 30
+jumpfalse 1 18 # 19 10
+bigprim 1 #1:string=""
+fixnum 10 0
+jump 10 # 21 9
+getprop 12 6 10
+addregfix 12 12 1
+getpropregstr 13 12 #2:string="toString"
+move 22 12
+send 13 0
+setfl 22
+geta 12 # 21 37
+add 1 1 12
+addregfix 10 10 1
+lessthan 12 10 2
+jumptrue 12 -10 # 21 22
+move 1 3 # 22 9
+addregfix 1 1 1
+move 3 1 # 22 9
+jump 8 # 25 6
+move 1 11 # 25 38
+move 10 11 # 25 29
+subregfix 10 10 1
+setprop 7 10 1
+move 1 11 # 25 41
+subregfix 1 1 1
+move 11 1 # 25 41
+move 1 11 # 25 13
+fixnum 12 1
+equalregfix 10 1 1
+isundef 13 10 # 25 13
+jumpfalse 13 18 # 25 13
+isobject 10 1 # 25 13
+jumpfalse 10 7 # 25 13
+getpropregstr 10 1 #3:string="valueOf"
+move 22 1
+send 10 0
+geta 1 # 25 13
+move 10 12
+jump 5 # 25 13
+getpropfixstr 10 1 #3:string="valueOf"
+move 22 12
+send 10 0
+geta 10 # 25 13
+equal 10 1 10
+isundef 1 10 # 25 13
+jumpfalse 1 3 # 25 13
+bigprim 1 #4:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 25 13
+not 1 10
+jumptrue 1 -30 # 25 13
+fixnum 10 0
+getpropregfix 1 6 0
+move 12 10
+equalregfix 13 1 0
+isundef 14 13 # 26 12
+jumpfalse 14 18 # 26 12
+isobject 13 1 # 26 12
+jumpfalse 13 7 # 26 12
+getpropregstr 13 1 #3:string="valueOf"
+move 22 1
+send 13 0
+geta 1 # 26 12
+move 12 10
+jump 5 # 26 12
+getpropfixstr 13 0 #3:string="valueOf"
+move 22 12
+send 13 0
+geta 12 # 26 12
+equal 13 1 12
+isundef 1 13 # 26 12
+jumpfalse 1 3 # 26 12
+bigprim 1 #4:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 26 12
+jumptrue 13 22 # 26 12
+getprop 1 6 9
+equal 13 1 9
+isundef 12 13 # 26 29
+jumpfalse 12 18 # 26 29
+isobject 12 1 # 26 29
+jumpfalse 12 7 # 26 29
+getpropregstr 12 1 #3:string="valueOf"
+move 22 1
+send 12 0
+geta 1 # 26 29
+move 12 9 # 26 29
+jump 5 # 26 29
+getpropregstr 12 9 #3:string="valueOf"
+move 22 9
+send 12 0
+geta 12 # 26 29
+equal 13 1 12
+isundef 1 13 # 26 29
+jumpfalse 1 3 # 26 29
+bigprim 1 #4:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 26 29
+not 1 13
+jumpfalse 1 71 # 26 10
+jump 5 # 27 9
+getprop 1 6 10
+setprop 5 10 1
+addregfix 1 10 1
+move 10 1 # 27 32
+lessthan 1 10 2
+jumptrue 1 -5 # 27 25
+fixnum 1 0
+move 12 1
+jump 23 # 32 9
+addregfix 1 13 1
+rightshiftregfix 1 1 1
+move 14 1 # 33 16
+jump 13 # 34 12
+getprop 1 5 10
+move 15 1 # 35 19
+move 1 13 # 35 50
+sub 1 1 10
+getprop 1 5 1
+setprop 5 10 1
+move 1 15 # 35 72
+move 15 13 # 35 63
+sub 15 15 10
+setprop 5 15 1
+addregfix 1 10 1
+move 10 1 # 34 36
+move 1 10 # 34 28
+lessthan 1 1 14
+jumptrue 1 -14 # 34 28
+move 1 12 # 37 12
+addregfix 1 1 1
+move 12 1 # 37 12
+fixnum 10 0
+getpropregfix 1 5 0
+move 13 1 # 32 19
+move 14 10
+equalregfix 15 1 0
+isundef 16 15 # 32 18
+jumpfalse 16 18 # 32 18
+isobject 15 1 # 32 18
+jumpfalse 15 7 # 32 18
+getpropregstr 15 1 #3:string="valueOf"
+move 22 1
+send 15 0
+geta 1 # 32 18
+move 14 10
+jump 5 # 32 18
+getpropfixstr 15 0 #3:string="valueOf"
+move 22 14
+send 15 0
+geta 14 # 32 18
+equal 15 1 14
+isundef 1 15 # 32 18
+jumpfalse 1 3 # 32 18
+bigprim 1 #4:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 32 18
+not 1 15
+jumptrue 1 -47 # 32 16
+move 1 12 # 40 13
+lessthan 1 8 1
+jumpfalse 1 10 # 40 13
+move 1 12 # 41 28
+move 8 1 # 41 12
+jump 5 # 42 12
+getprop 1 6 10
+setprop 4 10 1
+addregfix 1 10 1
+move 10 1 # 42 35
+lessthan 1 10 2
+jumptrue 1 -5 # 42 28
+jump 53 # 46 6
+move 10 11 # 47 13
+equal 1 10 2
+isundef 12 1 # 47 13
+jumpfalse 12 19 # 47 13
+isobject 1 10 # 47 13
+jumpfalse 1 7 # 47 13
+getpropregstr 1 10 #3:string="valueOf"
+move 22 10
+send 1 0
+geta 1 # 47 13
+move 12 2 # 47 13
+jump 6 # 47 13
+getpropregstr 1 2 #3:string="valueOf"
+move 22 2
+send 1 0
+geta 12 # 47 13
+move 1 10 # 47 13
+equal 1 1 12
+isundef 10 1 # 47 13
+jumpfalse 10 3 # 47 13
+bigprim 1 #4:string="EQUAL_GETTOPRIMITIVE"
+throw 1 # 47 13
+jumpfalse 1 3 # 47 13
+seta 8
+ret
+fixnum 10 0
+getpropregfix 1 6 0
+move 12 1 # 48 13
+move 1 10
+move 10 1
+jump 7 # 50 9
+addregfix 1 10 1
+move 13 1 # 51 16
+getprop 1 6 13
+setprop 6 10 1
+move 1 13 # 53 16
+move 10 1 # 53 12
+move 1 10 # 50 16
+lessthan 1 1 11
+jumptrue 1 -8 # 50 16
+move 1 12 # 55 20
+setprop 6 11 1
+getprop 1 7 11
+subregfix 1 1 1
+setprop 7 11 1
+getprop 1 7 11
+lessthanfixreg 1 0 1
+jumpfalse 1 2 # 58 13
+jump 6
+move 1 11 # 59 9
+addregfix 1 1 1
+move 11 1 # 59 9
+specconst 1 true
+jumptrue 1 -53 # 46 13
+specconst 1 true
+jumptrue 1 -224 # 17 10
+specconst 1 undefined
+seta 1
+ret

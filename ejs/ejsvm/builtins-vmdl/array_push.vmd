@@ -1,0 +1,29 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) array_push: JSValue -> JSValue 
+array_push(arr){
+  JSValue ret;
+
+  match(arr){
+    case(Array arr){
+      int len = to_cint(get_jsarray_length(arr));
+      /*
+       * The following for-loop is very inefficient.
+       * This is for simplicity of implementation.
+       */
+      /* NOTE: 'arr' is the target of GC_PUSH/GC_POP here. */
+      do (int i = 0 to n_rest-1 step 1){
+        set_array_prop(arr, cint_to_number(len), rest[i]);
+        len <- len + 1;
+      }
+      ret <- (cint_to_uintjsv_t(len) <= MAX_ARRAY_LENGTH) ? 
+        cint_to_number(len) : cint_to_number(uintjsv_t_to_cint(MAX_ARRAY_LENGTH));
+    }
+    case(true){
+      ret <- JS_EMPTY;
+      LOG_EXIT("type error: array_push");
+    }
+  }
+  return ret;
+}

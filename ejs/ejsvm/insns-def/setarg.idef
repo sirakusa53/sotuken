@@ -1,0 +1,14 @@
+\inst setarg (Immediate link, Subscript index_, Value src)
+
+\otherwise \{
+  FunctionFrame *fr;
+  JSValue arguments;
+  int i;
+
+  fr = get_lp(context);
+  for (i = 0; i < link; i++) fr = fframe_prev(fr);
+  // TODO: optimize
+  arguments = fframe_arguments(fr);
+  set_array_prop(context, arguments,
+                 cint_to_number(context, (cint) index_), src);
+\}

@@ -1,0 +1,35 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) array_reverse: JSValue -> JSValue 
+array_reverse(arr){
+  match(arr){
+      case(Array arr){
+        int len = number_to_cint(get_jsarray_length(arr));
+        int mid = len / 2;
+        do(int lower = 0 to mid-1 step 1) {
+            int upper = len - lower - 1;
+            int lowerExists = has_array_element(arr, lower);
+            int upperExists = has_array_element(arr, upper);
+
+            JSValue lowerValue = (lowerExists) ? get_array_element(arr, lower) : JS_NULL;
+            JSValue upperValue = (upperExists) ? get_array_element(arr, upper) : JS_NULL;
+
+            if(lowerExists)
+              set_array_prop(arr, cint_to_number(upper), lowerValue);
+            else
+              delete_array_element(arr, upper);
+            
+            if(upperExists)
+              set_array_prop(arr, cint_to_number(lower), upperValue);
+            else
+              delete_array_element(arr, lower);
+        }
+        return arr;
+      }
+      case(true){
+        LOG_EXIT("type error: array_reverse");
+        return JS_EMPTY;
+      }
+  }
+}

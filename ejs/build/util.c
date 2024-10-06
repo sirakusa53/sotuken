@@ -1,0 +1,225 @@
+/*
+ * eJS Project
+ * Kochi University of Technology
+ * The University of Electro-communications
+ *
+ * The eJS Project is the successor of the SSJS Project at The University of
+ * Electro-communications.
+ */
+
+#include "prefix.h"
+#define EXTERN extern
+#include "header.h"
+
+/* =================== */
+/* Exclude from main.c */
+/* =================== */
+
+/*
+ * prints a JSValue
+ */
+void print_value_simple(Context *context, JSValue v) {
+  print_value(context, v, 0);
+}
+
+void print_value_verbose(Context *context, JSValue v) {
+  print_value(context, v, 1);
+}
+
+void print_value(Context *context, JSValue v, int verbose) {
+  if (verbose)
+    printf("%" PRIJSValue " (tag = %d, type = %s): ",
+           v, get_ptag(v).v, type_name(v));
+
+  if (is_string(v))
+    /* do nothing */;
+  else if (is_number(v))
+    v = number_to_string(v);
+  else if (is_special(v))
+    v = special_to_string(v);
+  else if (is_simple_object(v))
+    v = gconsts.g_string_objtostr;
+  else if (is_array(v))
+    v = array_to_string(context, v, gconsts.g_string_comma);
+  else if (is_function(v))
+    v = cstr_to_string(NULL, "function");
+  else if (is_builtin(v))
+    v = cstr_to_string(NULL, "builtin");
+  else if (is_iterator(v))
+    v = cstr_to_string(NULL, "iterator");
+#ifdef USE_REGEXP
+  else if (is_regexp(v)) {
+    printf("/%s/", get_jsregexp_pattern(v));
+    if (get_jsregexp_global(v)) printf("g");
+    if (get_jsregexp_ignorecase(v)) printf("i");
+    if (get_jsregexp_multiline(v)) printf("m");
+    return;
+  }
+#endif
+  else if (is_string_object(v))
+    v = cstr_to_string(NULL, "boxed-string");
+  else if (is_number_object(v))
+    v = cstr_to_string(NULL, "boxed-number");
+  else if (is_boolean_object(v))
+    v = cstr_to_string(NULL, "boxed-boolean");
+  else
+    LOG_ERR("Type Error\n");
+
+  printf("%s", string_to_cstr(v));
+}
+
+void simple_print(JSValue v) {
+  if (is_number(v))
+    printf("number:%le", number_to_double(v));
+  else if (is_string(v))
+    printf("string:%s", string_to_cstr(v));
+  else if (is_object(v))
+    printf("object:object");
+  else if (v == JS_TRUE)
+    printf("boolean:true");
+  else if (v == JS_FALSE)
+    printf("boolean:false");
+  else if (v == JS_UNDEFINED)
+    printf("undefined:undefined");
+  else if (v == JS_NULL)
+    printf("object:null");
+  else
+    printf("unknown value");
+}
+
+/*
+ * debug_print
+ * This function is defined for the sake of the compatibility with the old VM.
+ */
+void debug_print(Context *context, int n) {
+  /* int topsize; */
+  JSValue res;
+
+  /* topsize = context->function_table[0].n_insns; */
+  res = get_a(context);
+  simple_print(res);
+  printf("\n");
+}
+
+
+
+/* ===================== */
+/* Exclude from vmloop.c */
+/* ===================== */
+
+#define TYPES_LIST \
+    TYPE_DEFTOKEN_MACRO(fixnum,          0) \
+    TYPE_DEFTOKEN_MACRO(flonum,          1) \
+    TYPE_DEFTOKEN_MACRO(string,          2) \
+    TYPE_DEFTOKEN_MACRO(special,         3) \
+    TYPE_DEFTOKEN_MACRO(simple_object,   4) \
+    TYPE_DEFTOKEN_MACRO(array,           5) \
+    TYPE_DEFTOKEN_MACRO(function,        6) \
+    TYPE_DEFTOKEN_MACRO(builtin,         7) \
+    TYPE_DEFTOKEN_MACRO(iterator,        8) \
+    TYPE_DEFTOKEN_MACRO(number_object,   9) \
+    TYPE_DEFTOKEN_MACRO(boolean_object, 10) \
+    TYPE_DEFTOKEN_MACRO(string_object,  11) \
+    TYPE_ITEM_REGEXP(                   12) \
+    TYPE_DEFTOKEN_TERM(                 13)
+
+#define TYPE_ITEM_TERM_IDX (13)
+
+#ifdef USE_REGEXP
+#define TYPE_ITEM_REGEXP(idx) TYPE_DEFTOKEN_MACRO(regexp, idx)
+#else /* USE_REGEXP */
+#define TYPE_ITEM_REGEXP(idx)
+#endif /* USE_REGEXP */
+
+const char *to_jsv_typename(JSValue v){
+  static const char *names[] = {
+#define TYPE_DEFTOKEN_MACRO(type, idx) #type,
+#define TYPE_DEFTOKEN_TERM(idx) "unknown"
+    TYPES_LIST
+#undef TYPE_DEFTOKEN_TERM
+#undef TYPE_DEFTOKEN_MACRO
+  };
+
+  int index = to_jsv_typeindex(v);
+  return names[index];
+}
+
+int to_jsv_typeindex(JSValue v){
+#define TYPE_DEFTOKEN_MACRO(type, idx) \
+  if (is_ ## type (v)) return idx;
+#define TYPE_DEFTOKEN_TERM(idx) return idx;
+  TYPES_LIST
+#undef TYPE_DEFTOKEN_TERM
+#undef TYPE_DEFTOKEN_MACRO
+}
+
+
+/* ====================== */
+/* Exclude from iccprof.c */
+/* ====================== */
+
+int icc_value2index(JSValue value){
+  const int idx = to_jsv_typeindex(value);
+  if (idx < TYPE_ITEM_TERM_IDX)
+    return idx;
+
+  LOG_EXIT("Illigal value in icc_value2index\n");
+  return -1;
+}
+
+const char *icc_index2type_name(int index){
+  static const char *names[] = {
+#define TYPE_DEFTOKEN_MACRO(type, idx) #type,
+#define TYPE_DEFTOKEN_TERM(idx)
+    TYPES_LIST
+#undef TYPE_DEFTOKEN_TERM
+#undef TYPE_DEFTOKEN_MACRO
+  };
+
+  if (index < TYPE_ITEM_TERM_IDX)
+    return names[index];
+
+  LOG_EXIT("Illigal value in icc_index2type_name\n");
+  return NULL;
+}
+
+void calc_rusage_duration(time_t *psec, suseconds_t *pusec, struct rusage *ru0, struct rusage *ru1) {
+  time_t sec;
+  suseconds_t usec;
+
+  sec = ru1->ru_utime.tv_sec - ru0->ru_utime.tv_sec;
+  usec = ru1->ru_utime.tv_usec - ru0->ru_utime.tv_usec;
+  if (usec < 0) {
+    sec--;
+    usec += 1000000;
+  }
+
+  *psec = sec;
+  *pusec = usec;
+}
+
+size_t get_function_table_length(FunctionTable *ftable) {
+  size_t size = 0;
+  FunctionTable *p;
+  for (p = ftable; p->insns != NULL; ++p)
+    ++size;
+  return size;
+}
+
+/* For arm-board */
+#ifdef STM32H743xx
+int getrusage (int who, struct rusage* usage) {
+  usage->ru_utime.tv_sec = 0;
+  usage->ru_utime.tv_usec = 0;
+  usage->ru_stime.tv_sec = 0;
+  usage->ru_stime.tv_usec = 0;
+
+  return 0;
+}
+#endif /* STM32H743xx */
+
+/* Local Variables:      */
+/* mode: c               */
+/* c-basic-offset: 2     */
+/* indent-tabs-mode: nil */
+/* End:                  */

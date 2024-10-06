@@ -1,0 +1,33 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+/*
+ * 15.5.4.6 String.prototype.concat
+ */
+(needContext, builtinFunction) string_concat: (JSValue, JSValue) -> JSValue 
+string_concat(str, str2){
+    JSValue ret;
+
+    /* 1. check coercible */
+    match(str){
+        case(Special str){
+            if (str == JS_NULL || str == JS_UNDEFINED)
+                type_error_exception("string_concat");
+        }
+        case(true){}
+    }
+
+    /* 2. */
+    ret <- to_string(str);
+
+    /* 5. */
+    String stringedStr2 = to_string(str2);
+    vmdlStringConcat(ret, stringedStr2);
+    do(int i=2 to na step 1){
+        String appendStr = to_string(rest[i]);
+        vmdlStringConcat(ret, appendStr);
+    }
+
+    /* 6. */
+    return ret;
+}

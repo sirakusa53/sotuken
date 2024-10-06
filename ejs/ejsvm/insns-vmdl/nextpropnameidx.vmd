@@ -1,0 +1,8 @@
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, needContext, tailCall)
+nextpropnameidx : JSValue -> JSValue
+nextpropnameidx (obj) {
+    JSValue res = iteratorGetNextPropName(obj);
+    return res;
+}

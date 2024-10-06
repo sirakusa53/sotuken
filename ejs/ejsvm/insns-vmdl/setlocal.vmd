@@ -1,0 +1,14 @@
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, needContext, tailCall)
+setlocal : (int, Subscript, JSValue) -> void
+
+setlocal (link, index, v) {
+    // Setlocal(link, index, v);
+
+    FunctionFrame fr = get_lp();
+    do(int i = 0 to link-1 step 1){
+        fr <- fframe_prev(fr);
+    }
+    setFFrameLocalsIndex(fr, subscriptToCint(index), v);
+}

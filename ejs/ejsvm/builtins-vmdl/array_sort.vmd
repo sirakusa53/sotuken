@@ -1,0 +1,18 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) array_sort: (JSValue, JSValue) -> JSValue 
+array_sort(arr, compareFunction){
+  match(arr){
+      case(Array arr){
+        int len = to_cint(get_jsarray_length(arr));
+        /* NOTE: arr sould be GC_PUSH/GC_POP here. */
+        asort(arr, 0, len - 1, compareFunction);
+        return arr;
+      }
+      case(true){
+        LOG_EXIT("type error: array_sort");
+        return JS_EMPTY;
+      }
+  }
+}

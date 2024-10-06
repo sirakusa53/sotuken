@@ -1,0 +1,23 @@
+======== math-partial-sums ========
+0: total CPU time = 36.346 msec, total GC time = 0.999 msec (#GC = 1) n_hc = 20, n_enter_hc = 352, n_exit_hc = 208
+1: total CPU time = 36.895 msec, total GC time = 1.53 msec (#GC = 1) n_hc = 20, n_enter_hc = 352, n_exit_hc = 208
+2: total CPU time = 41.293 msec, total GC time = 1.200 msec (#GC = 1) n_hc = 20, n_enter_hc = 352, n_exit_hc = 208
+3: total CPU time = 37.720 msec, total GC time = 1.0 msec (#GC = 1) n_hc = 20, n_enter_hc = 352, n_exit_hc = 208
+4: total CPU time = 37.385 msec, total GC time = 0.998 msec (#GC = 1) n_hc = 20, n_enter_hc = 352, n_exit_hc = 208
+5: total CPU time = 40.480 msec, total GC time = 1.4 msec (#GC = 1) n_hc = 20, n_enter_hc = 352, n_exit_hc = 208
+6: total CPU time = 36.593 msec, total GC time = 0.999 msec (#GC = 1) n_hc = 20, n_enter_hc = 352, n_exit_hc = 208
+7: total CPU time = 35.856 msec, total GC time = 1.44 msec (#GC = 1) n_hc = 20, n_enter_hc = 352, n_exit_hc = 208
+8: total CPU time = 38.315 msec, total GC time = 0.973 msec (#GC = 1) n_hc = 20, n_enter_hc = 352, n_exit_hc = 208
+9: total CPU time = 35.298 msec, total GC time = 0.940 msec (#GC = 1) n_hc = 20, n_enter_hc = 352, n_exit_hc = 208
+
+======== math-partial-sums Optimisation ========
+0: total CPU time = 35.106 msec, total GC time = 1.293 msec (#GC = 1) n_hc = 19, n_enter_hc = 342, n_exit_hc = 203
+1: total CPU time = 38.725 msec, total GC time = 0.940 msec (#GC = 1) n_hc = 19, n_enter_hc = 342, n_exit_hc = 203
+2: total CPU time = 34.733 msec, total GC time = 0.939 msec (#GC = 1) n_hc = 19, n_enter_hc = 342, n_exit_hc = 203
+3: total CPU time = 34.764 msec, total GC time = 0.939 msec (#GC = 1) n_hc = 19, n_enter_hc = 342, n_exit_hc = 203
+4: total CPU time = 38.596 msec, total GC time = 0.938 msec (#GC = 1) n_hc = 19, n_enter_hc = 342, n_exit_hc = 203
+5: total CPU time = 34.927 msec, total GC time = 0.939 msec (#GC = 1) n_hc = 19, n_enter_hc = 342, n_exit_hc = 203
+6: total CPU time = 39.226 msec, total GC time = 1.12 msec (#GC = 1) n_hc = 19, n_enter_hc = 342, n_exit_hc = 203
+7: total CPU time = 35.129 msec, total GC time = 0.939 msec (#GC = 1) n_hc = 19, n_enter_hc = 342, n_exit_hc = 203
+8: total CPU time = 38.633 msec, total GC time = 0.939 msec (#GC = 1) n_hc = 19, n_enter_hc = 342, n_exit_hc = 203
+9: total CPU time = 35.225 msec, total GC time = 1.9 msec (#GC = 1) n_hc = 19, n_enter_hc = 342, n_exit_hc = 203

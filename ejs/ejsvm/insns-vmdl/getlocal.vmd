@@ -1,0 +1,17 @@
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, needContext, triggerGC, tailCall)
+getlocal : (int, Subscript) -> JSValue
+
+getlocal (link, index) {
+    // //NOTE! Wrap function
+    // JSValue wrapped_return_value = JS_EMPTY;
+    // Getlocal(link, index);
+    // return wrapped_return_value;
+    FunctionFrame fr;
+    fr <- get_lp();
+    do(int i = 0 to link-1 step 1){
+        fr <- fframe_prev(fr);
+    }
+    return fframe_locals_idx(fr, index);
+}

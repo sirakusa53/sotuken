@@ -1,0 +1,142 @@
+#include "../header-vmdl/patterns.vmdh"
+
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, needContext)
+equal : (JSValue, JSValue) -> Special
+equal (v1, v2) {
+  top: match (v1, v2) {
+    case ((Fixnum v1 && Fixnum v2) || (String v1 && String v2)) {
+      if(v1 == v2){
+        return JS_TRUE;
+      }else{
+        return JS_FALSE;
+      }
+    }
+    case ((Fixnum v1 && Flonum v2) || (Flonum v1 && Fixnum v2) || (Special v1 && Flonum v2) || (Flonum v1 && Special v2)) {
+      return JS_FALSE;
+    }
+    case (Flonum v1 && Flonum v2) {
+      if(v1 == v2){
+        return false_true(is_nan(v1));
+      }else{
+        double x1 = to_double(v1);
+        double x2 = to_double(v2);
+        return true_false(x1 == x2);
+      }
+    }
+    case (Special v1 && Special v2) {
+      if(v1 == v2){
+        return JS_TRUE;
+      }else{
+        return true_false((is_undefined(v1) && is_null(v2)) || (is_undefined(v2) && is_null(v1)));
+      }
+    }
+    case (String v1 && Fixnum v2) {
+      Number u1 = to_number(v1);
+      return true_false(u1 == v2);
+    }
+    case (String v1 && Flonum v2) {
+      Number u1 = to_number(v1);
+      rematch top(u1, v2);
+    }
+    case (Fixnum v1 && String v2) {
+      Number u2 = to_number(v2);
+      return true_false(v1 == u2);
+    }
+    case (Flonum v1 && String v2) {
+      Number u2 = to_number(v2);
+      rematch top(v1, u2);
+    }
+    case (Special v1 && Fixnum v2) {
+      if(v1 == JS_UNDEFINED){
+        return JS_FALSE;
+      }
+      if(v1 == JS_NULL){
+        return JS_FALSE;
+      }
+      JSValue u1;
+      if(v1 == JS_TRUE){
+        u1 <- FIXNUM_ONE;
+      }else if(v1 == JS_FALSE){
+        u1 <- FIXNUM_ZERO;
+      }else{
+        u1 <- v1;
+      }
+      return true_false(u1 == v2);
+    }
+    case (Fixnum v1 && Special v2) {
+      if(v2 == JS_UNDEFINED){
+        return JS_FALSE;
+      }
+      if(v2 == JS_NULL){
+        return JS_FALSE;
+      }
+      JSValue u2;
+      if(v2 == JS_TRUE){
+        u2 <- FIXNUM_ONE;
+      }else if(v2 == JS_FALSE){
+        u2 <- FIXNUM_ZERO;
+      }else{
+        u2 <- v2;
+      }
+      return true_false(v1 == u2);
+    }
+    case (Special v1 && String v2) {
+      if (v1 == JS_UNDEFINED){
+        return JS_FALSE;
+      }else if (v1 == JS_NULL) {
+        return JS_FALSE;
+      }else {
+        JSValue u1;
+        if (v1 == JS_TRUE){
+          u1 <- FIXNUM_ONE;
+        }else if (v1 == JS_FALSE){
+          u1 <- FIXNUM_ZERO;
+        }else{
+          u1 <- v1;
+        }
+        rematch top(u1, v2);
+      }
+    }
+    case (String v1 && Special v2) {
+      if (v2 == JS_UNDEFINED){
+        return JS_FALSE;
+      }else if (v2 == JS_NULL) {
+        return JS_FALSE;
+      }else {
+        JSValue u2;
+        if (v2 == JS_TRUE){
+          u2 <- FIXNUM_ONE;
+        }else if (v2 == JS_FALSE){
+          u2 <- FIXNUM_ZERO;
+        }else{
+          u2 <- v2;
+        }
+        rematch top(v1, u2);
+      }
+    }
+    case (object v1 && Fixnum v2) {
+      JSValue u1 = object_to_primitive(v1, HINT_NUMBER);
+      return true_false(u1 == v2);
+    }
+    case (Fixnum v1 && object v2) {
+      JSValue u2 = object_to_primitive(v2, HINT_NUMBER);
+      return true_false(v1 == u2);
+    }
+    case ((Flonum v1 || String v1 || Special v1) && object v2) {
+      JSValue u2 = object_to_primitive(v2, HINT_NUMBER);
+      rematch top(v1, u2);
+    }
+    case (object v1 && (Flonum v2 || String v2 || Special v2)) {
+      JSValue u1 = object_to_primitive(v1, HINT_NUMBER);
+      rematch top(u1, v2);
+    }
+    case (true) {
+      if(v1 == v2){
+        return JS_TRUE;
+      }
+      return JS_FALSE;
+    }
+  }
+}

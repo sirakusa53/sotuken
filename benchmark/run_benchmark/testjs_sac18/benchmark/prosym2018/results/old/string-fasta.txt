@@ -1,0 +1,3 @@
+======== string-fasta ========
+0: total CPU time = 88.528 msec, total GC time = 6.60 msec (#GC = 9) n_hc = 54, n_enter_hc = 865496, n_exit_hc = 672647
+1: total CPU time = 84.592 msec, total GC time = 4.285 msec (#GC = 9) n_hc = 54, n_enter_hc = 865496, n_exit_hc = 672647

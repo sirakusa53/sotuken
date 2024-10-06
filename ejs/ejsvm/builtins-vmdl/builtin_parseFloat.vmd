@@ -1,0 +1,19 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) builtin_parseFloat: (JSValue, JSValue) -> JSValue 
+builtin_parseFloat(global, string){
+    if(na == 0)
+        return gconsts.g_flonum_nan;
+    JSValue str = to_string(string);
+    match(str){
+        case(String str){
+            cstring cstr = string_to_cstr(str);
+            JSValue ret = cstr_parse_float(cstr);
+            return ret;
+        }
+        case(true){
+            return gconsts.g_flonum_nan;
+        }
+    }
+}

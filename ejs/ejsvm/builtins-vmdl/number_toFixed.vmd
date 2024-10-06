@@ -1,0 +1,10 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) number_toFixed: (JSValue, JSValue) -> JSValue 
+number_toFixed(o, d){
+    JSValue num = to_number(o);
+    int digit = (na >= 1 ? toInteger(d) : 0);
+    
+    return toFixed_helper(num, digit);
+}

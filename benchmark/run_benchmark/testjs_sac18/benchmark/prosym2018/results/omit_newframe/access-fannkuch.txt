@@ -1,0 +1,23 @@
+======== access-fannkuch ========
+0: total CPU time = 101.111 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 836, n_exit_hc = 452
+1: total CPU time = 88.25 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 836, n_exit_hc = 452
+2: total CPU time = 92.59 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 836, n_exit_hc = 452
+3: total CPU time = 86.673 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 836, n_exit_hc = 452
+4: total CPU time = 84.502 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 836, n_exit_hc = 452
+5: total CPU time = 86.831 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 836, n_exit_hc = 452
+6: total CPU time = 88.641 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 836, n_exit_hc = 452
+7: total CPU time = 84.299 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 836, n_exit_hc = 452
+8: total CPU time = 81.695 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 836, n_exit_hc = 452
+9: total CPU time = 81.253 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 836, n_exit_hc = 452
+
+======== access-fannkuch Optimisation ========
+0: total CPU time = 79.902 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 834, n_exit_hc = 451
+1: total CPU time = 81.379 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 834, n_exit_hc = 451
+2: total CPU time = 83.175 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 834, n_exit_hc = 451
+3: total CPU time = 82.446 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 834, n_exit_hc = 451
+4: total CPU time = 83.904 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 834, n_exit_hc = 451
+5: total CPU time = 84.448 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 834, n_exit_hc = 451
+6: total CPU time = 80.91 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 834, n_exit_hc = 451
+7: total CPU time = 86.573 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 834, n_exit_hc = 451
+8: total CPU time = 81.114 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 834, n_exit_hc = 451
+9: total CPU time = 78.693 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 19, n_enter_hc = 834, n_exit_hc = 451

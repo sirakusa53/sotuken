@@ -1,0 +1,7 @@
+======== access-fannkuch ========
+0: total CPU time = 87.545 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 836, n_exit_hc = 452
+1: total CPU time = 88.934 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 836, n_exit_hc = 452
+
+======== access-fannkuch Optimisation ========
+0: total CPU time = 91.318 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 836, n_exit_hc = 452
+1: total CPU time = 88.424 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 836, n_exit_hc = 452

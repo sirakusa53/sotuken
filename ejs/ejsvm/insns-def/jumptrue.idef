@@ -1,0 +1,13 @@
+\inst jumptrue (Value v, InstructionDisplacement d)
+
+\otherwise \{
+/*
+   jumptrue src disp
+   if (!$src) pc = pc + $disp
+ */
+
+  if (v == JS_TRUE || (v != JS_FALSE && to_boolean(v) == JS_TRUE)) {
+    set_pc_relative(d);
+    NEXT_INSN_NOINCPC();
+  }
+\}

@@ -1,0 +1,38 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) array_indexOf : (Array, JSValue, JSValue) -> JSValue 
+array_indexOf(o, searchElement, fromIndex){
+  /* 2. 3. */
+  int len = number_to_cint(get_jsarray_length(o));
+  /* 4. */
+  if(len == 0){
+    return FIXNUM_MINUS_ONE;
+  }
+  /* 5. */
+  int n = na >= 2 ? toInteger(fromIndex) : 0;
+  /* 6. */
+  if(n >= len){
+    return FIXNUM_MINUS_ONE;
+  }
+  /* 7. 8. */
+  int k = (n >= 0) ? n : max(len - abs(n), 0);
+  /* 9. */
+  while(k < len){
+    /* a. */
+    if(has_array_element(o, k)){
+      /* b. */
+      /* i. */
+      JSValue element_k = get_array_element(o, k);
+      /* ii. */
+      if(eq_helper(searchElement, element_k)){
+        /* iii. */
+        return cint_to_number(k);
+      }
+      /* c. */
+      k <- k + 1;
+    }
+  }
+  /* 10. */
+  return FIXNUM_MINUS_ONE;
+}

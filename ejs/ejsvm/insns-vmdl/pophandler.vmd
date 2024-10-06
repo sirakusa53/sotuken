@@ -1,0 +1,13 @@
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, needContext, tailCall)
+pophandler : void -> void
+pophandler () {
+    UnwindProtect p;
+    p <- context.exhandler_stack_top;
+    if (!isNullPointer(p)){
+      context.exhandler_stack_top <- p.prev;
+      p.prev <- context.exhandler_pool;
+      context.exhandler_pool <- p;
+    }
+}

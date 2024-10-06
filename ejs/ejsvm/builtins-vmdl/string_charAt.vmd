@@ -1,0 +1,22 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) string_charAt: (JSValue, JSValue) -> JSValue 
+string_charAt(str, index){
+    if(str == JS_NULL || str == JS_UNDEFINED)
+        type_error_exception("string_charAt");
+    JSValue str0 = to_string(str);
+    int pos = (na >= 1) ? toInteger(index) : 0;
+    JSValue ret;
+    if(pos < 0 || string_length(str0) <= cint_to_uint32(pos))
+        ret <- gconsts.g_string_empty;
+    else{
+        int c = string_char_code_at(str0, pos);
+        if(c < 0)
+            ret <- gconsts.g_string_empty;
+        else{
+            ret <- getCharString(c);
+        }
+    }
+    return ret;
+}

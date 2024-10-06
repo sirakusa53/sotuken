@@ -1,0 +1,11 @@
+======== taknop ========
+0: total CPU time = 690.759 msec, total GC time = 53.862 msec (#GC = 304) n_hc = 20, n_enter_hc = 9845624, n_exit_hc = 4922844
+1: total CPU time = 685.739 msec, total GC time = 0.0 msec (#GC = 304) n_hc = 20, n_enter_hc = 9845624, n_exit_hc = 4922844
+2: total CPU time = 685.27 msec, total GC time = 0.0 msec (#GC = 304) n_hc = 20, n_enter_hc = 9845624, n_exit_hc = 4922844
+3: total CPU time = 690.782 msec, total GC time = 0.0 msec (#GC = 304) n_hc = 20, n_enter_hc = 9845624, n_exit_hc = 4922844
+4: total CPU time = 683.254 msec, total GC time = 0.0 msec (#GC = 304) n_hc = 20, n_enter_hc = 9845624, n_exit_hc = 4922844
+5: total CPU time = 689.586 msec, total GC time = 3.51 msec (#GC = 304) n_hc = 20, n_enter_hc = 9845624, n_exit_hc = 4922844
+6: total CPU time = 703.990 msec, total GC time = 0.0 msec (#GC = 304) n_hc = 20, n_enter_hc = 9845624, n_exit_hc = 4922844
+7: total CPU time = 687.768 msec, total GC time = 0.0 msec (#GC = 304) n_hc = 20, n_enter_hc = 9845624, n_exit_hc = 4922844
+8: total CPU time = 706.620 msec, total GC time = 74.276 msec (#GC = 304) n_hc = 20, n_enter_hc = 9845624, n_exit_hc = 4922844
+9: total CPU time = 685.916 msec, total GC time = 0.0 msec (#GC = 304) n_hc = 20, n_enter_hc = 9845624, n_exit_hc = 4922844

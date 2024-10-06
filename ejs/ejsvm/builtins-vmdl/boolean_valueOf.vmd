@@ -1,0 +1,25 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, builtinFunction) boolean_valueOf: JSValue -> JSValue 
+boolean_valueOf(b){
+    JSValue ret;
+    match(b){
+        case(Special b){
+            if(b == JS_TRUE || b == JS_FALSE){
+                ret <- b;
+            }else{
+                type_error_exception("boolean_valueOf");
+                ret <- JS_EMPTY;
+            }
+        }
+        case(BooleanObject b){
+            ret <- get_jsboolean_object_value(b);
+        }
+        case(true){
+            type_error_exception("boolean_valueOf");
+            ret <- JS_EMPTY;
+        }
+    }
+    return ret;
+}

@@ -1,0 +1,7 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) builtin_to_number: (JSValue, JSValue) -> JSValue 
+builtin_to_number(global, v){
+    return to_number(v);
+}

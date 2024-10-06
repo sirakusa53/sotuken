@@ -1,0 +1,31 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) array_join : (JSValue, JSValue) -> JSValue 
+array_join(arr, separator){
+    JSValue sep;
+    JSValue ret;
+    
+    match(separator){
+        case(Special separator){
+            if(is_undefined(separator)){
+                sep <- gconsts.g_string_comma;
+            }else{
+                sep <- to_string(separator);
+            }
+        }
+        case(true){
+            sep <- to_string(separator);
+        }
+    }
+    match(arr){
+        case(Array arr){
+            ret <- array_to_string(arr, sep);
+        }
+        case(true){
+            ret <- JS_EMPTY;
+            LOG_EXIT("type error: array_join");
+        }
+    }
+    return ret;
+}

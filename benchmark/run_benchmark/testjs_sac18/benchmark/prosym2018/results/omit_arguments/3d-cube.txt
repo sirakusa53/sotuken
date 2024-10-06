@@ -1,0 +1,7 @@
+======== 3d-cube ========
+0: total CPU time = 59.258 msec, total GC time = 4.376 msec (#GC = 5) n_hc = 40, n_enter_hc = 89440, n_exit_hc = 55225
+1: total CPU time = 58.373 msec, total GC time = 4.408 msec (#GC = 5) n_hc = 40, n_enter_hc = 89440, n_exit_hc = 55225
+
+======== 3d-cube Optimisation ========
+0: total CPU time = 53.877 msec, total GC time = 3.423 msec (#GC = 5) n_hc = 40, n_enter_hc = 78568, n_exit_hc = 49789
+1: total CPU time = 57.945 msec, total GC time = 4.176 msec (#GC = 5) n_hc = 40, n_enter_hc = 78568, n_exit_hc = 49789

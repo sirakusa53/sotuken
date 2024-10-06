@@ -1,0 +1,40 @@
+#include "../header-vmdl/patterns.vmdh"
+
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, needContext, triggerGC, tailCall)
+mul : (JSValue, JSValue) -> JSValue
+
+mul (v1, v2) {
+  top: match (v1, v2) {
+    case (Fixnum v1 && Fixnum v2) {
+      int n1 = to_cint(v1);
+      int n2 = to_cint(v2);
+      if (half_fixnum_range(n1) && half_fixnum_range(n2)) {
+        int p = n1 * n2;
+        return small_cint_to_fixnum(p);
+      } else {
+        double d = cint_to_double(n1) * cint_to_double(n2);
+        return double_to_number(d);
+      }
+    }
+    case (number v1 && number v2) {
+      double x1 = to_double(v1);
+      double x2 = to_double(v2);
+      return double_to_number(x1 * x2);
+    }
+    case (number v1) {
+      Number u2 = to_number(v2);
+      rematch top(v1, u2);
+    }
+    case (number v2) {
+      Number u1 = to_number(v1);
+      rematch top(u1, v2);
+    }
+    case (true) {
+      Number u1 = to_number(v1);
+      Number u2 = to_number(v2);
+      rematch top(u1, u2);
+    }
+  }
+}

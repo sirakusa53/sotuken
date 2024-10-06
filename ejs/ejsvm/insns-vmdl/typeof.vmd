@@ -1,0 +1,8 @@
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, tailCall)
+typeof : () -> void
+
+typeof () {
+    NOT_IMPLEMENTED();
+}

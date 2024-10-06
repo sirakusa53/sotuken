@@ -1,0 +1,15 @@
+\inst bigprim (Register dst, ConstantDisplacement disp)
+
+\otherwise \{
+/*
+   number dst disp
+   string dst disp
+   regexp dst disp
+     dst : destination register
+     disp : displacement of the constant position from the pc
+   $dst = ((JSValur *)insns)[disp]
+ */
+
+  // dst = insns[disp].code;
+  dst = curfn->constants[disp];
+\}

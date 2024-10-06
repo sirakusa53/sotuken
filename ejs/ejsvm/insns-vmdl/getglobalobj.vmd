@@ -1,0 +1,9 @@
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, needContext, tailCall)
+getglobalobj : void -> JSValue
+
+getglobalobj () {
+    return context.global;
+}
+

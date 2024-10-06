@@ -1,0 +1,40 @@
+JSC = ../../../ejs/compiler/tjs-c/tjs-c/tjscompiler
+FLAGS =
+
+jsfiles = 3d-cube.sbc \
+  3d-raytrace.sbc \
+  base64.sbc \
+  code-first-load-code-load.sbc \
+  code-multi-load-code-load.sbc \
+  crypto-aes.sbc \
+  crypto-md5.sbc \
+  crypto-sha1.sbc \
+  date-format-tofte.sbc \
+  date-format-xparb.sbc \
+  regex-dna.sbc \
+  tagcloud.sbc \
+  crypto.sbc \
+  deltablue.sbc \
+  gbemu-part1.sbc \
+  hash-map.sbc \
+  n-body.sbc \
+  navier-stokes.sbc \
+  richards.sbc \
+  splay.sbc \
+  zlib.sbc \
+  zlib-data.sbc
+
+
+ifdef JSC
+%.sbc: %.js
+	$(JSC) $(FLAGS) $<
+
+all: $(jsfiles)
+
+else
+all:
+	echo please set compiler path \"JSC\"
+endif
+
+clean:
+	rm *.sbc

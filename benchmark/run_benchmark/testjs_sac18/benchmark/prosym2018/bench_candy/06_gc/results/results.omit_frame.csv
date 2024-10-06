@@ -1,0 +1,16 @@
+filename,omit_frame,omit_frame (with optimisation)
+3d-cube,42.2406,40.1069
+3d-morph,47.9600,47.4797
+access-binary-trees,28.4353,17.5569
+access-fannkuch,68.3682,67.8261
+access-nbody,61.5357,61.4324
+access-nsieve,21.0202,18.3159
+bitops-3bit-bits-in-byte,30.4927,19.6251
+bitops-bits-in-byte,40.0796,31.1117
+bitops-bitwise-and,41.0964,40.8032
+controlflow-recursive,35.1329,15.4634
+math-partial-sums,31.9498,31.8523
+math-spectral-norm,35.7061,24.2554
+string-base64,909.3472,909.3138
+string-fasta,59.5576,53.5351
+tak,4839.9808,2018.7103

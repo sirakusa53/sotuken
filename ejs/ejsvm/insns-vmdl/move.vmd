@@ -1,0 +1,8 @@
+#include "../header-vmdl/externc.vmdh"
+
+(vmInstruction, tailCall)
+move : JSValue -> JSValue
+
+move (v1) {
+    return v1;
+}

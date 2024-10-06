@@ -1,0 +1,8 @@
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, vmInstruction, tailCall)
+fixnum : int -> Fixnum
+
+fixnum (i1) {
+    return small_cint_to_fixnum(i1);
+}

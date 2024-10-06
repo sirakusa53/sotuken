@@ -1,0 +1,41 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) array_some : (Array, callable, JSValue) -> JSValue 
+array_some(o, callbackfn, thisArg){
+  /* 2. 3. */
+  int len = number_to_cint(get_jsarray_length(o));
+  /* 4. */
+  /* 5. */
+  JSValue t = na >= 2 ? thisArg : JS_UNDEFINED;
+  /* 6. */
+  int k = 0;
+  /* 7. */
+  while(k < len){
+    /* b. */
+    if(has_array_element(o, k)){
+      /* c. */
+      /* i. */
+      JSValue js_k = cint_to_number(k);
+      JSValue k_value = get_array_element(o, k);
+      /* ii. */
+      JSValue result;
+      match(callbackfn){
+        case(Function callbackfn){
+          result <- send_function3(t, callbackfn, k_value, js_k, o);
+        }
+        case(Builtin callbackfn){
+          result <- send_builtin3(t, callbackfn, k_value, js_k, o);
+        }
+      }
+      /* iii. */
+      if(result == JS_TRUE || (result != JS_FALSE && to_boolean(result) == JS_TRUE)){
+        return JS_TRUE;
+      }
+    }
+    /* d. */
+    k <- k + 1;
+  }
+  /* 8. */
+  return JS_FALSE;
+}

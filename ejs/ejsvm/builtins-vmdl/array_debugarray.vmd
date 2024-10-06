@@ -1,0 +1,29 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+externC constant PRINT_FORMAT = "\"i = %\" PRIvmdl_int \": \"" : cstring
+
+(needContext, triggerGC, builtinFunction) array_debugarray: JSValue -> JSValue 
+array_debugarray(arr){
+  /* BUG?: The method does not print arr[i] (i >= max(size, ASIZE_LIMIT)) */
+  match(arr){
+      case(Array arr){
+        int size = uintjsv_tToCint(get_jsarray_size(arr));
+        int length = to_cint(get_jsarray_length(arr));
+        int to_ = (length < size) ? length : size;
+        printfDebugArray("debugarray: size = %lld length = %lld, to = %lld\n", size, length, to_);
+        /* NOTE: 'arr' is the target of GC_PUSH/GC_POP here. */
+        do(int i = 0 to to_-1 step 1) {
+          JSValue[] body = get_jsarray_body(arr);
+          printf_int(PRINT_FORMAT, i);
+          print_value_simple(body[i]);
+          printf("\n");
+        }
+        return JS_UNDEFINED;
+      }
+      case(true){
+        LOG_EXIT("type error: array_debugarray");
+        return JS_EMPTY;
+      }
+  }
+}

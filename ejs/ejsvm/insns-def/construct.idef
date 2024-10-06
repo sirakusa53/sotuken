@@ -1,0 +1,63 @@
+\inst construct (Register dst, Value con, Immediate nargs)
+
+\when con:function \{
+  JSValue obj;
+
+  // new $dst $con
+  {
+    GC_PUSH(con);
+    save_context();
+    obj = create_simple_object_with_constructor(context, con);
+    update_context();
+
+    dst = obj;
+  }
+
+  // newsend
+  set_fp(context, fp);
+  set_pc(context, pc);
+  int sendp = TRUE;
+  GC_PUSH(obj);
+  call_function(context, con, nargs, sendp);
+  update_context();
+
+  regbase[1] = obj; // this = $dst
+
+  GC_POP2(obj, con);
+
+  NEXT_INSN_NOINCPC();
+\}
+
+\when con:builtin \{
+  // new $dst $con
+  {
+    dst = JS_UNDEFINED;
+  }
+
+  // move this $dst
+  {
+    int sp = get_sp(context);
+    JSValue *stack = &get_stack(context, 0);
+
+    stack[sp - nargs] = dst;
+  }
+
+  // newsend $dst
+  set_fp(context, fp);
+  set_pc(context, pc);
+  call_builtin(context, con, nargs, TRUE, TRUE);
+  update_context();
+  NEXT_INSN_INCPC();
+\}
+
+\otherwise \{
+  set_fp(context, fp);
+  set_pc(context, pc);
+#ifdef DEBUG
+  print_value_simple(context, con);
+  printf(" is called in CALL instruction\n");
+#endif /* DEBUG */
+  LOG_EXIT("CALL\n");
+\}
+
+

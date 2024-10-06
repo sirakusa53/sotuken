@@ -1,0 +1,3 @@
+======== 3d-cube ========
+0: total CPU time = 55.302 msec, total GC time = 4.187 msec (#GC = 5) n_hc = 40, n_enter_hc = 89440, n_exit_hc = 55225
+1: total CPU time = 56.267 msec, total GC time = 4.564 msec (#GC = 5) n_hc = 40, n_enter_hc = 89440, n_exit_hc = 55225

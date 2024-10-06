@@ -1,0 +1,7 @@
+======== setprop_outer_needframe ========
+0: total CPU time = 0.280 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 2390, n_exit_hc = 1227
+1: total CPU time = 0.267 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 2390, n_exit_hc = 1227
+
+======== setprop_outer_needframe Optimisation ========
+0: total CPU time = 0.417 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 2390, n_exit_hc = 1227
+1: total CPU time = 0.240 msec, total GC time = 0.0 msec (#GC = 0) n_hc = 20, n_enter_hc = 2390, n_exit_hc = 1227

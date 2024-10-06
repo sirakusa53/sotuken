@@ -1,0 +1,7 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) builtin_to_string: (JSValue, JSValue) -> JSValue 
+builtin_to_string(global, v){
+    return to_string(v);
+}

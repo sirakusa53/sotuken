@@ -1,0 +1,449 @@
+{
+  "type": "File",
+  "start": 0,
+  "end": 83,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 3,
+      "column": 0
+    }
+  },
+  "errors": [],
+  "program": {
+    "type": "Program",
+    "start": 0,
+    "end": 83,
+    "loc": {
+      "start": {
+        "line": 1,
+        "column": 0
+      },
+      "end": {
+        "line": 3,
+        "column": 0
+      }
+    },
+    "sourceType": "script",
+    "interpreter": null,
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "start": 0,
+        "end": 72,
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 72
+          }
+        },
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 4,
+            "end": 71,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 4
+              },
+              "end": {
+                "line": 1,
+                "column": 71
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 4,
+              "end": 7,
+              "loc": {
+                "start": {
+                  "line": 1,
+                  "column": 4
+                },
+                "end": {
+                  "line": 1,
+                  "column": 7
+                },
+                "identifierName": "sum"
+              },
+              "name": "sum"
+            },
+            "init": {
+              "type": "FunctionExpression",
+              "start": 10,
+              "end": 71,
+              "loc": {
+                "start": {
+                  "line": 1,
+                  "column": 10
+                },
+                "end": {
+                  "line": 1,
+                  "column": 71
+                }
+              },
+              "id": null,
+              "generator": false,
+              "async": false,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "start": 19,
+                  "end": 20,
+                  "loc": {
+                    "start": {
+                      "line": 1,
+                      "column": 19
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 20
+                    },
+                    "identifierName": "n"
+                  },
+                  "name": "n"
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "start": 22,
+                "end": 71,
+                "loc": {
+                  "start": {
+                    "line": 1,
+                    "column": 22
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 71
+                  }
+                },
+                "body": [
+                  {
+                    "type": "IfStatement",
+                    "start": 23,
+                    "end": 69,
+                    "loc": {
+                      "start": {
+                        "line": 1,
+                        "column": 23
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 69
+                      }
+                    },
+                    "test": {
+                      "type": "BinaryExpression",
+                      "start": 27,
+                      "end": 31,
+                      "loc": {
+                        "start": {
+                          "line": 1,
+                          "column": 27
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 31
+                        }
+                      },
+                      "left": {
+                        "type": "Identifier",
+                        "start": 27,
+                        "end": 28,
+                        "loc": {
+                          "start": {
+                            "line": 1,
+                            "column": 27
+                          },
+                          "end": {
+                            "line": 1,
+                            "column": 28
+                          },
+                          "identifierName": "n"
+                        },
+                        "name": "n"
+                      },
+                      "operator": "==",
+                      "right": {
+                        "type": "NumericLiteral",
+                        "start": 30,
+                        "end": 31,
+                        "loc": {
+                          "start": {
+                            "line": 1,
+                            "column": 30
+                          },
+                          "end": {
+                            "line": 1,
+                            "column": 31
+                          }
+                        },
+                        "extra": {
+                          "rawValue": 0,
+                          "raw": "0"
+                        },
+                        "value": 0
+                      }
+                    },
+                    "consequent": {
+                      "type": "ReturnStatement",
+                      "start": 33,
+                      "end": 42,
+                      "loc": {
+                        "start": {
+                          "line": 1,
+                          "column": 33
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 42
+                        }
+                      },
+                      "argument": {
+                        "type": "NumericLiteral",
+                        "start": 40,
+                        "end": 41,
+                        "loc": {
+                          "start": {
+                            "line": 1,
+                            "column": 40
+                          },
+                          "end": {
+                            "line": 1,
+                            "column": 41
+                          }
+                        },
+                        "extra": {
+                          "rawValue": 0,
+                          "raw": "0"
+                        },
+                        "value": 0
+                      }
+                    },
+                    "alternate": {
+                      "type": "ReturnStatement",
+                      "start": 48,
+                      "end": 69,
+                      "loc": {
+                        "start": {
+                          "line": 1,
+                          "column": 48
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 69
+                        }
+                      },
+                      "argument": {
+                        "type": "BinaryExpression",
+                        "start": 55,
+                        "end": 68,
+                        "loc": {
+                          "start": {
+                            "line": 1,
+                            "column": 55
+                          },
+                          "end": {
+                            "line": 1,
+                            "column": 68
+                          }
+                        },
+                        "left": {
+                          "type": "Identifier",
+                          "start": 55,
+                          "end": 56,
+                          "loc": {
+                            "start": {
+                              "line": 1,
+                              "column": 55
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 56
+                            },
+                            "identifierName": "n"
+                          },
+                          "name": "n"
+                        },
+                        "operator": "+",
+                        "right": {
+                          "type": "CallExpression",
+                          "start": 59,
+                          "end": 68,
+                          "loc": {
+                            "start": {
+                              "line": 1,
+                              "column": 59
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 68
+                            }
+                          },
+                          "callee": {
+                            "type": "Identifier",
+                            "start": 59,
+                            "end": 62,
+                            "loc": {
+                              "start": {
+                                "line": 1,
+                                "column": 59
+                              },
+                              "end": {
+                                "line": 1,
+                                "column": 62
+                              },
+                              "identifierName": "sum"
+                            },
+                            "name": "sum"
+                          },
+                          "arguments": [
+                            {
+                              "type": "BinaryExpression",
+                              "start": 64,
+                              "end": 67,
+                              "loc": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 64
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 67
+                                }
+                              },
+                              "left": {
+                                "type": "Identifier",
+                                "start": 64,
+                                "end": 65,
+                                "loc": {
+                                  "start": {
+                                    "line": 1,
+                                    "column": 64
+                                  },
+                                  "end": {
+                                    "line": 1,
+                                    "column": 65
+                                  },
+                                  "identifierName": "n"
+                                },
+                                "name": "n"
+                              },
+                              "operator": "-",
+                              "right": {
+                                "type": "NumericLiteral",
+                                "start": 66,
+                                "end": 67,
+                                "loc": {
+                                  "start": {
+                                    "line": 1,
+                                    "column": 66
+                                  },
+                                  "end": {
+                                    "line": 1,
+                                    "column": 67
+                                  }
+                                },
+                                "extra": {
+                                  "rawValue": 1,
+                                  "raw": "1"
+                                },
+                                "value": 1
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                ],
+                "directives": []
+              }
+            }
+          }
+        ],
+        "kind": "var"
+      },
+      {
+        "type": "ExpressionStatement",
+        "start": 73,
+        "end": 82,
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 0
+          },
+          "end": {
+            "line": 2,
+            "column": 9
+          }
+        },
+        "expression": {
+          "type": "CallExpression",
+          "start": 73,
+          "end": 81,
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 0
+            },
+            "end": {
+              "line": 2,
+              "column": 8
+            }
+          },
+          "callee": {
+            "type": "Identifier",
+            "start": 73,
+            "end": 76,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 0
+              },
+              "end": {
+                "line": 2,
+                "column": 3
+              },
+              "identifierName": "sum"
+            },
+            "name": "sum"
+          },
+          "arguments": [
+            {
+              "type": "NumericLiteral",
+              "start": 77,
+              "end": 80,
+              "loc": {
+                "start": {
+                  "line": 2,
+                  "column": 4
+                },
+                "end": {
+                  "line": 2,
+                  "column": 7
+                }
+              },
+              "extra": {
+                "rawValue": 100,
+                "raw": "100"
+              },
+              "value": 100
+            }
+          ]
+        }
+      }
+    ],
+    "directives": []
+  },
+  "comments": []
+}

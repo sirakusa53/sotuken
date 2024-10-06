@@ -1,0 +1,11 @@
+======== math-spectral-norm ========
+0: total CPU time = 35.435 msec, total GC time = 0.0 msec (#GC = 8) n_hc = 20, n_enter_hc = 245686, n_exit_hc = 122883
+1: total CPU time = 35.276 msec, total GC time = 0.0 msec (#GC = 8) n_hc = 20, n_enter_hc = 245686, n_exit_hc = 122883
+2: total CPU time = 35.344 msec, total GC time = 0.0 msec (#GC = 8) n_hc = 20, n_enter_hc = 245686, n_exit_hc = 122883
+3: total CPU time = 31.505 msec, total GC time = 0.238 msec (#GC = 8) n_hc = 20, n_enter_hc = 245686, n_exit_hc = 122883
+4: total CPU time = 35.374 msec, total GC time = 0.0 msec (#GC = 8) n_hc = 20, n_enter_hc = 245686, n_exit_hc = 122883
+5: total CPU time = 35.241 msec, total GC time = 0.0 msec (#GC = 8) n_hc = 20, n_enter_hc = 245686, n_exit_hc = 122883
+6: total CPU time = 35.398 msec, total GC time = 0.0 msec (#GC = 8) n_hc = 20, n_enter_hc = 245686, n_exit_hc = 122883
+7: total CPU time = 35.133 msec, total GC time = 0.0 msec (#GC = 8) n_hc = 20, n_enter_hc = 245686, n_exit_hc = 122883
+8: total CPU time = 35.336 msec, total GC time = 0.0 msec (#GC = 8) n_hc = 20, n_enter_hc = 245686, n_exit_hc = 122883
+9: total CPU time = 35.276 msec, total GC time = 0.0 msec (#GC = 8) n_hc = 20, n_enter_hc = 245686, n_exit_hc = 122883

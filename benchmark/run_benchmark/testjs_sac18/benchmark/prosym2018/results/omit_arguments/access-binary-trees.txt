@@ -1,0 +1,7 @@
+======== access-binary-trees ========
+0: total CPU time = 45.527 msec, total GC time = 6.576 msec (#GC = 9) n_hc = 24, n_enter_hc = 463145, n_exit_hc = 294714
+1: total CPU time = 48.561 msec, total GC time = 6.512 msec (#GC = 9) n_hc = 24, n_enter_hc = 463145, n_exit_hc = 294714
+
+======== access-binary-trees Optimisation ========
+0: total CPU time = 25.198 msec, total GC time = 0.481 msec (#GC = 1) n_hc = 23, n_enter_hc = 210713, n_exit_hc = 168498
+1: total CPU time = 25.564 msec, total GC time = 0.495 msec (#GC = 1) n_hc = 23, n_enter_hc = 210713, n_exit_hc = 168498

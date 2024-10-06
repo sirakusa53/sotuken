@@ -1,0 +1,11 @@
+======== access-nbody ========
+0: total CPU time = 57.495 msec, total GC time = 2.299 msec (#GC = 5) n_hc = 31, n_enter_hc = 9734, n_exit_hc = 4981
+1: total CPU time = 71.574 msec, total GC time = 2.905 msec (#GC = 5) n_hc = 31, n_enter_hc = 9734, n_exit_hc = 4981
+2: total CPU time = 62.994 msec, total GC time = 0.0 msec (#GC = 5) n_hc = 31, n_enter_hc = 9734, n_exit_hc = 4981
+3: total CPU time = 62.17 msec, total GC time = 0.0 msec (#GC = 5) n_hc = 31, n_enter_hc = 9734, n_exit_hc = 4981
+4: total CPU time = 62.308 msec, total GC time = 0.0 msec (#GC = 5) n_hc = 31, n_enter_hc = 9734, n_exit_hc = 4981
+5: total CPU time = 61.702 msec, total GC time = 0.0 msec (#GC = 5) n_hc = 31, n_enter_hc = 9734, n_exit_hc = 4981
+6: total CPU time = 61.911 msec, total GC time = 0.0 msec (#GC = 5) n_hc = 31, n_enter_hc = 9734, n_exit_hc = 4981
+7: total CPU time = 61.630 msec, total GC time = 0.0 msec (#GC = 5) n_hc = 31, n_enter_hc = 9734, n_exit_hc = 4981
+8: total CPU time = 61.644 msec, total GC time = 0.0 msec (#GC = 5) n_hc = 31, n_enter_hc = 9734, n_exit_hc = 4981
+9: total CPU time = 61.728 msec, total GC time = 0.0 msec (#GC = 5) n_hc = 31, n_enter_hc = 9734, n_exit_hc = 4981

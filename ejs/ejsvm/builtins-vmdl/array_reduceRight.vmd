@@ -1,0 +1,41 @@
+#include "../header-vmdl/patterns.vmdh"
+#include "../header-vmdl/externc.vmdh"
+
+(needContext, triggerGC, builtinFunction) array_reduceRight : (Array, callable, JSValue) -> JSValue 
+array_reduceRight(o, callbackfn, initialValue){
+  /* 2. 3. */
+  int len = number_to_cint(get_jsarray_length(o));
+  /* 5. */
+  if(len == 0 && na < 2){
+    type_error_exception("array_reduceRight");
+    return JS_EMPTY;
+  }
+  /* 6. */
+  int k = len - 1;
+  JSValue accumulator;
+  if(na >= 2){
+    /* 7. */
+    accumulator <- initialValue;
+  }else{
+    /* 8. */
+    /* a. */
+    int k_present = FALSE;
+    /* b. */
+    while(k_present == FALSE && k >= 0){
+      /* ii. */
+      k_present <- has_array_element(o, k);
+      if(k_present == FALSE){
+        k <- k - 1;
+      }
+    }
+    /* c */
+    if(k_present == FALSE){
+      type_error_exception("array_reduceRight");
+      return JS_EMPTY;
+    }else{
+      accumulator <- get_array_element(o, k);
+    }
+  }
+  /* 9. 10. */
+  return reduce_helper(k, len, o, accumulator, callbackfn, -1);
+}
