@@ -17,7 +17,7 @@ TLjumpfalse_fixnum: __attribute__((unused));
 TLjumpfalse_boolean_object: __attribute__((unused));
 TLjumpfalse_builtin: __attribute__((unused));
 TLjumpfalse_array: __attribute__((unused));
-{ // normal_flonum vmgen.newsynth.DecisionDiagram$Leaf@54
+{ // normal_builtin vmgen.newsynth.DecisionDiagram$Leaf@54
 
 /*
    jumpfalse src disp

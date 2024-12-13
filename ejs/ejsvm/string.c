@@ -142,9 +142,10 @@ JSValue cstr_to_string_ool(Context *context, const char *s)
   len = strlen(s);
   hash = update_hash(0, s, len);
   hash = finalise_hash(hash);
-
-  if (string_table_lookup(s, len, hash, &v))
-    return v;
+  if(len <= LEN){
+    if (string_table_lookup(s, len, hash, &v))
+     return v;
+  }
 
   p = allocate_string(context, len);
 #ifdef STROBJ_HAS_HASH
@@ -153,10 +154,12 @@ JSValue cstr_to_string_ool(Context *context, const char *s)
   memcpy(p->value, s, len + 1);
   v = ptr_to_normal_string(p);
   /* gc_push_tmp_root(&v); */
-  GC_PUSH(v);
+  if(len <= LEN){
+    GC_PUSH(v);
     string_table_put(context, v, hash);
-  /* gc_pop_tmp_root(1); */
-  GC_POP(v);
+    /* gc_pop_tmp_root(1); */
+    GC_POP(v);
+  }
   return v;
 }
 

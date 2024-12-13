@@ -5,6 +5,7 @@
 #define BIBOP_CACHE_BMP_GRANULES
 #endif /* __cplusplus */
 #define NDEBUG
+#define DEBUG
 #define MBED_SILENT
 #define GC_MS_HEADER32
 #define BIBOP_SEGREGATE_1PAGE
@@ -33,5 +34,4 @@
 #define MARKSWEEP
 #define FREELIST
 #define USE_TYPES_GENERATED 1
-#undef DEBUG
 #endif /* DEFINITIONS_H */

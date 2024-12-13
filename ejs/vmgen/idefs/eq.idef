@@ -9,9 +9,15 @@
 \}
 
 \when v1:flonum && v2:flonum \{
+  printf("^v^");
   double x1 = flonum_to_double(v1);
   double x2 = flonum_to_double(v2);
   dst = true_false(x1 == x2);
+\}
+
+\when v1:string && v2:string \{
+  printf("^v^");
+  dst = true_false(long_string_cmp_hash);
 \}
 
 \otherwise \{

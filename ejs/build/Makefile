@@ -43,7 +43,8 @@ CXX = gcc
 ## command arguments ##
 
 ## CPPFLAGS for C and  C++ compilers and preprocessor
-CPPFLAGS = -O2 -DNDEBUG -UDEBUG
+#CPPFLAGS = -O2 -DNDEBUG -UDEBUG
+CPPFLAGS = -O2 -DNDEBUG -DDEBUG
 # CPPFLAGS = -Os -DNDEBUG -UDEBUG
 # CPPFLAGS = -O0 -g
 

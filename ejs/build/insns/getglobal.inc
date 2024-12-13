@@ -12,9 +12,9 @@ default:
 case TV_GENERIC:
 Lgetglobal1: __attribute__((unused));
 TLgetglobal_builtin: __attribute__((unused));
-TLgetglobal_special: __attribute__((unused));
-TLgetglobal_array: __attribute__((unused));
 TLgetglobal_flonum: __attribute__((unused));
+TLgetglobal_array: __attribute__((unused));
+TLgetglobal_special: __attribute__((unused));
 TLgetglobal_string_object: __attribute__((unused));
 TLgetglobal_boolean_object: __attribute__((unused));
 TLgetglobal_simple_object: __attribute__((unused));
@@ -23,7 +23,7 @@ TLgetglobal_regexp: __attribute__((unused));
 TLgetglobal_fixnum: __attribute__((unused));
 TLgetglobal_number_object: __attribute__((unused));
 TLgetglobal_function: __attribute__((unused));
-{ // normal_regexp vmgen.newsynth.DecisionDiagram$Leaf@435
+{ // normal_builtin vmgen.newsynth.DecisionDiagram$Leaf@54
 
   LOG_EXIT("GETGLOBAL with non-stirng variable name\n");
 /* Local Variables:      */
@@ -39,7 +39,7 @@ case 2:
 case 1:
 Lgetglobal2: __attribute__((unused));
 TLgetglobal_string: __attribute__((unused));
-{ // normal_string vmgen.newsynth.DecisionDiagram$Leaf@1f5d
+{ // normal_string vmgen.newsynth.DecisionDiagram$Leaf@1c49
 
 /*
    getglobal dst reg

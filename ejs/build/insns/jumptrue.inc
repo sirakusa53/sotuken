@@ -15,9 +15,9 @@ TLjumptrue_any: __attribute__((unused));
 TLjumptrue_boolean_object: __attribute__((unused));
 TLjumptrue_function: __attribute__((unused));
 TLjumptrue_special: __attribute__((unused));
-TLjumptrue_fixnum: __attribute__((unused));
 TLjumptrue_iterator: __attribute__((unused));
-{ // normal_flonum vmgen.newsynth.DecisionDiagram$Leaf@54
+TLjumptrue_fixnum: __attribute__((unused));
+{ // normal_builtin vmgen.newsynth.DecisionDiagram$Leaf@54
 
 /*
    jumptrue src disp

@@ -1,0 +1,2 @@
+fast3bitlookupTimeFuncresultsumexpectedvalueOfvalueOfEQUAL_GETTOPRIMITIVEprintERROR: bad result: expected  but got endcodeloader
+total CPU time = 18.430 msec, total GC time =  0.000 msec (#GC = 0)

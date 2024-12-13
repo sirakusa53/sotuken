@@ -1,0 +1,24 @@
+createVectorsqrLengthVectorlengthVectoraddVectorsubVectorscaleVectornormaliseVectoraddsubscalevdotscalecrossnormalisetransformMatrixinvertMatrixTriangleSceneCamerarenderRowsraytraceScenearrayToCanvasCommandsprototypeintersectArrayzeroprototypeintersectprototypeblockedprototypegenerateRayPairprototyperendertestOutputexpectedLengthlengthvalueOfvalueOfEQUAL_GETTOPRIMITIVEError: bad result: expected length  but got lengthArrayMathsqrtMathsqrtArrayArrayArrayArrayArraylengthVectorArrayArrayArrayhvhvhhiisubcrossMathabsabsabsabsaxisaxisabsabsaxisaxisaxisaxisnormalisenormalaxisnuaxisnvdotaxisndeuevnu1nv1nu2nv2Array0.70.70.7materialtrianglesArraylightsambient0.80.8backgroundnormaliseVectorsubVectorcrossArrayArrayinvertMatrixorigindirectionsnormalise-0.70.7directions0.70.7directions0.7-0.7directions-0.7-0.7directionstransformMatrixdirectionsdirectionsdirectionsdirectionsdirectionsdirectionsdirectionsdirectionsgenerateRayPairaddVectorscaleoriginoriginnormaliseVectordirdirintersectDategetTimeArraycreateVectorTriangle0.4reflectionshadershaderScenelights0.70.3lightscolourlightslightscolourlightslightscolour0.1ambientArrayCameracreateVectorrender0.3valueOfvalueOfEQUAL_GETTOPRIMITIVE<canvas id="renderCanvas" width="30px" height="30px"></canvas><script>
+var pixels = [[[],],];
+    var canvas = document.getElementById("renderCanvas").getContext("2d");
+
+
+    var size = 30;
+    canvas.fillStyle = "red";
+    canvas.fillRect(0, 0, size, size);
+    canvas.scale(1, -1);
+    canvas.translate(0, -size);
+
+    if (!canvas.setFillColor)
+        canvas.setFillColor = function(r, g, b, a) {
+            this.fillStyle = "rgb("+[Math.floor(r * 255), Math.floor(g * 255), Math.floor(b * 255)]+")";
+    }
+
+for (var y = 0; y < size; y++) {
+  for (var x = 0; x < size; x++) {
+    var l = pixels[y][x];
+    canvas.setFillColor(l[0], l[1], l[2], 1);
+    canvas.fillRect(x, y, 1, 1);
+  }
+}</script>axisaxisaxisnunvndaxisnunveuevnu1nv1nu2nv2trianglesintersectvalueOfvalueOfEQUAL_GETTOPRIMITIVEtriangleslengthArraybackgroundbackgroundbackgroundnormaladdscaledotArrayshadershadermaterialreflection0.001addVectorintersect0.0001reflection0.999999ArrayambientambientambientlightssublengthVectorscaleVector0.0001blockeddotaddVectorscalecolourlightslengthscalevaddVectorscaleVectorreflectionreflectionitrianglesintersect0.0001valueOfvalueOfEQUAL_GETTOPRIMITIVE0.0001itriangleslengthArrayObjectraysoriginoriginoriginoriginaddVectorscaledirectionsdirectionsdirdirectionsdirectionsdirrenderRowsendcodeloader
+undefined is called in CALL instruction

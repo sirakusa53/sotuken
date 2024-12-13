@@ -11,7 +11,6 @@
 #define TYPES_H_
 
 #include <limits.h>
-
 /*
  * Struct type declaration
  */
@@ -647,6 +646,24 @@ DEFINE_GETTER(normal_string, StringCell, char*, value)
 #define ejs_normal_string_concat(ctx, str1, str2)       \
   (string_concat_ool((ctx), (str1), (str2)))
 
+static inline uint32_t update_long_hash(uint32_t hash, const char *s, uint32_t len)
+{
+  uint32_t i;
+  for (i = 0; i < len; i++) {
+    hash += s[i];
+    hash += (hash << 10);
+    hash ^= (hash >> 6);
+  }
+  return hash; 
+}
+
+static inline int long_string_cmp_hash(JSValue str1, JSValue str2){
+
+  if((update_long_hash(0, string_value(str1), string_length(str1))) == (update_long_hash(0, string_value(str2), string_length(str2)))){
+    return 1;
+  }
+  return 0;
+}
 
 #undef DEFINE_GETTER
 #undef DEFINE_SETTER

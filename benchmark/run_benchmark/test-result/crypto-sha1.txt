@@ -1,0 +1,15 @@
+hex_sha1b64_sha1str_sha1hex_hmac_sha1b64_hmac_sha1str_hmac_sha1sha1_vm_testcore_sha1sha1_ftsha1_ktcore_hmac_sha1safe_addrolstr2binbbinb2strbinb2hexbinb2b64hexcaseb64padchrszTwo households, both alike in dignity,
+In fair Verona, where we lay our scene,
+From ancient grudge break to new mutiny,
+Where civil blood makes civil hands unclean.
+From forth the fatal loins of these two foes
+A pair of star-cross'd lovers take their life;
+Whole misadventured piteous overthrows
+Do with their death bury their parents' strife.
+The fearful passage of their death-mark'd love,
+And the continuance of their parents' rage,
+Which, but their children's end, nought could remove,
+Is now the two hours' traffic of our stage;
+The which if you with patient ears attend,
+What here shall miss, our toil shall strive to mend.plainTextiplainTextihex_sha1plainTextsha1Output2524d264def74cce2498bf112bedf00e6c0b796dexpectedvalueOfvalueOfEQUAL_GETTOPRIMITIVEERROR: bad result: expected  but got binb2hexcore_sha1str2binblengthchrszbinb2b64core_sha1str2binblengthchrszbinb2strcore_sha1str2binblengthchrszbinb2hexcore_hmac_sha1binb2b64core_hmac_sha1binb2strcore_hmac_sha1hex_sha1abca9993e364706816aba3e25717850c26c9cd0d89da9993e364706816aba3e25717850c26c9cd0d89dvalueOfvalueOfEQUAL_GETTOPRIMITIVEArrayrolsafe_addrolsha1_ftsha1_ktsafe_addlengthArraystr2binblengthcore_sha1lengthchrszArraycore_sha1concatstr2binblengthchrszconcatArraychrszcharCodeAtlengthchrszchrszStringfromCharCodechrszlengthhexcase0123456789ABCDEF0123456789abcdefcharAtcharAtlengthlengthb64padABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/charAtlengthendcodeloader
+total CPU time = 17.491 msec, total GC time =  0.000 msec (#GC = 0)

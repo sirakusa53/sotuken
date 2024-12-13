@@ -3,8 +3,8 @@ funcLength 1
 callentry 0
 sendentry 1
 numberOfLocals 0
-numberOfInstructions 10
-numberOfConstants 4
+numberOfInstructions 16
+numberOfConstants 6
 setfl 7
 setfl 7
 bigprim 1 #0:string="bcdefghijklmnop"
@@ -12,6 +12,12 @@ bigprim 2 #1:string="a"
 setglobal 2 1
 bigprim 1 #2:string="lmno"
 bigprim 2 #3:string="b"
+setglobal 2 1
+bigprim 1 #0:string="bcdefghijklmnop"
+bigprim 2 #4:string="c"
+setglobal 2 1
+bigprim 1 #2:string="lmno"
+bigprim 2 #5:string="d"
 setglobal 2 1
 seta 1
 ret

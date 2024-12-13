@@ -676,15 +676,36 @@ int load_jsvalue_sbc(Context *ctx, char *src, JSValue *ctop, int ninsns, int nco
       LOG_ERR("inconsistent number constants at index %d", index);
       return -1;
     }
+    if (type == STR) {
+      int n = strlen(str);
+      if (n <= LEN) {
+        if (cstr_to_string(NULL, str) != v0) {
+          LOG_ERR("inconsistent string constants at index %d", index);
+          return -1;
+        }
+      } else if (!is_string(v0)) {
+        LOG_ERR("inconsistent string constants at index %d", index);
+        return -1;
+      } else {
+        if (strcmp(string_to_cstr(v0), str) != 0) {
+          LOG_ERR("inconsistent string constants at index %d", index);
+          return -1;
+        }
+      }
+    }
+    /*
     if (type == STR && cstr_to_string(NULL, str) != v0) {
+      printf("!!!!!!!!!\n");
       LOG_ERR("inconsistent string constants at index %d", index);
       return -1;
     }
+    */
     /*
      * else, it is necessary to check the consistency of v0 and str
      * but this check in not implemented yet.
      */
   }
+  print_value_simple(ctx, ctop[index]);
   return index;
 }
 

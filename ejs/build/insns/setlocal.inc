@@ -18,7 +18,7 @@ TLsetlocal_array: __attribute__((unused));
 TLsetlocal_iterator: __attribute__((unused));
 TLsetlocal_boolean_object: __attribute__((unused));
 TLsetlocal_function: __attribute__((unused));
-{ // normal_flonum vmgen.newsynth.DecisionDiagram$Leaf@54
+{ // normal_builtin vmgen.newsynth.DecisionDiagram$Leaf@54
 
   FunctionFrame *fr;
   int i;

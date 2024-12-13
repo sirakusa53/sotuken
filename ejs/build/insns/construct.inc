@@ -21,12 +21,12 @@ TLconstruct_simple_object: __attribute__((unused));
 TLconstruct_iterator: __attribute__((unused));
 TLconstruct_number_object: __attribute__((unused));
 TLconstruct_string: __attribute__((unused));
-TLconstruct_flonum: __attribute__((unused));
 TLconstruct_special: __attribute__((unused));
+TLconstruct_flonum: __attribute__((unused));
 TLconstruct_array: __attribute__((unused));
-TLconstruct_string_object: __attribute__((unused));
 TLconstruct_boolean_object: __attribute__((unused));
-{ // normal_number_object vmgen.newsynth.DecisionDiagram$Leaf@54
+TLconstruct_string_object: __attribute__((unused));
+{ // normal_string_object vmgen.newsynth.DecisionDiagram$Leaf@54
 
   set_fp(context, fp);
   set_pc(context, pc);

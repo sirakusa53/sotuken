@@ -17,7 +17,7 @@ TLisobject_flonum: __attribute__((unused));
 TLisobject_boolean_object: __attribute__((unused));
 TLisobject_array: __attribute__((unused));
 TLisobject_fixnum: __attribute__((unused));
-{ // normal_builtin vmgen.newsynth.DecisionDiagram$Leaf@54
+{ // normal_function vmgen.newsynth.DecisionDiagram$Leaf@54
 
 /*
    isobject dst reg

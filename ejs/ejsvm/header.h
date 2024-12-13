@@ -152,6 +152,7 @@ extern "C" {
 #include "lisp2-space-inl.h"
 #endif /* LISP2 */
 
+#define LEN 10 
 
 #endif /* HEADER_H_ */
 

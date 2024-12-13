@@ -20,8 +20,8 @@ default:
 Lcall1: __attribute__((unused));
 TLcall_regexp: __attribute__((unused));
 TLcall_fixnum: __attribute__((unused));
-TLcall_number_object: __attribute__((unused));
 TLcall_array: __attribute__((unused));
+TLcall_number_object: __attribute__((unused));
 TLcall_special: __attribute__((unused));
 TLcall_flonum: __attribute__((unused));
 TLcall_string: __attribute__((unused));
@@ -29,7 +29,7 @@ TLcall_simple_object: __attribute__((unused));
 TLcall_boolean_object: __attribute__((unused));
 TLcall_iterator: __attribute__((unused));
 TLcall_string_object: __attribute__((unused));
-{ // normal_iterator vmgen.newsynth.DecisionDiagram$Leaf@54
+{ // normal_number_object vmgen.newsynth.DecisionDiagram$Leaf@54
 
   set_fp(context, fp);
   set_pc(context, pc);
@@ -42,7 +42,7 @@ TLcall_string_object: __attribute__((unused));
 }
 break;
 case TV_GENERIC:
-Lcall2: __attribute__((unused));switch((unsigned int) get_htag(fn).v){ // vmgen.newsynth.DecisionDiagram$HTNode@41d(3)
+Lcall2: __attribute__((unused));switch((unsigned int) get_htag(fn).v){ // vmgen.newsynth.DecisionDiagram$HTNode@173c(3)
 case HTAGV_SIMPLE_OBJECT:
 case 5:
 case 4:
@@ -59,22 +59,10 @@ case HTAGV_BOXED_BOOLEAN:
 default:
 goto Lcall1;
 break;
-case HTAGV_FUNCTION:
-Lcall3: __attribute__((unused));
-TLcall_function: __attribute__((unused));
-{ // normal_function vmgen.newsynth.DecisionDiagram$Leaf@1c49
-
-  set_fp(context, fp);
-  set_pc(context, pc);
-  call_function(context, fn, nargs, sendp);
-  update_context();
-  NEXT_INSN_NOINCPC();
-}
-break;
 case HTAGV_BUILTIN:
-Lcall4: __attribute__((unused));
+Lcall3: __attribute__((unused));
 TLcall_builtin: __attribute__((unused));
-{ // normal_builtin vmgen.newsynth.DecisionDiagram$Leaf@1ec3
+{ // normal_builtin vmgen.newsynth.DecisionDiagram$Leaf@192f
 
   set_fp(context, fp);
   set_pc(context, pc);
@@ -83,7 +71,19 @@ TLcall_builtin: __attribute__((unused));
   NEXT_INSN_INCPC();
 }
 break;
-}// vmgen.newsynth.DecisionDiagram$HTNode@41d
+case HTAGV_FUNCTION:
+Lcall4: __attribute__((unused));
+TLcall_function: __attribute__((unused));
+{ // normal_function vmgen.newsynth.DecisionDiagram$Leaf@1f5d
+
+  set_fp(context, fp);
+  set_pc(context, pc);
+  call_function(context, fn, nargs, sendp);
+  update_context();
+  NEXT_INSN_NOINCPC();
+}
+break;
+}// vmgen.newsynth.DecisionDiagram$HTNode@173c
 break;
 } // vmgen.newsynth.DecisionDiagram$PTNode@550
 #undef fn

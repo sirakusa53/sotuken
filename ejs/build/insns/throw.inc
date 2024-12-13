@@ -16,7 +16,7 @@ TLthrow_builtin: __attribute__((unused));
 TLthrow_fixnum: __attribute__((unused));
 TLthrow_simple_object: __attribute__((unused));
 TLthrow_string_object: __attribute__((unused));
-{ // normal_flonum vmgen.newsynth.DecisionDiagram$Leaf@54
+{ // normal_builtin vmgen.newsynth.DecisionDiagram$Leaf@54
 
   save_context();
   set_a(context, src);

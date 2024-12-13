@@ -1,8 +1,28 @@
 \inst equal (Register dst, Value v1, Value v2)
 
-\when (v1:fixnum && v2:fixnum) || (v1:string && v2:string) \{
+\when (v1:fixnum && v2:fixnum) \{
   if (v1 == v2) dst = JS_TRUE;
   else dst = JS_FALSE;
+\}
+
+\when (v1:string && v2:string) \{
+  if (v1 == v2) dst = JS_TRUE;
+  else {
+    cint len1 = string_length(v1);
+    cint len2 = string_length(v2);
+    if (len1 <= LEN || len2 <= LEN || len1 != len2)
+      dst = JS_FALSE;
+    else if (string_hash(v1) != string_hash(v2))
+      dst = JS_FALSE;
+    else{
+      char *cs1 = string_to_cstr(v1);
+      char *cs2 = string_to_cstr(v2);
+      if (strcmp(cs1,cs2) == 0)
+        dst = JS_TRUE;
+      else 
+        dst = JS_FALSE;
+    }
+  }
 \}
 
 \when (v1:fixnum && v2:flonum) || (v1:flonum && v2:fixnum) || (v1:special && v2:flonum) || (v1:flonum && v2:special) \{

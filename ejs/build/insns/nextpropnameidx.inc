@@ -9,15 +9,15 @@ TLnextpropnameidx_builtin: __attribute__((unused));
 TLnextpropnameidx_flonum: __attribute__((unused));
 TLnextpropnameidx_number_object: __attribute__((unused));
 TLnextpropnameidx_array: __attribute__((unused));
+TLnextpropnameidx_simple_object: __attribute__((unused));
 TLnextpropnameidx_string_object: __attribute__((unused));
 TLnextpropnameidx_special: __attribute__((unused));
 TLnextpropnameidx_boolean_object: __attribute__((unused));
-TLnextpropnameidx_simple_object: __attribute__((unused));
 TLnextpropnameidx_function: __attribute__((unused));
 TLnextpropnameidx_any: __attribute__((unused));
 TLnextpropnameidx_iterator: __attribute__((unused));
 TLnextpropnameidx_fixnum: __attribute__((unused));
-{ // normal_builtin vmgen.newsynth.DecisionDiagram$Leaf@54
+{ // normal_function vmgen.newsynth.DecisionDiagram$Leaf@54
 
 /*
    nextpropnameidx itr dst
