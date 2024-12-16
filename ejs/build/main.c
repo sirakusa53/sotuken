@@ -574,7 +574,6 @@ int load_bc(FILE *fp, Context *context, FunctionTable *ftable) {
   init_code_loader(fp);
   nf = code_loader(context, ftable, base_function);
   end_code_loader();
-  printf("endcodeloader\n");
   if (nf > 0)
     return base_function;
   else if (fp != stdin) {

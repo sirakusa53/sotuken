@@ -43,7 +43,7 @@
     if ((max) < _val_tmp)                               \
       LOG_EXIT("%s : %d IS GREATER THAN MAX VALUE %d.", \
                msg, _val_tmp, (max));                   \
-    var = (type) _val_tmp;                              \
+    var = (type) _val_tmp;                            \
   } while(0)
 
 #define load_small_primitive(var, val, msg)     \
@@ -406,7 +406,6 @@ void const_load(Context *ctx, int nconsts, JSValue *ctop)
   for (i = 0; i < nconsts; i++) {
     int size;
     JSValue v = JS_UNDEFINED;
-
     next_buf();
     size = buf_to_int();
     if (size > 0) {
@@ -550,11 +549,11 @@ Bytecode convertToBc(unsigned char buf[sizeof(Bytecode)]) {
  * where <n> is the zero-origined index within the constant table.
  * Return value is the index (<n>) or -1 (in an error case).
  */
+
 int load_const_sbc(char *start, int nconsts, InsnOperandType *ptype, double *d, char **str, int *opt) {
   char *s, *p;
   int index;
   InsnOperandType type = NONE;
-
   s = start;
   if (s == NULL || *s++ != '#') {
     LOG_ERR("%s: constant format error", start);
@@ -705,7 +704,6 @@ int load_jsvalue_sbc(Context *ctx, char *src, JSValue *ctop, int ninsns, int nco
      * but this check in not implemented yet.
      */
   }
-  print_value_simple(ctx, ctop[index]);
   return index;
 }
 

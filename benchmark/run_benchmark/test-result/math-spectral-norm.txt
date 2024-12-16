@@ -1,2 +1,1 @@
-AAuAtuAtAuspectralnormtotalitotalspectralnormi5.08669423130328expectedtotalvalueOfvalueOfEQUAL_GETTOPRIMITIVEprintERROR: bad result: expected  but got AlengthlengthAlengthlengthAuAtuArrayAtAuMathsqrtendcodeloader
-total CPU time = 28.548 msec, total GC time =  0.955 msec (#GC = 1)
+total CPU time = 17.578 msec, total GC time =  0.656 msec (#GC = 1)
