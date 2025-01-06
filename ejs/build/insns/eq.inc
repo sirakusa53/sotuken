@@ -8,8 +8,8 @@ TLeq_any_any: __attribute__((unused));
 TLeq_iterator_any: __attribute__((unused));
 TLeq_string_any: __attribute__((unused));
 TLeq_fixnum_any: __attribute__((unused));
-TLeq_boolean_object_any: __attribute__((unused));
 TLeq_regexp_any: __attribute__((unused));
+TLeq_boolean_object_any: __attribute__((unused));
 TLeq_array_any: __attribute__((unused));
 TLeq_special_any: __attribute__((unused));
 TLeq_builtin_any: __attribute__((unused));
@@ -27,15 +27,15 @@ TLeq_boolean_object_array: __attribute__((unused));
 TLeq_fixnum_regexp: __attribute__((unused));
 TLeq_regexp_function: __attribute__((unused));
 TLeq_boolean_object_regexp: __attribute__((unused));
-TLeq_array_number_object: __attribute__((unused));
 TLeq_array_array: __attribute__((unused));
+TLeq_array_number_object: __attribute__((unused));
 TLeq_any_array: __attribute__((unused));
 TLeq_string_array: __attribute__((unused));
 TLeq_special_string_object: __attribute__((unused));
 TLeq_boolean_object_iterator: __attribute__((unused));
 TLeq_simple_object_special: __attribute__((unused));
-TLeq_function_builtin: __attribute__((unused));
 TLeq_simple_object_flonum: __attribute__((unused));
+TLeq_function_builtin: __attribute__((unused));
 TLeq_string_object_special: __attribute__((unused));
 TLeq_string_object_string_object: __attribute__((unused));
 TLeq_fixnum_number_object: __attribute__((unused));
@@ -49,12 +49,12 @@ TLeq_function_fixnum: __attribute__((unused));
 TLeq_number_object_function: __attribute__((unused));
 TLeq_array_boolean_object: __attribute__((unused));
 TLeq_number_object_array: __attribute__((unused));
-TLeq_string_number_object: __attribute__((unused));
 TLeq_builtin_array: __attribute__((unused));
+TLeq_string_number_object: __attribute__((unused));
 TLeq_function_string: __attribute__((unused));
 TLeq_array_flonum: __attribute__((unused));
-TLeq_simple_object_array: __attribute__((unused));
 TLeq_flonum_iterator: __attribute__((unused));
+TLeq_simple_object_array: __attribute__((unused));
 TLeq_array_builtin: __attribute__((unused));
 TLeq_builtin_simple_object: __attribute__((unused));
 TLeq_string_object_boolean_object: __attribute__((unused));
@@ -73,16 +73,16 @@ TLeq_builtin_builtin: __attribute__((unused));
 TLeq_regexp_number_object: __attribute__((unused));
 TLeq_regexp_string: __attribute__((unused));
 TLeq_string_object_flonum: __attribute__((unused));
+TLeq_function_array: __attribute__((unused));
 TLeq_function_iterator: __attribute__((unused));
 TLeq_regexp_builtin: __attribute__((unused));
-TLeq_function_array: __attribute__((unused));
 TLeq_simple_object_simple_object: __attribute__((unused));
 TLeq_special_fixnum: __attribute__((unused));
 TLeq_simple_object_boolean_object: __attribute__((unused));
 TLeq_any_iterator: __attribute__((unused));
 TLeq_any_fixnum: __attribute__((unused));
-TLeq_special_regexp: __attribute__((unused));
 TLeq_special_number_object: __attribute__((unused));
+TLeq_special_regexp: __attribute__((unused));
 TLeq_special_function: __attribute__((unused));
 TLeq_builtin_regexp: __attribute__((unused));
 TLeq_flonum_simple_object: __attribute__((unused));
@@ -91,12 +91,12 @@ TLeq_array_regexp: __attribute__((unused));
 TLeq_boolean_object_boolean_object: __attribute__((unused));
 TLeq_array_fixnum: __attribute__((unused));
 TLeq_string_fixnum: __attribute__((unused));
-TLeq_number_object_regexp: __attribute__((unused));
 TLeq_special_simple_object: __attribute__((unused));
 TLeq_flonum_number_object: __attribute__((unused));
+TLeq_number_object_regexp: __attribute__((unused));
+TLeq_simple_object_string_object: __attribute__((unused));
 TLeq_any_function: __attribute__((unused));
 TLeq_string_object_builtin: __attribute__((unused));
-TLeq_simple_object_string_object: __attribute__((unused));
 TLeq_fixnum_simple_object: __attribute__((unused));
 TLeq_builtin_fixnum: __attribute__((unused));
 TLeq_builtin_boolean_object: __attribute__((unused));
@@ -107,31 +107,31 @@ TLeq_any_regexp: __attribute__((unused));
 TLeq_function_flonum: __attribute__((unused));
 TLeq_simple_object_fixnum: __attribute__((unused));
 TLeq_regexp_flonum: __attribute__((unused));
-TLeq_number_object_fixnum: __attribute__((unused));
 TLeq_string_object_string: __attribute__((unused));
+TLeq_number_object_fixnum: __attribute__((unused));
 TLeq_flonum_string_object: __attribute__((unused));
 TLeq_fixnum_fixnum: __attribute__((unused));
-TLeq_builtin_iterator: __attribute__((unused));
 TLeq_flonum_boolean_object: __attribute__((unused));
+TLeq_builtin_iterator: __attribute__((unused));
 TLeq_builtin_string_object: __attribute__((unused));
 TLeq_boolean_object_fixnum: __attribute__((unused));
 TLeq_fixnum_array: __attribute__((unused));
 TLeq_fixnum_flonum: __attribute__((unused));
 TLeq_flonum_function: __attribute__((unused));
-TLeq_boolean_object_function: __attribute__((unused));
 TLeq_boolean_object_string: __attribute__((unused));
+TLeq_boolean_object_function: __attribute__((unused));
 TLeq_simple_object_regexp: __attribute__((unused));
 TLeq_boolean_object_flonum: __attribute__((unused));
-TLeq_simple_object_number_object: __attribute__((unused));
 TLeq_array_function: __attribute__((unused));
+TLeq_simple_object_number_object: __attribute__((unused));
 TLeq_iterator_boolean_object: __attribute__((unused));
-TLeq_any_builtin: __attribute__((unused));
 TLeq_fixnum_string: __attribute__((unused));
-TLeq_flonum_builtin: __attribute__((unused));
+TLeq_any_builtin: __attribute__((unused));
 TLeq_boolean_object_builtin: __attribute__((unused));
+TLeq_flonum_builtin: __attribute__((unused));
 TLeq_boolean_object_number_object: __attribute__((unused));
-TLeq_string_boolean_object: __attribute__((unused));
 TLeq_number_object_iterator: __attribute__((unused));
+TLeq_string_boolean_object: __attribute__((unused));
 TLeq_iterator_flonum: __attribute__((unused));
 TLeq_special_special: __attribute__((unused));
 TLeq_builtin_number_object: __attribute__((unused));
@@ -155,17 +155,17 @@ TLeq_builtin_special: __attribute__((unused));
 TLeq_regexp_boolean_object: __attribute__((unused));
 TLeq_regexp_array: __attribute__((unused));
 TLeq_builtin_flonum: __attribute__((unused));
-TLeq_string_builtin: __attribute__((unused));
 TLeq_iterator_special: __attribute__((unused));
+TLeq_string_builtin: __attribute__((unused));
 TLeq_simple_object_iterator: __attribute__((unused));
 TLeq_regexp_fixnum: __attribute__((unused));
 TLeq_string_function: __attribute__((unused));
 TLeq_flonum_regexp: __attribute__((unused));
 TLeq_function_number_object: __attribute__((unused));
 TLeq_array_special: __attribute__((unused));
-TLeq_string_object_regexp: __attribute__((unused));
-TLeq_iterator_builtin: __attribute__((unused));
 TLeq_string_special: __attribute__((unused));
+TLeq_iterator_builtin: __attribute__((unused));
+TLeq_string_object_regexp: __attribute__((unused));
 TLeq_string_object_number_object: __attribute__((unused));
 TLeq_simple_object_function: __attribute__((unused));
 TLeq_number_object_number_object: __attribute__((unused));
@@ -185,58 +185,31 @@ TLeq_iterator_number_object: __attribute__((unused));
 TLeq_fixnum_boolean_object: __attribute__((unused));
 TLeq_simple_object_builtin: __attribute__((unused));
 TLeq_string_object_function: __attribute__((unused));
-TLeq_string_object_simple_object: __attribute__((unused));
 TLeq_number_object_simple_object: __attribute__((unused));
+TLeq_string_object_simple_object: __attribute__((unused));
 TLeq_number_object_builtin: __attribute__((unused));
-TLeq_number_object_string: __attribute__((unused));
 TLeq_builtin_string: __attribute__((unused));
+TLeq_number_object_string: __attribute__((unused));
 TLeq_string_object_fixnum: __attribute__((unused));
-TLeq_function_simple_object: __attribute__((unused));
 TLeq_flonum_array: __attribute__((unused));
+TLeq_function_simple_object: __attribute__((unused));
 TLeq_string_simple_object: __attribute__((unused));
 TLeq_any_special: __attribute__((unused));
 TLeq_array_string: __attribute__((unused));
-TLeq_iterator_fixnum: __attribute__((unused));
 TLeq_iterator_array: __attribute__((unused));
+TLeq_iterator_fixnum: __attribute__((unused));
 TLeq_simple_object_string: __attribute__((unused));
 TLeq_any_number_object: __attribute__((unused));
-{ // normal_iterator normal_special vmgen.newsynth.DecisionDiagram$Leaf@16
+{ // normal_array normal_number_object vmgen.newsynth.DecisionDiagram$Leaf@16
 
   if (v1 == v2) dst = false_true(is_nan(v1));
   else dst = JS_FALSE;
 }
 break;
-case TV_STRING:
-case 3:
-case 2:
-case 1:
+case TV_FLONUM:
 Leq2: __attribute__((unused));
-TLeq_any_string: __attribute__((unused));
-switch((unsigned int) get_ptag(v1).v){ // vmgen.newsynth.DecisionDiagram$PTNode@69(2)
-case TV_FLONUM:
-case TV_SPECIAL:
-case TV_FIXNUM:
-default:
-case TV_GENERIC:
-goto Leq1;
-break;
-case TV_STRING:
-case 3:
-case 2:
-case 1:
-Leq3: __attribute__((unused));
-TLeq_string_string: __attribute__((unused));
-{ // normal_string normal_string vmgen.newsynth.DecisionDiagram$Leaf@a53
-
-  dst = true_false(long_string_cmp_hash);
-}
-break;
-} // vmgen.newsynth.DecisionDiagram$PTNode@69
-break;
-case TV_FLONUM:
-Leq4: __attribute__((unused));
 TLeq_any_flonum: __attribute__((unused));
-switch((unsigned int) get_ptag(v1).v){ // vmgen.newsynth.DecisionDiagram$PTNode@173c(2)
+switch((unsigned int) get_ptag(v1).v){ // vmgen.newsynth.DecisionDiagram$PTNode@11ac(2)
 case TV_STRING:
 case 3:
 case 2:
@@ -248,16 +221,43 @@ case TV_GENERIC:
 goto Leq1;
 break;
 case TV_FLONUM:
-Leq5: __attribute__((unused));
+Leq3: __attribute__((unused));
 TLeq_flonum_flonum: __attribute__((unused));
-{ // normal_flonum normal_flonum vmgen.newsynth.DecisionDiagram$Leaf@dbb
+{ // normal_flonum normal_flonum vmgen.newsynth.DecisionDiagram$Leaf@2084
 
   double x1 = flonum_to_double(v1);
   double x2 = flonum_to_double(v2);
   dst = true_false(x1 == x2);
 }
 break;
-} // vmgen.newsynth.DecisionDiagram$PTNode@173c
+} // vmgen.newsynth.DecisionDiagram$PTNode@11ac
+break;
+case TV_STRING:
+case 3:
+case 2:
+case 1:
+Leq4: __attribute__((unused));
+TLeq_any_string: __attribute__((unused));
+switch((unsigned int) get_ptag(v1).v){ // vmgen.newsynth.DecisionDiagram$PTNode@1c49(2)
+case TV_FLONUM:
+case TV_SPECIAL:
+case TV_FIXNUM:
+default:
+case TV_GENERIC:
+goto Leq1;
+break;
+case TV_STRING:
+case 3:
+case 2:
+case 1:
+Leq5: __attribute__((unused));
+TLeq_string_string: __attribute__((unused));
+{ // normal_string normal_string vmgen.newsynth.DecisionDiagram$Leaf@a53
+
+  dst = true_false(long_string_cmp_hash);
+}
+break;
+} // vmgen.newsynth.DecisionDiagram$PTNode@1c49
 break;
 } // vmgen.newsynth.DecisionDiagram$PTNode@550
 #undef dst
