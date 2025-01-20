@@ -1,1 +1,42 @@
-total CPU time = 40.857 msec, total GC time =  3.231 msec (#GC = 4)
+total CPU time = 20.633 msec, total GC time =  2.070 msec (#GC = 4)
+len =     0  :     1     0
+len =     1  :     7    21
+len =     2  :     4    29
+len =     3  :    16    19
+len =     4  :    16    35
+len =     5  :    15    20
+len =     6  :    19    36
+len =     7  :    14    21
+len =     8  :     8    17
+len =     9  :    10    16
+len =    10  :     5    10
+len =    11  :     9    11
+len =    12  :     1     0
+len =    13  :     3     6
+len =    14  :     2     2
+len =    15  :     1     0
+len =    16  :     1     2
+len =    17  :     1     0
+len =    20  :     1     0
+len =    28  :     1     0
+
+len =     0  :     1     0
+len =     1  :     7    21
+len =     2  :     4    29
+len =     3  :    16    19
+len =     4  :    16    35
+len =     5  :    15    20
+len =     6  :    19    36
+len =     7  :    14    21
+len =     8  :     8    17
+len =     9  :    10    16
+len =    10  :     5    10
+len =    11  :     9    11
+len =    12  :     1     0
+len =    13  :     3     6
+len =    14  :     2     2
+len =    15  :     1     0
+len =    16  :     1     2
+len =    17  :     1     0
+len =    20  :     1     0
+len =    28  :     1     0

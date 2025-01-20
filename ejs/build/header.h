@@ -152,6 +152,9 @@ extern "C" {
 #include "lisp2-space-inl.h"
 #endif /* LISP2 */
 
+#define MAX_STRING_LENGTH 20000  // 必要に応じて最大文字列長を調整
+static int string_length_histogram[MAX_STRING_LENGTH + 1] = {0};
+static int typed_string_length_histogram[MAX_STRING_LENGTH + 1] = {0};
 
 #endif /* HEADER_H_ */
 

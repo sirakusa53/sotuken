@@ -667,6 +667,8 @@ void log_papi_values(long long *values, int eventsize);
 }
 #endif /* USE_PAPI */
 
+extern void print_hist(void), make_hist(void), reset_hist(void);
+
 /*
  * main function
  */
@@ -861,6 +863,12 @@ int ejs_main_func(int argc, char *argv[]) {
   }
 
   print_prof_result(context);
+
+  print_hist();
+  printf("\n");
+  reset_hist();
+  make_hist();
+  print_hist();
 
   PRINT_END();
 
