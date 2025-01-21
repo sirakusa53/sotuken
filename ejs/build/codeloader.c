@@ -734,8 +734,8 @@ int insn_load_sbc(Context *ctx, Instruction *insns, JSValue *ctop,
   step_load_code(buf, LOADBUFLEN);
   tokp = first_token(buf);
 
-  printf("Function #%d, Instruction #%d: %s\n", findex, pc, tokp);
-  fflush(stdout);
+  /*printf("Function #%d, Instruction #%d: %s\n", findex, pc, tokp);
+  fflush(stdout);*/
 
 #ifdef PROFILE
   {
