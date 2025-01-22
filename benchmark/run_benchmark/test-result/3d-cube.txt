@@ -1,4 +1,4 @@
-total CPU time = 49.734 msec, total GC time =  6.564 msec (#GC = 3)
+total CPU time = 29.842 msec, total GC time =  2.938 msec (#GC = 3)
 len =     0  :     1     0
 len =     1  :    25  2149
 len =     2  :   145    70
