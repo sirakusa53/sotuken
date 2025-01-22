@@ -862,6 +862,12 @@ int ejs_main_func(int argc, char *argv[]) {
 
   print_prof_result(context);
 
+  print_hist();
+  printf("\n");
+  reset_hist();
+  make_hist();
+  print_hist();
+
   PRINT_END();
 
   return 0;

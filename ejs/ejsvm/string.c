@@ -35,6 +35,45 @@ static inline uint32_t finalise_hash(uint32_t hash)
   return hash;
 }
 
+#define HISTSIZE 200
+
+int strtabhist[HISTSIZE + 1];
+int strtabhist2[HISTSIZE + 1];
+
+void reset_hist(void) {
+  int i;
+  for (i = 0; i <= HISTSIZE; i++)
+    strtabhist[i] = 0;
+}
+
+void print_hist(void) {
+  int i;
+  char *s1 = " ";
+  char *s2 = " ";
+  for (i = 0; i <= HISTSIZE; i++) {
+    if (strtabhist[i] > 0 || strtabhist2[i] > 0) {
+      if (i == HISTSIZE) s1 = "+";
+      if (strtabhist[i] == 0) s2 = "!";
+      printf("len = %5d%s%s: %5d %5d\n", i, s1, s2, strtabhist[i], strtabhist2[i]);
+      s2 = " ";
+    }
+  }
+}
+
+void make_hist(void) {
+  int i;
+  for (i = 0; i < string_table.size; i++) {
+    StrCons *current = string_table.obvector[i];
+    while (current != NULL) {
+      JSValue str = current->str;
+      int len = string_length(str);
+      if (len >= HISTSIZE) len = HISTSIZE;
+      strtabhist[len]++;
+      current = current->next;
+    }
+  }
+}
+
 static
 int string_table_lookup2(const char *s1, uint32_t len1,
                          const char *s2, uint32_t len2,
@@ -55,9 +94,15 @@ int string_table_lookup2(const char *s1, uint32_t len1,
     if (memcmp(s1, string_value(v), len1) == 0 &&
         memcmp(s2, string_value(v) + len1, len2 + 1) == 0) {
       *ret = v;
+      int len = len1 + len2;
+      if (len >= HISTSIZE) len = HISTSIZE;
+      strtabhist2[len]++;
       return 1; /* found */
     }
   }
+  int len = len1 + len2;
+  if (len >= HISTSIZE) len = HISTSIZE;
+  strtabhist[len]++;
   return 0;  /* not found */
 }
 
@@ -144,7 +189,7 @@ JSValue cstr_to_string_ool(Context *context, const char *s)
   hash = finalise_hash(hash);
   if(len <= LEN){
     if (string_table_lookup(s, len, hash, &v))
-     return v;
+      return v;
   }
 
   p = allocate_string(context, len);
