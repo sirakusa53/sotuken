@@ -1,1 +1,1 @@
-total CPU time = 35.412 msec, total GC time =  2.506 msec (#GC = 3)
+total CPU time = 25.324 msec, total GC time =  2.520 msec (#GC = 3)
